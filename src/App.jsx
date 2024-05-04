@@ -3,7 +3,16 @@ import Card from './Card/Card'
 
 const App = () => {
   return (
-    <div>
+    <div className='cards-container'>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
         <Card />
     </div>
   )
