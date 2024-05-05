@@ -1,0 +1,355 @@
+.profile-header {
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
+}
+
+.profile-header.v2 .profile-header-info {
+  height: 112px;
+}
+
+.profile-header.v2 .profile-header-info .user-short-description {
+  min-height: 164px;
+  padding: 84px 0 0 164px;
+  position: absolute;
+  left: 32px;
+  bottom: 0;
+}
+
+.profile-header.v2 .profile-header-info .profile-header-avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin-left: 0;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  overflow: hidden;
+}
+
+.profile-header.v2 .profile-header-info .profile-header-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-header.v2
+  .profile-header-info
+  .user-short-description
+  .user-short-description-title,
+.profile-header.v2
+  .profile-header-info
+  .user-short-description
+  .user-short-description-text {
+  text-align: left;
+  text-transform: lowercase;
+}
+
+.profile-header.v2 .profile-header-info .user-short-description .user-short-description-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.profile-header.v2 .profile-header-info .user-short-description .user-short-description-title svg{
+  width: 24px;
+  height: 24px;
+  color: #00dff0;
+}
+
+.profile-header.v2 .user-short-description.big .user-short-description-text {
+  font-size: 0.875rem;
+  color: #ff6728;
+}
+
+.profile-header.v2 .profile-header-info .user-stat.big {
+  padding: 0 20px;
+}
+
+.profile-header.v2 .profile-header-info .user-stats {
+  left: auto;
+  top: 38px;
+  right: 164px;
+}
+
+.profile-header .profile-header-info .user-stats .user-stat .user-stat-text {
+  font-size: 14px;
+}
+
+.profile-header.v2 .profile-header-info .tag-sticker {
+  position: absolute;
+  top: -12px;
+  right: 28px;
+  display: none;
+}
+
+.profile-header.v2 .profile-header-info .profile-header-info-actions {
+  top: 32px;
+}
+
+.profile-header.v2
+  .profile-header-info
+  .profile-header-info-actions
+  .profile-header-info-action.button {
+  width: 58px;
+}
+
+.profile-header .profile-header-cover {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  overflow: hidden;
+  height: 300px;
+}
+
+.profile-header .profile-header-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-header .profile-header-info {
+  height: 126px;
+  position: relative;
+}
+
+.profile-header .profile-header-info .profile-header-social-links-wrap {
+  width: 352px;
+  height: 44px;
+  margin: 0 auto;
+  position: absolute;
+  top: 54px;
+  right: 32px;
+}
+
+.profile-header
+  .profile-header-info
+  .profile-header-social-links-wrap
+  .profile-header-social-links {
+  padding-top: 4px;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-header
+  .profile-header-info
+  .profile-header-social-links-wrap
+  .slider-controls {
+  width: 234px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  left: -40px;
+  z-index: 1;
+}
+
+.profile-header .profile-header-info .user-stats {
+  position: absolute;
+  top: 54px;
+  left: 40px;
+}
+
+.profile-header .profile-header-info .profile-header-info-actions {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: -40px;
+  right: 32px;
+}
+
+.profile-header
+  .profile-header-info
+  .profile-header-info-actions
+  .profile-header-info-action {
+  margin-right: 16px;
+}
+
+.profile-header
+  .profile-header-info
+  .profile-header-info-actions
+  .profile-header-info-action:first-child
+  svg {
+  fill: #adafca;
+}
+
+.profile-header
+  .profile-header-info
+  .profile-header-info-actions
+  .profile-header-info-action:first-child:hover
+  svg {
+  fill: #fff;
+}
+
+.profile-header
+  .profile-header-info
+  .profile-header-info-actions
+  .profile-header-info-action.button {
+  width: 180px;
+}
+
+.profile-header
+  .profile-header-info
+  .profile-header-info-actions
+  .profile-header-info-action:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 1365px) {
+  .profile-header .profile-header-cover {
+    height: 200px;
+  }
+  .profile-header.v2 .profile-header-info {
+    height: auto;
+  }
+  .profile-header.v2 .profile-header-info .user-short-description {
+    min-height: auto;
+    padding: 52px 0 0;
+    position: static;
+  }
+
+  .profile-header.v2 .profile-header-info .profile-header-avatar {
+    transform: translateY(-70%) translateX(-50%);
+    left: 50%;
+    width: 140px;
+    height: 140px;
+  }
+
+  .profile-header.v2
+    .profile-header-info
+    .user-short-description
+    .user-short-description-title,
+  .profile-header.v2
+    .profile-header-info
+    .user-short-description
+    .user-short-description-text {
+    text-align: center;
+  }
+  .profile-header .profile-header-info {
+    height: auto;
+    padding-bottom: 32px;
+  }
+  .profile-header .profile-header-info .profile-header-social-links-wrap,
+  .profile-header .profile-header-info .user-stats,
+  .profile-header .profile-header-info .profile-header-info-actions {
+    position: static;
+  }
+  .profile-header .profile-header-info .profile-header-social-links-wrap {
+    margin-top: 32px;
+  }
+  .profile-header .profile-header-info .user-stats,
+  .profile-header .profile-header-info .profile-header-info-actions {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile-header.v2 .profile-header-info .user-stat.big {
+    padding: 0 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile-header .profile-header-cover {
+    height: 76px;
+  }
+  .profile-header.v2 .profile-header-info .user-short-description {
+    padding-top: 84px;
+  }
+  .profile-header.v2 .profile-header-info .user-stats .user-stat:first-child {
+    display: none;
+  }
+  .profile-header.v2
+    .profile-header-info
+    .user-stats
+    .user-stat:nth-last-child(2)::after {
+    display: block;
+  }
+  .profile-header.v2 .profile-header-info .user-stats .user-stat:last-child {
+    display: block;
+  }
+
+  .profile-header.v2 .profile-header-info .user-stat.big {
+    padding: 0 10px;
+  }
+
+  .profile-header.v2 .profile-header-info .user-stat.big .user-stat-stars {
+    gap: 1px;
+  }
+
+  .profile-header.v2 .profile-header-info .user-stat.big .user-stat-stars svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .profile-header .profile-header-info .user-stats .user-stat .user-stat-text {
+    font-size: 12px;
+  }
+
+  .profile-header.v2 .profile-header-info .tag-sticker {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .profile-header .profile-header-info .user-short-description {
+    padding-top: 84px;
+  }
+
+  .profile-header.v2 .profile-header-info .profile-header-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-header
+    .profile-header-info
+    .user-short-description
+    .user-short-description-title {
+    font-size: 1.125rem;
+  }
+  .profile-header
+    .profile-header-info
+    .user-short-description
+    .user-short-description-text {
+    font-size: 0.6875rem;
+  }
+  .profile-header .profile-header-info .profile-header-social-links-wrap {
+    width: 160px;
+    height: 36px;
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+  .profile-header
+    .profile-header-info
+    .profile-header-social-links-wrap
+    .social-link {
+    width: 32px;
+    height: 32px;
+  }
+  .profile-header
+    .profile-header-info
+    .user-stats
+    .user-stat:nth-last-child(2)::after {
+    display: none;
+  }
+  .profile-header .profile-header-info .user-stats .user-stat:last-child {
+    display: none;
+  }
+  .profile-header .profile-header-info .user-stats .user-stat .user-stat-title {
+    font-size: 16px;
+  }
+
+  .profile-header
+    .profile-header-info
+    .profile-header-info-actions
+    .profile-header-info-action.button {
+    width: 114px;
+  }
+}

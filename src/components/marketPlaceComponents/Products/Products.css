@@ -1,0 +1,36 @@
+.products-cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.products-cards > div{
+    width: 380px;
+}
+
+.img-upload-container{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+.img-upload-container.active{
+    z-index: 2;
+}
+
+.uploaded-img-product{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+
+
+

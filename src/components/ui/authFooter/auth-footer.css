@@ -1,0 +1,61 @@
+.login-footer {
+	margin: 0 auto;
+	margin-top: 50px;
+	padding: 0 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1500px;
+}
+
+.isMobileView {
+	position: relative;
+	top: 40%;
+}
+
+.login-footer * {
+	font-size: 12px;
+	color: white;
+}
+
+.login-footer .footer-links-container a {
+	padding-right: 10px;
+	text-decoration: none;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.login-footer .footer-links-container a:hover {
+	text-decoration: underline !important;
+}
+
+.login-footer p {
+	margin: 0;
+	white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+	.login-footer * {
+		font-size: 10px;
+		color: white;
+	}
+}
+
+@media (max-width: 768px) {
+	.login-footer {
+		flex-direction: column;
+		/* padding: 5px 40px;
+		margin-top: 50px; */
+	}
+}
+
+@media (min-width: 990px) {
+	.footer-lg-screen {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 1501px) {
+	.copyrights {
+		color: black;
+	}
+}
