@@ -65,6 +65,7 @@ const ProductCard = (props) => {
                     {/* <a href="service.html"><span class="badge bg-danger"><FaMeteor />Hot</span></a> */}
                 </div>
                 <div class="fav-selection">
+                    <input class="fav-checkbox" type="checkbox" />
                     <a href="javascript:void(0);" class="fav-icon">
                         <CiHeart />
                     </a>
