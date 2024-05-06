@@ -50,6 +50,7 @@ const currencies = [
 const AddProduct = () => {
   const [isOpened, setIsOpened] = useState(false);
   const [image, setImage] = useState(null);
+  const [isFromHome, setIsFromHome] = useState(false);
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
@@ -63,8 +64,12 @@ const AddProduct = () => {
 }   
   return (
     <>
-        <div className="header-actions" style={{padding:"0 10px"}}>
-            <button className="add-listing-product" onClick={() => setIsOpened(!isOpened)}>Add Listing +</button>
+        <div className="header-actions">
+            <button className="add-listing-product">
+               <a href="/marketplace/dashboard" className="text-white block p-3">
+                Add Listing +
+                </a> 
+               </button>
         </div>
         <Modal
             title={null}
@@ -101,6 +106,36 @@ const AddProduct = () => {
 
                 <FormInput label="Product name" name="product-name" type="text" />
 
+                <div
+                  className="form-row"
+                  style={{
+                    display: "flex",
+                    alignItems: "start",
+                    justifyContent: "start",
+                    flexDirection: "column",
+                    gap: "12px",
+                    marginTop: "15px",
+                    marginLeft: "5px",
+                  }}
+                    >
+                  <p style={{ fontSize: "0.95rem", fontWeight: "bold" }}>
+                    Is Produtc Used ?
+                  </p>
+                  <section style={{display:"flex" , gap:"0.5rem"}}>
+                  <span>No</span>
+                  <div
+                    className={`form-switch ${isFromHome ? "active" : ""}`}
+                    onClick={() => {
+                      setIsFromHome((prev) => !prev);
+                    }}
+                  >
+                    <div className="form-switch-button"></div>
+                  </div>
+
+                  <span>Yes</span>
+                  </section>
+                </div>
+
                 <div className="sell-product-form-item">
                     <Select defaultValue={"Country"} optionsArray={countries} />
 
@@ -114,7 +149,7 @@ const AddProduct = () => {
                 </div>
 
                 <div className="sell-product-form-item">
-                    <Select defaultValue={"Brand"} optionsArray={categories} />
+                    <Select defaultValue={"Brand"} optionsArray={brands} />
 
                     <Select defaultValue={"Condition"} optionsArray={conditions} />
                 </div>

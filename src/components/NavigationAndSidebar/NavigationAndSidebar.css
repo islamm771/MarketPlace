@@ -268,7 +268,8 @@
 	border: 1px solid #fff;
 	color: white;
 	width: 120px;
-    padding: 8px 12px;
+	margin: 0 5px;
+    /* padding: 8px 12px; */
 }
 
 .header-mobile {

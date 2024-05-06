@@ -1,12 +1,13 @@
 import React from "react";
+import './MarketPlace.css'
 import MarketPlaceNavigation from "../../components/marketPlaceComponents/MarketPlaceNavigation";
 import "swiper/css/navigation";
-import './MarketPlace.css'
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import Products from "../../components/marketPlaceComponents/Products/Products";
+import MarketDashboard from "../../components/marketPlaceComponents/Dashboard/MarketDashboard";
 
 const MarketPlace = () => {
 	return (

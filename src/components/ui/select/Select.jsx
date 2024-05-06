@@ -6,7 +6,7 @@ import {
 	setSelectedCollege,
 } from "../../../app/feature/ListChatSlice";
 
-const Select = ({ optionsArray, defaultValue, setValue, selectName, date }) => {
+const Select = ({ optionsArray, defaultValue, setValue, selectName, date, ...rest }) => {
 	const dispatch = useDispatch();
 
 	const updateValue = (value) => {
@@ -32,6 +32,7 @@ const Select = ({ optionsArray, defaultValue, setValue, selectName, date }) => {
 					</svg>
 				)}
 				<select
+					{...rest}
 					id="profile-privacy-friend-request"
 					name="profile_privacy_friend_request"
 					style={{ paddingLeft: `${date === "yes" ? "36px" : ""}` }}

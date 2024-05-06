@@ -369,6 +369,7 @@ const MiniNavigation = () => {
 				</li>
 			</ul>
 		</nav>
+		
 	);
 };
 

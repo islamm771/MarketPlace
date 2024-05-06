@@ -40,7 +40,7 @@ const ProductCard = (props) => {
         return numStr;
     }
   return (
-    <div className='product-card col-lg-4 col-md-6'>
+    <div className='market-product-card'>
         <div className="gigs-grid">
             <div className="gigs-img">
                 <div className="img-slider owl-carousel">
@@ -61,7 +61,7 @@ const ProductCard = (props) => {
                     </div> */}
                 </div>
                 <div class="card-overlay-badge">
-                    <a href="service.html"><span class="badge bg-warning"><FaRegStar />Featured</span></a>
+                    <a href="#"><span class="badge bg-warning"><FaRegStar />Featured</span></a>
                     {/* <a href="service.html"><span class="badge bg-danger"><FaMeteor />Hot</span></a> */}
                 </div>
                 <div class="fav-selection">
@@ -86,10 +86,8 @@ const ProductCard = (props) => {
                             size={16}
                         />
                         <div className="badge-container-nav">
-                            <div className="badge-container-nav-items">
                                 <img src="/img/download.png" alt="Padge" />
                                 <p className="badge-number-nav">12</p>
-                            </div>
                         </div>
                     </div>
                 </div>

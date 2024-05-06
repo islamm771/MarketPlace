@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import { ConfigProvider } from "antd";
 import "./App.css";
-
 import MarketPlace from "./pages/marketPlace/MarketPlace";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import MainPage from "./pages/PagesOutlet/Pages";
+import MarketDashboard from "./components/marketPlaceComponents/Dashboard/MarketDashboard";
 
 function App() {
   AOS.init();
@@ -35,6 +35,7 @@ function App() {
             element={<MainPage />}
           >
             <Route path="/marketplace" element={<MarketPlace />} />
+            <Route path="/marketplace/dashboard" element={<MarketDashboard />} />
           </Route>
         </Routes>
       </div>
