@@ -237,7 +237,7 @@ const RealForm = () => {
                     <div className="location bg-white p-[20px] rounded-[12px] mt-[20px]" id="location">
                         <h2 className='text-[20px]'>3. Location</h2>
                         <h6 className='my-[20px]'>Listing Location</h6>
-                        <div className="grid md:!grid-cols-2 !gap-4">
+                        <div className="grid !grid-cols-1 md:!grid-cols-2 !gap-4">
                             <div className="col-md-6">
                             <div className="input-item input-item-name ltn__custom-icon">
                                 <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Address" name="product-addr" type="text" />
@@ -269,7 +269,7 @@ const RealForm = () => {
                                 <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Zip" name="product-zip" type="text" />
                             </div>
                             </div>
-                            <div className="!col-span-2">
+                            <div className="md:!col-span-2">
                             <div className="property-details-google-map">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9334.271551495209!2d-73.97198251485975!3d40.668170674982946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b0456b5a2e7%3A0x68bdf865dda0b669!2sBrooklyn%20Botanic%20Garden%20Shop!5e0!3m2!1sen!2sbd!4v1590597267201!5m2!1sen!2sbd" width="100%" height="100%" frameBorder={0} allowFullScreen aria-hidden="false" tabIndex={0} />
                             </div>
@@ -303,7 +303,7 @@ const RealForm = () => {
                         <h2 className='text-[20px]'>4. Details</h2>
 
                         <h6 className='my-[20px]'>Listing Details</h6>
-                        <div className="grid md:!grid-cols-2 !gap-4">
+                        <div className="grid !grid-cols-1 md:!grid-cols-2 !gap-4">
                         <div className="">
                         <div className="input-item input-item-name ltn__custom-icon">
                         <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Size in m2 (*only numbers)" name="product-size" type="text" />
@@ -385,7 +385,7 @@ const RealForm = () => {
                         <DesignedSelect items={floor_nums} />
                         </div>
                         </div>
-                        <div className="col-span-2">
+                        <div className="md:col-span-2">
                         <div className="input-item input-item-textarea ltn__custom-icon">
                         <FormTextBox
                         label="Owner/Agent notes (*not visible on front end)"
