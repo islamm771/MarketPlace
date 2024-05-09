@@ -64,7 +64,8 @@
     letter-spacing: 1px;
     font-size: 14px;
     color: #fff;
-    font-family: "Open Sans",sans-serif
+    font-family: "Open Sans",sans-serif;
+    z-index: 5;
 }
 
 .state-product-card .card__image-header img.img-transition {
@@ -207,10 +208,22 @@
 }
 .state-product-card .card__image-footer .price h6 span{
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
 }
 
 .state-product-card .card__image-footer p{
     font-size: 14px;
+}
+
+.real-card-swiper .swiper-pagination-bullet{
+    opacity: 0.5;
+    background-color: #ddd;
+}
+
+.real-card-swiper .swiper-pagination-bullet-active{
+    width: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    opacity: 1;
 }

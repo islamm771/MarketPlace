@@ -66,12 +66,6 @@ color: #1D1D1D;
 margin-bottom: 0;
 margin-right: 20px;
 }
-.market-product-card .owl-carousel .owl-item .gigs-info p img {
-width: 18px;
-height: 18px;
-margin-right: 6px;
-  display: block;
-}
 .market-product-card .gigs-card-footer p img {
 width: 18px;
 height: 18px;
@@ -327,6 +321,22 @@ z-index: 1;
   top: 6px;
   left: 5px;
 }
+
+
+.member-card-swiper .swiper-pagination-bullet{
+  opacity: 0.5;
+  background-color: #ddd;
+}
+
+.member-card-swiper .swiper-pagination-bullet-active{
+  width: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  opacity: 1;
+}
+
+
+
 
 
 /* .img-slider .owl-dots {

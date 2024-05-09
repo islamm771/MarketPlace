@@ -7,7 +7,11 @@ import img_map from "../../../../assests/marketplace/member_classifieds/card/map
 import { Link } from "react-router-dom";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { MdAdminPanelSettings } from "react-icons/md";
-
+import "swiper/css/navigation";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 
 const ClassifiedCard = (props) => {
     const {title,price} = props
@@ -42,23 +46,32 @@ const ClassifiedCard = (props) => {
     <div className='market-product-card'>
         <div className="gigs-grid">
             <div className="gigs-img">
-                <div className="img-slider owl-carousel">
-                    <div className="slide-images">
-                        <Link to="service-details.html">
-                            <img src={img_01} className="img-fluid" alt="Gigs" />
-                        </Link>
-                    </div>
-                    {/* <div class="slide-images">
-                        <a href="service-details.html">
-                            <img src="assets/img/gigs/gigs-06.jpg" class="img-fluid" alt="Gigs">
-                        </a>
-                    </div>
-                    <div class="slide-images">
-                        <a href="service-details.html">
-                            <img src="assets/img/gigs/gigs-07.jpg" class="img-fluid" alt="Gigs">
-                        </a>
-                    </div> */}
-                </div>
+                <Swiper
+                spaceBetween={30}
+                centeredSlides={true}
+                pagination={{
+                clickable: true,
+                }}
+                modules={[Pagination]}
+                className="member-card-swiper"
+                >
+                <SwiperSlide>
+                <Link to="service-details.html">
+                    <img src={img_01} className="img-fluid" alt="Gigs" />
+                </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                <Link to="service-details.html">
+                    <img src={img_01} className="img-fluid" alt="Gigs" />
+                </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                <Link to="service-details.html">
+                    <img src={img_01} className="img-fluid" alt="Gigs" />
+                </Link>
+                </SwiperSlide>
+                
+                </Swiper>
                 <div class="card-overlay-badge">
                     <a href="#"><span class="badge bg-warning"><FaRegStar />Featured</span></a>
                     {/* <a href="service.html"><span class="badge bg-danger"><FaMeteor />Hot</span></a> */}
@@ -126,3 +139,43 @@ const ClassifiedCard = (props) => {
 };
 
 export default ClassifiedCard;
+
+
+
+
+
+
+<div className="img-slider owl-carousel">
+                    <div className="slide-images">
+                        <Link to="service-details.html">
+                            <img src={img_01} className="img-fluid" alt="Gigs" />
+                        </Link>
+                    </div>
+                    {/* <div class="slide-images">
+                        <a href="service-details.html">
+                            <img src="assets/img/gigs/gigs-06.jpg" class="img-fluid" alt="Gigs">
+                        </a>
+                    </div>
+                    <div class="slide-images">
+                        <a href="service-details.html">
+                            <img src="assets/img/gigs/gigs-07.jpg" class="img-fluid" alt="Gigs">
+                        </a>
+                    </div> */}
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

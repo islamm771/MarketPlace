@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaBath,FaBed ,FaInbox ,FaMap,FaRegStar  } from "react-icons/fa";
 import { CiHeart  } from "react-icons/ci";
@@ -6,7 +7,11 @@ import "./RealCard.css"
 import img_01 from "../../../../assests/marketplace/real_estate/card/img-card-01.jpg"
 import company_img_01 from "../../../../assests/marketplace/real_estate/card/company-img-01.png"
 import avatar_img from "../../../../assests/avatar/01.jpg"
-
+import "swiper/css/navigation";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 
 
 const RealCard = (props) => {
@@ -44,7 +49,37 @@ const RealCard = (props) => {
         <div class="card__image card__box-v1">
             <div class="card__image-header h-250">
                 <div class="ribbon text-capitalize"><span><FaRegStar className="inline me-1" />featured</span></div>
-                <img src={img_01} alt="" class="img-fluid w100 img-transition" />
+
+                
+                {/* <img src={img_01} alt="" class="img-fluid w100 img-transition" /> */}
+                <Swiper
+                spaceBetween={30}
+                centeredSlides={true}
+                pagination={{
+                clickable: true,
+                }}
+                modules={[Pagination]}
+                className="real-card-swiper"
+                >
+                <SwiperSlide>
+                    <Link to="service-details.html">
+                        <img src={img_01} className="img-fluid" alt="Gigs" />
+                    </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Link to="service-details.html">
+                        <img src={img_01} className="img-fluid" alt="Gigs" />
+                    </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Link to="service-details.html">
+                        <img src={img_01} className="img-fluid" alt="Gigs" />
+                    </Link>
+                </SwiperSlide>
+                
+                </Swiper>
+
+
                 <div class="info"><a className="text-white font-[600]" href="#">{owner}</a></div>
                 <div class="fav-selection">
                     <input class="fav-checkbox" type="checkbox" />
