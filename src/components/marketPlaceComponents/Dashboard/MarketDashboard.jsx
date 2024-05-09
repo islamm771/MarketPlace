@@ -90,7 +90,7 @@ const MarketDashboard = () => {
                   {activeButton.title === "Add Listing" && <><MemberForm /></>}
                   {activeButton.title === "Classifieds Chat" && <div>Classifieds Chat</div>}
                   {activeButton.title === "Fav List" && <div>Fav List</div>}
-                  {activeButton.title === "Purchased" && <div>Purchased</div>}
+                  {activeButton.title === "Sold / Purchased" && <div><h3>Sold</h3> <h3>Purchased</h3> </div>}
                 </>
               )}
 
@@ -102,7 +102,7 @@ const MarketDashboard = () => {
                     {activeButton.title === "Add Property" && <><RealForm /></>}
                     {activeButton.title === "Property Chat" && <div>Classifieds Chat</div>}
                     {activeButton.title === "Fav List" && <RealFav>Fav List</RealFav>}
-                    {activeButton.title === "Purchased" && <div>Purchased</div>}
+                    {activeButton.title === "Sold / Purchased" && <div><h3>Sold</h3> <h3>Purchased</h3> </div>}
                   </>
               )}
 
@@ -114,7 +114,7 @@ const MarketDashboard = () => {
                     {activeButton.title === "Add Automotives" && <div><MemberForm /></div>}
                     {activeButton.title === "Automotives Chat" && <div>Classifieds Chat</div>}
                     {activeButton.title === "Fav List" && <div>Fav List</div>}
-                    {activeButton.title === "Purchased" && <div>Purchased</div>}
+                    {activeButton.title === "Sold / Purchased" && <div><h3>Sold</h3> <h3>Purchased</h3> </div>}
                   </>
               )}
             </div>

@@ -19,35 +19,26 @@ const RealCard = (props) => {
         return text
     }
 
-    // const priceFormater = (number) => {
-    //     // Convert number to string
-    //     let numStr = number.toString();
+    const priceFormater = (number) => {
+        // Convert number to string
+        let numStr = number.toString();
     
-    //     // Check if number is long enough to add commas
-    //     if (numStr.length > 3) {
-    //         // Add commas
-    //         let result = '';
-    //         for (let i = numStr.length - 1, j = 1; i >= 0; i--, j++) {
-    //             result = numStr[i] + result;
-    //             if (j % 3 === 0 && i !== 0) {
-    //                 result = ',' + result;
-    //             }
-    //         }
-    //         return result;
-    //     } 
-    //     // Number is short, no need for commas
-    //     return numStr;
-    // }
-
-    function priceFormater(num) {
-        if (Math.abs(num) < 999) {
-            return num;
-        }
-        if (Math.abs(num) < 999999) {
-            return Math.sign(num) * (Math.abs(num) / 1000).toFixed(1) + 'K';
-        }
-        return Math.sign(num) * (Math.abs(num) / 1000000).toFixed(1) + 'M';
+        // Check if number is long enough to add commas
+        if (numStr.length > 3) {
+            // Add commas
+            let result = '';
+            for (let i = numStr.length - 1, j = 1; i >= 0; i--, j++) {
+                result = numStr[i] + result;
+                if (j % 3 === 0 && i !== 0) {
+                    result = ',' + result;
+                }
+            }
+            return result;
+        } 
+        // Number is short, no need for commas
+        return numStr;
     }
+
   return (
     <div className='state-product-card'>
         <div class="card__image card__box-v1">
@@ -147,9 +138,9 @@ const RealCard = (props) => {
                 <img className="w-[50px] h-[50px] rounded-[50px]" src={company_img_01} alt="" /> {owner}
                 </div> )}
 
-                <div className="price ms-auto">
-                    {price && <h6 className="text-[14px]"><span>Price:</span> {priceFormater(price)} EGP</h6>}
-                    {downPayment && <h6 className="text-[14px]"><span>Down Payment:</span> {priceFormater(downPayment)} EGP</h6>}
+                <div className="price ms-auto text-center">
+                    {price && <h6 className="text-[14px]"><span>Price</span> {priceFormater(price)} EGP</h6>}
+                    {downPayment && <h6 className="text-[14px]"><span>Down Payment</span> {priceFormater(downPayment)} EGP</h6>}
                 </div>
             </div>
         </div>
