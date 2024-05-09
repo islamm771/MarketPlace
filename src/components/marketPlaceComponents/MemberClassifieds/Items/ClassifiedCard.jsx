@@ -1,16 +1,15 @@
 import React from "react";
-import "./ProductCard.css";
+import "./ClassifiedCard.css";
 import { FaStar,FaShareAlt,FaMeteor,FaRegStar  } from "react-icons/fa";
 import { CiHeart  } from "react-icons/ci";
-import img_01 from "../../../assests/marketplace/member_classifieds/card/gigs-01.jpg"
-import imgUser_01 from "../../../assests/marketplace/member_classifieds/card/user-01.jpg"
-import img_map from "../../../assests/marketplace/member_classifieds/card/map-pin-check.svg"
+import img_01 from "../../../../assests/marketplace/member_classifieds/card/gigs-01.jpg"
+import img_map from "../../../../assests/marketplace/member_classifieds/card/map-pin-check.svg"
 import { Link } from "react-router-dom";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { MdAdminPanelSettings } from "react-icons/md";
 
 
-const ProductCard = (props) => {
+const ClassifiedCard = (props) => {
     const {title,price} = props
 
     const textFormater = (text = "") =>{
@@ -72,7 +71,7 @@ const ProductCard = (props) => {
                 </div>
                 <div class="user-thumb">
 
-                    <div className="profile-image">
+                    <div className="profile-image bg-white rounded-[50%]">
                     <div className="profile-image-content">
                         <img className="profile-img" src="/img/avatar/01.jpg" alt="Profile" />
                         <RiVerifiedBadgeFill
@@ -126,4 +125,4 @@ const ProductCard = (props) => {
   );
 };
 
-export default ProductCard;
+export default ClassifiedCard;

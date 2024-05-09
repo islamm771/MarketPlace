@@ -1,9 +1,6 @@
 .dashboard-container .sidebar-menu-header {
-    height: 70px !important;
-    padding: 20px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 20px;
 }
 
 .dashboard-container .sidebar-menu-cont{
@@ -12,15 +9,23 @@
     transition: all 0.3s ease-in-out 0s;
 }
 .dashboard-container .sidebar-menu-cont.active{
-    height: 60px;
+    height: 236px;
 }
 
 .dashboard-container .sidebar-menu-cont button{
     display: block;
     background-color: transparent;
-    color: #ff6728;
+    color: #3e3f5e;
     width: fit-content;
     border-radius: 10px;
     padding: 5px 12px;
     margin: 0 auto;
+}
+
+.dashboard-container .sidebar-menu-cont button.active{
+    color: #ff6728;
+}
+
+.dashboard-container .account-hub-sidebar .sidebar-menu-header.active h4{
+    color: #ff6728;
 }

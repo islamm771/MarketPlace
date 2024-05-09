@@ -1,0 +1,46 @@
+.real-favList .favlist-dropdown{
+    position: absolute;
+    top: 36px;
+    left: 56px;
+    background-color: #ffff;
+    /* padding: 10px 0; */
+    width: 150px;
+    box-shadow: 0 1px 5px rgba(70, 70, 70, 0.2);
+    border-radius: 12px;
+    text-align: center;
+    gap: 15px;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.real-favList .favlist-dropdown p{
+    padding: 15px 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.real-favList .favlist-dropdown p:hover{
+    background-color: #fd6729;
+    color: #fff;
+}
+.real-favList .view-item svg{
+    /* display: block;
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid #eee;
+    color:#fd6729;
+    background-color: #fff;
+    border-radius: 0; */
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid #eee;
+    color: #fd6729;
+    background-color: #fff;
+    border-radius: 0;
+    font-size: 40px;
+}
+.real-favList .view-item svg.active{
+    background-color:#fd6729;
+    color:#fff
+}

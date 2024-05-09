@@ -64,13 +64,11 @@ const AddProduct = () => {
 }   
   return (
     <>
-        <div className="header-actions">
-            <button className="add-listing-product">
-               <a href="/marketplace/dashboard" className="text-white block p-3">
-                Add Listing +
-                </a> 
-               </button>
-        </div>
+        <button className="add-listing-product">
+            <a href="/marketplace/dashboard" className="text-white block p-3">
+            Add Listing +
+            </a> 
+        </button>
         <Modal
             title={null}
             open={isOpened}

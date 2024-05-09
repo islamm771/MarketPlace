@@ -448,10 +448,9 @@ const Header = () => {
 				</div>
 			</div>
 
-			{
-				location.pathname.includes("/marketplace") && 
+			<div className="header-actions">
 				<AddProduct />
-			}
+			</div>
 
 			<div className="header-mobile">
 				<svg className="action-list-item-icon icon-notification">

@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { ConfigProvider } from "antd";
 import "./App.css";
 import MarketPlace from "./pages/marketPlace/MarketPlace";
+import RealEstate from "./pages/marketPlace/RealEstate";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import MainPage from "./pages/PagesOutlet/Pages";
@@ -34,7 +35,8 @@ function App() {
             path="/"
             element={<MainPage />}
           >
-            <Route path="/marketplace" element={<MarketPlace />} />
+            <Route path="/" element={<MarketPlace />} />
+            <Route path="/marketplace/realestate" element={<RealEstate />} />
             <Route path="/marketplace/dashboard" element={<MarketDashboard />} />
           </Route>
         </Routes>

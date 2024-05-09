@@ -1,6 +1,8 @@
 import React from "react";
 import "./form-checkbox.css";
 import { Link } from "react-router-dom";
+import { FaCheck } from "react-icons/fa6";
+
 
 const FormCheckbox = ({ label, isChecked, setIsChecked, id, name }) => {
 	// const [isChecked, setIsChecked] = useState(false);
@@ -32,9 +34,10 @@ const FormCheckbox = ({ label, isChecked, setIsChecked, id, name }) => {
 				{/* <!-- CHECKBOX BOX --> */}
 				<div class="checkbox-box">
 					{/* <!-- ICON CROSS --> */}
-					<svg class="icon-cross">
+					{/* <svg >
 						<use xlinkHref="#svg-cross"></use>
-					</svg>
+					</svg> */}
+					<FaCheck class="icon-cross" />
 					{/* <!-- /ICON CROSS --> */}
 				</div>
 				{/* <!-- /CHECKBOX BOX --> */}

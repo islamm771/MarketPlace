@@ -6,12 +6,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-import ClassifiedsProducts from "../../components/marketPlaceComponents/Products/ClassifiedProducts/Products";
+import EstateProducts from "../../components/marketPlaceComponents/Products/EstateProducts/Products";
 
-const MarketPlace = () => {
+const RealEstate = () => {
 	return (
-    <div className="market-place-container">
-		
+    <div className="real-estate-container">
+    
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -43,10 +43,10 @@ const MarketPlace = () => {
       </Swiper>
 
       <section>
-        <ClassifiedsProducts/>
+        <EstateProducts />
       </section>
     </div>
   );
 };
 
-export default MarketPlace;
+export default RealEstate;
