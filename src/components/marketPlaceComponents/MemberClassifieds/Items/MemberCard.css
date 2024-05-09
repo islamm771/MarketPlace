@@ -8,6 +8,7 @@ box-shadow: 0px 4.4px 12px -1px rgba(222, 222, 222, 0.36);
 border: 1px solid #f8f8f8;
 border-radius: 10px;
 margin-bottom: 15px;
+overflow: hidden;
 }
 .market-product-card .gigs-grid a{
   text-decoration: none;

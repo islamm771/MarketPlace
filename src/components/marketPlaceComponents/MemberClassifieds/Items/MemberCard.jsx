@@ -1,5 +1,5 @@
-import React from "react";
-import "./ClassifiedCard.css";
+import React, { useState } from "react";
+import "./MemberCard.css";
 import { FaStar,FaShareAlt,FaMeteor,FaRegStar  } from "react-icons/fa";
 import { CiHeart  } from "react-icons/ci";
 import img_01 from "../../../../assests/marketplace/member_classifieds/card/gigs-01.jpg"
@@ -14,7 +14,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
 const ClassifiedCard = (props) => {
-    const {title,price} = props
+    const {title,price,isChecked} = props
+
+    const [isFav , setIsFav] = useState(isChecked)
 
     const textFormater = (text = "") =>{
         if(text.length > 35){
@@ -77,7 +79,7 @@ const ClassifiedCard = (props) => {
                     {/* <a href="service.html"><span class="badge bg-danger"><FaMeteor />Hot</span></a> */}
                 </div>
                 <div class="fav-selection">
-                    <input class="fav-checkbox" type="checkbox" />
+                    <input class="fav-checkbox" type="checkbox" checked={isFav} onChange={() => {setIsFav(!isFav)}} />
                     <a href="javascript:void(0);" class="fav-icon">
                         <CiHeart />
                     </a>

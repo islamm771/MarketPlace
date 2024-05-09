@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaBath,FaBed ,FaInbox ,FaMap,FaRegStar  } from "react-icons/fa";
@@ -15,7 +15,9 @@ import { Pagination } from "swiper/modules";
 
 
 const RealCard = (props) => {
-    const {title,price,owner,downPayment} = props
+    const {title,price,owner,downPayment,isFav,isSold} = props
+
+    const [isFavProduct, setisFav] = useState(isFav)
 
     const textFormater = (text = "") =>{
         if(text.length > 35){
@@ -48,7 +50,11 @@ const RealCard = (props) => {
     <div className='state-product-card'>
         <div class="card__image card__box-v1">
             <div class="card__image-header h-250">
-                <div class="ribbon text-capitalize"><span><FaRegStar className="inline me-1" />featured</span></div>
+                <div class="ribbon text-capitalize">
+                    {
+                        isSold? <span>Sold</span> :<span><FaRegStar className="inline me-1" />featured</span>
+                    }
+                </div>
 
                 
                 {/* <img src={img_01} alt="" class="img-fluid w100 img-transition" /> */}
@@ -82,7 +88,7 @@ const RealCard = (props) => {
 
                 <div class="info"><a className="text-white font-[600]" href="#">{owner}</a></div>
                 <div class="fav-selection">
-                    <input class="fav-checkbox" type="checkbox" />
+                    <input class="fav-checkbox" type="checkbox" onChange={() => {setisFav(!isFavProduct)}} checked={isFavProduct} />
                     <span href="#" class="fav-icon">
                         <CiHeart />
                     </span>
@@ -132,7 +138,7 @@ const RealCard = (props) => {
                     <div class="owner-profile-img w-[50px]">
                         <div className="relative">
                             <img className="rounded-[50%] border-[1px] border-solid border-[#fd6729] p-[1.5px]" src={avatar_img} alt="Profile" />
-
+                            
                             <svg stroke="currentColor" 
                                 fill="currentColor" stroke-width="0" viewBox="0 0 24 24" 
                                 class="owner-profile-verify absolute bottom-[-6px] right-0" color="#36e9f7" height="16" width="16" 
@@ -155,7 +161,19 @@ const RealCard = (props) => {
                                     13.1715L16.6593 7.51465L18.0735 8.92886L11.0024 15.9999L6.75977 11.7573Z">
                                 </path>
                             </svg>
-
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" 
+                            viewBox="0 0 24 24" color="#d7006a" 
+                            height="16" width="16" xmlns="http://www.w3.org/2000/svg"
+                            class="absolute top-[-2px] right-[-2px]"
+                            style={{color: "rgb(215, 0, 106)"}}>
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M17 11c.34 0 .67.04 1 .09V6.27L10.5 3 3 6.27v4.91c0 
+                            4.54 3.2 8.79 7.5 9.82.55-.13 1.08-.32 1.6-.55-.69-.98-1.1-2.17-1.1-3.45 0-3.31 
+                            2.69-6 6-6z"></path><path d="M17 13c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 
+                            1.38c.62 0 1.12.51 1.12 1.12s-.51 1.12-1.12 1.12-1.12-.51-1.12-1.12.5-1.12 1.12-1.12zm0 
+                            5.37c-.93 0-1.74-.46-2.24-1.17.05-.72 1.51-1.08 2.24-1.08s2.19.36 2.24 1.08c-.5.71-1.31 
+                            1.17-2.24 1.17z"></path>
+                            </svg>
                             <div class="badge-container absolute bottom-[-6px] left-0 w-[18px] h-[18px]">
                                 <div className="relative">
                                     <div className="absolute w-[18px] h-[18px]">
@@ -166,11 +184,25 @@ const RealCard = (props) => {
                             </div>
                         </div>
                     </div>
+                    <div className="owner-details">
+                        <h6 className="owner-details-title">
+                            Marina Valentine
+                            {/* <MdAdminPanelSettings size={20} color={"#d7006a"} /> */}
+                        </h6>
+
+                        <p className="owner-details-text">
+                            Marketing Manager
+                        </p>
+                        <p className="owner-details-text">Brandmarks</p>
+                    </div>
                     
                     </div>)}
 
                 {owner.toLowerCase() != 'owner' && (  <div className="profile-wrapper flex items-center gap-[10px]"> 
-                <img className="w-[50px] h-[50px] rounded-[50px]" src={company_img_01} alt="" /> {owner}
+                <img className="w-[50px] h-[50px] rounded-[50px]" src={company_img_01} alt="" /> 
+                <h6 className="">
+                    {owner}
+                </h6>
                 </div> )}
 
                 <div className="price ms-auto">

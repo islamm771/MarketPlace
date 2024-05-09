@@ -1,0 +1,68 @@
+.market-dashboard-favList > *{
+    font-family: "Rajdhani", sans-serif;
+}
+.market-dashboard-favList .favlist-dropdown{
+    position: relative;
+    width: 180px;
+    border: 1px solid #11d8dc !important;
+    padding: 7px 15px;
+    border-radius: 12px;
+}
+.market-dashboard-favList .favlist-dropdown:focus{
+    border: 1px solid #fd6729 !important;
+}
+.market-dashboard-favList .favlist-dropdown span{
+    cursor: pointer;
+    display: block;
+    font-weight: 500;
+}
+.market-dashboard-favList .favlist-dropdown .list{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #ffff;
+    width: 100%;
+    box-shadow: 0 1px 5px rgba(70, 70, 70, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 5;
+    opacity: 0;
+    transition: 0.5s;
+    height: 0;
+}
+.market-dashboard-favList .favlist-dropdown .list.show{
+    opacity: 1;
+    height: 324px;
+}
+.market-dashboard-favList .favlist-dropdown .list li{
+    padding: 15px 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.market-dashboard-favList .favlist-dropdown li:hover,
+.market-dashboard-favList .favlist-dropdown li.active{
+    background-color: #fd6729;
+    color: #fff;
+}
+.market-dashboard-favList .view-item svg{
+    /* display: block;
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid #eee;
+    color:#fd6729;
+    background-color: #fff;
+    border-radius: 0; */
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid #eee;
+    color: #fd6729;
+    background-color: #fff;
+    border-radius: 0;
+    font-size: 40px;
+}
+.market-dashboard-favList .view-item svg.active{
+    background-color:#fd6729;
+    color:#fff
+}

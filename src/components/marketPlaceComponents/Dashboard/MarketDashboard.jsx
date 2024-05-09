@@ -10,6 +10,13 @@ import "swiper/css/pagination";
 import SideBarDash from "./SideBarDashboard/SideBarDash";
 import RealForm from "../RealEstate/Form/RealForm";
 import RealFav from "../RealEstate/Favourites/RealFav";
+import FavList from "./FavList/FavList";
+import MemberFav from "../MemberClassifieds/Favourites/MemberFav";
+import SoldPurchased from "./Sold-Purchased/SoldPurchased";
+import RealSold from "../RealEstate/Sold-Purchased/RealSold";
+import RealPurchased from "../RealEstate/Sold-Purchased/RealPurchased";
+import MyListings from "./MyLisitngs/MyListings";
+import RealListings from "../RealEstate/Listings/RealListings";
 
 const MarketDashboard = () => {
   const [activeButton , setActiveButton] = useState({
@@ -89,8 +96,8 @@ const MarketDashboard = () => {
                   {activeButton.title === "My Listings" && <div>My List</div>}
                   {activeButton.title === "Add Listing" && <><MemberForm /></>}
                   {activeButton.title === "Classifieds Chat" && <div>Classifieds Chat</div>}
-                  {activeButton.title === "Fav List" && <div>Fav List</div>}
-                  {activeButton.title === "Sold / Purchased" && <div><h3>Sold</h3> <h3>Purchased</h3> </div>}
+                  {activeButton.title === "Fav List" && <FavList> <MemberFav /> </FavList>}
+                  {activeButton.title === "Sold / Purchased" && <SoldPurchased></SoldPurchased>}
                 </>
               )}
 
@@ -98,11 +105,11 @@ const MarketDashboard = () => {
               {activeButton.parent === "Real Estate" && (
                   <>
                     {activeButton.title === "Dashboard" && <div>Dashboard</div>}
-                    {activeButton.title === "My Properties" && <div>My List</div>}
+                    {activeButton.title === "My Properties" && <MyListings><RealListings/></MyListings>}
                     {activeButton.title === "Add Property" && <><RealForm /></>}
                     {activeButton.title === "Property Chat" && <div>Classifieds Chat</div>}
-                    {activeButton.title === "Fav List" && <RealFav>Fav List</RealFav>}
-                    {activeButton.title === "Sold / Purchased" && <div><h3>Sold</h3> <h3>Purchased</h3> </div>}
+                    {activeButton.title === "Fav List" && <FavList> <RealFav /> </FavList>}
+                    {activeButton.title === "Sold / Purchased" && <SoldPurchased sold={<RealSold />} purchased={<RealPurchased />}  />}
                   </>
               )}
 
@@ -114,7 +121,7 @@ const MarketDashboard = () => {
                     {activeButton.title === "Add Automotives" && <div><MemberForm /></div>}
                     {activeButton.title === "Automotives Chat" && <div>Classifieds Chat</div>}
                     {activeButton.title === "Fav List" && <div>Fav List</div>}
-                    {activeButton.title === "Sold / Purchased" && <div><h3>Sold</h3> <h3>Purchased</h3> </div>}
+                    {activeButton.title === "Sold / Purchased" && <SoldPurchased></SoldPurchased>}
                   </>
               )}
             </div>

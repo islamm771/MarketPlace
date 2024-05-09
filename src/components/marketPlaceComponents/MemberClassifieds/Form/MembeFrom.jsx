@@ -103,15 +103,15 @@ const MemberForm = () => {
                 </div>
             </div> */}
 
-            <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Product name" name="product-name" type="text" />
+            <FormInput label="Product name" name="product-name" type="text" />
 
             <div className="sell-product-form-item">
-                <DesignedSelect items={countries} />
-                <DesignedSelect items={cities} />
+                <Select optionsArray={countries} defaultValue={"Countries"} />
+                <Select optionsArray={cities} defaultValue={"Cities"} />
             </div>
 
             <div className="sell-product-form-item">
-                <DesignedSelect items={brands} />
+                <Select optionsArray={brands} defaultValue={"Brands"} />
                 <div class="product-switch w-[100%] ms-1 flex items-center justify-between">
                     <p style={{ fontSize: "0.95rem", fontWeight: "bold" }}>
                     Is The Item Condition Used?
@@ -139,22 +139,21 @@ const MemberForm = () => {
                 label="Description"
                 name="desc"
                 type="text"
-                className="shadow !border-white focus:!border-[#fd6729]"
                 cols={4}
                 rows={4}
                 />
               </div>
                 <div class="col-span-2 md:col-span-1">
-                  <DesignedSelect items={categories} />
+                  <Select optionsArray={categories} defaultValue={"Categories"} />
                 </div>
                 <div class="col-span-2 md:col-span-1">
-                  <DesignedSelect items={categories} />
+                  <Select optionsArray={categories} defaultValue={"Sub-Categories"} />
                 </div>
             </div>
 
             <div className="sell-product-form-item">
-                <DesignedSelect items={currencies} />
-                <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Price" name="price" type="number" />
+                <Select optionsArray={currencies} defaultValue={"Currencies"} />
+                <FormInput label="Price" name="price" type="number" />
             </div>
 
             <div className="sell-product-form-item">
