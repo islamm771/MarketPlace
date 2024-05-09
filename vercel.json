@@ -1,9 +1,16 @@
 {
     "routes":[
         {
-            "src":"/(.*)",
+            "src":"/",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/dashboard",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/realestate",
             "dest" : "/"
         }
-        
     ]
 }
