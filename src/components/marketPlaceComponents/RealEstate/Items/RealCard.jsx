@@ -138,7 +138,7 @@ const RealCard = (props) => {
                 <img className="w-[50px] h-[50px] rounded-[50px]" src={company_img_01} alt="" /> {owner}
                 </div> )}
 
-                <div className="price ms-auto text-center">
+                <div className="price ms-auto">
                     {price && <h6 className="text-[14px]"><span>Price</span> {priceFormater(price)} EGP</h6>}
                     {downPayment && <h6 className="text-[14px]"><span>Down Payment</span> {priceFormater(downPayment)} EGP</h6>}
                 </div>
