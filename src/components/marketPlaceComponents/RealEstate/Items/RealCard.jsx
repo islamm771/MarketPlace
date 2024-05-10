@@ -47,9 +47,8 @@ const RealCard = (props) => {
     }
 
   return (
-    <div className='state-product-card'>
-        <div class="card__image card__box-v1">
-            <div class="card__image-header h-250">
+    <div className='state-product-card market-card grid-rows-12'>
+            <div class="card__image-header">
                 <div class="ribbon text-capitalize">
                     {
                         isSold? <span>Sold</span> :<span><FaRegStar className="inline me-1" />featured</span>
@@ -65,9 +64,9 @@ const RealCard = (props) => {
                 clickable: true,
                 }}
                 modules={[Pagination]}
-                className="real-card-swiper"
+                className="real-card-swiper h-[100%]"
                 >
-                <SwiperSlide>
+                <SwiperSlide className="relative">
                     <Link to="service-details.html">
                         <img src={img_01} className="img-fluid" alt="Gigs" />
                     </Link>
@@ -210,7 +209,6 @@ const RealCard = (props) => {
                     {downPayment && <h6 className="text-[14px]"><span>Down Payment</span> {priceFormater(downPayment)} EGP</h6>}
                 </div>
             </div>
-        </div>
     </div>
   );
 };

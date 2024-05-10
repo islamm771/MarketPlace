@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import MainPage from "./pages/PagesOutlet/Pages";
 import MarketDashboard from "./components/marketPlaceComponents/Dashboard/MarketDashboard";
+import Automotives from "./pages/marketPlace/Automotives";
 
 function App() {
   AOS.init();
@@ -37,6 +38,7 @@ function App() {
           >
             <Route path="/" element={<MarketPlace />} />
             <Route path="/marketplace/realestate" element={<RealEstate />} />
+            <Route path="/marketplace/automotive" element={<Automotives />} />
             <Route path="/marketplace/dashboard" element={<MarketDashboard />} />
           </Route>
         </Routes>

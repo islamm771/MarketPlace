@@ -45,7 +45,7 @@ const ClassifiedCard = (props) => {
         return numStr;
     }
   return (
-    <div className='market-product-card'>
+    <div className='member-product-card market-card'>
         <div className="gigs-grid">
             <div className="gigs-img">
                 <Swiper
@@ -147,23 +147,6 @@ export default ClassifiedCard;
 
 
 
-<div className="img-slider owl-carousel">
-                    <div className="slide-images">
-                        <Link to="service-details.html">
-                            <img src={img_01} className="img-fluid" alt="Gigs" />
-                        </Link>
-                    </div>
-                    {/* <div class="slide-images">
-                        <a href="service-details.html">
-                            <img src="assets/img/gigs/gigs-06.jpg" class="img-fluid" alt="Gigs">
-                        </a>
-                    </div>
-                    <div class="slide-images">
-                        <a href="service-details.html">
-                            <img src="assets/img/gigs/gigs-07.jpg" class="img-fluid" alt="Gigs">
-                        </a>
-                    </div> */}
-                </div>
 
 
 

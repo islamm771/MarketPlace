@@ -56,6 +56,7 @@
 }
 .market-dashboard-favList .favlist-dropdown li.active svg{
     display: block;
+    color: #fd6729;
 }
 .market-dashboard-favList .view-item svg{
     /* display: block;
@@ -78,4 +79,55 @@
 .market-dashboard-favList .view-item svg.active{
     background-color:#fd6729;
     color:#fff
+}
+
+.list-items > .grid{
+    grid-template-columns: 100% !important;
+}
+
+.list-items > .grid .state-product-card{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: repeat(12, minmax(0, 1fr));
+    height: 290px;
+}
+.list-items > .grid .state-product-card .card__image-header{
+    grid-row: span 12 / span 12;
+    grid-column: span 7 / span 7;
+}
+.list-items > .grid .state-product-card .card__image-body,
+.list-items > .grid .state-product-card .card__image-footer{
+    grid-column: span 5 / span 5;
+}
+.list-items > .grid .state-product-card .card__image-body{
+    grid-row: span 9 / span 9;
+}
+.list-items > .grid .state-product-card .card__image-footer{
+    grid-row: span 3 / span 3;
+}
+.list-items > .grid .state-product-card .card__image-body .badge{
+    margin-bottom: 20px;
+}
+.list-items > .grid .state-product-card .card__image-body ul{
+    gap: 30px;
+}
+.list-items > .grid .state-product-card .card__image-body ul li span{
+    font-size: 16px;
+}
+
+.list-items .member-product-card .gigs-grid{
+    display: flex !important;
+    /* height: 400px; */
+}
+.list-items .member-product-card .gigs-grid .gigs-img{
+    width: 55%;
+    height: 100%;
+}
+.list-items .member-product-card .gigs-grid .gigs-content{
+    width: 45%;
+    height: 100%;
+}
+
+.list-items .member-product-card .gigs-grid .user-thumb{
+    bottom: 0;
 }

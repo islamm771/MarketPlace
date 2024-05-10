@@ -45,11 +45,11 @@ const FavList = (props) => {
     }
 
     const renderSortList = sorts.map( li =>( 
-      <li data-value={li} class={`${sort == li ? "active" : ""}`} onClick={(e) => handleSort(e)}>{li} <FaCheck className='text-[#fff] hidden' /></li>
+      <li data-value={li} class={`${sort == li ? "active" : ""}`} onClick={(e) => handleSort(e)}>{li} <FaCheck className='hidden' /></li>
     ) )
 
     const renderPerPageList = perPages.map( li =>( 
-      <li data-value={li} class={`${perPage == li ? "active" : ""}`} onClick={(e) => handlePerPage(e)}>{li}</li>
+      <li data-value={li} class={`${perPage == li ? "active" : ""}`} onClick={(e) => handlePerPage(e)}>{li} <FaCheck className='hidden' /></li>
     ) )
 
   return (
@@ -93,7 +93,7 @@ const FavList = (props) => {
             </ul>
         </nav>
 
-        <div className="render-favCards pt-[15px]">
+        <div className={`${active['list-item'] ? "list-items " : "grid-items "}render-favCards pt-[15px]`}>
           {props.children}
         </div>
       </div>

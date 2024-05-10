@@ -17,6 +17,7 @@ import RealSold from "../RealEstate/Sold-Purchased/RealSold";
 import RealPurchased from "../RealEstate/Sold-Purchased/RealPurchased";
 import MyListings from "./MyLisitngs/MyListings";
 import RealListings from "../RealEstate/Listings/RealListings";
+import AutoListings from "../Automotives/Listings/AutoListings";
 
 const MarketDashboard = () => {
   const [activeButton , setActiveButton] = useState({
@@ -117,7 +118,7 @@ const MarketDashboard = () => {
               {activeButton.parent === "Automotives" && (
                   <>
                     {activeButton.title === "Dashboard" && <div>Dashboard</div>}
-                    {activeButton.title === "My Automotives" && <div>My List</div>}
+                    {activeButton.title === "My Automotives" && <MyListings><AutoListings /></MyListings>}
                     {activeButton.title === "Add Automotives" && <div><MemberForm /></div>}
                     {activeButton.title === "Automotives Chat" && <div>Classifieds Chat</div>}
                     {activeButton.title === "Fav List" && <div>Fav List</div>}
