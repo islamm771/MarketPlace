@@ -88,6 +88,7 @@ const floor_nums = [
     { id:4,value:"4" },
     { id:4,value:"5" },
 ]
+
 const energy_classes = [
     { id:1,value:"A+" },
     { id:2,value:"A" },
@@ -96,6 +97,14 @@ const energy_classes = [
     { id:4,value:"D" },
     { id:4,value:"E" },
 ]
+
+const agents = [
+    { id:1,value:"Agent 1" },
+    { id:2,value:"Agent 2" },
+    { id:3,value:"Agent 3" },
+    { id:4,value:"Agent 4" },
+]
+
 
 
 
@@ -139,18 +148,8 @@ const RealForm = () => {
                                 </div>
                             </div>
                             <div className="col-md-6">
-                                <div className="input-item input-item-name">
-                                    <FormInput  label="Before Price Label (ex: from)" name="product-price-BLabel" type="text" />
-                                </div>
-                            </div>
-                            <div className="col-md-6">
                             <div className="input-item input-item-name">
-                                <FormInput  label="Yearly Tax Rate" name="product-price-tax" type="text" />
-                            </div>
-                            </div>
-                            <div className="col-md-6">
-                            <div className="input-item input-item-name">
-                                <FormInput  label="Homeowners Association Fee(monthly)" name="product-ownerFee" type="text" />
+                                <FormInput  label="Monthly Installment" name="product-price-tax" type="text" />
                             </div>
                             </div>
                             <div className="col-md-6">
@@ -165,11 +164,6 @@ const RealForm = () => {
                             <div className="input-item">
                                 <Select optionsArray={categories.type} defaultValue={"Types"} />
                             </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6">
-                                <div className="input-item">
-                                    <Select optionsArray={categories.pay} defaultValue={"Pay"} />
-                                </div>
                             </div>
                             <div className="col-lg-4 col-md-6">
                                 <div className="input-item">
@@ -327,11 +321,7 @@ const RealForm = () => {
                         <FormInput  label="Bathrooms (*only numbers)" name="product-bathrooms" type="text" />
                         </div>
                         </div>
-                        <div className="">
-                        <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput  label="Custom ID (*text)" name="product-size" type="text" />
-                        </div>
-                        </div>
+                        
                         <div className="">
                         <div className="input-item input-item-name ltn__custom-icon">
                         <FormInput  label="Garages (*text)" name="product-size" type="text" />
@@ -342,11 +332,7 @@ const RealForm = () => {
                         <FormInput  label="Year Built (*numeric)" name="product-size" type="text" />
                         </div>
                         </div>
-                        <div className="col-md-6">
-                        <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput  label="Garage Size (*text)" name="product-size" type="text" />
-                        </div>
-                        </div>
+                        
                         <div className="col-md-6">
                         <div className="input-item input-item-name ltn__custom-icon">
                         <FormInput  label="Available from (*date)" name="product-size" type="text" />
@@ -358,22 +344,6 @@ const RealForm = () => {
                         </div>
                         </div>
                         <div className="col-md-6">
-                        <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput  label="Extra Details (*text)" name="product-size" type="text" />
-                        </div>
-                        </div>
-                        <div className="col-md-6">
-                        <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput  label="Roofing (*text)" name="product-size" type="text" />
-
-                        </div>
-                        </div>
-                        <div className="col-md-6">
-                        <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput  label="Exterior Material (*text)" name="product-size" type="text" />
-                        </div>
-                        </div>
-                        <div className="col-md-6">
                         <div className="input-item">
                         <Select optionsArray={structure_types} defaultValue={"Structure Types"} />
                         </div>
@@ -381,6 +351,11 @@ const RealForm = () => {
                         <div className="col-md-6">
                         <div className="input-item">
                         <Select optionsArray={floor_nums} defaultValue={"Floor no"} />
+                        </div>
+                        </div>
+                        <div className="col-md-6">
+                        <div className="input-item">
+                        <Select optionsArray={agents} defaultValue={"Agents"} />
                         </div>
                         </div>
                         <div className="md:col-span-2">

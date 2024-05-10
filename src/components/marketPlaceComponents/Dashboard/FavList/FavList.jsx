@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import "./FavList.css"
 import {IoGridSharp } from "react-icons/io5";
 import { FaThList } from "react-icons/fa";
-import { FaChevronDown } from "react-icons/fa6";
+import { FaChevronDown,FaCheck } from "react-icons/fa6";
+
 
 const sorts=[
     "Default Sorting",
@@ -44,7 +45,7 @@ const FavList = (props) => {
     }
 
     const renderSortList = sorts.map( li =>( 
-      <li data-value={li} class={`${sort == li ? "active" : ""}`} onClick={(e) => handleSort(e)}>{li}</li>
+      <li data-value={li} class={`${sort == li ? "active" : ""}`} onClick={(e) => handleSort(e)}>{li} <FaCheck className='text-[#fff] hidden' /></li>
     ) )
 
     const renderPerPageList = perPages.map( li =>( 
@@ -55,13 +56,13 @@ const FavList = (props) => {
     <div className='market-dashboard-favList'>
       <div className="market-dashboard-favList-container ">
         <nav className='bg-white rounded-[12px] p-[20px] mt-[20px]'> 
-            <ul class="flex items-center" role="tablist">
+            <ul class="grid !grid-cols-2 lg:!grid-cols-4" role="tablist">
 
-              <li class="sort-by me-3 relative">
+              <li class="sort-by relative">
                   <div className={`${activeDropSort ? "open " : ""}favlist-dropdown`} onClick={() => {setActiveDropSort(!activeDropSort)}}>
                     <span>
                       {sort}
-                      <FaChevronDown className='inline ms-2 absolute top-[12px] right-[15px]' /> 
+                      <FaChevronDown className='inline ms-2 absolute top-[12px] right-[15px] text-[#fd6729]' /> 
                     </span>
                     <ul class={`${activeDropSort ? "show " : ""}sorts-list list`}>
                       {renderSortList}
@@ -69,23 +70,22 @@ const FavList = (props) => {
                   </div>
               </li>
 
-              <li class="per-page mr-auto relative">
+              <li class="per-page relative">
                   <div className={`${activeDropPage ? "open " : ""}favlist-dropdown`} onClick={() => {setActiveDropPage(!activeDropPage)}}>
                     <span>
                       {perPage}
-                      <FaChevronDown className='inline ms-2 absolute top-[12px] right-[15px]' /> 
+                      <FaChevronDown className='inline ms-2 absolute top-[12px] right-[15px] text-[#fd6729]' /> 
                     </span>
                     <ul class={`${activeDropPage ? "show " : ""}perPages-list list`}>
                       {renderPerPageList}
                     </ul>
                   </div>
               </li>
-              <li class="view-item cursor-pointer" >
+              <li></li>
+              <li class="view-item cursor-pointer flex justify-end gap-0">
                 <span onClick={() => handleClick("list-item")}>
-                  <FaThList className={`${active['list-item'] ? 'active' : ''}`} id='list-item'/>
-                  </span>
-              </li>
-              <li class="view-item cursor-pointer">
+                    <FaThList className={`${active['list-item'] ? 'active' : ''}`} id='list-item'/>
+                    </span>
                 <span onClick={() => handleClick("grid-item")}>
                   <IoGridSharp className={`${active['grid-item'] ? 'active' : ''}`} id='grid-item'/>
                   </span>

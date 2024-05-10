@@ -3,7 +3,7 @@
 }
 .market-dashboard-favList .favlist-dropdown{
     position: relative;
-    width: 180px;
+    width: 100%;
     border: 1px solid #11d8dc !important;
     padding: 7px 15px;
     border-radius: 12px;
@@ -35,21 +35,27 @@
 }
 .market-dashboard-favList .favlist-dropdown .sorts-list.show{
     opacity: 1;
-    height: 324px;
+    height: 268px;
 }
 .market-dashboard-favList .favlist-dropdown .perPages-list.show{
     opacity: 1;
-    height: 270px;
+    height: 222px;
 }
 .market-dashboard-favList .favlist-dropdown .list li{
-    padding: 15px 10px;
+    padding: 10px 10px;
     font-weight: 500;
     cursor: pointer;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.market-dashboard-favList .favlist-dropdown li:hover,
-.market-dashboard-favList .favlist-dropdown li.active{
+.market-dashboard-favList .favlist-dropdown li:hover{
     background-color: #fd6729;
     color: #fff;
+}
+.market-dashboard-favList .favlist-dropdown li.active svg{
+    display: block;
 }
 .market-dashboard-favList .view-item svg{
     /* display: block;
