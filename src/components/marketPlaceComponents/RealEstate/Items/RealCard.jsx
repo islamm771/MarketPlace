@@ -184,7 +184,7 @@ const RealCard = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className="owner-details">
+                    <div className="owner-details pt-[2.5px]">
                         <h6 className="owner-details-title">
                             Marina Valentine
                             {/* <MdAdminPanelSettings size={20} color={"#d7006a"} /> */}

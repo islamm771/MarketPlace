@@ -4,7 +4,6 @@ import FormInput from "../../../ui/formInput/FormInput";
 import Select from "../../../ui/select/Select";
 import FormTextBox from "../../../ui/formTextBox/FormTextBox";
 import { FaImage } from "react-icons/fa6";
-import DesignedSelect from '../../../ui/HeadlessSelect/Select';
 import "./RealForm.css"
 import FormCheckbox from '../../../ui/formCheckbox/FormCheckbox';
 
@@ -114,14 +113,14 @@ const RealForm = () => {
                         <h6 className='my-[20px]'>Property Description</h6>
                         <div className="grid !gap-4">
                             <div className="input-item input-item-name">
-                                <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Title" name="product-title" type="text" />
+                                <FormInput label="Title" name="product-title" type="text" />
                             </div>
                             <div className="input-item input-item-textarea">
                                 <FormTextBox
                                     label="Description"
                                     name="desc"
                                     type="text"
-                                    className="shadow !border-white focus:!border-[#fd6729]"
+                                    
                                     cols={4}
                                     rows={4}
                                     />                                
@@ -131,32 +130,32 @@ const RealForm = () => {
                         <div className="grid !grid-cols-1  md:!grid-cols-2 lg:!grid-cols-3 !gap-4">
                             <div className="col-md-6">
                                 <div className="input-item input-item-name">
-                                    <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Price" name="product-price" type="number" />
+                                    <FormInput  label="Price" name="product-price" type="number" />
                                 </div>
                             </div>
                             <div className="col-md-6">
                                 <div className="input-item input-item-name">
-                                    <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="After Price Label (ex: /month)" name="product-price-Alabel" type="text" />
+                                    <FormInput  label="After Price Label (ex: /month)" name="product-price-Alabel" type="text" />
                                 </div>
                             </div>
                             <div className="col-md-6">
                                 <div className="input-item input-item-name">
-                                    <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Before Price Label (ex: from)" name="product-price-BLabel" type="text" />
+                                    <FormInput  label="Before Price Label (ex: from)" name="product-price-BLabel" type="text" />
                                 </div>
                             </div>
                             <div className="col-md-6">
                             <div className="input-item input-item-name">
-                                <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Yearly Tax Rate" name="product-price-tax" type="text" />
+                                <FormInput  label="Yearly Tax Rate" name="product-price-tax" type="text" />
                             </div>
                             </div>
                             <div className="col-md-6">
                             <div className="input-item input-item-name">
-                                <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Homeowners Association Fee(monthly)" name="product-ownerFee" type="text" />
+                                <FormInput  label="Homeowners Association Fee(monthly)" name="product-ownerFee" type="text" />
                             </div>
                             </div>
                             <div className="col-md-6">
                                 <div className="input-item input-item-name">
-                                    <DesignedSelect style={{marginTop:15}} items={currencies} />
+                                    <Select optionsArray={currencies} defaultValue={"Currencies"} />
                                 </div>
                             </div>
                         </div>
@@ -164,18 +163,18 @@ const RealForm = () => {
                         <div className="grid !grid-cols-1  md:!grid-cols-2 lg:!grid-cols-3 !gap-4">
                             <div className="col-lg-4 col-md-6">
                             <div className="input-item">
-                                <DesignedSelect items={categories.type} />
+                                <Select optionsArray={categories.type} defaultValue={"Types"} />
                             </div>
                             </div>
                             <div className="col-lg-4 col-md-6">
                                 <div className="input-item">
-                                    <DesignedSelect items={categories.pay} />
+                                    <Select optionsArray={categories.pay} defaultValue={"Pay"} />
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6">
-                            <div className="input-item">
-                                <DesignedSelect items={categories.status} />
-                            </div>
+                                <div className="input-item">
+                                    <Select optionsArray={categories.status} defaultValue={"Status"} />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -210,12 +209,12 @@ const RealForm = () => {
                         <div className="grid md:!grid-cols-2">
                             <div className="col-md-6">
                             <div className="input-item">
-                                <DesignedSelect items={videoSources} />
+                                <Select optionsArray={videoSources} defaultValue={"Video Sources"} />
                             </div>
                             </div>
                             <div className="col-md-6">
                             <div className="input-item input-item-name">
-                                <FormInput type="text" className="shadow !border-white focus:!border-[#fd6729]" label="Embed Video ID" name="product-videoID" />
+                                <FormInput type="text"  label="Embed Video ID" name="product-videoID" />
                             </div>
                             </div>
                         </div>
@@ -225,7 +224,6 @@ const RealForm = () => {
                                 label="Virtual Tour"
                                 name="desc"
                                 type="text"
-                                className="shadow !border-white focus:!border-[#fd6729]"
                                 cols={4}
                                 rows={4}
                                 /> 
@@ -240,33 +238,33 @@ const RealForm = () => {
                         <div className="grid !grid-cols-1 md:!grid-cols-2 !gap-4">
                             <div className="col-md-6">
                             <div className="input-item input-item-name ltn__custom-icon">
-                                <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Address" name="product-addr" type="text" />
+                                <FormInput  label="Address" name="product-addr" type="text" />
                             </div>
                             </div>
                             <div className="col-md-6">
                             <div className="input-item input-item-name ltn__custom-icon">
-                                <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Country" name="product-country" type="text" />
+                                <FormInput  label="Country" name="product-country" type="text" />
                             </div>
                             </div>
                             <div className="col-md-6">
                             <div className="input-item input-item-name ltn__custom-icon">
-                                <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="County / State" name="product-state" type="text" />
+                                <FormInput  label="County / State" name="product-state" type="text" />
                             </div>
                             </div>
                             <div className="col-md-6">
                             <div className="input-item input-item-name ltn__custom-icon">
-                                <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="City" name="product-city" type="text" />
+                                <FormInput  label="City" name="product-city" type="text" />
 
                             </div>
                             </div>
                             <div className="col-md-6">
                             <div className="input-item input-item-name ltn__custom-icon">
-                                <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Neighborhood" name="product-neighborhood" type="text" />
+                                <FormInput  label="Neighborhood" name="product-neighborhood" type="text" />
                             </div>
                             </div>
                             <div className="col-md-6">
                             <div className="input-item input-item-name ltn__custom-icon">
-                                <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Zip" name="product-zip" type="text" />
+                                <FormInput  label="Zip" name="product-zip" type="text" />
                             </div>
                             </div>
                             <div className="md:!col-span-2">
@@ -276,22 +274,22 @@ const RealForm = () => {
                             </div>
                             <div className="col-md-6">
                             <div className="input-item input-item-name ltn__custom-icon">
-                                <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Latitude (for Google Maps)" name="product-latitude" type="text" />
+                                <FormInput  label="Latitude (for Google Maps)" name="product-latitude" type="text" />
 
                             </div>
                             </div>
                             <div className="col-md-6">
                             <div className="input-item input-item-name ltn__custom-icon">
-                                <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Longitude (for Google Maps)" name="product-longtitude" type="text" />
+                                <FormInput  label="Longitude (for Google Maps)" name="product-longtitude" type="text" />
 
                             </div>
                             </div>
                             <div className="col-md-6 pt-3">
-                            <FormCheckbox label={"Enable Google Street View"} id={"Enable-Google-Street-View"} />
+                                <FormCheckbox label={"Enable Google Street View"} id={"Enable-Google-Street-View"} />
                             </div>
                             <div className="col-md-6">
                             <div className="input-item input-item-name ltn__custom-icon">
-                                <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Google Street View - Camera Angle (value from 0 to 360)" name="product-title" type="text" />
+                                <FormInput  label="Google Street View - Camera Angle (value from 0 to 360)" name="product-title" type="text" />
                             </div>
                             </div>
                         </div>
@@ -306,83 +304,83 @@ const RealForm = () => {
                         <div className="grid !grid-cols-1 md:!grid-cols-2 !gap-4">
                         <div className="">
                         <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Size in m2 (*only numbers)" name="product-size" type="text" />
+                        <FormInput  label="Size in m2 (*only numbers)" name="product-size" type="text" />
                         </div>
                         </div>
                         <div className="">
                         <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Lot Size in m2 (*only numbers)" name="product-lotSize" type="text" />
+                        <FormInput  label="Lot Size in m2 (*only numbers)" name="product-lotSize" type="text" />
                         </div>
                         </div>
                         <div className="">
                         <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Rooms (*only numbers)" name="product-rooms" type="text" />
+                        <FormInput  label="Rooms (*only numbers)" name="product-rooms" type="text" />
                         </div>
                         </div>
                         <div className="">
                         <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Bedrooms (*only numbers)" name="product-bedrooms" type="text" />
+                        <FormInput  label="Bedrooms (*only numbers)" name="product-bedrooms" type="text" />
                         </div>
                         </div>
                         <div className="">
                         <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Bathrooms (*only numbers)" name="product-bathrooms" type="text" />
+                        <FormInput  label="Bathrooms (*only numbers)" name="product-bathrooms" type="text" />
                         </div>
                         </div>
                         <div className="">
                         <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Custom ID (*text)" name="product-size" type="text" />
+                        <FormInput  label="Custom ID (*text)" name="product-size" type="text" />
                         </div>
                         </div>
                         <div className="">
                         <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Garages (*text)" name="product-size" type="text" />
+                        <FormInput  label="Garages (*text)" name="product-size" type="text" />
                         </div>
                         </div>
                         <div className="">
                         <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Year Built (*numeric)" name="product-size" type="text" />
+                        <FormInput  label="Year Built (*numeric)" name="product-size" type="text" />
                         </div>
                         </div>
                         <div className="col-md-6">
                         <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Garage Size (*text)" name="product-size" type="text" />
+                        <FormInput  label="Garage Size (*text)" name="product-size" type="text" />
                         </div>
                         </div>
                         <div className="col-md-6">
                         <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Available from (*date)" name="product-size" type="text" />
+                        <FormInput  label="Available from (*date)" name="product-size" type="text" />
                         </div>
                         </div>
                         <div className="col-md-6">
                         <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Basement (*text)" name="product-size" type="text" />
+                        <FormInput  label="Basement (*text)" name="product-size" type="text" />
                         </div>
                         </div>
                         <div className="col-md-6">
                         <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Extra Details (*text)" name="product-size" type="text" />
+                        <FormInput  label="Extra Details (*text)" name="product-size" type="text" />
                         </div>
                         </div>
                         <div className="col-md-6">
                         <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Roofing (*text)" name="product-size" type="text" />
+                        <FormInput  label="Roofing (*text)" name="product-size" type="text" />
 
                         </div>
                         </div>
                         <div className="col-md-6">
                         <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Exterior Material (*text)" name="product-size" type="text" />
+                        <FormInput  label="Exterior Material (*text)" name="product-size" type="text" />
                         </div>
                         </div>
                         <div className="col-md-6">
                         <div className="input-item">
-                        <DesignedSelect items={structure_types} />
+                        <Select optionsArray={structure_types} defaultValue={"Structure Types"} />
                         </div>
                         </div>
                         <div className="col-md-6">
                         <div className="input-item">
-                        <DesignedSelect items={floor_nums} />
+                        <Select optionsArray={floor_nums} defaultValue={"Floor no"} />
                         </div>
                         </div>
                         <div className="md:col-span-2">
@@ -391,7 +389,7 @@ const RealForm = () => {
                         label="Owner/Agent notes (*not visible on front end)"
                         name="desc"
                         type="text"
-                        className="shadow !border-white focus:!border-[#fd6729]"
+                        
                         cols={4}
                         rows={4}
                         /> 
@@ -403,12 +401,12 @@ const RealForm = () => {
                         <div className="grid !grid-cols-1 md:!grid-cols-2">
                         <div className="col-md-6">
                         <div className="input-item">
-                        <DesignedSelect items={energy_classes} />
+                        <Select optionsArray={energy_classes} defaultValue={"Energy Classes"} />
                         </div>
                         </div>
                         <div className="col-md-6">
                         <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput className="shadow !border-white focus:!border-[#fd6729]" label="Energy Index in kWh/m2a" name="product-size" type="text" />
+                        <FormInput  label="Energy Index in kWh/m2a" name="product-size" type="text" />
                         </div>
                         </div>
                         </div>
