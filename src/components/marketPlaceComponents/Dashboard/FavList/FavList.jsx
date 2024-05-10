@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import "./FavList.css"
-import { Menu } from '@headlessui/react'
 import {IoGridSharp } from "react-icons/io5";
 import { FaThList } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa6";
 
-const filters=[
+const sorts=[
     "Default Sorting",
     "Popularity",
     "New arrivals",
@@ -14,20 +13,42 @@ const filters=[
     "Price: high to low",
 ]
 
+const perPages = [
+  "Per Page: 12",
+  "Per Page: 20",
+  "Per Page: 30",
+  "Per Page: 50",
+  "Per Page: 100",
+]
+
 
 const FavList = (props) => {
     const [active,setActive] = useState({'list-item':false,'grid-item' : true})
-    const [activeDrop,setActiveDrop] = useState(false)
+    const [activeDropSort,setActiveDropSort] = useState(false)
+    const [activeDropPage,setActiveDropPage] = useState(false)
+    const [sort , setSort] = useState(sorts[0])
+    const [perPage , setPerPage] = useState(perPages[0])
+
+
     const handleClick = (id) =>{
-        setActive({[id]:true})
-    }
-    const [filter , setFilter] = useState("Default Sorting")
-    const handleFilter = (e) =>{
+      setActive({[id]:true})
+  }
+    const handleSort = (e) =>{
       const {value} = e.target.dataset
-      setFilter(value)
+      setSort(value)
     }
-    const renderfilterList = filters.map( li =>( 
-      <li data-value={li} class={`${filter == li ? "active" : ""}`} onClick={(e) => handleFilter(e)}>{li}</li>
+
+    const handlePerPage = (e) =>{
+      const {value} = e.target.dataset
+      setPerPage(value)
+    }
+
+    const renderSortList = sorts.map( li =>( 
+      <li data-value={li} class={`${sort == li ? "active" : ""}`} onClick={(e) => handleSort(e)}>{li}</li>
+    ) )
+
+    const renderPerPageList = perPages.map( li =>( 
+      <li data-value={li} class={`${perPage == li ? "active" : ""}`} onClick={(e) => handlePerPage(e)}>{li}</li>
     ) )
 
   return (
@@ -35,13 +56,27 @@ const FavList = (props) => {
       <div className="market-dashboard-favList-container ">
         <nav className='bg-white rounded-[12px] p-[20px] mt-[20px]'> 
             <ul class="flex items-center" role="tablist">
-              <li class="list-inline-item mr-auto relative">
-                  <div className="favlist-dropdown">
-                    <span onClick={() => {setActiveDrop(!activeDrop)}}>{filter}
+
+              <li class="sort-by me-3 relative">
+                  <div className={`${activeDropSort ? "open " : ""}favlist-dropdown`} onClick={() => {setActiveDropSort(!activeDropSort)}}>
+                    <span>
+                      {sort}
                       <FaChevronDown className='inline ms-2 absolute top-[12px] right-[15px]' /> 
                     </span>
-                    <ul class={`${activeDrop ? "show " : ""}list`}>
-                      {renderfilterList}
+                    <ul class={`${activeDropSort ? "show " : ""}sorts-list list`}>
+                      {renderSortList}
+                    </ul>
+                  </div>
+              </li>
+
+              <li class="per-page mr-auto relative">
+                  <div className={`${activeDropPage ? "open " : ""}favlist-dropdown`} onClick={() => {setActiveDropPage(!activeDropPage)}}>
+                    <span>
+                      {perPage}
+                      <FaChevronDown className='inline ms-2 absolute top-[12px] right-[15px]' /> 
+                    </span>
+                    <ul class={`${activeDropPage ? "show " : ""}perPages-list list`}>
+                      {renderPerPageList}
                     </ul>
                   </div>
               </li>

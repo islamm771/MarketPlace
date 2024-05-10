@@ -11,6 +11,9 @@
 .market-dashboard-favList .favlist-dropdown:focus{
     border: 1px solid #fd6729 !important;
 }
+.market-dashboard-favList .favlist-dropdown.open{
+    border: 1px solid #fd6729 !important;
+}
 .market-dashboard-favList .favlist-dropdown span{
     cursor: pointer;
     display: block;
@@ -25,14 +28,18 @@
     box-shadow: 0 1px 5px rgba(70, 70, 70, 0.2);
     border-radius: 5px;
     overflow: hidden;
-    z-index: 5;
+    z-index: 8;
     opacity: 0;
     transition: 0.5s;
     height: 0;
 }
-.market-dashboard-favList .favlist-dropdown .list.show{
+.market-dashboard-favList .favlist-dropdown .sorts-list.show{
     opacity: 1;
     height: 324px;
+}
+.market-dashboard-favList .favlist-dropdown .perPages-list.show{
+    opacity: 1;
+    height: 270px;
 }
 .market-dashboard-favList .favlist-dropdown .list li{
     padding: 15px 10px;
