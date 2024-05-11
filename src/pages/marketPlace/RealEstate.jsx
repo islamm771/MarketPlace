@@ -7,6 +7,10 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import EstateProducts from "../../components/marketPlaceComponents/Products/EstateProducts/Products";
+import Hero from "../../components/marketPlaceComponents/LandingPage/HeroSection/Hero";
+import Featured from "../../components/marketPlaceComponents/LandingPage/FeaturedSection/Featured";
+import CategoryProperty from "../../components/marketPlaceComponents/LandingPage/CategorySection/Category";
+import SectionFour from "../../components/marketPlaceComponents/LandingPage/SectionFour/SectionFour";
 
 const RealEstate = () => {
 	return (
@@ -43,7 +47,11 @@ const RealEstate = () => {
       </Swiper>
 
       <section>
-        <EstateProducts />
+        {/* <EstateProducts /> */}
+        <Hero />
+        <Featured />
+        <CategoryProperty />
+        <SectionFour />
       </section>
     </div>
   );

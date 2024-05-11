@@ -1,0 +1,18 @@
+.category-grid .grid > div{
+    position: relative;
+    height: 350px;
+}
+.category-grid .grid > div::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    background-color: #000;
+    opacity: 0.3;
+}
