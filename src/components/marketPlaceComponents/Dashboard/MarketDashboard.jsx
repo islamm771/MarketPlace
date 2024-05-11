@@ -19,6 +19,11 @@ import MyListings from "./MyLisitngs/MyListings";
 import RealListings from "../RealEstate/Listings/RealListings";
 import AutoListings from "../Automotives/Listings/AutoListings";
 import AutoFav from "../Automotives/Favourites/AutoFav";
+import AutoSold from "../Automotives/Sold-Purchased/AutoSold";
+import AutoPurchased from "../Automotives/Sold-Purchased/AutoPurchased";
+import MemberListings from "../MemberClassifieds/Listings/MemberListings";
+import MemberSold from "../MemberClassifieds/Sold-Purchased/MemberSold";
+import MemberPurchased from "../MemberClassifieds/Sold-Purchased/AutoPurchased";
 
 const MarketDashboard = () => {
   const [activeButton , setActiveButton] = useState({
@@ -95,11 +100,11 @@ const MarketDashboard = () => {
               {activeButton.parent === "Member Classifieds" && (
                 <>
                   {activeButton.title === "Dashboard" && <div>Dashboard</div>}
-                  {activeButton.title === "My Listings" && <div>My List</div>}
+                  {activeButton.title === "My Listings" && <MyListings><MemberListings/></MyListings>}
                   {activeButton.title === "Add Listing" && <><MemberForm /></>}
                   {activeButton.title === "Classifieds Chat" && <div>Classifieds Chat</div>}
                   {activeButton.title === "Fav List" && <FavList> <MemberFav /> </FavList>}
-                  {activeButton.title === "Sold / Purchased" && <SoldPurchased></SoldPurchased>}
+                  {activeButton.title === "Sold / Purchased" && <SoldPurchased sold={<MemberSold />} purchased={<MemberPurchased />} />}
                 </>
               )}
 
@@ -123,7 +128,7 @@ const MarketDashboard = () => {
                     {activeButton.title === "Add Automotives" && <div>Automotive Form</div>}
                     {activeButton.title === "Automotives Chat" && <div>Classifieds Chat</div>}
                     {activeButton.title === "Fav List" && <FavList> <AutoFav /> </FavList>}
-                    {activeButton.title === "Sold / Purchased" && <SoldPurchased></SoldPurchased>}
+                    {activeButton.title === "Sold / Purchased" && <SoldPurchased sold={<AutoSold />} purchased={<AutoPurchased />} />}
                   </>
               )}
             </div>

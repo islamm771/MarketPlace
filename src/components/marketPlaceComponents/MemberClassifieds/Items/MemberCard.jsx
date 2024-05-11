@@ -14,7 +14,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
 const ClassifiedCard = (props) => {
-    const {title,price,isChecked} = props
+    const {title,price,isChecked,isSold} = props
 
     const [isFav , setIsFav] = useState(isChecked)
 
@@ -75,7 +75,7 @@ const ClassifiedCard = (props) => {
                 
                 </Swiper>
                 <div class="card-overlay-badge">
-                    <a href="#"><span class="badge bg-warning"><FaRegStar />Featured</span></a>
+                    <a href="#"><span class="badge bg-warning"><FaRegStar /> {isSold ? "Sold" : "Featured"} </span></a>
                     {/* <a href="service.html"><span class="badge bg-danger"><FaMeteor />Hot</span></a> */}
                 </div>
                 <div class="fav-selection">
