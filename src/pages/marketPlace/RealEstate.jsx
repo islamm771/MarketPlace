@@ -9,8 +9,10 @@ import { Autoplay, Pagination } from "swiper/modules";
 import EstateProducts from "../../components/marketPlaceComponents/Products/EstateProducts/Products";
 import Hero from "../../components/marketPlaceComponents/LandingPage/HeroSection/Hero";
 import Featured from "../../components/marketPlaceComponents/LandingPage/FeaturedSection/Featured";
-import CategoryProperty from "../../components/marketPlaceComponents/LandingPage/CategorySection/Category";
+import Category from "../../components/marketPlaceComponents/LandingPage/CategorySection/Category";
 import SectionFour from "../../components/marketPlaceComponents/LandingPage/SectionFour/SectionFour";
+import Latest from "../../components/marketPlaceComponents/LandingPage/LatestSection/Latest";
+import Location from "../../components/marketPlaceComponents/LandingPage/LocationSection/Location";
 
 const RealEstate = () => {
 	return (
@@ -50,8 +52,10 @@ const RealEstate = () => {
         {/* <EstateProducts /> */}
         <Hero />
         <Featured />
-        <CategoryProperty />
+        <Category />
         <SectionFour />
+        <Latest />
+        <Location />
       </section>
     </div>
   );

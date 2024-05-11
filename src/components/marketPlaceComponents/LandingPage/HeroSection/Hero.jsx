@@ -4,7 +4,7 @@ import "./Hero.css"
 
 const Hero = () => {
   return (
-    <div className="landing-hero-header">
+    <div className="landing-hero-header mt-[3rem]">
 			<div className="landingl-hero-header-container">
 			{/* HTML5 VIDEO */}
                 <video autoPlay muted loop id="myVideo">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import "./FavList.css"
 import {IoGridSharp } from "react-icons/io5";
 import { FaThList } from "react-icons/fa";
@@ -29,7 +29,8 @@ const FavList = (props) => {
     const [activeDropPage,setActiveDropPage] = useState(false)
     const [sort , setSort] = useState(sorts[0])
     const [perPage , setPerPage] = useState(perPages[0])
-
+    const dropSortRef = useRef(null);
+    const dropPageRef = useRef(null);
 
     const handleClick = (id) =>{
       setActive({[id]:true})
@@ -43,6 +44,29 @@ const FavList = (props) => {
       const {value} = e.target.dataset
       setPerPage(value)
     }
+
+    useEffect(() => {
+      const handleClickOutside = (event) => {
+        if (dropSortRef.current && !dropSortRef.current.contains(event.target)) {
+          if (dropPageRef.current && !dropPageRef.current.contains(event.target)) {
+            setActiveDropSort(false);
+          }
+        }
+        if (dropPageRef.current && !dropPageRef.current.contains(event.target)) {
+          if (dropSortRef.current && !dropSortRef.current.contains(event.target)) {
+            setActiveDropPage(false);
+          }
+        }
+      };
+  
+      // Add event listener when component mounts
+      document.addEventListener('click', handleClickOutside);
+  
+      // Remove event listener when component unmounts
+      return () => {
+        document.removeEventListener('click', handleClickOutside);
+      };
+    }, []);
 
     const renderSortList = sorts.map( li =>( 
       <li data-value={li} class={`${sort == li ? "active" : ""}`} onClick={(e) => handleSort(e)}>{li} <FaCheck className='hidden' /></li>
@@ -58,7 +82,7 @@ const FavList = (props) => {
         <nav className='bg-white rounded-[12px] p-[20px] mt-[20px]'> 
             <ul class="grid !grid-cols-2 lg:!grid-cols-4" role="tablist">
 
-              <li class="sort-by relative">
+              <li class="sort-by relative" ref={dropSortRef}>
                   <div className={`${activeDropSort ? "open " : ""}favlist-dropdown`} onClick={() => {setActiveDropSort(!activeDropSort)}}>
                     <span>
                       {sort}
@@ -70,7 +94,7 @@ const FavList = (props) => {
                   </div>
               </li>
 
-              <li class="per-page relative">
+              <li class="per-page relative" ref={dropPageRef}>
                   <div className={`${activeDropPage ? "open " : ""}favlist-dropdown`} onClick={() => {setActiveDropPage(!activeDropPage)}}>
                     <span>
                       {perPage}

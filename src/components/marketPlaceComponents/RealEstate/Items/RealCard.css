@@ -159,7 +159,7 @@
 }
 .state-product-card .card__image-body p{
     display: flex;
-    font-size: 18px;
+    font-size: 14px;
     gap: 5px;
 }
 .state-product-card .card__image-body .card__content {

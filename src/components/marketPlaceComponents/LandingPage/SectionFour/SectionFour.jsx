@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import {  Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import "./SectionFour.css"
 import img_01 from "../../../../assests/marketplace/landing/Category/3.jpg"
 import img_02 from "../../../../assests/marketplace/landing/Category/4.jpg"
 import img_03 from "../../../../assests/marketplace/landing/Category/5.jpg"
@@ -28,10 +28,10 @@ const SectionFour = () => {
                 clickable: true,
                 }}
                 navigation={{
-                    nextEl:".swiper-next-btn",
-                    prevEl:".swiper-prev-btn",
+                    nextEl:".section-swiper-next-btn",
+                    prevEl:".section-swiper-prev-btn",
                   }}
-                className="featured-swiper !pb-[35px]"
+                className="section-swiper !pb-[35px]"
                 modules={[Pagination,Navigation]}
                 breakpoints={{
                     320: {
@@ -49,30 +49,127 @@ const SectionFour = () => {
                   }}
                 >
                 <SwiperSlide>
-                    <img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" />
+                    {/* <img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" /> */}
+                    <div className="slide-item">
+                      <a href="#">
+                        <img src={img_01} alt="Image" />
+                      </a>
+                      <div class="slide-item-info">
+                        <div class="slide-item-info-breif">
+                          <h6 className='mb-[10px]'>The luxury crib</h6>
+                          <h1><a href="#" className='text-[20px]'>Upper East Side</a></h1>
+                        </div>
+                        <div class="btn-wrapper go-top">
+                          <a class="" href="#">
+                          Details
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={img_02} className='w-[100%] h-[100%] object-cover' alt="" />
+                    {/* <img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" /> */}
+                    <div className="slide-item">
+                      <a href="#">
+                        <img src={img_02} alt="Image" />
+                      </a>
+                      <div class="slide-item-info">
+                        <div class="slide-item-info-breif">
+                          <h6 className='mb-[10px]'>The luxury crib</h6>
+                          <h1><a href="#" className='text-[20px]'>Upper East Side</a></h1>
+                        </div>
+                        <div class="btn-wrapper go-top">
+                          <a class="" href="#">
+                          Details
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={img_03} className='w-[100%] h-[100%] object-cover' alt="" />
+                    {/* <img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" /> */}
+                    <div className="slide-item">
+                      <a href="#">
+                        <img src={img_03} alt="Image" />
+                      </a>
+                      <div class="slide-item-info">
+                        <div class="slide-item-info-breif">
+                          <h6 className='mb-[10px]'>The luxury crib</h6>
+                          <h1><a href="#" className='text-[20px]'>Upper East Side</a></h1>
+                        </div>
+                        <div class="btn-wrapper go-top">
+                          <a class="" href="#">
+                          Details
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" />
+                    {/* <img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" /> */}
+                    <div className="slide-item">
+                      <a href="#">
+                        <img src={img_01} alt="Image" />
+                      </a>
+                      <div class="slide-item-info">
+                        <div class="slide-item-info-breif">
+                          <h6 className='mb-[10px]'>The luxury crib</h6>
+                          <h1><a href="#" className='text-[20px]'>Upper East Side</a></h1>
+                        </div>
+                        <div class="btn-wrapper go-top">
+                          <a class="" href="#">
+                          Details
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={img_02} className='w-[100%] h-[100%] object-cover' alt="" />
+                    {/* <img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" /> */}
+                    <div className="slide-item">
+                      <a href="#">
+                        <img src={img_02} alt="Image" />
+                      </a>
+                      <div class="slide-item-info">
+                        <div class="slide-item-info-breif">
+                          <h6 className='mb-[10px]'>The luxury crib</h6>
+                          <h1><a href="#" className='text-[20px]'>Upper East Side</a></h1>
+                        </div>
+                        <div class="btn-wrapper go-top">
+                          <a class="" href="#">
+                          Details
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={img_03} className='w-[100%] h-[100%] object-cover' alt="" />
+                    {/* <img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" /> */}
+                    <div className="slide-item">
+                      <a href="#">
+                        <img src={img_03} alt="Image" />
+                      </a>
+                      <div class="slide-item-info">
+                        <div class="slide-item-info-breif">
+                          <h6 className='mb-[10px]'>The luxury crib</h6>
+                          <h1><a href="#" className='text-[20px]'>Upper East Side</a></h1>
+                        </div>
+                        <div class="btn-wrapper go-top">
+                          <a class="" href="#">
+                          Details
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                 </SwiperSlide>
-                
+
+
                 </Swiper>
             </div>
 
             <div className="buttons">
-                <button className='swiper-prev-btn'><FaChevronLeft /></button>
-                <button className='swiper-next-btn'><FaChevronRight /></button>
+                <button className='section-swiper-prev-btn'><FaChevronLeft /></button>
+                <button className='section-swiper-next-btn'><FaChevronRight /></button>
             </div>
         </div>
     </div>
@@ -80,3 +177,11 @@ const SectionFour = () => {
 }
 
 export default SectionFour
+
+
+
+
+
+
+
+

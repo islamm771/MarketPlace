@@ -1,0 +1,28 @@
+.landing-location .buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+.landing-location .buttons button {
+  font-size: 20px;
+  color: #fff;
+  background-color: #fd6729;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.landing-location .buttons .swiper-button-disabled, 
+.landing-location .buttons .swiper-button-disabled {
+    opacity: 0.5;
+}
+
+.landing-location .location-swiper>.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ff6728ed !important;
+  transform: scale(1.2);
+}
+
+.landing-location .location-swiper>.swiper-pagination .swiper-pagination-bullet {
+  background-color: #ff692876;
+}

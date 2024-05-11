@@ -109,7 +109,22 @@ const agents = [
 
 
 const RealForm = () => {
-  const [checked,setChecked] = useState(false)
+    const [checked,setChecked] = useState(false)
+    const [floorNo , setFloorNo] = useState(0)
+    const createUploadFloorBox = [];
+    for (let i = 1; i <= floorNo; i++) {
+        createUploadFloorBox.push(
+            <div key={i} className="upload-box relative">
+                <label htmlFor={`img${i}`} className='absolute top-0 left-0 w-[100%] h-[100%] z-10 cursor-pointer'></label>
+                <input type="file" id={`img${i}`} name={`img${i}`} accept='image/*' className='hidden'/>
+                <FaImage className='text-[#36e9f7]' />
+                <p className="upload-box-title">Add Image For Floor {i}</p>
+                <p className="upload-box-text">110x110px size minimum</p>
+            </div>
+        );
+    }
+    const renderUploadFloorBox = createUploadFloorBox.map( box => (<div className='col-md-6'>{box}</div>) )
+
   return (
     <>
       <div className="real-estate-form py-[1rem]">
@@ -136,10 +151,10 @@ const RealForm = () => {
                             </div>
                         </div>
                         <h6 className='my-[20px]'>Property Price</h6>
-                        <div className="grid !grid-cols-1  md:!grid-cols-2 lg:!grid-cols-3 !gap-4">
+                        <div className="grid !grid-cols-1  md:!grid-cols-2 !gap-4">
                             <div className="col-md-6">
                                 <div className="input-item input-item-name">
-                                    <FormInput  label="Price" name="product-price" type="number" />
+                                    <FormInput  label="Downpayment" name="product-price" type="number" />
                                 </div>
                             </div>
                             <div className="col-md-6">
@@ -159,7 +174,7 @@ const RealForm = () => {
                             </div>
                         </div>
                         <h6 className='my-[20px]'>Select Categories</h6>
-                        <div className="grid !grid-cols-1  md:!grid-cols-2 lg:!grid-cols-3 !gap-4">
+                        <div className="grid !grid-cols-1  md:!grid-cols-2 !gap-4">
                             <div className="col-lg-4 col-md-6">
                             <div className="input-item">
                                 <Select optionsArray={categories.type} defaultValue={"Types"} />
@@ -338,26 +353,22 @@ const RealForm = () => {
                         <FormInput  label="Available from (*date)" name="product-size" type="text" />
                         </div>
                         </div>
-                        <div className="col-md-6">
-                        <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput  label="Basement (*text)" name="product-size" type="text" />
-                        </div>
-                        </div>
+                        
                         <div className="col-md-6">
                         <div className="input-item">
-                        <Select optionsArray={structure_types} defaultValue={"Structure Types"} />
+                        <Select optionsArray={floor_nums} defaultValue={"Floor no"} setValue={setFloorNo} />
                         </div>
                         </div>
-                        <div className="col-md-6">
-                        <div className="input-item">
-                        <Select optionsArray={floor_nums} defaultValue={"Floor no"} />
-                        </div>
-                        </div>
+
+                        
+
                         <div className="col-md-6">
                         <div className="input-item">
                         <Select optionsArray={agents} defaultValue={"Agents"} />
                         </div>
                         </div>
+
+                        {renderUploadFloorBox}
                         <div className="md:col-span-2">
                         <div className="input-item input-item-textarea ltn__custom-icon">
                         <FormTextBox
