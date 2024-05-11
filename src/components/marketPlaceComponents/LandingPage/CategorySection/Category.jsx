@@ -13,8 +13,8 @@ const CategoryProperty = () => {
             </div>
 
             <div className="category-grid">
-              <div className="grid !grid-rows-2 !grid-cols-3 !gap-4">
-                <div className='col-span-2 '><img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" /></div>
+              <div className="grid md:!grid-cols-2 lg:!grid-rows-2 lg:!grid-cols-3 !gap-4">
+                <div className='lg:col-span-2 '><img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" /></div>
                 <div className=''><img src={img_02} className='w-[100%] h-[100%] object-cover' alt="" /></div>
                 <div className=''><img src={img_02} className='w-[100%] h-[100%] object-cover' alt="" /></div>
                 <div className=''><img src={img_03} className='w-[100%] h-[100%] object-cover' alt="" /></div>
