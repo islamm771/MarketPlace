@@ -37,8 +37,8 @@ function App() {
             element={<MainPage />}
           >
             <Route path="/" element={<MarketPlace />} />
-            <Route path="/marketplace/realestate" element={<RealEstate />} />
-            <Route path="/marketplace/automotive" element={<Automotives />} />
+            <Route path="/marketplace/realestates" element={<RealEstate />} />
+            <Route path="/marketplace/automotives" element={<Automotives />} />
             <Route path="/marketplace/dashboard" element={<MarketDashboard />} />
           </Route>
         </Routes>

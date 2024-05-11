@@ -9,7 +9,11 @@
             "dest" : "/"
         },
         {
-            "src":"/marketplace/realestate",
+            "src":"/marketplace/realestates",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/automotives",
             "dest" : "/"
         }
     ]
