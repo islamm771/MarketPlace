@@ -21,45 +21,44 @@ const RealEstate = ({setRealOpen}) => {
 	return (
     <div className="real-estate-container">
     
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 7500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <div className="banner-container">
-            <img src="/img/ads/ads.jpeg" alt="ads banner" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="banner-container">
-            <img src="/img/ads/ads.jpeg" alt="ads banner" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="banner-container">
-            <img src="/img/ads/ads.jpeg" alt="ads banner" />
-          </div>
-        </SwiperSlide>
-      </Swiper>
+      <div className="real-estate-swiperContainer">
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 7500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Autoplay, Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <div className="banner-container">
+              <img src="/img/ads/ads.jpeg" alt="ads banner" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="banner-container">
+              <img src="/img/ads/ads.jpeg" alt="ads banner" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="banner-container">
+              <img src="/img/ads/ads.jpeg" alt="ads banner" />
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
 
-      <section>
-        {/* <EstateProducts /> */}
-        <Hero />
-        <Featured />
-        <Category />
-        <SectionFour />
-        <Latest />
-        <Location />
-      </section>
+      <Hero />
+      <Featured />
+      <Category />
+      <SectionFour />
+      <Latest />
+      <Location />
     </div>
   );
 };

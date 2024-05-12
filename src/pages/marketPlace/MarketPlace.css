@@ -1,7 +1,30 @@
-.market-place-container section{
-  margin-top: 50px;
+.real-estate-swiperContainer{
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media (min-width:540px){
+  .real-estate-swiperContainer{
+    width: 450px;
+}
+}
+@media (min-width:768px){
+  .real-estate-swiperContainer{
+    width: 650px;
+  }
+}
+@media (min-width:992px){
+  .real-estate-swiperContainer{
+    width: 750px;
+  }
+}
+@media (min-width:1200px){
+  .real-estate-swiperContainer{
+    width: 1000px;
+  }
 }
 
-.market-place-container:first-child{
-  /* z-index: 10; */
+@media (min-width:1300px){
+  .real-estate-swiperContainer{
+    width: 1200px;
+  }
 }
