@@ -1,6 +1,8 @@
 import React from 'react'
 import video_01 from "../../../../assests/marketplace/landing/1.mp4"
 import "./Hero.css"
+import FormInput from '../../../ui/formInput/FormInput'
+import Select from '../../../ui/select/Select'
 
 const Hero = () => {
   return (
@@ -10,11 +12,15 @@ const Hero = () => {
                 <video autoPlay muted loop id="myVideo">
                     <source src={video_01} type="video/mp4" />
                 </video>
-                <div className="header-item-info">
-                    <div className="header-item-info">
-                        <h6 className="header-sub-title text-center text-[#fff]"><span><i className="fas fa-home" /></span> Real Estate Agency</h6>
-                        <h1 className="header-title text-center text-[#fff]">Find Your Dream <br /> House By Us</h1>
-                    </div>
+                <div className="header-item-form">
+                    <form className='bg-white py-4 px-[3rem] rounded-[12px]' action="">
+                      <h3 className='text-[20px] my-[10px]'>Find Your Next Home</h3>
+                      <div className="form-container lg:w-[600px] flex items-center gap-3">
+                        <FormInput  label="Search" name="product-price" type="text" />
+                        <Select optionsArray={[{value:"Option 1"},{value:"Option 3"},{value:"Option 3"}]} defaultValue={"Options"} />
+                        <button className='bg-[#fd6729] text-white py-[12px] px-[20px] w-fit'>Search</button>
+                      </div>
+                    </form>
                 </div>
             </div>
     </div>

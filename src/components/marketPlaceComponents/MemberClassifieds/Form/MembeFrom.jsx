@@ -156,7 +156,7 @@ const MemberForm = () => {
                 <FormInput label="Price" name="price" type="number" />
             </div>
 
-            <div className="sell-product-form-item">
+            <div className="sell-product-form-item !mt-[45px]">
               <button class="button white small-space">Discard All</button>
               <button class="button primary">Add Listing</button>
             </div>

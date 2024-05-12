@@ -31,7 +31,7 @@ const conditions = [
 
 
 const categories = {
-    type:[
+    cat:[
       {id:1 , value: "None"},
       {id:2 , value: "Apartments"},
       {id:3 , value: "Condos"},
@@ -43,10 +43,11 @@ const categories = {
       {id:9 , value: "Villas"},
     ],
   
-    pay:[
-      {id:1 , value: "None"},
-      {id:2 , value: "Rental"},
-      {id:3 , value: "Sales"},
+    subCat:[
+      {id:1 , value: "Sub Category 1"},
+      {id:2 , value: "Sub Category 2"},
+      {id:3 , value: "Sub Category 3"},
+      {id:3 , value: "Sub Category 4"},
     ],
   
     status:[
@@ -132,9 +133,7 @@ const RealForm = () => {
                     
                     {/* Start Describtion */}
                     <div className="describtion bg-white p-[20px] rounded-[12px]" id="desc">
-                        <h2 className='text-[20px]'>1. Description</h2>
-                        <p><small>These fields are mandatory: Title, Property Media</small></p>
-                        <h6 className='my-[20px]'>Property Description</h6>
+                        <h2 className='text-[20px] mb-[20px]'>1. Description</h2>
                         <div className="grid !gap-4">
                             <div className="input-item input-item-name">
                                 <FormInput label="Title" name="product-title" type="text" />
@@ -150,18 +149,24 @@ const RealForm = () => {
                                     />                                
                             </div>
                         </div>
-                        <h6 className='my-[20px]'>Property Price</h6>
+                    </div>
+                    {/* End Describtion */}
+
+                    {/* Start Price */}
+                    <div className="price bg-white p-[20px] rounded-[12px] mt-[20px]" id="price">
+                    <h2 className='text-[20px] mb-[20px]'>2. Price</h2>
                         <div className="grid !grid-cols-1  md:!grid-cols-2 !gap-4">
+                            <div className="col-md-6">
+                                <div className="input-item input-item-name">
+                                    <FormInput  label="Price" name="product-price" type="number" />
+                                </div>
+                            </div>
                             <div className="col-md-6">
                                 <div className="input-item input-item-name">
                                     <FormInput  label="Downpayment" name="product-price" type="number" />
                                 </div>
                             </div>
-                            <div className="col-md-6">
-                                <div className="input-item input-item-name">
-                                    <FormInput  label="After Price Label (ex: /month)" name="product-price-Alabel" type="text" />
-                                </div>
-                            </div>
+                            
                             <div className="col-md-6">
                             <div className="input-item input-item-name">
                                 <FormInput  label="Monthly Installment" name="product-price-tax" type="text" />
@@ -173,40 +178,65 @@ const RealForm = () => {
                                 </div>
                             </div>
                         </div>
-                        <h6 className='my-[20px]'>Select Categories</h6>
+                    </div>
+                    {/* End Price */}
+
+
+                    {/* Start Details */}
+                    <div className="details bg-white p-[20px] rounded-[12px] mt-[20px]" id="details">
+                    <h2 className='text-[20px] mb-[20px]'>3. Details</h2>
                         <div className="grid !grid-cols-1  md:!grid-cols-2 !gap-4">
-                            <div className="col-lg-4 col-md-6">
-                            <div className="input-item">
-                                <Select optionsArray={categories.type} defaultValue={"Types"} />
+                            <div className="col-md-6">
+                                <div className="input-item">
+                                    <Select optionsArray={categories.cat} defaultValue={"Category"} />
+                                </div>
                             </div>
+                            <div className="col-md-6">
+                                <div className="input-item">
+                                    <Select optionsArray={categories.subCat} defaultValue={"Subcategory"} />
+                                </div>
                             </div>
-                            <div className="col-lg-4 col-md-6">
+                            <div className="col-md-6">
                                 <div className="input-item">
                                     <Select optionsArray={categories.status} defaultValue={"Status"} />
                                 </div>
                             </div>
+                            <div className="col-md-6">
+                                <div className="input-item input-item-name ltn__custom-icon">
+                                <FormInput  label="Size in m2 (*only numbers)" name="product-size" type="text" />
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="input-item input-item-name ltn__custom-icon">
+                                <FormInput  label="Year Built (*numeric)" name="product-size" type="text" />
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="input-item input-item-name ltn__custom-icon">
+                                <FormInput  label="Available from (*date)" name="product-size" type="text" />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    {/* End Describtion */}
+                    {/* End Details */}
 
                     {/* Start Media */}
                     <div className="media bg-white p-[20px] rounded-[12px] mt-[20px]" id="media">
-                        <h2 className='text-[20px]'>2. Media</h2>
-                        <h6 className='mt-[15px] mb-[20px]'>Listing Media</h6>
+                        <h2 className='text-[20px] mb-[20px]'>4. Media</h2>
                         <div className="grid !grid-cols-2 !gap-4 mb-4">
                             <div class="upload-box relative">
                                 <label htmlFor="img" className='absolute top-0 left-0 w-[100%] h-[100%] z-10 cursor-pointer'></label>
                                 <input type="file" id='img' name='img' accept='image/*' className='hidden'/>
                                 <FaImage className='text-[#36e9f7]' />
                                 <p class="upload-box-title">Add Featue Image</p>
-                                <p class="upload-box-text">110x110px size minimum</p>
+                                <p class="upload-box-text">500*500px size minimum</p>
                             </div>
                             <div class="upload-box relative">
                                 <label htmlFor="files" className='absolute top-0 left-0 w-[100%] h-[100%] z-10 cursor-pointer'></label>
                                 <input type="file" id='files' name='files' className='hidden' multiple/>
                                 <FaImage className='text-[#36e9f7]' />
                                 <p class="upload-box-title">Add Gallery Images</p>
-                                <p class="upload-box-text">1184x300px size minimum</p>
+                                <p class="upload-box-text">500*500px size minimum</p>
                             </div>
                         </div>
                         <p>
@@ -242,9 +272,13 @@ const RealForm = () => {
 
                     {/* Start Location */}
                     <div className="location bg-white p-[20px] rounded-[12px] mt-[20px]" id="location">
-                        <h2 className='text-[20px]'>3. Location</h2>
-                        <h6 className='my-[20px]'>Listing Location</h6>
+                        <h2 className='text-[20px] mb-[20px]'>5. Location</h2>
                         <div className="grid !grid-cols-1 md:!grid-cols-2 !gap-4">
+                            <div className="md:!col-span-2">
+                                <div className="input-item input-item-name ltn__custom-icon">
+                                    <FormInput  label="Enter Google Location Link" name="product-googleLocation" type="text" />
+                                </div>
+                            </div>
                             <div className="col-md-6">
                             <div className="input-item input-item-name ltn__custom-icon">
                                 <FormInput  label="Address" name="product-addr" type="text" />
@@ -257,11 +291,6 @@ const RealForm = () => {
                             </div>
                             <div className="col-md-6">
                             <div className="input-item input-item-name ltn__custom-icon">
-                                <FormInput  label="County / State" name="product-state" type="text" />
-                            </div>
-                            </div>
-                            <div className="col-md-6">
-                            <div className="input-item input-item-name ltn__custom-icon">
                                 <FormInput  label="City" name="product-city" type="text" />
 
                             </div>
@@ -269,11 +298,6 @@ const RealForm = () => {
                             <div className="col-md-6">
                             <div className="input-item input-item-name ltn__custom-icon">
                                 <FormInput  label="Neighborhood" name="product-neighborhood" type="text" />
-                            </div>
-                            </div>
-                            <div className="col-md-6">
-                            <div className="input-item input-item-name ltn__custom-icon">
-                                <FormInput  label="Zip" name="product-zip" type="text" />
                             </div>
                             </div>
                             <div className="md:!col-span-2">
@@ -305,17 +329,25 @@ const RealForm = () => {
                     </div>
                     {/* End Location */}
 
-                    {/* Start Details */}
-                    <div className="details bg-white p-[20px] rounded-[12px] mt-[20px]" id="details">
-                        <h2 className='text-[20px]'>4. Details</h2>
 
-                        <h6 className='my-[20px]'>Listing Details</h6>
+                    {/* Start Agent */}
+                    <div className="agent bg-white p-[20px] rounded-[12px] mt-[20px]">
+                        <h2 className='text-[20px] mb-[20px]'>6. Agent</h2>
                         <div className="grid !grid-cols-1 md:!grid-cols-2 !gap-4">
-                        <div className="">
-                        <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput  label="Size in m2 (*only numbers)" name="product-size" type="text" />
+                            <div className="col-md-6">
+                            <div className="input-item">
+                            <Select optionsArray={agents} defaultValue={"Agents"} />
+                            </div>
+                            </div>
                         </div>
-                        </div>
+                    </div>
+                    {/* End Agent */}
+
+
+                    {/* Start Details */}
+                    <div className="lisitng-details bg-white p-[20px] rounded-[12px] mt-[20px]" id="listing-details">
+                        <h2 className='text-[20px] mb-[20px]'>7. Listing Details</h2>
+                        <div className="grid !grid-cols-1 md:!grid-cols-2 !gap-4">
                         <div className="">
                         <div className="input-item input-item-name ltn__custom-icon">
                         <FormInput  label="Lot Size in m2 (*only numbers)" name="product-lotSize" type="text" />
@@ -336,72 +368,42 @@ const RealForm = () => {
                         <FormInput  label="Bathrooms (*only numbers)" name="product-bathrooms" type="text" />
                         </div>
                         </div>
-                        
                         <div className="">
                         <div className="input-item input-item-name ltn__custom-icon">
                         <FormInput  label="Garages (*text)" name="product-size" type="text" />
                         </div>
                         </div>
-                        <div className="">
-                        <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput  label="Year Built (*numeric)" name="product-size" type="text" />
-                        </div>
-                        </div>
-                        
-                        <div className="col-md-6">
-                        <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput  label="Available from (*date)" name="product-size" type="text" />
-                        </div>
-                        </div>
-                        
-                        <div className="col-md-6">
-                        <div className="input-item">
-                        <Select optionsArray={floor_nums} defaultValue={"Floor no"} setValue={setFloorNo} />
-                        </div>
-                        </div>
 
-                        
-
-                        <div className="col-md-6">
-                        <div className="input-item">
-                        <Select optionsArray={agents} defaultValue={"Agents"} />
-                        </div>
-                        </div>
-
-                        {renderUploadFloorBox}
-                        <div className="md:col-span-2">
-                        <div className="input-item input-item-textarea ltn__custom-icon">
-                        <FormTextBox
-                        label="Owner/Agent notes (*not visible on front end)"
-                        name="desc"
-                        type="text"
-                        
-                        cols={4}
-                        rows={4}
-                        /> 
-                        </div>
-                        </div>
-                        </div>
-
-                        <h6 className='my-[20px]'>Select Energy Class</h6>
-                        <div className="grid !grid-cols-1 md:!grid-cols-2">
                         <div className="col-md-6">
                         <div className="input-item">
                         <Select optionsArray={energy_classes} defaultValue={"Energy Classes"} />
                         </div>
                         </div>
-                        <div className="col-md-6">
-                        <div className="input-item input-item-name ltn__custom-icon">
-                        <FormInput  label="Energy Index in kWh/m2a" name="product-size" type="text" />
-                        </div>
-                        </div>
+
                         </div>
                     </div>
                     {/* End Details */}
 
+
+                    {/* Start Floor Plans */}
+                    <div className="floor-plans bg-white p-[20px] rounded-[12px] mt-[20px]" id="listing-details">
+                        <h2 className='text-[20px] mb-[20px]'>8. Floor Plans</h2>
+                        <div className="grid !grid-cols-1 md:!grid-cols-2 !gap-4">
+                        <div className="col-md-6">
+                        <div className="input-item">
+                        <Select optionsArray={floor_nums} defaultValue={"Floor no"} setValue={setFloorNo} />
+                        </div>
+                        </div>
+                        <br />
+                        {renderUploadFloorBox}
+                        </div>
+                    </div>
+                    {/* end Floor Plan */}
+
+
                     {/* Start Amenities*/}
                     <div className="amenities bg-white p-[20px] rounded-[12px] mt-[20px]" id="amenities">
-                        <h2 className='text-[20px]'>5. Amenities</h2>
+                        <h2 className='text-[20px]'>9. Amenities</h2>
                         <h6 className='my-[20px]'>Amenities and Features</h6>  
                         <h6 className='mb-[15px]'>Interior Details</h6>                      
                         <div className="grid md:!grid-cols-2 lg:!grid-cols-3">                                
@@ -482,14 +484,37 @@ const RealForm = () => {
                             </div>
                         </div>
 
-                        <div className="grid !grid-cols-2 !mt-[45px]">
+                    </div>
+                    {/* End Amenities */}
+
+                    {/* Start Owner Notes */}
+                    <div className="owner-notes bg-white p-[20px] rounded-[12px] mt-[20px]" id="listing-details">
+                        <h2 className='text-[20px] mb-[20px]'>10. Owner Notes</h2>
+                        <div className="grid !grid-cols-1 !gap-4">
+                        
+                        <div className="col-md-6">
+                            <div className="input-item input-item-textarea ltn__custom-icon">
+                            <FormTextBox
+                            label="Owner/Agent notes (*not visible on front end)"
+                            name="desc"
+                            type="text"
+                            
+                            cols={4}
+                            rows={4}
+                            /> 
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+                    {/* End Owner Notes */}
+
+                    <div className="submit-buttons bg-white p-[20px] rounded-[12px] mt-[20px]">
+                        <div className="grid !grid-cols-2">
                             <button className="button white small-space">Discard All</button>
                             <button className="button primary">Add Property</button>
                         </div>
                     </div>
-                    {/* End Amenities */}
-
-                    
         </form>
       </div>
     </>
