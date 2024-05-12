@@ -21,7 +21,7 @@ const RealEstate = ({setRealOpen}) => {
 	return (
     <div className="real-estate-container">
     
-      <div className="real-estate-swiperContainer">
+      {/* <div className="real-estate-swiperContainer">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -51,7 +51,7 @@ const RealEstate = ({setRealOpen}) => {
             </div>
           </SwiperSlide>
         </Swiper>
-      </div>
+      </div> */}
 
       <Hero />
       <Featured />

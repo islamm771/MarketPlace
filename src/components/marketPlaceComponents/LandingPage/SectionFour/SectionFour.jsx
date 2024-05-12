@@ -12,9 +12,9 @@ import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
 
 const SectionFour = () => {
   return (
-    <div className='landing-featured bg-white py-[2rem] mb-[25px]'>
-        <div className="landing-featured-container">
-            <div className="featured-heading special-landing-heading text-center">
+    <div className='landing-featured-full bg-white py-[3rem] mb-[25px]'>
+        <div className="landing-featured-full-container">
+            <div className="featured-full-heading special-landing-heading mx-[30px]">
                 <span>Properties</span>
                 <h1>Featured Lisitngs</h1>
             </div>
@@ -25,13 +25,13 @@ const SectionFour = () => {
                 spaceBetween={0}
                 // centeredSlides={true}
                 pagination={{
-                clickable: true,
+                  clickable: true,
                 }}
                 navigation={{
                     nextEl:".section-swiper-next-btn",
                     prevEl:".section-swiper-prev-btn",
                   }}
-                className="section-swiper !pb-[35px]"
+                className="section-swiper !pb-[50px]"
                 modules={[Pagination,Navigation]}
                 breakpoints={{
                     320: {

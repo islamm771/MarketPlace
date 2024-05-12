@@ -10,9 +10,9 @@ import RealCard from '../../RealEstate/Items/RealCard';
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
 const Featured = () => {
   return (
-    <div className='landing-featured bg-white py-[2rem] mb-[25px]'>
+    <div className='landing-featured bg-white py-[4rem] mb-[25px]'>
         <div className="landing-featured-container">
-            <div className="featured-heading special-landing-heading text-center">
+            <div className="featured-heading special-landing-heading">
                 <span>Properties</span>
                 <h1>Featured Lisitngs</h1>
             </div>
@@ -29,7 +29,7 @@ const Featured = () => {
                     nextEl:".swiper-next-btn",
                     prevEl:".swiper-prev-btn",
                   }}
-                className="featured-swiper !pb-[35px]"
+                className="featured-swiper !pb-[50px]"
                 modules={[Pagination,Navigation]}
                 breakpoints={{
                     320: {

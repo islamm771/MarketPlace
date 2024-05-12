@@ -1,13 +1,19 @@
 import React from 'react'
 import RealCard from '../../RealEstate/Items/RealCard'
 import "./Latest.css"
+import { FaArrowRightLong } from "react-icons/fa6";
+import { HiArrowLongRight } from "react-icons/hi2";
+
 const Latest = () => {
   return (
-    <div className='landing-latest bg-white py-[2rem] mb-[25px]'>
+    <div className='landing-latest bg-white py-[3rem] mb-[25px]'>
         <div className="landing-latest-container">
-            <div className="latest-heading special-landing-heading text-center">
-                <span>Property</span>
-                <h1>Latest Lisitngs</h1>
+            <div className="latest-heading special-landing-heading flex justify-between items-center">
+                <div className="latest-heading-info">
+                    <span>Property</span>
+                    <h1>Latest Lisitngs</h1>
+                </div>
+                <a className='latest-heading-link' href="#">Browse All <HiArrowLongRight className='inline text-[14px]' /> </a>
             </div>
 
             <div className="card-container">

@@ -3,16 +3,16 @@ import "./Location.css"
 import "swiper/css/navigation";
 import "swiper/css";
 import "swiper/css/pagination";
-import {  Navigation } from 'swiper/modules';
+import {  Navigation,Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
 import RealCard from '../../RealEstate/Items/RealCard';
 
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
 const Location = () => {
   return (
-    <div className='landing-location bg-white py-[2rem] mb-[25px]'>
+    <div className='landing-location bg-white py-[3rem] mb-[25px]'>
         <div className="landing-location-container">
-            <div className="location-heading special-landing-heading text-center">
+            <div className="location-heading special-landing-heading">
                 <span>Properties</span>
                 <h1>Location Lisitngs</h1>
             </div>
@@ -21,12 +21,15 @@ const Location = () => {
                 <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
+                pagination={{
+                  clickable: true,
+                  }}
                 navigation={{
                     nextEl:".swiper-next-btn",
                     prevEl:".swiper-prev-btn",
                   }}
-                className="location-swiper !pb-[35px]"
-                modules={[Navigation]}
+                className="location-swiper !pb-[50px]"
+                modules={[Navigation,Pagination]}
                 breakpoints={{
                     320: {
                       slidesPerView: 1,
