@@ -1,3 +1,33 @@
+.landing-category-container{
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  @media (min-width:540px){
+    .landing-category-container{
+      width: 450px;
+  }
+  }
+  @media (min-width:768px){
+    .landing-category-container{
+      width: 650px;
+    }
+  }
+  @media (min-width:992px){
+    .landing-category-container{
+      width: 750px;
+    }
+  }
+  @media (min-width:1200px){
+    .landing-category-container{
+      width: 1000px;
+    }
+  }
+  
+  @media (min-width:1300px){
+    .landing-category-container{
+      width: 1200px;
+    }
+  }
 .category-grid .grid > div{
     position: relative;
     height: 350px;
@@ -15,7 +45,7 @@
     transition: all 0.4s ease 0s;
     background-color: #000;
     opacity: 0.3;
-    z-index: 0;
+    z-index: 1;
 }
 .category-grid .grid-item img{
     position: absolute;
@@ -23,7 +53,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
     object-fit: cover;
 }
 .category-grid .category-title-wrapper{

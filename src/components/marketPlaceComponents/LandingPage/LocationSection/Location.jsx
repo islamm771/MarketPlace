@@ -10,14 +10,14 @@ import RealCard from '../../RealEstate/Items/RealCard';
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
 const Location = () => {
   return (
-    <div className='landing-location py-[3rem]'>
+    <div className='landing-location bg-white py-[2rem] mb-[25px]'>
         <div className="landing-location-container">
             <div className="location-heading special-landing-heading text-center">
                 <span>Properties</span>
                 <h1>Location Lisitngs</h1>
             </div>
 
-            <div className="card-container mt-[30px]">
+            <div className="card-container">
                 <Swiper
                 slidesPerView={3}
                 spaceBetween={30}

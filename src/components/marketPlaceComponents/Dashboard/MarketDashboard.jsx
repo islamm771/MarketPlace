@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./MarketDashboard.css";
 import { useState } from "react";
 import MemberForm from "../MemberClassifieds/Form/MembeFrom";
@@ -36,9 +36,11 @@ const MarketDashboard = () => {
     real: false,
     auto: false,
   });
-
+  const dashboradContent = useRef(null)
+  
   return (
-    <div className="dashboard-container">
+    <div className="marketplace-dashboard">
+      <div className="dashboard-container">
       <div className="dashboard-cont-swiper mb-[50px]">
         <Swiper
           spaceBetween={30}
@@ -70,15 +72,14 @@ const MarketDashboard = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      {/* <div class="section-banner">
-            <img class="section-banner-icon" src={imghub} alt="accounthub-icon" />
-            <p class="section-banner-title">Dashboard Hub</p>
-            <p class="section-banner-text">Add Member Classifieds , Real State , Automotives</p>
-      </div> */}
+      
       <div className="grid !grid-cols-12">
-        <SideBarDash activeButton={activeButton} setActiveButton={setActiveButton} buttonStates={buttonStates} setButtonStates={setButtonStates} />
+        <SideBarDash
+         activeButton={activeButton} setActiveButton={setActiveButton} 
+         buttonStates={buttonStates} setButtonStates={setButtonStates}
+         dashboardContent={dashboradContent} />
 
-        <div className="account-hub-content col-span-12 xl:col-span-9">
+        <div className="account-hub-content col-span-12 xl:col-span-9" ref={dashboradContent}>
           <div class="section-header !mb-[5px]">
             <div class="section-header-info">
               <p class="section-pretitle">{activeButton.parent}</p>
@@ -135,6 +136,7 @@ const MarketDashboard = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

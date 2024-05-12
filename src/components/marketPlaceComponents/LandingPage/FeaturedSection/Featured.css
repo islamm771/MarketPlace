@@ -1,3 +1,37 @@
+.landing-featured-container{
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media (min-width:540px){
+  .landing-featured-container{
+    width: 450px;
+}
+}
+@media (min-width:768px){
+  .landing-featured-container{
+    width: 650px;
+  }
+}
+@media (min-width:992px){
+  .landing-featured-container{
+    width: 750px;
+  }
+}
+@media (min-width:1200px){
+  .landing-featured-container{
+    width: 1000px;
+  }
+}
+
+@media (min-width:1300px){
+  .landing-featured-container{
+    width: 1200px;
+  }
+}
+
+.special-landing-heading{
+  margin-bottom: 30px;
+}
 .special-landing-heading span{
     align-items: center;
     background: #fff1e7;

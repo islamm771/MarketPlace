@@ -12,14 +12,14 @@ import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
 
 const SectionFour = () => {
   return (
-    <div className='landing-featured py-[3rem]'>
+    <div className='landing-featured bg-white py-[2rem] mb-[25px]'>
         <div className="landing-featured-container">
             <div className="featured-heading special-landing-heading text-center">
                 <span>Properties</span>
                 <h1>Featured Lisitngs</h1>
             </div>
 
-            <div className="card-container mt-[30px]">
+            <div className="card-container">
                 <Swiper
                 slidesPerView={4}
                 spaceBetween={0}

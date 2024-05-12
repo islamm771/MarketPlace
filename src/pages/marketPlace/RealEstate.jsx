@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './MarketPlace.css'
 import MarketPlaceNavigation from "../../components/marketPlaceComponents/MarketPlaceNavigation";
 import "swiper/css/navigation";
@@ -14,7 +14,10 @@ import SectionFour from "../../components/marketPlaceComponents/LandingPage/Sect
 import Latest from "../../components/marketPlaceComponents/LandingPage/LatestSection/Latest";
 import Location from "../../components/marketPlaceComponents/LandingPage/LocationSection/Location";
 
-const RealEstate = () => {
+const RealEstate = ({setRealOpen}) => {
+  useEffect(()=>{
+    setRealOpen(true)
+  },[])
 	return (
     <div className="real-estate-container">
     

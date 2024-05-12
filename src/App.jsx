@@ -8,9 +8,11 @@ import "aos/dist/aos.css";
 import MainPage from "./pages/PagesOutlet/Pages";
 import MarketDashboard from "./components/marketPlaceComponents/Dashboard/MarketDashboard";
 import Automotives from "./pages/marketPlace/Automotives";
+import { useState } from "react";
 
 function App() {
   AOS.init();
+  const [isRealOpen , setOpenReal] = useState(false)
   return (
     <ConfigProvider
       theme={{
@@ -34,10 +36,10 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<MainPage />}
+            element={<MainPage isRealOpen={isRealOpen} />}
           >
             <Route path="/" element={<MarketPlace />} />
-            <Route path="/marketplace/realestates" element={<RealEstate />} />
+            <Route path="/marketplace/realestates" element={<RealEstate setRealOpen={setOpenReal} />} />
             <Route path="/marketplace/automotives" element={<Automotives />} />
             <Route path="/marketplace/dashboard" element={<MarketDashboard />} />
           </Route>

@@ -10,14 +10,14 @@ import RealCard from '../../RealEstate/Items/RealCard';
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
 const Featured = () => {
   return (
-    <div className='landing-featured py-[3rem]'>
+    <div className='landing-featured bg-white py-[2rem] mb-[25px]'>
         <div className="landing-featured-container">
             <div className="featured-heading special-landing-heading text-center">
                 <span>Properties</span>
                 <h1>Featured Lisitngs</h1>
             </div>
 
-            <div className="card-container mt-[30px]">
+            <div className="card-container">
                 <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
@@ -37,6 +37,10 @@ const Featured = () => {
                       spaceBetween: 10,
                     },
                     768: {
+                      slidesPerView: 2,
+                      spaceBetween: 15,
+                    },
+                    992: {
                       slidesPerView: 2,
                       spaceBetween: 15,
                     },

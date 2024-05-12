@@ -1,17 +1,17 @@
 import React from 'react'
 import RealCard from '../../RealEstate/Items/RealCard'
-
+import "./Latest.css"
 const Latest = () => {
   return (
-    <div className='landing-featured py-[3rem]'>
-        <div className="landing-featured-container">
-            <div className="featured-heading special-landing-heading text-center">
+    <div className='landing-latest bg-white py-[2rem] mb-[25px]'>
+        <div className="landing-latest-container">
+            <div className="latest-heading special-landing-heading text-center">
                 <span>Property</span>
                 <h1>Latest Lisitngs</h1>
             </div>
 
-            <div className="card-container mt-[30px]">
-                <div className="grid md:!grid-cols-2 lg:!grid-cols-3">
+            <div className="card-container">
+                <div className="grid md:!grid-cols-2 xl:!grid-cols-3">
                     <div className="grid-item">
                     <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
                     </div>

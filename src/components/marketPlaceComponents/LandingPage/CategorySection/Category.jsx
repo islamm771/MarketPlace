@@ -6,7 +6,7 @@ import img_03 from "../../../../assests/marketplace/landing/Category/4.jpg"
 import img_04 from "../../../../assests/marketplace/landing/Category/5.jpg"
 const Category = () => {
   return (
-    <div className='landing-category py-[3rem]'>
+    <div className='landing-category bg-white py-[2rem] mb-[25px]'>
         <div className="landing-category-container">
             <div className="category-heading special-landing-heading text-center">
                 <span>Propertry</span>

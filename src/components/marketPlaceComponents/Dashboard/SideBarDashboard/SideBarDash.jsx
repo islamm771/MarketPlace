@@ -64,7 +64,7 @@ const sidebarItems = [
 
 
 
-const SideBarDash = ({activeButton,setActiveButton,buttonStates,setButtonStates}) => {
+const SideBarDash = ({activeButton,setActiveButton,buttonStates,setButtonStates,dashboardContent}) => {
 
     const handleToggleActive = (button) =>{
         const copyState = {...buttonStates}
@@ -84,6 +84,9 @@ const SideBarDash = ({activeButton,setActiveButton,buttonStates,setButtonStates}
     
       const handleClick = (title,text) => {
         setActiveButton({title,parent:text})
+        if(dashboardContent.current){
+          window.scrollTo(0,dashboardContent.current.offsetTop-90)
+        }
       };
     
       const renderItems = sidebarItems.map((item) => (
@@ -116,7 +119,11 @@ const SideBarDash = ({activeButton,setActiveButton,buttonStates,setButtonStates}
           >
             <div className="sidebar-menu-body accordion-content-linked accordion-open !p-4 !ps-[50px]">
               {item.buttons.map( title => (
-                <button className={title == activeButton.title && activeButton.parent == item.title && "active"} onClick={()=>handleClick(title,item.title)}>{title}</button>
+                <button 
+                  className={title == activeButton.title && activeButton.parent == item.title && "active"}
+                  onClick={()=>handleClick(title,item.title)}>
+                  {title}
+                </button>
               ) )}
             </div>
           </div>

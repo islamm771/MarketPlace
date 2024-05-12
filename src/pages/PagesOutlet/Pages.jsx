@@ -3,15 +3,13 @@ import { Outlet } from "react-router-dom";
 import NavigationAndSidebar from "../../components/NavigationAndSidebar/NavigationAndSidebar";
 import "../marketPlace/MarketPlace.css";
 import { useSelector } from "react-redux";
-const MainPage = () => {
+const MainPage = ({isRealOpen}) => {
 	const isLargeHidden = useSelector((state) => state.outlet.isLargeHidden);
 	const isChatsOpen = useSelector((state) => state.outlet.isChatsOpen);
 	const isChatOpen = useSelector((state) => state.outlet.isChatOpen);
-
 	const [width, setWidth] = useState(window.innerWidth);
 	const [isHidden, setIsHidden] = useState(false);
 	const [currentPath, setCurrentPath] = useState(window.location.pathname);
-
 	const breakpointForGrid = 1365;
 	const breakpoint = 680;
 
@@ -40,29 +38,9 @@ const MainPage = () => {
 	return (
 		<>
 			<NavigationAndSidebar />
-			<div
-				className={`content-grid`}
-				style={{
-					transform: `translate(${
-						width >= breakpointForGrid &&
-						isLargeHidden &&
-						!isChatsOpen &&
-						!isChatOpen
-							? `${100 + (width - breakpointForGrid) * 0.5}px`
-							: width >= breakpointForGrid && isLargeHidden && isChatsOpen
-							? `${100 + (width - breakpointForGrid) * 0.5 - 110}px`
-							: width >= breakpointForGrid &&
-							  !isLargeHidden &&
-							  !isChatsOpen &&
-							  !isChatOpen
-							? `${100 + (width - breakpointForGrid) * 0.5 + 110}px`
-							: "0px"
-					}, 0px)`,
-					transition: "transform .68s ease-in-out 0s",
-				}}
-			>
+			<>
 				<Outlet />
-			</div>
+			</>
 		</>
 	);
 };
