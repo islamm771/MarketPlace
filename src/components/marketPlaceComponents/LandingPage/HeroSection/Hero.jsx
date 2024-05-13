@@ -8,7 +8,7 @@ import { FaHouse,FaEarthAsia,FaMagnifyingGlass,FaBuilding  } from "react-icons/f
 // import FormInput from '../../../ui/formInput/FormInput'
 // import Select from '../../../ui/select/Select'
 
-const Hero = () => {
+const Hero = (props) => {
   return (
     <div className="landing-hero-header mt-[3rem]">
 			<div className="landing-hero-header-container">

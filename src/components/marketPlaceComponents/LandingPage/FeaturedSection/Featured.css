@@ -47,9 +47,6 @@
   transform: scale(1.2);
 }
 
-.landing-featured .featured-swiper>.swiper-pagination .swiper-pagination-bullet {
-  /* background-color: #ff692876; */
-}
 
 
 @media (min-width:540px){

@@ -188,7 +188,8 @@ const AutoCar = (props) => {
             </div>
             <div class="card__image-footer">
 
-                {owner.toLowerCase() == 'owner' && (<div class="owner-profile-wrapper flex w-fit gap-3">
+                {owner.toLowerCase() == 'owner' && (
+                <div class="owner-profile-wrapper flex w-fit gap-3">
                     <div class="owner-profile-img w-[50px]">
                         <div className="relative">
                             <img className="rounded-[50%] border-[1px] border-solid border-[#fd6729] p-[1.5px]" src={avatar_img} alt="Profile" />
@@ -250,11 +251,11 @@ const AutoCar = (props) => {
                         <p className="owner-details-text">Brandmarks</p>
                     </div>
                     
-                    </div>)}
+                </div>)}
 
                 {owner.toLowerCase() != 'owner' && (<div className="profile-wrapper flex items-center gap-[10px]"> 
                 <img className="w-[50px] h-[50px] rounded-[50px]" src={company_img_01} alt="" /> 
-                <h6 className="">
+                <h6 className="capitalize">
                     {owner}
                 </h6>
                 </div> )}

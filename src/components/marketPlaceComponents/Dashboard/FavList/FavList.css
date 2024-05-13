@@ -117,17 +117,24 @@
 
 .list-items .member-product-card .gigs-grid{
     display: flex !important;
-    /* height: 400px; */
+    height: 330px;
 }
 .list-items .member-product-card .gigs-grid .gigs-img{
     width: 55%;
     height: 100%;
 }
+.list-items .member-product-card .gigs-grid .gigs-img .user-thumb{
+    display: none;
+}
 .list-items .member-product-card .gigs-grid .gigs-content{
     width: 45%;
     height: 100%;
+    padding: 22px 24px 0;
+}
+.list-items .member-product-card .gigs-grid .gigs-describtion{
+    display: block;
 }
 
-.list-items .member-product-card .gigs-grid .user-thumb{
-    bottom: 0;
+.list-items .member-product-card .gigs-grid .owner-profile-wrapper{
+    display: flex;
 }

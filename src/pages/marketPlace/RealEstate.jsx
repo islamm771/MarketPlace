@@ -6,18 +6,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-import EstateProducts from "../../components/marketPlaceComponents/Products/EstateProducts/Products";
 import Hero from "../../components/marketPlaceComponents/LandingPage/HeroSection/Hero";
 import Featured from "../../components/marketPlaceComponents/LandingPage/FeaturedSection/Featured";
 import Category from "../../components/marketPlaceComponents/LandingPage/CategorySection/Category";
 import SectionFour from "../../components/marketPlaceComponents/LandingPage/SectionFour/SectionFour";
 import Latest from "../../components/marketPlaceComponents/LandingPage/LatestSection/Latest";
 import Location from "../../components/marketPlaceComponents/LandingPage/LocationSection/Location";
+import RealCard from "../../components/marketPlaceComponents/RealEstate/Items/RealCard";
 
-const RealEstate = ({setRealOpen}) => {
-  useEffect(()=>{
-    setRealOpen(true)
-  },[])
+const RealEstate = () => {
 	return (
     <div className="real-estate-container">
     
@@ -54,11 +51,30 @@ const RealEstate = ({setRealOpen}) => {
       </div> */}
 
       <Hero />
-      <Featured />
+
+      <Featured>
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"owner"} isFav={false} />
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+      </Featured>
+
       <Category />
       <SectionFour />
-      <Latest />
-      <Location />
+
+      <Latest>
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+      </Latest>
+
+      <Location>
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+      </Location>
     </div>
   );
 };

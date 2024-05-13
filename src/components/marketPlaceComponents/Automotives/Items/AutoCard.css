@@ -64,7 +64,7 @@
     letter-spacing: 1px;
     font-size: 14px;
     color: #fff;
-    font-family: "Open Sans",sans-serif;
+    font-family: Rajdhani,sans-serif;
     z-index: 5;
 }
 
@@ -216,6 +216,17 @@
 
 .state-product-card .card__image-footer p{
     font-size: 14px;
+}
+
+.state-product-card .card__image-footer .owner-profile-img > div::before{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: #1df377;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
 }
 
 .real-card-swiper .swiper-pagination-bullet{

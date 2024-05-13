@@ -199,7 +199,7 @@ const RealCard = (props) => {
 
                 {owner.toLowerCase() != 'owner' && (  <div className="profile-wrapper flex items-center gap-[10px]"> 
                 <img className="w-[50px] h-[50px] rounded-[50px]" src={company_img_01} alt="" /> 
-                <h6 className="">
+                <h6 className="capitalize">
                     {owner}
                 </h6>
                 </div> )}

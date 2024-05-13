@@ -4,7 +4,14 @@ import "./Latest.css"
 import { FaArrowRightLong } from "react-icons/fa6";
 import { HiArrowLongRight } from "react-icons/hi2";
 
-const Latest = () => {
+const Latest = ({children}) => {
+    const renderMarketCards = children.map( child =>(
+        <>
+            <div className="grid-item">
+                {child}
+            </div>
+        </>
+    ))
   return (
     <div className='landing-latest bg-white py-[3rem] mb-[25px]'>
         <div className="landing-latest-container">
@@ -18,25 +25,7 @@ const Latest = () => {
 
             <div className="card-container">
                 <div className="grid md:!grid-cols-2 xl:!grid-cols-3">
-                    <div className="grid-item">
-                    <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
-                    </div>
-                    <div className="grid-item">
-                    <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
-                    </div>
-                    <div className="grid-item">
-                    <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
-                    </div>
-                    <div className="grid-item">
-                    <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
-                    </div>
-                    <div className="grid-item">
-                    <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
-                    </div>
-                    <div className="grid-item">
-                    <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
-                    </div>
-                    
+                    {renderMarketCards}
                 </div>
             </div>
         </div>

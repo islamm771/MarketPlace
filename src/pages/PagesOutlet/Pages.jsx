@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import NavigationAndSidebar from "../../components/NavigationAndSidebar/NavigationAndSidebar";
 import "../marketPlace/MarketPlace.css";
 import { useSelector } from "react-redux";
-const MainPage = ({isRealOpen}) => {
+const MainPage = () => {
 	const isLargeHidden = useSelector((state) => state.outlet.isLargeHidden);
 	const isChatsOpen = useSelector((state) => state.outlet.isChatsOpen);
 	const isChatOpen = useSelector((state) => state.outlet.isChatOpen);

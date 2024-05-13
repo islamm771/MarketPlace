@@ -43,7 +43,6 @@ const MarketPlace = () => {
       </Swiper>
 
       <section>
-        <ClassifiedsProducts/>
       </section>
     </div>
   );

@@ -5,10 +5,17 @@ import "swiper/css";
 import "swiper/css/pagination";
 import {  Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
-import RealCard from '../../RealEstate/Items/RealCard';
 
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
-const Featured = () => {
+const Featured = ({children}) => {
+  console.log(children)
+  const renderSwiperSlides = children.map( child => (
+    <>
+      <SwiperSlide>
+          {child}
+      </SwiperSlide>
+    </>
+  ) )
   return (
     <div className='landing-featured bg-white py-[4rem] mb-[25px]'>
         <div className="landing-featured-container">
@@ -26,8 +33,8 @@ const Featured = () => {
                 clickable: true,
                 }}
                 navigation={{
-                    nextEl:".swiper-next-btn",
-                    prevEl:".swiper-prev-btn",
+                    nextEl:".swiper-featured-next-btn",
+                    prevEl:".swiper-featured-prev-btn",
                   }}
                 className="featured-swiper !pb-[50px]"
                 modules={[Pagination,Navigation]}
@@ -50,30 +57,13 @@ const Featured = () => {
                     },
                   }}
                 >
-                <SwiperSlide>
-                    <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
-                </SwiperSlide>
+                {renderSwiperSlides}
                 </Swiper>
             </div>
 
             <div className="buttons">
-                <button className='swiper-prev-btn'><FaChevronLeft /></button>
-                <button className='swiper-next-btn'><FaChevronRight /></button>
+                <button className='swiper-featured-prev-btn'><FaChevronLeft /></button>
+                <button className='swiper-featured-next-btn'><FaChevronRight /></button>
             </div>
         </div>
     </div>

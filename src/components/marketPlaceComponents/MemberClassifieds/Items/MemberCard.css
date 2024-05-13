@@ -56,6 +56,9 @@ padding: 0px 15px;
 border-radius: 25px;
 font-size: 14px;
 }
+.member-product-card .gigs-describtion{
+  display: none;
+}
 .member-product-card .gigs-card-footer p {
 display: inline-flex;
 display: -webkit-inline-box;
@@ -172,21 +175,6 @@ margin-bottom: 0;
   text-overflow: ellipsis;
   display: -webkit-box;
 }
-.member-product-card .card-overlay-badge span {
-font-size: 14px;
-border-radius: 10px;
-padding: 8px 10px;
-display: inline-flex;
-align-items: center;
-}
-.member-product-card .card-overlay-badge span.bg-danger{
-  color: white;
-  background-color: #dc3545;
-}
-.member-product-card .card-overlay-badge span.bg-warning{
-  color: white;
-  background-color: #ffc107;
-}
 .member-product-card .gigs-img {
 position: relative;
 border-radius: 10px 10px 0 0;
@@ -218,19 +206,26 @@ width: 100%;
 display: block;
 }
 .member-product-card .card-overlay-badge {
-display: flex;
-align-items: center;
-position: absolute;
-left: 0;
-top: 0;
-margin: 15px 0 0 15px;
-z-index: 1;
-}
-.member-product-card .card-overlay-badge span svg {
-margin-right: 8px;
-}
-.member-product-card .card-overlay-badge span.bg-warning {
-margin-right: 8px;
+  box-shadow: 0 1px 1px #0003;
+  transform: translateZ(1px) rotate(-45deg);
+  backface-visibility: hidden;
+  background-color: #ffc107;
+  color: #fff;
+  font-size: 14px;
+  font-family: Open Sans, sans-serif;
+  padding: 6px;
+  position: absolute;
+  z-index: 3;
+  left: -30px;
+  top: 15px;
+  width: 120px;
+  text-align: center;
+  margin: auto;
+  height: 30px;
+  bottom: inherit;
+  right: inherit;
+  text-transform: capitalize;
+  font-family: Rajdhani,sans-serif;
 }
 .member-product-card .fav-selection {
 position: absolute;
@@ -335,6 +330,18 @@ z-index: 1;
   opacity: 1;
 }
 
+
+
+.member-product-card .gigs-grid .owner-profile-img > div::before{
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #1df377;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+}
 
 
 
