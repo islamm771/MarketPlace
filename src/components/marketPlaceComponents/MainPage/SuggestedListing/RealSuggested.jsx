@@ -2,6 +2,9 @@ import React from 'react'
 import RealCard from "../../RealEstate/Items/RealCard"
 import { HiArrowLongRight } from 'react-icons/hi2'
 
+import {  Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+
 const RealSuggested = () => {
   return (
     <>
@@ -11,11 +14,58 @@ const RealSuggested = () => {
           View All <HiArrowLongRight className='inline text-[14px]' /> 
         </a>
       </div>
-      <div className='grid grid-cols-1 md:!grid-cols-2 lg:!grid-cols-3'>
+
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        // centeredSlides={true}
+        pagination={{
+        clickable: true,
+        // el:"swiper-memberSuggested-pagination",
+        type:"bullets"
+        }}
+        navigation={{
+            nextEl:".swiper-realSuggested-next-btn",
+            prevEl:".swiper-realSuggested-prev-btn",
+          }}
+        className="realSuggested-swiper !pb-[2.5rem] md:!pb-[5rem]"
+        modules={[Pagination,Navigation]}
+        breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            992: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            1200: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+        >
+        <SwiperSlide>
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+        </SwiperSlide>
+        <SwiperSlide>
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+        </SwiperSlide>
+        <SwiperSlide>
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
-      </div>
+        </SwiperSlide>
+        <SwiperSlide>
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+        </SwiperSlide>
+        <SwiperSlide>
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+        </SwiperSlide>
+        {/* <div className='swiper-memberSuggested-pagination'></div> */}
+      </Swiper>
     </>
   )
 }

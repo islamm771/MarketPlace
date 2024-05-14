@@ -30,6 +30,25 @@
     z-index: -2;
     object-fit: cover;
 }
+
+.landing-hero-form .btn-tabHeroFrom{
+    background-color: #fff;
+    padding: 10px 25px;
+    padding-left: 10px;
+    border-radius: 5px 5px 0 0 !important;
+    width: fit-content;
+}
+.landing-hero-form .btn-tabHeroFrom.active{
+    background-color: #fd6729;
+    color: #fff;
+}
+.landing-hero-form .btn-tabHeroFrom.active svg{
+    fill: white;
+}
+.landing-hero-form .all-hero-forms form{
+    border-radius: 0 5px 5px 5px !important;
+}
+
 .landing-hero-form form{
     display: flex;
     border-radius: 5px;

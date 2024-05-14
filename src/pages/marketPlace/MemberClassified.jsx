@@ -12,11 +12,12 @@ import SectionFour from "../../components/marketPlaceComponents/LandingPage/Sect
 import Latest from "../../components/marketPlaceComponents/LandingPage/LatestSection/Latest";
 import Location from "../../components/marketPlaceComponents/LandingPage/LocationSection/Location";
 import MemberCard from "../../components/marketPlaceComponents/MemberClassifieds/Items/MemberCard"
+import MemberLandingForm from "../../components/marketPlaceComponents/MemberClassifieds/Form/MemberLandingForm";
 const MemberClassified = () => {
 	return (
     <div className="member-classifieds-container">
 
-      <Hero />
+      <Hero> <MemberLandingForm /> </Hero>
       <Featured>
         <MemberCard title={"Ladies Gap Jeans (Bought one month ago)"} price={7500} isChecked={false} />
         <MemberCard title={"Ladies Gap Jeans (Bought one month ago)"} price={8500} isChecked={false} />

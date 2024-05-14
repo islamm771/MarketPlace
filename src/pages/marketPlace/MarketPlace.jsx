@@ -46,7 +46,16 @@ const MarketPlace = () => {
       </Swiper> */}
 
       <Hero />
-      <Featured title={"Suggested Listings"} MemberCards={<MemberSuggested />} RealCards={<RealSuggested />} AutoCards={<AutoSuggested />} />
+      <Featured title={"Suggested Listings"}
+       subTitle={"Based on your recent search"}
+       MemberCards={<MemberSuggested />} 
+       RealCards={<RealSuggested />} 
+       AutoCards={<AutoSuggested />} />
+
+      <Featured title={"Recently Viewed"}
+       MemberCards={<MemberSuggested />} 
+       RealCards={<RealSuggested />} 
+       AutoCards={<AutoSuggested />} />
     </div>
   );
 };

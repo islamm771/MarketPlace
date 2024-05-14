@@ -6,7 +6,7 @@ import { BsShop } from "react-icons/bs";
 const sidebarItems = [
     {
       id: 1,
-      title: "Member Classifieds",
+      title: "Member Classified",
       function: "member",
       svg:<svg
       className="w-[40px] text-[#36e9f7]"
@@ -45,7 +45,7 @@ const sidebarItems = [
     },
     {
       id: 3,
-      title: "Automotives",
+      title: "Automotive",
       function: "auto",
       svg:<svg
         className="w-[40px] fill-[#36e9f7]"

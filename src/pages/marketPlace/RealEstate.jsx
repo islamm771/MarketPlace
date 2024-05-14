@@ -13,6 +13,7 @@ import SectionFour from "../../components/marketPlaceComponents/LandingPage/Sect
 import Latest from "../../components/marketPlaceComponents/LandingPage/LatestSection/Latest";
 import Location from "../../components/marketPlaceComponents/LandingPage/LocationSection/Location";
 import RealCard from "../../components/marketPlaceComponents/RealEstate/Items/RealCard";
+import RealLandingForm from "../../components/marketPlaceComponents/RealEstate/Form/RealLandingForm";
 
 const RealEstate = () => {
 	return (
@@ -50,7 +51,7 @@ const RealEstate = () => {
         </Swiper>
       </div> */}
 
-      <Hero />
+      <Hero> <RealLandingForm /> </Hero>
 
       <Featured>
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />

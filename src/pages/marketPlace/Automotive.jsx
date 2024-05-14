@@ -7,12 +7,13 @@ import SectionFour from "../../components/marketPlaceComponents/LandingPage/Sect
 import Latest from "../../components/marketPlaceComponents/LandingPage/LatestSection/Latest";
 import Location from "../../components/marketPlaceComponents/LandingPage/LocationSection/Location";
 import AutoCard from "../../components/marketPlaceComponents/Automotives/Items/AutoCard";
+import AutoLandingForm from "../../components/marketPlaceComponents/Automotives/Form/AutoLandingForm";
 
 const Automotive = () => {
 	return (
     <div className="automotives-container">
 
-      <Hero />
+      <Hero> <AutoLandingForm /> </Hero>
 
       <Featured>
         <AutoCard 

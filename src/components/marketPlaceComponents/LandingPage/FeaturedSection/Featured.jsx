@@ -7,7 +7,7 @@ import {  Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
-const Featured = ({title,children , MemberCards , RealCards , AutoCards}) => {
+const Featured = ({title,subTitle ,children , MemberCards , RealCards , AutoCards}) => {
   let renderSwiperSlides;
   console.log(children)
   if(children){
@@ -25,10 +25,10 @@ const Featured = ({title,children , MemberCards , RealCards , AutoCards}) => {
             <div className="featured-heading special-landing-heading">
                 <span>Properties</span>
                 <h1>{title ? title : "Featured Lisitngs"}</h1>
+                {subTitle && <span>{subTitle}</span>}
             </div>
 
-            {
-              renderSwiperSlides && (
+            {renderSwiperSlides && (
               <>
                 <div className="card-container">
                   <Swiper
@@ -74,8 +74,7 @@ const Featured = ({title,children , MemberCards , RealCards , AutoCards}) => {
                     <button className='swiper-featured-prev-btn'><FaChevronLeft /></button>
                     <button className='swiper-featured-next-btn'><FaChevronRight /></button>
                 </div>
-              </>)
-            }
+              </>)}
 
             {MemberCards && <>{MemberCards}</>}
             {RealCards && <>{RealCards}</>}
