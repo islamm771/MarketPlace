@@ -12,7 +12,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-
+import img_gasoline_icon from "../../../../assests/marketplace/automotives/card/icon-04.png"
 
 const AutoCar = (props) => {
     const {title,price,location,owner,downPayment,isFav,isSold,carBrand,carModel,carYear} = props
@@ -65,17 +65,17 @@ const AutoCar = (props) => {
                 className="real-card-swiper h-[100%]"
                 >
                 <SwiperSlide className="relative">
-                    <Link to="service-details.html">
+                    <Link to="">
                         <img src={img_01} className="img-fluid" alt="Gigs" />
                     </Link>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Link to="service-details.html">
+                    <Link to="">
                         <img src={img_01} className="img-fluid" alt="Gigs" />
                     </Link>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Link to="service-details.html">
+                    <Link to="">
                         <img src={img_01} className="img-fluid" alt="Gigs" />
                     </Link>
                 </SwiperSlide>
@@ -131,7 +131,6 @@ const AutoCar = (props) => {
                                     </g>
                                 </g>
                             </svg> 10
-                            {/* <FaBath className="inline-block" /> 2 */}
                         </span>
                     </li>
                     <li class="list-inline-item">
@@ -155,6 +154,13 @@ const AutoCar = (props) => {
                                     </g>
                                 </g>
                             </svg> 3
+                        </span>
+                    </li>
+                    <li class="list-inline-item">
+                        <span>
+                            CC <br />
+                            <img className="w-[20px] h-[20px] inline" src={img_gasoline_icon} alt="" />
+                            1500
                         </span>
                     </li>
                     <li class="list-inline-item">

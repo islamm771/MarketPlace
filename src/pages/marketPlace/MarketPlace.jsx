@@ -6,13 +6,16 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-import ClassifiedsProducts from "../../components/marketPlaceComponents/Products/ClassifiedProducts/Products";
+import Hero from "../../components/marketPlaceComponents/LandingPage/HeroSection/Hero";
+import Featured from "../../components/marketPlaceComponents/LandingPage/FeaturedSection/Featured";
+import MemberSuggested from "../../components/marketPlaceComponents/MainPage/SuggestedListing/MemberSuggested";
+import RealSuggested from "../../components/marketPlaceComponents/MainPage/SuggestedListing/RealSuggested";
+import AutoSuggested from "../../components/marketPlaceComponents/MainPage/SuggestedListing/AutoSuggested";
 
 const MarketPlace = () => {
 	return (
-    <div className="market-place-container">
-		
-      <Swiper
+    <div className="market-place-container !mt-[5rem]">
+      {/* <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
@@ -23,7 +26,7 @@ const MarketPlace = () => {
           clickable: true,
         }}
         modules={[Autoplay, Pagination]}
-        className="mySwiper"
+        className="mySwiper mb-[30px]"
       >
         <SwiperSlide>
           <div className="banner-container">
@@ -40,10 +43,10 @@ const MarketPlace = () => {
             <img src="/img/ads/ads.jpeg" alt="ads banner" />
           </div>
         </SwiperSlide>
-      </Swiper>
+      </Swiper> */}
 
-      <section>
-      </section>
+      <Hero />
+      <Featured title={"Suggested Listings"} MemberCards={<MemberSuggested />} RealCards={<RealSuggested />} AutoCards={<AutoSuggested />} />
     </div>
   );
 };

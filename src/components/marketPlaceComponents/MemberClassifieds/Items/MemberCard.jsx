@@ -59,17 +59,17 @@ const ClassifiedCard = (props) => {
                 className="member-card-swiper"
                 >
                 <SwiperSlide>
-                <Link to="service-details.html">
+                <Link to="#">
                     <img src={img_01} className="img-fluid" alt="Gigs" />
                 </Link>
                 </SwiperSlide>
                 <SwiperSlide>
-                <Link to="service-details.html">
+                <Link to="#">
                     <img src={img_01} className="img-fluid" alt="Gigs" />
                 </Link>
                 </SwiperSlide>
                 <SwiperSlide>
-                <Link to="service-details.html">
+                <Link to="#">
                     <img src={img_01} className="img-fluid" alt="Gigs" />
                 </Link>
                 </SwiperSlide>
@@ -82,7 +82,7 @@ const ClassifiedCard = (props) => {
                 </div>
                 <div class="fav-selection">
                     <input class="fav-checkbox" type="checkbox" checked={isFav} onChange={() => {setIsFav(!isFav)}} />
-                    <a href="javascript:void(0);" class="fav-icon">
+                    <a href="" class="fav-icon">
                         <CiHeart />
                     </a>
                 </div>
@@ -112,14 +112,14 @@ const ClassifiedCard = (props) => {
             </div>
             <div class="gigs-content">
                 <div class="gigs-info">
-                    <a href="service-details.html" class="badge bg-primary-light">
+                    <a href="#" class="badge bg-primary-light">
                         Fashion
                     </a>
                     <span>Used</span>
                 </div>
                 <div class="gigs-title">
                     <h3>
-                        <a href="service-details.html">
+                        <a href="#">
                             {title ? textFormater(title) : "Product Title"}
                         </a>
                     </h3>

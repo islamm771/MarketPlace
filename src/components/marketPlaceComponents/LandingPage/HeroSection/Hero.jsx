@@ -10,7 +10,7 @@ import { FaHouse,FaEarthAsia,FaMagnifyingGlass,FaBuilding  } from "react-icons/f
 
 const Hero = (props) => {
   return (
-    <div className="landing-hero-header mt-[3rem]">
+    <div className="landing-hero-header">
 			<div className="landing-hero-header-container">
 			{/* HTML5 VIDEO */}
                 <video autoPlay muted loop id="myVideo">

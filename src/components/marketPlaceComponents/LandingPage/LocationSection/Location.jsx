@@ -16,7 +16,7 @@ const Location = ({children}) => {
     </>
   ) )
   return (
-    <div className='landing-location bg-white py-[3rem] mb-[25px]'>
+    <div className='landing-location bg-white py-[4rem] lg:py-[6rem] mb-[25px]'>
         <div className="landing-location-container">
             <div className="location-heading special-landing-heading">
                 <span>Properties</span>
@@ -34,7 +34,7 @@ const Location = ({children}) => {
                     nextEl:".swiper-location-next-btn",
                     prevEl:".swiper-location-prev-btn",
                   }}
-                className="location-swiper !pb-[50px]"
+                className="location-swiper !pb-[4rem] md:!pb-[5rem]"
                 modules={[Navigation,Pagination]}
                 breakpoints={{
                     320: {

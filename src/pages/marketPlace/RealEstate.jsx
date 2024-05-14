@@ -16,7 +16,7 @@ import RealCard from "../../components/marketPlaceComponents/RealEstate/Items/Re
 
 const RealEstate = () => {
 	return (
-    <div className="real-estate-container">
+    <div className="real-estate-container !mt-[5rem]">
     
       {/* <div className="real-estate-swiperContainer">
         <Swiper

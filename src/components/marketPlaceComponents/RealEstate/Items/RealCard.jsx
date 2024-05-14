@@ -67,17 +67,17 @@ const RealCard = (props) => {
                 className="real-card-swiper h-[100%]"
                 >
                 <SwiperSlide className="relative">
-                    <Link to="service-details.html">
+                    <Link to="">
                         <img src={img_01} className="img-fluid" alt="Gigs" />
                     </Link>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Link to="service-details.html">
+                    <Link to="">
                         <img src={img_01} className="img-fluid" alt="Gigs" />
                     </Link>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Link to="service-details.html">
+                    <Link to="">
                         <img src={img_01} className="img-fluid" alt="Gigs" />
                     </Link>
                 </SwiperSlide>

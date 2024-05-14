@@ -7,64 +7,81 @@ import {  Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
-const Featured = ({children}) => {
+const Featured = ({title,children , MemberCards , RealCards , AutoCards}) => {
+  let renderSwiperSlides;
   console.log(children)
-  const renderSwiperSlides = children.map( child => (
-    <>
-      <SwiperSlide>
-          {child}
-      </SwiperSlide>
-    </>
-  ) )
+  if(children){
+    renderSwiperSlides = children.map( child => (
+      <>
+        <SwiperSlide>
+            {child}
+        </SwiperSlide>
+      </>
+    ) )
+  }
   return (
-    <div className='landing-featured bg-white py-[4rem] mb-[25px]'>
+    <div className='landing-featured bg-white py-[4rem] lg:py-[6rem] mb-[25px]'>
         <div className="landing-featured-container">
             <div className="featured-heading special-landing-heading">
                 <span>Properties</span>
-                <h1>Featured Lisitngs</h1>
+                <h1>{title ? title : "Featured Lisitngs"}</h1>
             </div>
 
-            <div className="card-container">
-                <Swiper
-                slidesPerView={3}
-                spaceBetween={30}
-                // centeredSlides={true}
-                pagination={{
-                clickable: true,
-                }}
-                navigation={{
-                    nextEl:".swiper-featured-next-btn",
-                    prevEl:".swiper-featured-prev-btn",
+            {
+              renderSwiperSlides && (
+              <>
+                <div className="card-container">
+                  <Swiper
+                  slidesPerView={3}
+                  spaceBetween={30}
+                  // centeredSlides={true}
+                  pagination={{
+                  clickable: true,
+                  // el:"swiper-featured-pagination",
+                  type:"bullets"
                   }}
-                className="featured-swiper !pb-[50px]"
-                modules={[Pagination,Navigation]}
-                breakpoints={{
-                    320: {
-                      slidesPerView: 1,
-                      spaceBetween: 10,
-                    },
-                    768: {
-                      slidesPerView: 2,
-                      spaceBetween: 15,
-                    },
-                    992: {
-                      slidesPerView: 2,
-                      spaceBetween: 15,
-                    },
-                    1200: {
-                      slidesPerView: 3,
-                      spaceBetween: 30,
-                    },
-                  }}
-                >
-                {renderSwiperSlides}
-                </Swiper>
-            </div>
+                  navigation={{
+                      nextEl:".swiper-featured-next-btn",
+                      prevEl:".swiper-featured-prev-btn",
+                    }}
+                  className="featured-swiper !pb-[2.5rem] md:!pb-[5rem]"
+                  modules={[Pagination,Navigation]}
+                  breakpoints={{
+                      320: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                      },
+                      768: {
+                        slidesPerView: 2,
+                        spaceBetween: 15,
+                      },
+                      992: {
+                        slidesPerView: 2,
+                        spaceBetween: 15,
+                      },
+                      1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                      },
+                    }}
+                  >
+                  {renderSwiperSlides}
+                  </Swiper>
+                  {/* <div className='swiper-featured-pagination'></div> */}
+                </div>
 
-            <div className="buttons">
-                <button className='swiper-featured-prev-btn'><FaChevronLeft /></button>
-                <button className='swiper-featured-next-btn'><FaChevronRight /></button>
-            </div>
+                <div className="buttons">
+                    <button className='swiper-featured-prev-btn'><FaChevronLeft /></button>
+                    <button className='swiper-featured-next-btn'><FaChevronRight /></button>
+                </div>
+              </>)
+            }
+
+            {MemberCards && <>{MemberCards}</>}
+            {RealCards && <>{RealCards}</>}
+            {AutoCards && <>{AutoCards}</>}
+
+
         </div>
     </div>
   )
