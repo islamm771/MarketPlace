@@ -131,7 +131,6 @@ const SideBarDash = ({activeButton,setActiveButton,buttonStates,setButtonStates,
         </div>
       ));
 
-      console.log(activeButton)
   return (
     <>
     <div className="account-hub-sidebar col-span-12 xl:col-span-3">

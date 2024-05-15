@@ -14,7 +14,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import img_gasoline_icon from "../../../../assests/marketplace/automotives/card/icon-04.png"
 
-const AutoCar = (props) => {
+const AutoCard = (props) => {
     const {title,price,location,owner,downPayment,isFav,isSold,carBrand,carModel,carYear} = props
 
     const [isFavProduct, setisFav] = useState(isFav)
@@ -275,4 +275,4 @@ const AutoCar = (props) => {
   );
 };
 
-export default AutoCar;
+export default AutoCard;

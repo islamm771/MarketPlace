@@ -10,6 +10,7 @@ import MarketDashboard from "./components/marketPlaceComponents/Dashboard/Market
 import Automotive from "./pages/marketPlace/Automotive";
 import { useState } from "react";
 import MemberClassified from "./pages/marketPlace/MemberClassified";
+import MarketSearchPage from "./pages/marketPlace/MarketSearch";
 
 function App() {
   AOS.init();
@@ -43,6 +44,7 @@ function App() {
             <Route path="/marketplace/realestates" element={<RealEstate />} />
             <Route path="/marketplace/automotives" element={<Automotive />} />
             <Route path="/marketplace/dashboard" element={<MarketDashboard />} />
+            <Route path="/marketplace/search" element={<MarketSearchPage />} />
           </Route>
         </Routes>
       </div>

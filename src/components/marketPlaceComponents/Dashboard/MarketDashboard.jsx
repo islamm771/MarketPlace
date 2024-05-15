@@ -98,7 +98,7 @@ const MarketDashboard = () => {
               )}
 
               {/* Member Classifieds Contents */}
-              {activeButton.parent === "Member Classifieds" && (
+              {activeButton.parent === "Member Classified" && (
                 <>
                   {activeButton.title === "Dashboard" && <div>Dashboard</div>}
                   {activeButton.title === "My Listings" && <MyListings><MemberListings/></MyListings>}
@@ -122,7 +122,7 @@ const MarketDashboard = () => {
               )}
 
               {/* Automotive Contents */}
-              {activeButton.parent === "Automotives" && (
+              {activeButton.parent === "Automotive" && (
                   <>
                     {activeButton.title === "Dashboard" && <div>Dashboard</div>}
                     {activeButton.title === "My Automotives" && <MyListings><AutoListings /></MyListings>}

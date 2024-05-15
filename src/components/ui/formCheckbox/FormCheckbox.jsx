@@ -10,6 +10,7 @@ const FormCheckbox = ({ label, isChecked, setIsChecked, id, name }) => {
 	const handleCheckboxChange = () => {
 		setIsChecked((prev) => !prev);
 	};
+	
 	return (
 		// <label className="custom-checkbox-label">
 		// 	<input

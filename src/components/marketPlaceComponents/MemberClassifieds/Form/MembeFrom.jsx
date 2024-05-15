@@ -4,7 +4,6 @@ import FormInput from "../../../ui/formInput/FormInput";
 import Select from "../../../ui/select/Select";
 import FormTextBox from "../../../ui/formTextBox/FormTextBox";
 import { FaImage } from "react-icons/fa6";
-import DesignedSelect from '../../../ui/HeadlessSelect/Select';
 
 const countries = [
   { id:1, img:"" , value: "Afghanistan" },

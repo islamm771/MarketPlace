@@ -64,7 +64,7 @@ const IntegerStep = ({ max }) => {
 // 		</Row>
 // 	);
 // };
-const InputSlider = () => (
+const InputSlider = ({label}) => (
 	<Space
 		style={{
 			width: "100%",
@@ -73,7 +73,7 @@ const InputSlider = () => (
 		direction="vertical"
 	>
 		<p style={{ fontSize: "1rem", fontWeight: "600" }}>
-			Location Distance (Km)
+			{label}
 		</p>
 		<IntegerStep />
 		{/* <DecimalStep /> */}
