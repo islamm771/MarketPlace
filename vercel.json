@@ -19,6 +19,10 @@
         {
             "src":"/marketplace/automotives",
             "dest" : "/"
+        },
+        {
+            "src":"/marketplace/search",
+            "dest" : "/"
         }
     ]
 }
