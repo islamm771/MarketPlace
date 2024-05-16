@@ -136,10 +136,10 @@ const MarketSearchPage = () => {
                   </div>
               </li>
               <li class="view-item flex justify-end gap-0 col-span-3 lg:col-span-1">
-                <span onClick={() => handleClick("list-item")}>
+                <span className='cursor-pointer' onClick={() => handleClick("list-item")}>
                     <FaThList className={`${active['list-item'] ? 'active' : ''}`} id='list-item'/>
                     </span>
-                <span onClick={() => handleClick("grid-item")}>
+                <span className='cursor-pointer' onClick={() => handleClick("grid-item")}>
                   <IoGridSharp className={`${active['grid-item'] ? 'active' : ''}`} id='grid-item'/>
                   </span>
               </li>
@@ -289,7 +289,7 @@ const MarketSearchPage = () => {
             </div>
            
         </aside>
-        <div className={`${active['list-item'] ? "list-items " : "grid-items "}lg:col-span-9 bg-white p-3 md:p-6 rounded-[12px]`}
+        <div className={`${active['list-item'] ? "list-items " : "grid-items "}lg:col-span-9`}
         >
             <EstateProducts />
             <div className="search-navigation-buttons flex">
