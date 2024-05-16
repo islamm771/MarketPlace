@@ -7,7 +7,7 @@ import {  Navigation,Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
-const Location = ({children}) => {
+const Location = ({children ,pageTitle}) => {
   const renderSwiperSlides = children.map( child => (
     <>
       <SwiperSlide>
@@ -19,7 +19,7 @@ const Location = ({children}) => {
     <div className='landing-location bg-white py-[4rem] lg:py-[6rem] mb-[25px]'>
         <div className="landing-location-container">
             <div className="location-heading special-landing-heading">
-                <span>Properties</span>
+                <span>{pageTitle}</span>
                 <h1>Location Lisitngs</h1>
             </div>
 

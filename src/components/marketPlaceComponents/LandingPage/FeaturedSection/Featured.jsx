@@ -7,7 +7,7 @@ import {  Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
-const Featured = ({title,subTitle ,children , MemberCards , RealCards , AutoCards}) => {
+const Featured = ({pageTitle,title,subTitle ,children , MemberCards , RealCards , AutoCards}) => {
   let renderSwiperSlides;
   console.log(children)
   if(children){
@@ -23,7 +23,7 @@ const Featured = ({title,subTitle ,children , MemberCards , RealCards , AutoCard
     <div className='landing-featured bg-white py-[4rem] lg:py-[6rem] mb-[25px]'>
         <div className="landing-featured-container">
             <div className="featured-heading special-landing-heading">
-                <span>Properties</span>
+                <span>{pageTitle}</span>
                 <h1>{title ? title : "Featured Lisitngs"}</h1>
                 {subTitle && <span>{subTitle}</span>}
             </div>

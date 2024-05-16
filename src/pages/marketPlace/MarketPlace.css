@@ -20,6 +20,13 @@
 .search-page-container aside .form-item{
   width: fit-content;
 }
+.search-page-container aside hr{
+  /* height: 1px; */
+  background-color: #ddd;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  border-top: 1px solid #e1e6ff;
+}
 
 .search-page-container .search-navigation-buttons{
   display: flex;
@@ -85,6 +92,10 @@
 
 .search-page-container nav > *{
   font-family: "Rajdhani", sans-serif;
+}
+
+.search-page-container nav .form-input{
+  margin: 0 !important;
 }
 
 .search-page-container .favlist-dropdown{

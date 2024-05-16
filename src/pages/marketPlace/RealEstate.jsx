@@ -53,24 +53,24 @@ const RealEstate = () => {
 
       <Hero> <RealLandingForm /> </Hero>
 
-      <Featured>
+      <Featured pageTitle={"Real Estates"}>
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"owner"} isFav={false} />
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
       </Featured>
 
-      <Category />
-      <SectionFour />
+      <Category pageTitle={"Real Estates"} />
+      <SectionFour pageTitle={"Real Estates"} />
 
-      <Latest>
+      <Latest pageTitle={"Real Estates"}>
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
       </Latest>
 
-      <Location>
+      <Location pageTitle={"Real Estates"}>
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />

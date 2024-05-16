@@ -9,12 +9,12 @@ import img_02 from "../../../../assests/marketplace/landing/Category/4.jpg"
 import img_03 from "../../../../assests/marketplace/landing/Category/5.jpg"
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
 
-const SectionFour = () => {
+const SectionFour = ({pageTitle}) => {
   return (
     <div className='landing-featured-ful py-[4rem] lg:py-[6rem] mb-[25px]'>
         <div className="landing-featured-full-container">
             <div className="featured-full-heading special-landing-heading mx-[15px] md:mx-[4rem]">
-                <span>Properties</span>
+                <span>{pageTitle}</span>
                 <h1>Featured Lisitngs</h1>
             </div>
 

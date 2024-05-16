@@ -13,6 +13,7 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import img_gasoline_icon from "../../../../assests/marketplace/automotives/card/icon-04.png"
+import img_speed_icon from "../../../../assests/marketplace/automotives/card/icon-02.png"
 
 const AutoCard = (props) => {
     const {title,price,location,owner,downPayment,isFav,isSold,carBrand,carModel,carYear} = props
@@ -47,7 +48,7 @@ const AutoCard = (props) => {
     }
 
   return (
-    <div className='state-product-card market-card grid-rows-12'>
+    <div className='auto-product-card market-card grid-rows-12'>
             <div class="card__image-header">
                 <div class="ribbon text-capitalize">
                     {
@@ -91,9 +92,10 @@ const AutoCard = (props) => {
                 </div>
             </div>
             <div class="card__image-body">
-                <span class="badge badge-primary text-capitalize mb-2">{carBrand}</span>
-                <span class="badge badge-primary text-capitalize mb-2 ms-2">{carModel}</span>
-                <span class="badge badge-primary text-capitalize mb-2 ms-2">{carYear}</span>
+                <a href="#" class="badge badge-primary text-capitalize mb-2">{carBrand}</a>
+                <a href="#" class="badge badge-primary text-capitalize mb-2 ms-3">{carModel}</a>
+                <a href="#" class="badge badge-primary text-capitalize mb-2 ms-3">{carYear}</a>
+                <span className="auto-card-status text-capitalize ms-3">Used</span>
                 <h6 class="text-capitalize">
                     <a href="">{textFormater(title)}</a>
                 </h6>
@@ -106,8 +108,9 @@ const AutoCard = (props) => {
                     <li class="list-inline-item">
 
                         <span>
-                            Passengers <br />
-                            <svg className="inline-block" width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            Mileage <br />
+                            <img className="w-[20px] h-[20px] inline" src={img_speed_icon} alt="" />
+                            {/* <svg className="inline-block" width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <desc>Created with Sketch.</desc>
                                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                                     <g id="01_Home" transform="translate(-155.000000, -2016.000000)" stroke="#1A2B50" stroke-width="0.5">
@@ -130,12 +133,13 @@ const AutoCard = (props) => {
                                         </g>
                                     </g>
                                 </g>
-                            </svg> 10
+                            </svg>  */}
+                            115,000 KM
                         </span>
                     </li>
                     <li class="list-inline-item">
                         <span>
-                            Gear Shift <br />
+                            Transmission <br />
                             <svg className="inline-block" width="22px" height="22px" viewBox="0 0 23 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
                                 <desc>Created with Sketch.</desc>
                                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -153,7 +157,7 @@ const AutoCard = (props) => {
                                         </g>
                                     </g>
                                 </g>
-                            </svg> 3
+                            </svg> Auto
                         </span>
                     </li>
                     <li class="list-inline-item">

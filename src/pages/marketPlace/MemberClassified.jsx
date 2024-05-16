@@ -18,23 +18,27 @@ const MemberClassified = () => {
     <div className="member-classifieds-container">
 
       <Hero> <MemberLandingForm /> </Hero>
-      <Featured>
+      <Featured pageTitle={"Member Classifieds"}>
         <MemberCard title={"Ladies Gap Jeans (Bought one month ago)"} price={7500} isChecked={false} />
         <MemberCard title={"Ladies Gap Jeans (Bought one month ago)"} price={8500} isChecked={false} />
         <MemberCard title={"Ladies Gap Jeans (Bought one month ago)"} price={9500} isChecked={false} />
         <MemberCard title={"Ladies Gap Jeans (Bought one month ago)"} price={10500} isChecked={false} />
         <MemberCard title={"Ladies Gap Jeans (Bought one month ago)"} price={11500} isChecked={false} />
       </Featured>
-      <Category />
-      <SectionFour />
-      <Latest>
+
+      <Category pageTitle={"Member Classifieds"} />
+
+      <SectionFour pageTitle={"Member Classifieds"} />
+
+      <Latest pageTitle={"Member Classifieds"}>
         <MemberCard title={"Ladies Gap Jeans (Bought one month ago)"} price={7500} isChecked={false} />
         <MemberCard title={"Ladies Gap Jeans (Bought one month ago)"} price={8500} isChecked={false} />
         <MemberCard title={"Ladies Gap Jeans (Bought one month ago)"} price={9500} isChecked={false} />
         <MemberCard title={"Ladies Gap Jeans (Bought one month ago)"} price={10500} isChecked={false} />
         <MemberCard title={"Ladies Gap Jeans (Bought one month ago)"} price={11500} isChecked={false} />
       </Latest>
-      <Location>
+
+      <Location pageTitle={"Member Classifieds"}>
         <MemberCard title={"Ladies Gap Jeans (Bought one month ago)"} price={7500} isChecked={false} />
         <MemberCard title={"Ladies Gap Jeans (Bought one month ago)"} price={8500} isChecked={false} />
         <MemberCard title={"Ladies Gap Jeans (Bought one month ago)"} price={9500} isChecked={false} />

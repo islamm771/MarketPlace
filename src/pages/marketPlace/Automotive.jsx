@@ -15,7 +15,7 @@ const Automotive = () => {
 
       <Hero> <AutoLandingForm /> </Hero>
 
-      <Featured>
+      <Featured pageTitle={"Automotives"}>
         <AutoCard 
           title={"BMW M6 Gran Coupe 2019"} 
           location={"Cairo, El Maadi"}
@@ -53,10 +53,10 @@ const Automotive = () => {
           />
       </Featured>
 
-      <Category />
-      <SectionFour />
+      <Category pageTitle={"Automotives"} />
+      <SectionFour pageTitle={"Automotives"} />
 
-      <Latest>
+      <Latest pageTitle={"Automotives"}>
         <AutoCard 
           title={"BMW M6 Gran Coupe 2019"} 
           location={"Cairo, El Maadi"}
@@ -94,7 +94,7 @@ const Automotive = () => {
           />
       </Latest>
       
-      <Location>
+      <Location pageTitle={"Automotives"}>
         <AutoCard 
           title={"BMW M6 Gran Coupe 2019"} 
           location={"Cairo, El Maadi"}

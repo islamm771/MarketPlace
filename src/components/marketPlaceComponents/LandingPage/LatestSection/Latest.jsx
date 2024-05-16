@@ -4,7 +4,7 @@ import "./Latest.css"
 import { FaArrowRightLong } from "react-icons/fa6";
 import { HiArrowLongRight } from "react-icons/hi2";
 
-const Latest = ({children}) => {
+const Latest = ({children,pageTitle}) => {
     const renderMarketCards = children.map( child =>(
         <>
             <div className="grid-item">
@@ -17,7 +17,7 @@ const Latest = ({children}) => {
         <div className="landing-latest-container">
             <div className="latest-heading special-landing-heading flex justify-between items-center">
                 <div className="latest-heading-info">
-                    <span>Property</span>
+                    <span>{pageTitle}</span>
                     <h1>Latest Lisitngs</h1>
                 </div>
                 <a className='latest-heading-link font-[500]' href="#">Browse All <HiArrowLongRight className='inline text-[14px]' /> </a>

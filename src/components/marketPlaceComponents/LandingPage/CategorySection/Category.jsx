@@ -4,12 +4,12 @@ import img_01 from "../../../../assests/marketplace/landing/Category/2.jpg"
 import img_02 from "../../../../assests/marketplace/landing/Category/3.jpg"
 import img_03 from "../../../../assests/marketplace/landing/Category/4.jpg"
 import img_04 from "../../../../assests/marketplace/landing/Category/5.jpg"
-const Category = () => {
+const Category = ({pageTitle}) => {
   return (
     <div className='landing-category bg-white py-[4rem] lg:py-[6rem] mb-[25px]'>
         <div className="landing-category-container">
             <div className="category-heading special-landing-heading">
-                <span>Propertry</span>
+                <span>{pageTitle}</span>
                 <h1>Property By Category</h1>
             </div>
 

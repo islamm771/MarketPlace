@@ -9,6 +9,15 @@ import FormInputwithIcon from '../../components/ui/formInputWithSearchIcon/FormI
 import InputSlider from '../../components/ui/inputSlider/Input-Slider';
 import { FaAngleDoubleLeft,FaAngleDoubleRight } from "react-icons/fa";
 
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css/navigation";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Slider } from 'antd';
+
+
 const sorts=[
     "Default Sorting",
     "Popularity",
@@ -18,24 +27,21 @@ const sorts=[
     "Price: high to low",
 ]
 
-const perPages = [
-  "Per Page: 12",
-  "Per Page: 20",
-  "Per Page: 30",
-  "Per Page: 50",
-  "Per Page: 100",
-]
-
+const marks = {
+  415000: {
+    label: <small>4,150,00</small>
+  },
+  2700500: {
+    label: <small>2,700,500</small>,
+  },
+};
 
 
 const MarketSearchPage = () => {
     const [active,setActive] = useState({'list-item':false,'grid-item' : true})
     const [activeDropSort,setActiveDropSort] = useState(false)
-    const [activeDropPage,setActiveDropPage] = useState(false)
     const [sort , setSort] = useState(sorts[0])
-    const [perPage , setPerPage] = useState(perPages[0])
     const dropSortRef = useRef(null);
-    const dropPageRef = useRef(null);
 
     const handleClick = (id) =>{
         setActive({[id]:true})
@@ -43,25 +49,13 @@ const MarketSearchPage = () => {
     const handleSort = (e) =>{
         const {value} = e.target.dataset
         setSort(value)
-      }
-  
-      const handlePerPage = (e) =>{
-        const {value} = e.target.dataset
-        setPerPage(value)
-      }
-  
+      }  
       useEffect(() => {
         const handleClickOutside = (event) => {
           if (dropSortRef.current && !dropSortRef.current.contains(event.target)) {
-            if (dropPageRef.current && !dropPageRef.current.contains(event.target)) {
-              setActiveDropSort(false);
-            }
+            setActiveDropSort(false);
           }
-          if (dropPageRef.current && !dropPageRef.current.contains(event.target)) {
-            if (dropSortRef.current && !dropSortRef.current.contains(event.target)) {
-              setActiveDropPage(false);
-            }
-          }
+          
         };
     
         // Add event listener when component mounts
@@ -76,16 +70,61 @@ const MarketSearchPage = () => {
       const renderSortList = sorts.map( li =>( 
         <li data-value={li} class={`${sort == li ? "active" : ""}`} onClick={(e) => handleSort(e)}>{li} <FaCheck className='hidden' /></li>
       ) )
+
+
+      function onChange(value) {
+        console.log('onChange: ', value);
+      }
+      
+      function onAfterChange(value) {
+        console.log('onAfterChange: ', value);
+      }
   
-      const renderPerPageList = perPages.map( li =>( 
-        <li data-value={li} class={`${perPage == li ? "active" : ""}`} onClick={(e) => handlePerPage(e)}>{li} <FaCheck className='hidden' /></li>
-      ) )
   return (
     <div className='search-page-container !my-[6rem]'>
-        <nav className='bg-white rounded-[12px] mb-[15px] p-[20px] mt-[20px]'> 
-            <ul class="grid !grid-cols-2 lg:!grid-cols-4" role="tablist">
+        <div className="dashboard-cont-swiper mb-[50px]">
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 7500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Autoplay, Pagination]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div className="banner-container">
+                <img src="/img/ads/ads.jpeg" alt="ads banner" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="banner-container">
+                <img src="/img/ads/ads.jpeg" alt="ads banner" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="banner-container">
+                <img src="/img/ads/ads.jpeg" alt="ads banner" />
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
 
-              <li class="sort-by relative" ref={dropSortRef}>
+        <div className="special-landing-heading">
+                <span>Real Estates</span>
+                <h1>Find Properties in Egypt</h1>
+        </div>
+        <nav className='bg-white rounded-[12px] mb-[15px] p-[20px] mt-[20px]'> 
+            <ul class="grid !grid-cols-6 !items-center" role="tablist">
+
+              <li className="search-bar col-span-6 lg:col-span-3">
+                <FormInputwithIcon label={"Search for..."} id={"product-search"} />
+              </li>
+              <li class="sort-by relative w-[200px] lg:w-[250px] col-span-3 lg:col-span-2" ref={dropSortRef}>
                   <div className={`${activeDropSort ? "open " : ""}favlist-dropdown`} onClick={() => {setActiveDropSort(!activeDropSort)}}>
                     <span>
                       {sort}
@@ -96,20 +135,7 @@ const MarketSearchPage = () => {
                     </ul>
                   </div>
               </li>
-
-              <li class="per-page relative" ref={dropPageRef}>
-                  <div className={`${activeDropPage ? "open " : ""}favlist-dropdown`} onClick={() => {setActiveDropPage(!activeDropPage)}}>
-                    <span>
-                      {perPage}
-                      <FaChevronDown className='inline ms-2 absolute top-[12px] right-[15px] text-[#fd6729]' /> 
-                    </span>
-                    <ul class={`${activeDropPage ? "show " : ""}perPages-list list`}>
-                      {renderPerPageList}
-                    </ul>
-                  </div>
-              </li>
-              <li></li>
-              <li class="view-item cursor-pointer flex justify-end gap-0">
+              <li class="view-item flex justify-end gap-0 col-span-3 lg:col-span-1">
                 <span onClick={() => handleClick("list-item")}>
                     <FaThList className={`${active['list-item'] ? 'active' : ''}`} id='list-item'/>
                     </span>
@@ -189,7 +215,7 @@ const MarketSearchPage = () => {
                 </li>
             </ul>
             <hr />
-            <h4 className="ltn__widget-title mb-[15px]">Price Renge</h4>
+            <h4 className="ltn__widget-title mb-[15px]">Price Range</h4>
             <ul>
                 <li className='flex items-center mb-[15px]'>
                 <FormCheckbox label={"Low Budget"} id={"low-budget"} name={"low-budget"} />
@@ -207,20 +233,21 @@ const MarketSearchPage = () => {
                 </li>
             </ul>
             <hr />
-            {/* Price Filter Widget */}
-            <div className="widget--- ltn__price-filter-widget">
-                <h4 className="ltn__widget-title ltn__widget-title-border--- mb-[15px]">
-                Filter by price
-                </h4>
-                <div className="price_filter">
-                <div className="price_slider_amount">
-                    <button className='w-fit block'>Submit</button>
-                    {/* <input type="range" name="" id="" className='mb-[15px]' /> */}
-                    <InputSlider label={"Price"} />
-                </div>
-                </div>
+            <h4 className="ltn__widget-title mb-[15px]">Price Range</h4>
+            <div>
+
+            <Slider
+              range
+              step={1}
+              defaultValue={[415000,2700500]}
+              marks={marks}
+              min={415000}
+              max={2700500}
+              onChange={onChange}
+              onAfterChange={onAfterChange}
+            />
+            
             </div>
-            <hr />
             <h4 className="ltn__widget-title mb-[15px]">Bed/bath</h4>
             <ul>
                 <li className='flex items-center mb-[15px]'>
@@ -264,7 +291,6 @@ const MarketSearchPage = () => {
         </aside>
         <div className={`${active['list-item'] ? "list-items " : "grid-items "}lg:col-span-9 bg-white p-3 md:p-6 rounded-[12px]`}
         >
-            <FormInputwithIcon label={"Search for..."} id={"product-search"} />
             <EstateProducts />
             <div className="search-navigation-buttons flex">
               <button><FaAngleDoubleLeft /></button>

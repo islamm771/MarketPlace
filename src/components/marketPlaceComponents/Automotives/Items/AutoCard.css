@@ -1,23 +1,24 @@
-.state-product-card {
+.auto-product-card {
     border: 1px solid #e9ecef;
     transition: all 0.3s ease;
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0px 4.4px 12px -1px rgba(222, 222, 222, 0.36);
 }
 
-/* .state-product-card .card__image:hover {
+/* .auto-product-card .card__image:hover {
     cursor: pointer;
     -o-box-shadow: 0px 0px 30px 0px rgba(19,19,28,0.12);
     box-shadow: 0px 0px 30px 0px rgba(19,19,28,0.12)
 } */
 
-.state-product-card .card__image-header {
+.auto-product-card .card__image-header {
     position: relative;
     overflow: hidden;
     display: block
 }
 
-.state-product-card .card__image-header .real-card-swiper .swiper-slide::before{
+.auto-product-card .card__image-header .real-card-swiper .swiper-slide::before{
     content: "";
     position: absolute;
     bottom: 0;
@@ -29,7 +30,7 @@
 }
 
 
-.state-product-card .card__image-header .ribbon {
+.auto-product-card .card__image-header .ribbon {
     box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
     transform: translate3d(0, 0, 1px) rotate(-45deg);
     -webkit-backface-visibility: hidden;
@@ -52,7 +53,7 @@
     text-transform: capitalize;
 }
 
-.state-product-card .card__image-header .info {
+.auto-product-card .card__image-header .info {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -68,7 +69,7 @@
     z-index: 5;
 }
 
-.state-product-card .card__image-header img{
+.auto-product-card .card__image-header img{
     max-width: 100%;
     width: 100%;
     -o-object-fit: cover;
@@ -76,22 +77,22 @@
     transition: all 400ms linear 0s
 }
 
-.state-product-card .card__image-header:hover img{
+.auto-product-card .card__image-header:hover img{
     transform: scale(1.05)
 }
 
-.state-product-card .card__image-header:hover::before {
+.auto-product-card .card__image-header:hover::before {
     opacity: 1
 }
 
-.state-product-card .fav-selection {
+.auto-product-card .fav-selection {
     position: absolute;
     bottom: 15px;
     right: 0;
     margin: 15px 15px 0 0;
     z-index: 1;
     }
-.state-product-card .fav-selection .fav-icon {
+.auto-product-card .fav-selection .fav-icon {
     width: 32px;
     height: 32px;
     margin-right: 6px;
@@ -101,49 +102,57 @@
     align-items: center;
     justify-content: center;
 }
-.state-product-card .fav-selection .fav-checkbox{
+.auto-product-card .fav-selection .fav-checkbox{
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
     cursor: pointer;
 }
-.state-product-card .fav-selection .fav-checkbox:hover:not(:checked) ~ span svg{
+.auto-product-card .fav-selection .fav-checkbox:hover:not(:checked) ~ span svg{
     color: rgba(255, 105, 0, 1);
 }
-.state-product-card .fav-selection .fav-checkbox:checked ~ span{
+.auto-product-card .fav-selection .fav-checkbox:checked ~ span{
     background-color: rgba(255, 105, 0, 1);
     color: #fff;
 }
-.state-product-card .fav-selection .fav-icon:last-child {
+.auto-product-card .fav-selection .fav-icon:last-child {
     margin-right: 0;
 }
-.state-product-card .fav-selection .fav-icon.favourite {
+.auto-product-card .fav-selection .fav-icon.favourite {
     background: rgba(255, 105, 0, 1);
     color: #fff;
 }
 
-.state-product-card .card__image-body {
+.auto-product-card .card__image-body {
     padding: 20px 15px;
     position: relative;
     background-color: #fff;
 }
-.state-product-card .card__image-body > *{
+.auto-product-card .card__image-body > *{
     margin-bottom: 15px;
 }
 
-.state-product-card .card__image-body .badge {
+.auto-product-card .card__image-body .badge {
     align-items: center;
     background: #fff1e7;
     border-radius: 10px;
     color: #ff6900;
+    font-family: "Rajdhani", sans-serif;
     display: inline-flex;
     padding: 5px 8px 5px 20px;
     position: relative;
     text-transform: capitalize;
     font-size: 14px;
 }
-.state-product-card .card__image-body .badge::before{
+.auto-product-card .card__image-body .auto-card-status {
+    border: 1px solid #eee;
+    padding: 2px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-family: "Rajdhani", sans-serif;
+}
+.auto-product-card .card__image-body .badge::before{
     background: #ff6900;
     border-radius: 10px;
     content: "";
@@ -152,23 +161,23 @@
     position: absolute;
     width: 8px;
 }
-.state-product-card .card__image-body h6{
+.auto-product-card .card__image-body h6{
     font-size: 22px;
     margin-bottom: 15px;
 }
-.state-product-card .card__image-body h6 a{
+.auto-product-card .card__image-body h6 a{
     color: #1D1D1D;
     transition: 0.3s;
 }
-.state-product-card .card__image-body h6 a:hover{
+.auto-product-card .card__image-body h6 a:hover{
     color: #fd6728;
 }
-.state-product-card .card__image-body p{
+.auto-product-card .card__image-body p{
     display: flex;
     font-size: 14px;
     gap: 5px;
 }
-.state-product-card .card__image-body .card__content {
+.auto-product-card .card__image-body .card__content {
     width: 100%;
     /* color: #fff; */
     transition: all 0.4s;
@@ -178,12 +187,13 @@
     font-size: 14px;
     font-weight: 600;
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    /* gap: 30px; */
 }
-.state-product-card .card__image-body .card__content .list-inline-item{
+.auto-product-card .card__image-body .card__content .list-inline-item{
     display: inline-block;
 }
-.state-product-card .card__image-body .list-inline-item span{
+.auto-product-card .card__image-body .list-inline-item span{
     text-align: center;
     text-transform: capitalize;
     color: #495057;
@@ -193,7 +203,7 @@
     background-color: transparent;
 }
 
-.state-product-card .card__image-footer {
+.auto-product-card .card__image-footer {
     border-top: 1px solid #e9ecef;
     padding: 15px;
     display: flex;
@@ -201,12 +211,12 @@
     background-color: #fff;
 }
 
-.state-product-card .card__image-footer .price h6{
+.auto-product-card .card__image-footer .price h6{
     font-size: 25px;
     font-weight: 700;
     color: #000;
 }
-.state-product-card .card__image-footer .price h6 span{
+.auto-product-card .card__image-footer .price h6 span{
     display: block;
     font-size: 15px;
     font-weight: 400;
@@ -214,11 +224,11 @@
     text-align: right;
 }
 
-.state-product-card .card__image-footer p{
+.auto-product-card .card__image-footer p{
     font-size: 14px;
 }
 
-.state-product-card .card__image-footer .owner-profile-img > div::before{
+.auto-product-card .card__image-footer .owner-profile-img > div::before{
     content: "";
     position: absolute;
     width: 7px;

@@ -11,46 +11,46 @@ const AutoLandingForm = () => {
         </div>
         <div className="form-item">
           <FaHouse className="inline text-[#fd6729] absolute top-[22px] left-[15px]" />
-          <label htmlFor="">Type</label>
+          <label htmlFor="">Make</label>
           <select name="" id="property">
             <option value="" selected>
-              Property
+              Makes
             </option>
-            <option value="">Property 1</option>
-            <option value="">Property 2</option>
-            <option value="">Property 3</option>
-            <option value="">Property 4</option>
-            <option value="">Property 5</option>
+            <option value="">Make 1</option>
+            <option value="">Make 2</option>
+            <option value="">Make 3</option>
+            <option value="">Make 4</option>
+            <option value="">Make 5</option>
           </select>
           <IoChevronDownOutline className="inline text-[#fd6729] absolute bottom-[17px] right-[15px]" />
         </div>
         <div className="form-item">
           <FaEarthAsia className="inline text-[#fd6729] absolute top-[22px] left-[15px]" />
-          <label htmlFor="">Location</label>
+          <label htmlFor="">Model</label>
           <select name="" id="counrty">
             <option value="" selected>
-              Country
+              Models
             </option>
-            <option value="">Country 1</option>
-            <option value="">Country 2</option>
-            <option value="">Country 3</option>
-            <option value="">Country 4</option>
-            <option value="">Country 5</option>
+            <option value="">Model 1</option>
+            <option value="">Model 2</option>
+            <option value="">Model 3</option>
+            <option value="">Model 4</option>
+            <option value="">Model 5</option>
           </select>
           <IoChevronDownOutline className="inline text-[#fd6729] absolute bottom-[17px] right-[15px]" />
         </div>
         <div className="form-item">
           <FaBuilding className="inline text-[#fd6729] absolute top-[22px] left-[15px]" />
-          <label htmlFor="">Location</label>
+          <label htmlFor="">Year</label>
           <select name="" id="city">
             <option value="" selected>
-              City
+              Years
             </option>
-            <option value="">City 1</option>
-            <option value="">City 2</option>
-            <option value="">City 3</option>
-            <option value="">City 4</option>
-            <option value="">City 5</option>
+            <option value="">Year 1</option>
+            <option value="">Year 2</option>
+            <option value="">Year 3</option>
+            <option value="">Year 4</option>
+            <option value="">Year 5</option>
           </select>
           <IoChevronDownOutline className="inline text-[#fd6729] absolute bottom-[17px] right-[15px]" />
         </div>
