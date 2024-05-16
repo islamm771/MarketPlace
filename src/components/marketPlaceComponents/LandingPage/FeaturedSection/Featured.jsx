@@ -7,6 +7,7 @@ import {  Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
+import { HiArrowLongRight } from 'react-icons/hi2';
 const Featured = ({pageTitle,title,subTitle ,children , MemberCards , RealCards , AutoCards}) => {
   let renderSwiperSlides;
   console.log(children)
@@ -22,10 +23,15 @@ const Featured = ({pageTitle,title,subTitle ,children , MemberCards , RealCards 
   return (
     <div className='landing-featured bg-white py-[4rem] lg:py-[6rem] mb-[25px]'>
         <div className="landing-featured-container">
-            <div className="featured-heading special-landing-heading">
-                <span>{pageTitle}</span>
-                <h1>{title ? title : "Featured Lisitngs"}</h1>
-                {subTitle && <span>{subTitle}</span>}
+            <div className="featured-heading special-landing-heading flex items-end justify-between">
+                <div>
+                  <span>{pageTitle}</span>
+                  <h1>{title ? title : "Featured Lisitngs"}</h1>
+                  {subTitle && <span>{subTitle}</span>}
+                </div>
+                {!title && <a className='font-[500] mb-[5px]' href='#'>
+                  Browse All <HiArrowLongRight className='inline text-[14px]' /> 
+                  </a>}
             </div>
 
             {renderSwiperSlides && (

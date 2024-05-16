@@ -15,12 +15,12 @@ const Latest = ({children,pageTitle}) => {
   return (
     <div className='landing-latest bg-white py-[4rem] lg:py-[6rem] mb-[25px]'>
         <div className="landing-latest-container">
-            <div className="latest-heading special-landing-heading flex justify-between items-center">
+            <div className="latest-heading special-landing-heading flex justify-between items-end">
                 <div className="latest-heading-info">
                     <span>{pageTitle}</span>
                     <h1>Latest Lisitngs</h1>
                 </div>
-                <a className='latest-heading-link font-[500]' href="#">Browse All <HiArrowLongRight className='inline text-[14px]' /> </a>
+                <a className='latest-heading-link font-[500] mb-[5ox]' href="#">Browse All <HiArrowLongRight className='inline text-[14px]' /> </a>
             </div>
 
             <div className="card-container">

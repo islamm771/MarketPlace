@@ -5,6 +5,15 @@
   transform: scale(1.2);
 }
 
+.memberViewed-swiper>.swiper-pagination .swiper-pagination-bullet-active,
+.realViewed-swiper>.swiper-pagination .swiper-pagination-bullet-active,
+.autoViewed-swiper>.swiper-pagination .swiper-pagination-bullet-active{
+  background-color: #ff6728ed !important;
+  transform: scale(1.2);
+  
+}
+
+
 .search-page-container{
   padding: 0 15px;
   margin: 0 auto;
@@ -146,6 +155,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Rajdhani", sans-serif;
 }
 .search-page-container .favlist-dropdown li:hover{
   background-color: #fd6729;

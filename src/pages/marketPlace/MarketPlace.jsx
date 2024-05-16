@@ -1,16 +1,22 @@
 import React from "react";
 import './MarketPlace.css'
 import MarketPlaceNavigation from "../../components/marketPlaceComponents/MarketPlaceNavigation";
+
 import "swiper/css/navigation";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+
 import Hero from "../../components/marketPlaceComponents/LandingPage/HeroSection/Hero";
 import Featured from "../../components/marketPlaceComponents/LandingPage/FeaturedSection/Featured";
 import MemberSuggested from "../../components/marketPlaceComponents/MainPage/SuggestedListing/MemberSuggested";
 import RealSuggested from "../../components/marketPlaceComponents/MainPage/SuggestedListing/RealSuggested";
 import AutoSuggested from "../../components/marketPlaceComponents/MainPage/SuggestedListing/AutoSuggested";
+
+import MemberViewed from "../../components/marketPlaceComponents/MainPage/RecentlyViewedListings/MemberViewed";
+import RealViewed from "../../components/marketPlaceComponents/MainPage/RecentlyViewedListings/RealViewed";
+import AutoViewed from "../../components/marketPlaceComponents/MainPage/RecentlyViewedListings/AutoViewed";
 
 const MarketPlace = () => {
 	return (
@@ -47,7 +53,7 @@ const MarketPlace = () => {
 
       <Hero />
       <Featured pageTitle={"Marketplace"}
-      title={"Suggested Listings"}
+       title={"Suggested Listings"}
        subTitle={"Based on your recent search"}
        MemberCards={<MemberSuggested />} 
        RealCards={<RealSuggested />} 
@@ -55,9 +61,9 @@ const MarketPlace = () => {
 
       <Featured pageTitle={"Marketplace"}
       title={"Recently Viewed"}
-       MemberCards={<MemberSuggested />} 
-       RealCards={<RealSuggested />} 
-       AutoCards={<AutoSuggested />} />
+       MemberCards={<MemberViewed />} 
+       RealCards={<RealViewed />} 
+       AutoCards={<AutoViewed />} />
     </div>
   );
 };
