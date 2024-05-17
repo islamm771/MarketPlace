@@ -7,6 +7,8 @@ import {  Navigation,Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
+import { HiArrowLongRight } from 'react-icons/hi2';
+
 const Location = ({children ,pageTitle}) => {
   const renderSwiperSlides = children.map( child => (
     <>
@@ -18,9 +20,15 @@ const Location = ({children ,pageTitle}) => {
   return (
     <div className='landing-location bg-white py-[4rem] lg:py-[6rem] mb-[25px]'>
         <div className="landing-location-container">
-            <div className="location-heading special-landing-heading">
-                <span>{pageTitle}</span>
-                <h1>Location Lisitngs</h1>
+            <div className="location-heading special-landing-heading flex items-end justify-between">
+                <div>
+                  <span>{pageTitle}</span>
+                  <h1>Location Lisitngs</h1>
+                </div>
+                
+                <a className='font-[500] mb-[5px]' href='/marketplace/search'>
+                  Browse All <HiArrowLongRight className='inline text-[14px]' /> 
+                </a>
             </div>
 
             <div className="card-container">

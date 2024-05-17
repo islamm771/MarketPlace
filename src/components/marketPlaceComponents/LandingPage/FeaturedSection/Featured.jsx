@@ -29,7 +29,7 @@ const Featured = ({pageTitle,title,subTitle ,children , MemberCards , RealCards 
                   <h1>{title ? title : "Featured Lisitngs"}</h1>
                   {subTitle && <span>{subTitle}</span>}
                 </div>
-                {!title && <a className='font-[500] mb-[5px]' href='#'>
+                {!title && <a className='font-[500] mb-[5px]' href='/marketplace/search'>
                   Browse All <HiArrowLongRight className='inline text-[14px]' /> 
                   </a>}
             </div>

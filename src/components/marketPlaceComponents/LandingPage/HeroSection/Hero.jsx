@@ -10,7 +10,7 @@ import AutoLandingForm from '../../Automotives/Form/AutoLandingForm'
 // import FormInput from '../../../ui/formInput/FormInput'
 // import Select from '../../../ui/select/Select'
 
-const Hero = ({children}) => {
+const Hero = ({children,title,svg}) => {
   const [activeForm , setActiveFrom] = useState("member")
   const handleClick = (id) =>{
     setActiveFrom(id)
@@ -30,7 +30,13 @@ const Hero = ({children}) => {
         </div>
         <div className="landing-hero-form">
           {children ? (
-            <>{children}</>
+            <div>
+                <p className="btn-tabHeroFrom !py-[15px] active">
+                {svg}
+                {title}
+                </p>
+                {children}
+              </div>
           ) : (
             <>
               <div className="flex">

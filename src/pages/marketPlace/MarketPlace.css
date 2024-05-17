@@ -51,6 +51,28 @@
   font-size: 16px;
   color: #5c727d;
 }
+
+
+.search-sidebar .ant-slider-mark .ant-slider-mark-text{
+  font-family: "Rajdhani", sans-serif !important;
+  font-weight: 500;
+}
+
+.price-filter-slider .ant-slider-mark-text:first-child,
+.downpay-filter-slider .ant-slider-mark-text:first-child{
+  left: 15px !important;
+}
+
+.price-filter-slider .ant-slider-mark-text:last-child,
+.downpay-filter-slider .ant-slider-mark-text:last-child,
+.area-filter-slider .ant-slider-mark-text:last-child{
+  left: unset !important;
+  right: -32px !important;
+}
+
+
+
+
 @media (max-width:540px){
   .search-page-container .search-navigation-buttons button{
     width: 25px;
@@ -98,6 +120,9 @@
     width: 1200px;
   }
 }
+
+
+/* Start Search Field */
 
 .search-page-container nav > *{
   font-family: "Rajdhani", sans-serif;

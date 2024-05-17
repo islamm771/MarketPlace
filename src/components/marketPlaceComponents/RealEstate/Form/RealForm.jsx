@@ -8,19 +8,19 @@ import "./RealForm.css"
 import FormCheckbox from '../../../ui/formCheckbox/FormCheckbox';
 
 const countries = [
-  { value: "Afghanistan" },
-  { value: "Albania" },
-  { value: "Algeria" },
-  { value: "Andorra" },
-  { value: "Angola" },
+  { id:1,value: "Afghanistan" },
+  { id:2,value: "Albania" },
+  { id:3,value: "Algeria" },
+  { id:4,value: "Andorra" },
+  { id:5,value: "Angola" },
 ];
 
 const cities = [
-  { value: "Kabul" },
-  { value: "Tirana" },
-  { value: "Algiers" },
-  { value: "Andorra la Vella" },
-  { value: "Luanda" },
+  { id:1,value: "Kabul" },
+  { id:2,value: "Tirana" },
+  { id:3,value: "Algiers" },
+  { id:4,value: "Andorra la Vella" },
+  { id:5,value: "Luanda" },
 ];
 
 const conditions = [
@@ -50,13 +50,21 @@ const categories = {
       {id:3 , value: "Sub Category 4"},
     ],
   
-    status:[
-      {id:1 , value: "no status"},
-      {id:2 , value: "Active"},
-      {id:3 , value: "hot offer"},
-      {id:4 , value: "new offer"},
-      {id:5 , value: "open house"},
-      {id:6 , value: "sold"},
+    property:[
+      {id:1 , value: "House"},
+      {id:2 , value: "Single Family"},
+      {id:3 , value: "Apartment"},
+      {id:4 , value: "Office Villa"},
+      {id:5 , value: "Luxary Home"},
+      {id:6 , value: "Studio"},
+    ],
+
+    types:[
+        {id:1 , value: "type 1"},
+        {id:2 , value: "type 2"},
+        {id:3 , value: "type 3"},
+        {id:4 , value: "type 4"},
+        {id:5 , value: "type 5"},
     ]
   
 }
@@ -198,7 +206,12 @@ const RealForm = () => {
                             </div>
                             <div className="col-md-6">
                                 <div className="input-item">
-                                    <Select optionsArray={categories.status} defaultValue={"Status"} />
+                                    <Select optionsArray={categories.property} defaultValue={"Property Types"} />
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="input-item">
+                                    <Select optionsArray={categories.types} defaultValue={"Delivery Types"} />
                                 </div>
                             </div>
                             <div className="col-md-6">
@@ -279,20 +292,20 @@ const RealForm = () => {
                                     <FormInput  label="Enter Google Location Link" name="product-googleLocation" type="text" />
                                 </div>
                             </div>
+                            
+                            <div className="col-md-6">
+                            <div className="input-item input-item-name ltn__custom-icon">
+                                <Select optionsArray={countries} defaultValue={"Countries"} /> 
+                            </div>
+                            </div>
+                            <div className="col-md-6">
+                            <div className="input-item input-item-name ltn__custom-icon">
+                                <Select optionsArray={cities} defaultValue={"Cities"} /> 
+                            </div>
+                            </div>
                             <div className="col-md-6">
                             <div className="input-item input-item-name ltn__custom-icon">
                                 <FormInput  label="Address" name="product-addr" type="text" />
-                            </div>
-                            </div>
-                            <div className="col-md-6">
-                            <div className="input-item input-item-name ltn__custom-icon">
-                                <FormInput  label="Country" name="product-country" type="text" />
-                            </div>
-                            </div>
-                            <div className="col-md-6">
-                            <div className="input-item input-item-name ltn__custom-icon">
-                                <FormInput  label="City" name="product-city" type="text" />
-
                             </div>
                             </div>
                             <div className="col-md-6">
