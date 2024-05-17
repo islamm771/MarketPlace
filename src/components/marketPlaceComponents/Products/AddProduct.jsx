@@ -7,11 +7,11 @@ const AddProduct = () => {
 
         <Menu>
         <Menu.Button className="text-white block p-2 mx-[8px] text-[14px] w-[100px] border border-white border-solid">Add Listing +</Menu.Button>
-        <Menu.Items className="absolute bottom-[-140%] bg-[#fd6728] ps-[1rem] pe-[2rem] rounded-b-[12px]">
+        <Menu.Items className="absolute bottom-[-140%] bg-[#fd6728] ps-[1.5rem] pe-[4rem] rounded-b-[12px]">
           <Menu.Item>
             {({ active }) => (
               <a
-                className="inline-block py-3 text-white font-[500]"
+                className="inline-block text-[14px] py-3 text-white font-[500]"
                 href="/marketplace/dashboard/addlisting"
               >
                 Classifieds
@@ -21,7 +21,7 @@ const AddProduct = () => {
           <Menu.Item>
             {({ active }) => (
               <a
-                className="inline-block py-3 text-white font-[500]"
+                className="inline-block text-[14px] py-3 text-white font-[500]"
                 href="/marketplace/dashboard/addproperty"
               >
                 Real Estate
@@ -32,7 +32,7 @@ const AddProduct = () => {
           <Menu.Item>
             {({ active }) => (
               <a
-                className="inline-block py-3 text-white font-[500]"
+                className="inline-block text-[14px] py-3 text-white font-[500]"
                 href="/marketplace/dashboard/addautomotive"
               >
                 Automotive
