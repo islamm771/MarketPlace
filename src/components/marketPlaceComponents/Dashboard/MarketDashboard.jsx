@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./MarketDashboard.css";
 import { useState } from "react";
 import MemberForm from "../MemberClassifieds/Form/MembeFrom";
@@ -24,7 +24,7 @@ import AutoPurchased from "../Automotives/Sold-Purchased/AutoPurchased";
 import MemberListings from "../MemberClassifieds/Listings/MemberListings";
 import MemberSold from "../MemberClassifieds/Sold-Purchased/MemberSold";
 import MemberPurchased from "../MemberClassifieds/Sold-Purchased/AutoPurchased";
-
+import { useLocation } from "react-router-dom";
 const MarketDashboard = () => {
   const [activeButton , setActiveButton] = useState({
     title:"Marketplace",
@@ -38,9 +38,49 @@ const MarketDashboard = () => {
   });
   const dashboradContent = useRef(null)
   
+  const location = useLocation().pathname.split("/")[3]
+  useEffect( ()=>{
+    if(location == "addproperty"){
+      setActiveButton({title:"Add Property" , parent:"Real Estate"})
+
+      const copyState = {...buttonStates}
+
+      Object.keys(copyState).forEach( key =>{
+          copyState[key] = false
+      } )
+
+      copyState['real'] = !buttonStates['real']
+      setButtonStates(copyState)
+    }
+    if(location == "addlisting"){
+      setActiveButton({title:"Add Listing" , parent:"Member Classified"})
+
+      const copyState = {...buttonStates}
+
+      Object.keys(copyState).forEach( key =>{
+          copyState[key] = false
+      } )
+
+      copyState['member'] = !buttonStates['member']
+      setButtonStates(copyState)
+    }
+    if(location == "addautomotive"){
+      setActiveButton({title:"Add Automotive" , parent:"Automotive"})
+
+      const copyState = {...buttonStates}
+
+      Object.keys(copyState).forEach( key =>{
+          copyState[key] = false
+      } )
+
+      copyState['auto'] = !buttonStates['auto']
+      setButtonStates(copyState)
+    }
+  },[] ) 
   return (
-    <div className="marketplace-dashboard">
+    <div className="marketplace-dashboard !mt-[6rem]">
       <div className="dashboard-container">
+
       <div className="dashboard-cont-swiper mb-[50px]">
         <Swiper
           spaceBetween={30}
@@ -126,7 +166,7 @@ const MarketDashboard = () => {
                   <>
                     {activeButton.title === "Dashboard" && <div>Dashboard</div>}
                     {activeButton.title === "My Automotives" && <MyListings><AutoListings /></MyListings>}
-                    {activeButton.title === "Add Automotives" && <div>Automotive Form</div>}
+                    {activeButton.title === "Add Automotive" && <div>Automotive Form</div>}
                     {activeButton.title === "Automotives Chat" && <div>Classifieds Chat</div>}
                     {activeButton.title === "Fav List" && <FavList> <AutoFav /> </FavList>}
                     {activeButton.title === "Sold / Purchased" && <SoldPurchased sold={<AutoSold />} purchased={<AutoPurchased />} />}

@@ -9,6 +9,18 @@
             "dest" : "/"
         },
         {
+            "src":"/marketplace/dashboard/addlisting",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/dashboard/addproperty",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/dashboard/addautomotive",
+            "dest" : "/"
+        },
+        {
             "src":"/marketplace/memberclassifieds",
             "dest" : "/"
         },

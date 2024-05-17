@@ -44,6 +44,9 @@ function App() {
             <Route path="/marketplace/realestates" element={<RealEstate />} />
             <Route path="/marketplace/automotives" element={<Automotive />} />
             <Route path="/marketplace/dashboard" element={<MarketDashboard />} />
+            <Route path="/marketplace/dashboard/addlisting" element={<MarketDashboard />} />
+            <Route path="/marketplace/dashboard/addproperty" element={<MarketDashboard />} />
+            <Route path="/marketplace/dashboard/addautomotive" element={<MarketDashboard />} />
             <Route path="/marketplace/search" element={<MarketSearchPage />} />
           </Route>
         </Routes>
