@@ -95,6 +95,7 @@ const RealCard = (props) => {
             </div>
             <div class="card__image-body">
                 <span class="badge badge-primary text-capitalize mb-2">house</span>
+                <span class="badge badge-primary text-capitalize mb-2">Soul</span>
                 <h6 class="text-capitalize">
                     <a href="">{textFormater(title)}</a>
                 </h6>

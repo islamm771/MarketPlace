@@ -23,7 +23,7 @@ const Location = ({children ,pageTitle}) => {
             <div className="location-heading special-landing-heading flex items-end justify-between">
                 <div>
                   <span>{pageTitle}</span>
-                  <h1>Location Lisitngs</h1>
+                  <h1>Location Listings</h1>
                 </div>
                 
                 <a className='font-[500] mb-[5px]' href='/marketplace/search'>

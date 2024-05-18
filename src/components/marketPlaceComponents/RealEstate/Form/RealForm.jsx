@@ -59,12 +59,31 @@ const categories = {
       {id:6 , value: "Studio"},
     ],
 
-    types:[
+    delivery_types:[
         {id:1 , value: "type 1"},
         {id:2 , value: "type 2"},
         {id:3 , value: "type 3"},
         {id:4 , value: "type 4"},
         {id:5 , value: "type 5"},
+    ],
+    communities:[
+        {id:1 , value: "Soul"},
+        {id:2 , value: "Marassi"},
+        {id:3 , value: "Uptown Cairo"},
+        {id:4 , value: "Bellevie"},
+        {id:5 , value: "Cairo Gate"},
+        {id:6 , value: "Mivida"},
+    ],
+    property_form:[
+        {id:1 , value: "Sale"},
+        {id:2 , value: "Resale"},
+    ],
+    developers : [
+        {id:1 ,value:"Dev 1"},
+        {id:2 ,value:"Dev 2"},
+        {id:3 ,value:"Dev 3"},
+        {id:4 ,value:"Dev 4"},
+        {id:5 ,value:"Dev 5"},
     ]
   
 }
@@ -141,7 +160,7 @@ const RealForm = () => {
                     
                     {/* Start Describtion */}
                     <div className="describtion bg-white p-[20px] rounded-[12px]" id="desc">
-                        <h2 className='text-[20px] mb-[20px]'>1. Description</h2>
+                        <p className='mb-[40px] font-[700]'>Description</p>
                         <div className="grid !gap-4">
                             <div className="input-item input-item-name">
                                 <FormInput label="Title" name="product-title" type="text" />
@@ -162,7 +181,7 @@ const RealForm = () => {
 
                     {/* Start Price */}
                     <div className="price bg-white p-[20px] rounded-[12px] mt-[20px]" id="price">
-                    <h2 className='text-[20px] mb-[20px]'>2. Price</h2>
+                    <p className='mb-[40px] font-[700]'>Price</p>
                         <div className="grid !grid-cols-1  md:!grid-cols-2 !gap-4">
                             <div className="col-md-6">
                                 <div className="input-item input-item-name">
@@ -192,7 +211,7 @@ const RealForm = () => {
 
                     {/* Start Details */}
                     <div className="details bg-white p-[20px] rounded-[12px] mt-[20px]" id="details">
-                    <h2 className='text-[20px] mb-[20px]'>3. Details</h2>
+                    <p className='mb-[40px] font-[700]'>Details</p>
                         <div className="grid !grid-cols-1  md:!grid-cols-2 !gap-4">
                             <div className="col-md-6">
                                 <div className="input-item">
@@ -211,7 +230,22 @@ const RealForm = () => {
                             </div>
                             <div className="col-md-6">
                                 <div className="input-item">
-                                    <Select optionsArray={categories.types} defaultValue={"Delivery Types"} />
+                                    <Select optionsArray={categories.property_form} defaultValue={"Property Form"} />
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="input-item">
+                                    <Select optionsArray={categories.developers} defaultValue={"Developers"} />
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="input-item">
+                                    <Select optionsArray={categories.delivery_types} defaultValue={"Delivery Types"} />
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="input-item">
+                                    <Select optionsArray={categories.communities} defaultValue={"Communities"} />
                                 </div>
                             </div>
                             <div className="col-md-6">
@@ -226,7 +260,7 @@ const RealForm = () => {
                             </div>
                             <div className="col-md-6">
                                 <div className="input-item input-item-name ltn__custom-icon">
-                                <FormInput  label="Available from (*date)" name="product-size" type="text" />
+                                <FormInput label="Available from (*date)" icon={"date"} name="product-size" type="text" value={"August 24th, 1987"} />
                                 </div>
                             </div>
                         </div>
@@ -235,7 +269,7 @@ const RealForm = () => {
 
                     {/* Start Media */}
                     <div className="media bg-white p-[20px] rounded-[12px] mt-[20px]" id="media">
-                        <h2 className='text-[20px] mb-[20px]'>4. Media</h2>
+                        <p className='mb-[40px] font-[700]'>Media</p>
                         <div className="grid !grid-cols-2 !gap-4 mb-4">
                             <div class="upload-box relative">
                                 <label htmlFor="img" className='absolute top-0 left-0 w-[100%] h-[100%] z-10 cursor-pointer'></label>
@@ -285,7 +319,7 @@ const RealForm = () => {
 
                     {/* Start Location */}
                     <div className="location bg-white p-[20px] rounded-[12px] mt-[20px]" id="location">
-                        <h2 className='text-[20px] mb-[20px]'>5. Location</h2>
+                        <p className='mb-[40px] font-[700]'>Location</p>
                         <div className="grid !grid-cols-1 md:!grid-cols-2 !gap-4">
                             <div className="md:!col-span-2">
                                 <div className="input-item input-item-name ltn__custom-icon">
@@ -345,7 +379,7 @@ const RealForm = () => {
 
                     {/* Start Agent */}
                     <div className="agent bg-white p-[20px] rounded-[12px] mt-[20px]">
-                        <h2 className='text-[20px] mb-[20px]'>6. Agent</h2>
+                        <p className='mb-[40px] font-[700]'>Agent</p>
                         <div className="grid !grid-cols-1 md:!grid-cols-2 !gap-4">
                             <div className="col-md-6">
                             <div className="input-item">
@@ -359,7 +393,7 @@ const RealForm = () => {
 
                     {/* Start Details */}
                     <div className="lisitng-details bg-white p-[20px] rounded-[12px] mt-[20px]" id="listing-details">
-                        <h2 className='text-[20px] mb-[20px]'>7. Listing Details</h2>
+                        <p className='mb-[40px] font-[700]'>Listing Details</p>
                         <div className="grid !grid-cols-1 md:!grid-cols-2 !gap-4">
                         <div className="">
                         <div className="input-item input-item-name ltn__custom-icon">
@@ -400,7 +434,7 @@ const RealForm = () => {
 
                     {/* Start Floor Plans */}
                     <div className="floor-plans bg-white p-[20px] rounded-[12px] mt-[20px]" id="listing-details">
-                        <h2 className='text-[20px] mb-[20px]'>8. Floor Plans</h2>
+                        <p className='mb-[40px] font-[700]'>Floor Plans</p>
                         <div className="grid !grid-cols-1 md:!grid-cols-2 !gap-4">
                         <div className="col-md-6">
                         <div className="input-item">
@@ -416,8 +450,7 @@ const RealForm = () => {
 
                     {/* Start Amenities*/}
                     <div className="amenities bg-white p-[20px] rounded-[12px] mt-[20px]" id="amenities">
-                        <h2 className='text-[20px]'>9. Amenities</h2>
-                        <h6 className='my-[20px]'>Amenities and Features</h6>  
+                        <h2 className='mb-[40px] font-[700]'>Amenities</h2>
                         <h6 className='mb-[15px]'>Interior Details</h6>                      
                         <div className="grid md:!grid-cols-2 lg:!grid-cols-3">                                
                             <div className="">
@@ -502,7 +535,7 @@ const RealForm = () => {
 
                     {/* Start Owner Notes */}
                     <div className="owner-notes bg-white p-[20px] rounded-[12px] mt-[20px]" id="listing-details">
-                        <h2 className='text-[20px] mb-[20px]'>10. Owner Notes</h2>
+                        <p className='mb-[40px] font-[700]'>Owner Notes</p>
                         <div className="grid !grid-cols-1 !gap-4">
                         
                         <div className="col-md-6">

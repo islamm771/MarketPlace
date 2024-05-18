@@ -19,12 +19,14 @@
   margin: 0 auto;
 }
 
-.search-page-container aside ul li span{
-  font-family: "Rajdhani", sans-serif;
-  font-size: 14px;
-}
 .search-page-container aside ul li {
   justify-content: space-between;
+}
+
+.search-page-container aside ul li > span{
+  font-family: "Rajdhani", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
 }
 .search-page-container aside .form-item{
   width: fit-content;
@@ -55,19 +57,20 @@
 
 .search-sidebar .ant-slider-mark .ant-slider-mark-text{
   font-family: "Rajdhani", sans-serif !important;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .price-filter-slider .ant-slider-mark-text:first-child,
 .downpay-filter-slider .ant-slider-mark-text:first-child{
-  left: 15px !important;
+  left: 20px !important;
 }
 
 .price-filter-slider .ant-slider-mark-text:last-child,
 .downpay-filter-slider .ant-slider-mark-text:last-child,
 .area-filter-slider .ant-slider-mark-text:last-child{
   left: unset !important;
-  right: -32px !important;
+  right: -34px !important;
 }
 
 
@@ -146,6 +149,7 @@
   border: 1px solid #fd6729 !important;
 }
 .search-page-container .favlist-dropdown span{
+  font-family: "Rajdhani", sans-serif !important;
   cursor: pointer;
   display: block;
   font-weight: 500;

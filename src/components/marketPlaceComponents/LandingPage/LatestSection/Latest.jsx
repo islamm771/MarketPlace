@@ -18,7 +18,7 @@ const Latest = ({children,pageTitle}) => {
             <div className="latest-heading special-landing-heading flex justify-between items-end">
                 <div className="latest-heading-info">
                     <span>{pageTitle}</span>
-                    <h1>Latest Lisitngs</h1>
+                    <h1>Latest Listings</h1>
                 </div>
                 <a className='latest-heading-link font-[500] mb-[5ox]' href="/marketplace/search">Browse All <HiArrowLongRight className='inline text-[14px]' /> </a>
             </div>

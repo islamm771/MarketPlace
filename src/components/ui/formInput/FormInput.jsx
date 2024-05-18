@@ -3,6 +3,8 @@ import Email from "../../../assests/inputsIcon/email.svg";
 import Password from "../../../assests/inputsIcon/password.svg";
 import Username from "../../../assests/inputsIcon/username.svg";
 import Company from "../../../assests/icons/company.svg";
+import { LuCalendar } from "react-icons/lu";
+
 // import Calender from "../../../assests/calender/calender.svg";
 import "./formInput.css";
 
@@ -33,9 +35,10 @@ const FormInput = ({ label, name, icon, type, setValue, value, ...rest }) => {
 					{icon === "password" && <img src={Password} alt="password" />}
 					{icon === "company" && <img src={Company} alt="company" />}
 					{icon === "date" && (
-						<svg class="form-input-icon icon-events calender-svg">
-							<use xlinkHref="#svg-events"></use>
-						</svg>
+						// <svg class="form-input-icon icon-events calender-svg">
+						// 	<use xlinkHref="#svg-events"></use>
+						// </svg>
+						<LuCalendar className="text-[#adafca]" />
 					)}
 					<label htmlFor={name}>{label}</label>
 					<input

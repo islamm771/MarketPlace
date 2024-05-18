@@ -75,7 +75,13 @@ const RealEstate = () => {
         <RealCard
           title={"vila in coral gables with pool, garden"}
           price={3500000}
-          owner={"Agency"}
+          owner={"owner"}
+          isFav={false}
+        />
+        <RealCard
+          title={"vila in coral gables with pool, garden"}
+          price={3500000}
+          owner={"developer"}
           isFav={false}
         />
         <RealCard
@@ -87,7 +93,13 @@ const RealEstate = () => {
         <RealCard
           title={"vila in coral gables with pool, garden"}
           price={3500000}
-          owner={"Agency"}
+          owner={"developer"}
+          isFav={false}
+        />
+        <RealCard
+          title={"vila in coral gables with pool, garden"}
+          price={3500000}
+          owner={"owner"}
           isFav={false}
         />
       </Latest>

@@ -20,10 +20,10 @@ const Category = ({pageTitle}) => {
                   <div className='category-title-wrapper'>
                     <div className='category-title-info'>
                       <h3 class="animated fadeIn">
-                        <a href="#/shop"> Apartments </a>
+                        <a href="#"> Apartments </a>
                       </h3>
                       <p> Great Deals Available</p>
-                      <mark> 13 Listings</mark>
+                      <a href="/marketplace/search"><mark> 13 Listings</mark></a>
                     </div>
                   </div>
                 </div>
@@ -32,10 +32,10 @@ const Category = ({pageTitle}) => {
                   <div className='category-title-wrapper'>
                     <div className='category-title-info'>
                       <h3 class="animated fadeIn">
-                        <a href="#/shop"> Apartments </a>
+                        <a href="#"> Apartments </a>
                       </h3>
                       <p> Great Deals Available</p>
-                      <mark> 13 Listings</mark>
+                      <a href="/marketplace/search"><mark> 13 Listings</mark></a>
                     </div>
                   </div>
                   </div>
@@ -44,10 +44,10 @@ const Category = ({pageTitle}) => {
                   <div className='category-title-wrapper'>
                     <div className='category-title-info'>
                       <h3 class="animated fadeIn">
-                        <a href="#/shop"> Apartments </a>
+                        <a href="3"> Apartments </a>
                       </h3>
                       <p> Great Deals Available</p>
-                      <mark> 13 Listings</mark>
+                      <a href="/marketplace/search"><mark> 13 Listings</mark></a>
                     </div>
                   </div>
                   </div>
@@ -56,10 +56,10 @@ const Category = ({pageTitle}) => {
                   <div className='category-title-wrapper'>
                     <div className='category-title-info'>
                       <h3 class="animated fadeIn">
-                        <a href="#/shop"> Apartments </a>
+                        <a href="#"> Apartments </a>
                       </h3>
                       <p> Great Deals Available</p>
-                      <mark> 13 Listings</mark>
+                      <a href="/marketplace/search"><mark> 13 Listings</mark></a>
                     </div>
                   </div>
                   </div>
@@ -68,10 +68,10 @@ const Category = ({pageTitle}) => {
                   <div className='category-title-wrapper'>
                     <div className='category-title-info'>
                       <h3 class="animated fadeIn">
-                        <a href="#/shop"> Apartments </a>
+                        <a href="#"> Apartments </a>
                       </h3>
                       <p> Great Deals Available</p>
-                      <mark> 13 Listings</mark>
+                      <a href="/marketplace/search"><mark> 13 Listings</mark></a>
                     </div>
                   </div>
                   </div>

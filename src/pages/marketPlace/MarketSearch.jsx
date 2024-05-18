@@ -15,6 +15,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Slider } from 'antd';
 import Dropdown from '../../components/ui/MySelect/Dropdown';
+import { Provider } from 'react-redux';
 
 const Categories=[
   {id:1 ,value:"Category 1"},
@@ -30,7 +31,6 @@ const SubCategories=[
   {id:4 ,value:"SubCategory 4"},
   {id:5 ,value:"SubCategory 5"}
 ]
-
 
 const Countries=[
   {id:1 ,value:"Egypt"},
@@ -65,14 +65,29 @@ const Cities={
   ],
 }
 
+const Providers = [
+    {id:1 ,value:"All"},
+    {id:2 ,value:"Agency"},
+    {id:3 ,value:"Developer"},
+    {id:4 ,value:"Owner"},
+]
+
+const Developers = [
+    {id:1 ,value:"Dev 1"},
+    {id:2 ,value:"Dev 2"},
+    {id:3 ,value:"Dev 3"},
+    {id:4 ,value:"Dev 4"},
+    {id:5 ,value:"Dev 5"},
+]
 
 const Sorts=[
-  {id:1 ,value:"Default Sorting"},
-  {id:2 ,value:"Popularity"},
-  {id:3 ,value:"New arrivals"},
+  {id:1 ,value:"Featured"},
+  {id:2 ,value:"Newest"},
   {id:4 ,value:"Latest"},
-  {id:5 ,value:"Price: low to high"},
-  {id:6 ,value:"Price: high to low"}
+  {id:5 ,value:"Price (low)"},
+  {id:6 ,value:"Price (high)"},
+  {id:7 ,value:"Beds (least)"},
+  {id:8 ,value:"Beds (most)"},
 ]
 
 const marks = {
@@ -96,23 +111,30 @@ const AreaMarks = {
 
 const MarketSearchPage = () => {
     const [active,setActive] = useState({'list-item':false,'grid-item' : true})
+
+    // Start Dropdown States
     const [sort , setSort] = useState(null)
     const [country , setCountry] = useState(null)
     const [category , setCategory] = useState(null)
     const [subcategory , setSubCategory] = useState(null)
+    const [provider , setProvider] = useState(null)
+    const [developer , setDeveloper] = useState(null)
+
+    // Start Reference
     const dropSortRef = useRef(null);
     const dropCountryRef = useRef(null);
     const dropCategoryRef = useRef(null);
     const dropSubCategoryRef = useRef(null);
+    const dropProviderRef = useRef(null);
+    const dropDeveloperRef = useRef(null);
 
+    // Start Handelers
     const handleClick = (id) =>{
         setActive({[id]:true})
     }
-
     function onChange(value) {
       console.log('onChange: ', value);
     }
-    
     function onAfterChange(value) {
       console.log('onAfterChange: ', value);
     }
@@ -183,10 +205,60 @@ const MarketSearchPage = () => {
 
                   {country && 
                   <div className='mt-[8px] ms-[10px] flex flex-col gap-2'> 
-                  {Cities[country].map( city  => ( <a href="#">{city.value} ({city.count})</a> ))} 
+                  {Cities[country].map( city  => ( 
+
+                    <a className='flex justify-between' href="#">
+                      {city.value} 
+                      <span>{city.count}</span>
+                    </a> 
+
+                  ))} 
                   </div> }
                 </li>
               </ul>
+              <hr />
+
+              <h4 className="ltn__widget-title mb-[15px]">Providers</h4>
+              <ul>
+                <li ref={dropProviderRef}> 
+                  <Dropdown optionsArray={Providers} defaultValue={"Providers"} selectedValue={provider} setValue={setProvider} dropRef={dropProviderRef} />
+                </li>
+              </ul>
+              {provider?.toLowerCase() == "developer" && <>
+                  <h4 className="ltn__widget-title my-[15px]">Developer Options</h4>
+                  <ul>
+                    <li ref={dropDeveloperRef}>
+                      <Dropdown optionsArray={Developers} defaultValue={"Developers"} selectedValue={developer} setValue={setDeveloper} dropRef={dropDeveloperRef} />
+                    </li>
+                  </ul>
+                  <h4 className="ltn__widget-title my-[15px]">Communities</h4>
+                  <ul>
+                      <li className='flex items-center mb-[15px]'>
+                          <FormCheckbox label={"Soul"} id={"Soul"} name={"Soul"} />
+                          {/* <span className="categorey-no">3,924</span> */}
+                      </li>
+                      <li className='flex items-center mb-[15px]'>
+                          <FormCheckbox label={"Bellevie"} id={"Bellevie"} name={"Bellevie"} />
+                          {/* <span className="categorey-no">3,924</span> */}
+                      </li>
+                      <li className='flex items-center mb-[15px]'>
+                          <FormCheckbox label={"Uptown Cairo"} id={"Uptown"} name={"Uptown"} />
+                          {/* <span className="categorey-no">3,924</span> */}
+                      </li>
+                      <li className='flex items-center mb-[15px]'>
+                          <FormCheckbox label={"Marassi"} id={"Marassi"} name={"Marassi"} />
+                          {/* <span className="categorey-no">3,924</span> */}
+                      </li>
+                      <li className='flex items-center mb-[15px]'>
+                          <FormCheckbox label={"Cairo Gate"} id={"Gate"} name={"Gate"} />
+                          {/* <span className="categorey-no">3,924</span> */}
+                      </li>
+                      <li className='flex items-center mb-[15px]'>
+                          <FormCheckbox label={"Mivida"} id={"Mivida"} name={"Mivida"} />
+                          {/* <span className="categorey-no">3,924</span> */}
+                      </li>
+                  </ul>
+              </>}
               <hr />
 
               <h4 className="ltn__widget-title mb-[15px]">Price</h4>
