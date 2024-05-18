@@ -76,6 +76,10 @@ const MarketDashboard = () => {
       copyState['auto'] = !buttonStates['auto']
       setButtonStates(copyState)
     }
+
+    if(dashboradContent.current){
+      window.scrollTo(0,dashboradContent.current.offsetTop-90)
+    }
   },[] ) 
   return (
     <div className="marketplace-dashboard !mt-[6rem]">

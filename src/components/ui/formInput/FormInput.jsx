@@ -26,8 +26,7 @@ const FormInput = ({ label, name, icon, type, setValue, value, ...rest }) => {
 		<div className="form-row">
 			<div className="form-item form-item-css">
 				<div
-					className={`form-input 
-				${focused ? "active" : value !== "" && value ? "active" : ""} 
+					className={`form-input ${focused ? "active" : value !== "" && value ? "active" : ""} 
 					${icon ? "inputForm" : ""}`}
 				>
 					{icon === "email" && <img src={Email} alt="email" />}
@@ -38,7 +37,7 @@ const FormInput = ({ label, name, icon, type, setValue, value, ...rest }) => {
 						// <svg class="form-input-icon icon-events calender-svg">
 						// 	<use xlinkHref="#svg-events"></use>
 						// </svg>
-						<LuCalendar className="text-[#adafca]" />
+						<LuCalendar size={20} className="text-[#adafca]" />
 					)}
 					<label htmlFor={name}>{label}</label>
 					<input

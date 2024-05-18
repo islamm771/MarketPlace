@@ -23,10 +23,11 @@
   justify-content: space-between;
 }
 
-.search-page-container aside ul li > span{
+.search-page-container aside ul li .categorey-no{
   font-family: "Rajdhani", sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
+  color: #fd6728;
 }
 .search-page-container aside .form-item{
   width: fit-content;

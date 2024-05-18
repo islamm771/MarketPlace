@@ -209,7 +209,7 @@ const MarketSearchPage = () => {
 
                     <a className='flex justify-between' href="#">
                       {city.value} 
-                      <span>{city.count}</span>
+                      <span className='categorey-no'>{city.count}</span>
                     </a> 
 
                   ))} 
@@ -225,7 +225,7 @@ const MarketSearchPage = () => {
                 </li>
               </ul>
               {provider?.toLowerCase() == "developer" && <>
-                  <h4 className="ltn__widget-title my-[15px]">Developer Options</h4>
+                  <h4 className="ltn__widget-title my-[15px]">Developers</h4>
                   <ul>
                     <li ref={dropDeveloperRef}>
                       <Dropdown optionsArray={Developers} defaultValue={"Developers"} selectedValue={developer} setValue={setDeveloper} dropRef={dropDeveloperRef} />
@@ -310,32 +310,32 @@ const MarketSearchPage = () => {
               <ul>
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"House"} id={"house"} name={"house"} />
-                      <span className="categorey-no">3,924</span>
+                      <a className="categorey-no" href="#">3,924</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Single Family"} id={"single-family"} name={"single-family"} />
-                      <span className="categorey-no">3,610</span>
+                      <a className="categorey-no" href="#">3,610</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Apartment"} id={"apartment"} name={"apartment"} />
-                      <span className="categorey-no">2,912</span>
+                      <a className="categorey-no" href="#">2,912</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                   <FormCheckbox label={"Office Villa"} id={"office-villa"} name={"office-villa"} />
-                  <span className="categorey-no">2,687</span>
+                  <a className="categorey-no" href="#">2,687</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                   <FormCheckbox label={"Luxary Home"} id={"luxary-home"} name={"Luxary-home"} />
-                  <span className="categorey-no">1,853</span>
+                  <a className="categorey-no" href="#">1,853</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Studio"} id={"studio"} name={"studio"} />
-                      <span className="categorey-no">893</span>
+                      <a className="categorey-no" href="#">893</a>
                   </li>
               </ul>
               <hr />
@@ -343,22 +343,22 @@ const MarketSearchPage = () => {
               <ul>
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"1"} id={"1"} name={"1"} />
-                      <span className="categorey-no">3,924</span>
+                      <a href='#' className="categorey-no">3,924</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"2"} id={"2"} name={"2"} />
-                      <span className="categorey-no">3,610</span>
+                      <a href='#' className="categorey-no">3,610</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"3"} id={"3"} name={"3"} />
-                      <span className="categorey-no">2,912</span>
+                      <a href='#' className="categorey-no">2,912</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                   <FormCheckbox label={"4"} id={"4"} name={"4"} />
-                  <span className="categorey-no">2,687</span>
+                  <a href='#' className="categorey-no">2,687</a>
                   </li>
 
               </ul>
@@ -368,32 +368,32 @@ const MarketSearchPage = () => {
               <ul>
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Dishwasher"} id={"Dishwasher"} name={"Dishwasher"} />
-                      <span className="categorey-no">3,924</span>
+                      <a href='#' className="categorey-no">3,924</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                   <FormCheckbox label={"Floor Coverings"} id={"floor-coverings"} name={"floor-coverings"} />
-                  <span className="categorey-no">3,610</span>
+                  <a href='#' className="categorey-no">3,610</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Internet"} id={"internet"} name={"internet"} />
-                      <span className="categorey-no">2,912</span>
+                      <a href='#' className="categorey-no">2,912</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Build Wardrobes"} id={"build-wardrobes"} name={"build-wardrobes"} />
-                      <span className="categorey-no">2,687</span>
+                      <a href='#' className="categorey-no">2,687</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Supermarket"} id={"supermarket"} name={"supermarket"} />
-                      <span className="categorey-no">1,853</span>
+                      <a href='#' className="categorey-no">1,853</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Kids Zone"} id={"kids-zone"} name={"kids-zone"} />
-                      <span className="categorey-no">893</span>
+                      <a href='#' className="categorey-no">893</a>
                   </li>
               </ul>
               <hr />
@@ -402,22 +402,22 @@ const MarketSearchPage = () => {
               <ul>
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Single"} id={"single-bed"} name={"single"} />
-                      <span className="categorey-no">3,924</span>
+                      <a href="#" className="categorey-no">3,924</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Double"} id={"double-bed"} name={"double"} />
-                      <span className="categorey-no">3,610</span>
+                      <a href="#" className="categorey-no">3,610</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Up To 3"} id={"up-to-3-bed"} name={"up-to-3"} />
-                      <span className="categorey-no">2,912</span>
+                      <a href="#" className="categorey-no">2,912</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Up To 5"} id={"up-to-5-bed"} name={"up-to-5"} />
-                      <span className="categorey-no">2,687</span>
+                      <a href="#" className="categorey-no">2,687</a>
                   </li>
               </ul>
               <hr />
@@ -426,22 +426,22 @@ const MarketSearchPage = () => {
               <ul>
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Single"} id={"single"} name={"single"} />
-                      <span className="categorey-no">3,924</span>
+                      <a href="#" className="categorey-no">3,924</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Double"} id={"double"} name={"double"} />
-                      <span className="categorey-no">3,610</span>
+                      <a href="#" className="categorey-no">3,610</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Up To 3"} id={"up-to-3"} name={"up-to-3"} />
-                      <span className="categorey-no">2,912</span>
+                      <a href="#" className="categorey-no">2,912</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Up To 5"} id={"up-to-5"} name={"up-to-5"} />
-                      <span className="categorey-no">2,687</span>
+                      <a href="#" className="categorey-no">2,687</a>
                   </li>
               </ul>
               <hr />
@@ -449,18 +449,18 @@ const MarketSearchPage = () => {
               <ul>
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Cash or Installment"} id={"cash-install"} name={"single"} />
-                      <span className="categorey-no">13,671</span>
+                      <a href="#" className="categorey-no">13,671</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Cash"} id={"cash"} name={"cash"} />
-                      <span className="categorey-no">10,020</span>
+                      <a href="#" className="categorey-no">10,020</a>
                   </li>
 
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Installment"} id={"installment"} name={"installment"} />
-                      <span className="categorey-no">50,647</span>
+                      <a href="#" className="categorey-no">50,647</a>
                   </li>
               </ul>
               <hr />
@@ -469,27 +469,27 @@ const MarketSearchPage = () => {
               <ul>
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Ready to move"} id={"ready-move"} name={"ready-move"} />
-                      <span className="categorey-no">13,671</span>
+                      <a href="#" className="categorey-no">13,671</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"2027"} id={"2027"} name={"2027"} />
-                      <span className="categorey-no">1,640</span>
+                      <a href="#" className="categorey-no">1,640</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"2026"} id={"2026"} name={"2026"} />
-                      <span className="categorey-no">1,512</span>
+                      <a href="#" className="categorey-no">1,512</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"soon"} id={"soon"} name={"soon"} />
-                      <span className="categorey-no">1,647</span>
+                      <a href="#" className="categorey-no">1,647</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"2025"} id={"2025"} name={"2025"} />
-                      <span className="categorey-no">1,057</span>
+                      <a href="#" className="categorey-no">1,057</a>
                   </li>
               </ul>
               <hr />
@@ -498,21 +498,21 @@ const MarketSearchPage = () => {
               <ul>
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Finished"} id={"Finished"} name={"Finished"} />
-                      <span className="categorey-no">1,640</span>
+                      <a href="#" className="categorey-no">1,640</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Semi Finished"} id={"Semi-Finished"} name={"Semi-Finished"} />
-                      <span className="categorey-no">1,512</span>
+                      <a href="#" className="categorey-no">1,512</a>
                   </li>
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Not Yet"} id={"Not-Yet"} name={"Not-Yet"} />
-                      <span className="categorey-no">1,647</span>
+                      <a href="#" className="categorey-no">1,647</a>
                   </li>
 
                   <li className='flex items-center mb-[15px]'>
                       <FormCheckbox label={"Core & Shell"} id={"Core-Shell"} name={"Core-Shell"} />
-                      <span className="categorey-no">1,057</span>
+                      <a href="#" className="categorey-no">1,057</a>
                   </li>
               </ul>
 

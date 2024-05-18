@@ -136,6 +136,7 @@
     padding: 5px 8px 5px 20px;
     position: relative;
     text-transform: capitalize;
+    font-family: "Rajdhani", sans-serif;
     font-size: 14px;
 }
 .state-product-card .card__image-body .badge::before{
@@ -147,6 +148,14 @@
     position: absolute;
     width: 8px;
 }
+.state-product-card .card__image-body .badge-status{
+    border: 1px solid #eee;
+    padding: 2px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-family: "Rajdhani", sans-serif;
+}
+
 .state-product-card .card__image-body h6{
     font-size: 22px;
     margin-bottom: 15px;
