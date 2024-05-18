@@ -9,6 +9,8 @@ import img_02 from "../../../../assests/marketplace/landing/Category/4.jpg"
 import img_03 from "../../../../assests/marketplace/landing/Category/5.jpg"
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
 
+import developer_logo from "../../../../assests/marketplace/real_estate/card/company-img-01.png"
+
 const SectionFour = ({pageTitle}) => {
   return (
     <div className="landing-Secondfeatured bg-white py-[4rem] lg:py-[6rem] mb-[25px]">
@@ -55,6 +57,7 @@ const SectionFour = ({pageTitle}) => {
                 <img src={img_01} alt="Image" />
               </a>
               <div class="slide-item-info">
+                <div className='slide-item-info-logo w-[100%] mb-[15px]'> <img src={developer_logo} alt="" /> </div>
                 <div class="slide-item-info-breif">
                   <h6 className="mb-[10px]">The luxury crib</h6>
                   <h1>
@@ -78,6 +81,7 @@ const SectionFour = ({pageTitle}) => {
                 <img src={img_02} alt="Image" />
               </a>
               <div class="slide-item-info">
+                <div className='slide-item-info-logo w-[100%] mb-[15px]'> <img src={developer_logo} alt="" /> </div>
                 <div class="slide-item-info-breif">
                   <h6 className="mb-[10px]">The luxury crib</h6>
                   <h1>
@@ -101,6 +105,7 @@ const SectionFour = ({pageTitle}) => {
                 <img src={img_03} alt="Image" />
               </a>
               <div class="slide-item-info">
+                <div className='slide-item-info-logo w-[100%] mb-[15px]'> <img src={developer_logo} alt="" /> </div>
                 <div class="slide-item-info-breif">
                   <h6 className="mb-[10px]">The luxury crib</h6>
                   <h1>
@@ -124,6 +129,7 @@ const SectionFour = ({pageTitle}) => {
                 <img src={img_01} alt="Image" />
               </a>
               <div class="slide-item-info">
+                <div className='slide-item-info-logo w-[100%] mb-[15px]'> <img src={developer_logo} alt="" /> </div>
                 <div class="slide-item-info-breif">
                   <h6 className="mb-[10px]">The luxury crib</h6>
                   <h1>
@@ -147,6 +153,7 @@ const SectionFour = ({pageTitle}) => {
                 <img src={img_02} alt="Image" />
               </a>
               <div class="slide-item-info">
+                <div className='slide-item-info-logo w-[100%] mb-[15px]'> <img src={developer_logo} alt="" /> </div>
                 <div class="slide-item-info-breif">
                   <h6 className="mb-[10px]">The luxury crib</h6>
                   <h1>
@@ -170,6 +177,7 @@ const SectionFour = ({pageTitle}) => {
                 <img src={img_03} alt="Image" />
               </a>
               <div class="slide-item-info">
+                <div className='slide-item-info-logo w-[100%] mb-[15px]'> <img src={developer_logo} alt="" /> </div>
                 <div class="slide-item-info-breif">
                   <h6 className="mb-[10px]">The luxury crib</h6>
                   <h1>
