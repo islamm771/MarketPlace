@@ -26,7 +26,7 @@ const Featured = ({pageTitle,title,subTitle ,children , MemberCards , RealCards 
             <div className="featured-heading special-landing-heading flex items-end justify-between">
                 <div>
                   <span>{pageTitle}</span>
-                  <h1>{title ? title : "Featured Lisitngs"}</h1>
+                  <h1>{title ? title : "Featured Listings"}</h1>
                   {subTitle && <span>{subTitle}</span>}
                 </div>
                 {!title && <a className='font-[500] mb-[5px]' href='/marketplace/search'>

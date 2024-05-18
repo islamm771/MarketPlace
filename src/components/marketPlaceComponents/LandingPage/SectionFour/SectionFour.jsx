@@ -11,9 +11,9 @@ import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
 
 const SectionFour = ({pageTitle}) => {
   return (
-    <div className="landing-Secondfeatured py-[4rem] lg:py-[6rem] mb-[25px]">
+    <div className="landing-Secondfeatured bg-white py-[4rem] lg:py-[6rem] mb-[25px]">
       <div className="landing-Secondfeatured-container">
-        <div className="Secondfeatured-heading special-landing-heading mx-[15px] md:mx-[4rem]">
+        <div className="Secondfeatured-heading special-landing-heading">
           <span>{pageTitle}</span>
           <h1>Featured Developers</h1>
         </div>
