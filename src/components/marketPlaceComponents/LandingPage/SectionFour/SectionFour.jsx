@@ -36,7 +36,7 @@ const SectionFour = ({pageTitle}) => {
               slidesPerView: 1,
               spaceBetween: 0,
             },
-            768: {
+            540: {
               slidesPerView: 2,
               spaceBetween: 0,
             },
