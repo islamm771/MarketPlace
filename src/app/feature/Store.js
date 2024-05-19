@@ -5,6 +5,7 @@ import { outletSlice } from "./outletSlice";
 import { quickPostSlice } from "./quickPostSlice";
 import { authSlice } from "./authSlice";
 import { tabsSliceOnline } from "./TabOnlineList";
+import { tabSlice } from "./MarketplaceDashSlice";
 
 const store = configureStore({
   reducer: {
@@ -13,7 +14,8 @@ const store = configureStore({
     outlet: outletSlice.reducer,
     quickPost: quickPostSlice.reducer,
     auth: authSlice.reducer,
-    tabsOnline: tabsSliceOnline.reducer
+    tabsOnline: tabsSliceOnline.reducer,
+    marketplacetabs : tabSlice.reducer
   },
 });
 

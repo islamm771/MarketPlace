@@ -24,7 +24,7 @@ import AutoPurchased from "../Automotives/Sold-Purchased/AutoPurchased";
 import MemberListings from "../MemberClassifieds/Listings/MemberListings";
 import MemberSold from "../MemberClassifieds/Sold-Purchased/MemberSold";
 import MemberPurchased from "../MemberClassifieds/Sold-Purchased/AutoPurchased";
-import { useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 const MarketDashboard = () => {
   const [activeButton , setActiveButton] = useState({
     title:"Marketplace",
@@ -38,9 +38,13 @@ const MarketDashboard = () => {
   });
   const dashboradContent = useRef(null)
   
-  const location = useLocation().pathname.split("/")[3]
+
+  const activemarketplacetab = useSelector( state => state.marketplacetabs.activeTabSlice )
+
   useEffect( ()=>{
-    if(location == "addproperty"){
+    
+    // RealForm
+    if(activemarketplacetab == 2){
       setActiveButton({title:"Add Property" , parent:"Real Estate"})
 
       const copyState = {...buttonStates}
@@ -52,7 +56,9 @@ const MarketDashboard = () => {
       copyState['real'] = !buttonStates['real']
       setButtonStates(copyState)
     }
-    if(location == "addlisting"){
+
+    // MemberForm
+    if(activemarketplacetab == 1){
       setActiveButton({title:"Add Listing" , parent:"Member Classified"})
 
       const copyState = {...buttonStates}
@@ -64,7 +70,9 @@ const MarketDashboard = () => {
       copyState['member'] = !buttonStates['member']
       setButtonStates(copyState)
     }
-    if(location == "addautomotive"){
+
+    // AutomotiveForm
+    if(activemarketplacetab == 3){
       setActiveButton({title:"Add Automotive" , parent:"Automotive"})
 
       const copyState = {...buttonStates}
@@ -77,10 +85,42 @@ const MarketDashboard = () => {
       setButtonStates(copyState)
     }
 
-    if(dashboradContent.current){
-      window.scrollTo(0,dashboradContent.current.offsetTop-90)
-    }
-  },[] ) 
+
+    // RealForm
+  if(activemarketplacetab == 2){
+    setActiveButton({title:"Add Property" , parent:"Real Estate"})
+
+    const copyState = {...buttonStates}
+
+    Object.keys(copyState).forEach( key =>{
+        copyState[key] = false
+    } )
+
+    copyState['real'] = !buttonStates['real']
+    setButtonStates(copyState)
+  }
+
+  // MemberForm
+  if(activemarketplacetab == 1){
+    setActiveButton({title:"Add Listing" , parent:"Member Classified"})
+
+    const copyState = {...buttonStates}
+
+    Object.keys(copyState).forEach( key =>{
+        copyState[key] = false
+    } )
+
+    copyState['member'] = !buttonStates['member']
+    setButtonStates(copyState)
+  }
+
+  // Scroll to Form
+  if(dashboradContent.current){
+    window.scrollTo(0,dashboradContent.current.offsetTop-90)
+  } 
+
+  },[activemarketplacetab] ) 
+  
   return (
     <div className="marketplace-dashboard !mt-[6rem]">
       <div className="dashboard-container">

@@ -17,6 +17,7 @@ import AutoSuggested from "../../components/marketPlaceComponents/MainPage/Sugge
 import MemberViewed from "../../components/marketPlaceComponents/MainPage/RecentlyViewedListings/MemberViewed";
 import RealViewed from "../../components/marketPlaceComponents/MainPage/RecentlyViewedListings/RealViewed";
 import AutoViewed from "../../components/marketPlaceComponents/MainPage/RecentlyViewedListings/AutoViewed";
+import HeroForm from "../../components/marketPlaceComponents/MainPage/HeroForm/HeroForm";
 
 const MarketPlace = () => {
 	return (
@@ -51,7 +52,9 @@ const MarketPlace = () => {
         </SwiperSlide>
       </Swiper> */}
 
-      <Hero />
+      <Hero>
+        <HeroForm />
+      </Hero>
       <Featured pageTitle={"Marketplace"}
        title={"Suggested Listings"}
        subTitle={"Based on your recent search"}

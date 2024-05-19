@@ -1,13 +1,13 @@
 import React from 'react'
 import { IoChevronDownOutline } from "react-icons/io5";
 import { FaHouse,FaEarthAsia,FaMagnifyingGlass,FaBuilding  } from "react-icons/fa6";
-const RealLandingForm = () => {
+const AgencyLandingForm = () => {
   return (
     <>
       <form action="">
-        <div className="form-item">
+        <div className="form-item search-field">
           <FaMagnifyingGlass className="inline text-[#fd6729] absolute top-[22px] left-[15px]" />
-          <input type="text" placeholder="Search for building..." />
+          <input type="text" placeholder="Search for Agency..." />
         </div>
         <div className="form-item type-select">
           <FaHouse className="inline text-[#fd6729] absolute top-[22px] left-[15px]" />
@@ -21,6 +21,21 @@ const RealLandingForm = () => {
             <option value="">Property 3</option>
             <option value="">Property 4</option>
             <option value="">Property 5</option>
+          </select>
+          <IoChevronDownOutline className="inline text-[#fd6729] absolute bottom-[17px] right-[15px]" />
+        </div>
+        <div className="form-item room-select">
+          <FaHouse className="inline text-[#fd6729] absolute top-[22px] left-[15px]" />
+          <label htmlFor="">Room</label>
+          <select name="" id="property">
+            <option value="" selected>
+              Room
+            </option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
           </select>
           <IoChevronDownOutline className="inline text-[#fd6729] absolute bottom-[17px] right-[15px]" />
         </div>
@@ -62,4 +77,4 @@ const RealLandingForm = () => {
   );
 }
 
-export default RealLandingForm
+export default AgencyLandingForm

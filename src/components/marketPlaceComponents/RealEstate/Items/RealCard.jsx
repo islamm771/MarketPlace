@@ -96,7 +96,7 @@ const RealCard = (props) => {
             <div class="card__image-body">
                 <a href="/marketplace/search" class="badge badge-primary text-capitalize mb-2 me-2">house</a>
                 <a href="/marketplace/search" class="badge badge-primary text-capitalize mb-2 me-2">Soul</a>
-                {owner !== "owner" && <span className="badge-status">Used</span>}
+                {owner !== "owner" && <span className="badge-status">Resale</span>}
                 <h6 class="text-capitalize">
                     <a href="">{textFormater(title)}</a>
                 </h6>
