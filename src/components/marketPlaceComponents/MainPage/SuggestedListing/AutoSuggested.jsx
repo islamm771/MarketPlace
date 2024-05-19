@@ -62,7 +62,16 @@ const AutoSuggested = () => {
         title={"BMW M6 Gran Coupe 2019"} 
         location={"Cairo, El Maadi"}
         price={3500000} 
-        owner={"Agency"} 
+        owner={"Owner"} 
+        isFav={false} carBrand={"BMW"} carModel={'M6'} carYear={"2019"}
+        />
+        </SwiperSlide>
+        <SwiperSlide>
+        <AutoCard 
+        title={"BMW M6 Gran Coupe 2019"} 
+        location={"Cairo, El Maadi"}
+        price={3500000} 
+        owner={"Developer"} 
         isFav={false} carBrand={"BMW"} carModel={'M6'} carYear={"2019"}
         />
         </SwiperSlide>
@@ -80,7 +89,7 @@ const AutoSuggested = () => {
         title={"BMW M6 Gran Coupe 2019"} 
         location={"Cairo, El Maadi"}
         price={3500000} 
-        owner={"Agency"} 
+        owner={"Owner"} 
         isFav={false} carBrand={"BMW"} carModel={'M6'} carYear={"2019"}
         />
         </SwiperSlide>
@@ -89,7 +98,7 @@ const AutoSuggested = () => {
         title={"BMW M6 Gran Coupe 2019"} 
         location={"Cairo, El Maadi"}
         price={3500000} 
-        owner={"Agency"} 
+        owner={"Developer"} 
         isFav={false} carBrand={"BMW"} carModel={'M6'} carYear={"2019"}
         />
         </SwiperSlide>

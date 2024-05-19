@@ -57,17 +57,21 @@ const RealViewed = () => {
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
         </SwiperSlide>
        <SwiperSlide>
-        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Owner"} isFav={false} />
+        </SwiperSlide>
+       <SwiperSlide>
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Developer"} isFav={false} />
         </SwiperSlide>
        <SwiperSlide>
         <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
         </SwiperSlide>
        <SwiperSlide>
-        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Owner"} isFav={false} />
         </SwiperSlide>
        <SwiperSlide>
-        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Agency"} isFav={false} />
+        <RealCard title={"vila in coral gables with pool, garden"} price={3500000} owner={"Developer"} isFav={false} />
         </SwiperSlide>
+       
        
 
         {/* <div className='swiper-memberSuggested-pagination'></div> */}
