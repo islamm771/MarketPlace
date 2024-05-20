@@ -11,6 +11,7 @@ import Automotive from "./pages/marketPlace/Automotive";
 import { useState } from "react";
 import MemberClassified from "./pages/marketPlace/MemberClassified";
 import MarketSearchPage from "./pages/marketPlace/MarketSearch";
+import MarketDeveloperPage from "./pages/marketPlace/Developer";
 
 function App() {
   AOS.init();
@@ -45,6 +46,7 @@ function App() {
             <Route path="/marketplace/automotives" element={<Automotive />} />
             <Route path="/marketplace/dashboard" element={<MarketDashboard />} />
             <Route path="/marketplace/search" element={<MarketSearchPage />} />
+            <Route path="/marketplace/developer" element={<MarketDeveloperPage />} />
           </Route>
         </Routes>
       </div>

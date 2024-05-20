@@ -17,7 +17,7 @@ import HeroForm from "../../components/marketPlaceComponents/RealEstate/HeroForm
 
 const RealEstate = () => {
 	return (
-    <div className="real-estate-container !mt-[5rem]">
+    <div className="real-estate-container mt-[3rem] md:!mt-[5rem]">
       <Hero>
         <HeroForm />
       </Hero>

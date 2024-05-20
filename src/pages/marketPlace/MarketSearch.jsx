@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import FormCheckbox from '../../components/ui/formCheckbox/FormCheckbox';
 import EstateProducts from '../../components/marketPlaceComponents/Products/EstateProducts/Products';
 import "./MarketPlace.css"
@@ -15,7 +15,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Slider } from 'antd';
 import Dropdown from '../../components/ui/MySelect/Dropdown';
-import { Provider } from 'react-redux';
 
 const Categories=[
   {id:1 ,value:"Category 1"},
@@ -207,7 +206,7 @@ const MarketSearchPage = () => {
                   <div className='mt-[8px] ms-[10px] flex flex-col gap-2'> 
                   {Cities[country].map( city  => ( 
 
-                    <a className='flex justify-between' href="#">
+                    <a className='flex justify-between font-[600]' href="#">
                       {city.value} 
                       <span className='categorey-no'>{city.count}</span>
                     </a> 

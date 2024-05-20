@@ -11,7 +11,7 @@ import AutoLandingForm from "../../components/marketPlaceComponents/Automotives/
 
 const Automotive = () => {
 	return (
-    <div className="automotives-container">
+    <div className="automotives-container mt-[3rem] md:!mt-[5rem]">
       <Hero
         title={"Automotive"}
         svg={

@@ -19,7 +19,7 @@ const HeroForm = () => {
                   onClick={() => handleClick("member")}
                 >
                   <svg
-                    className="w-[40px] inline"
+                    className="me-[5px] inline"
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
                     height="1em"
@@ -42,7 +42,7 @@ const HeroForm = () => {
                   onClick={() => handleClick("real")}
                 >
                   <svg
-                    className="w-[40px] inline"
+                    className="me-[5px] inline"
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
                     height="1em"
@@ -59,7 +59,7 @@ const HeroForm = () => {
                   onClick={() => handleClick("auto")}
                 >
                   <svg
-                    className="w-[40px] inline"
+                    className="me-[5px] inline"
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
                     height="1em"
@@ -69,7 +69,7 @@ const HeroForm = () => {
                   </svg>
                   Automotives
                 </button>
-              </div>
+        </div>
 
               <div className="all-hero-forms">
                 {activeForm == "real" && <RealLandingForm />}

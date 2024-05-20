@@ -1,8 +1,3 @@
-.landing-location-container{
-  padding: 0 15px;
-  margin: 0 auto;
-  position: relative;
-}
 .landing-location .buttons{
   display: flex;
   justify-content: center;
@@ -35,33 +30,4 @@
   /* background-color: #ff692876; */
 }
 
-@media (min-width:540px){
-  .landing-location-container{
-    width: 450px;
-}
-}
-@media (min-width:768px){
-  .landing-location-container{
-    width: 650px;
-  }
-  .landing-location .buttons{
-    gap: 20rem;
-  }
-}
-@media (min-width:992px){
-  .landing-location-container{
-    width: 750px;
-  }
-}
-@media (min-width:1200px){
-  .landing-location-container{
-    width: 1000px;
-  }
-}
-
-@media (min-width:1300px){
-  .landing-location-container{
-    width: 1200px;
-  }
-}
 

@@ -14,7 +14,7 @@ const Latest = ({children,pageTitle}) => {
     ))
   return (
     <div className='landing-latest bg-white py-[4rem] lg:py-[6rem] mb-[25px]'>
-        <div className="landing-latest-container">
+        <div className="marketplace-container">
             <div className="latest-heading special-landing-heading flex justify-between items-end">
                 <div className="latest-heading-info">
                     <span>{pageTitle}</span>

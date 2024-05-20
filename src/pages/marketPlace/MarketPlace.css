@@ -140,7 +140,7 @@
   position: relative;
   width: 100%;
   border: 1px solid #11d8dc !important;
-  padding: 7px 15px;
+  padding: 10px 15px;
   border-radius: 12px;
 }
 .search-page-container .favlist-dropdown:focus{
@@ -153,7 +153,9 @@
   font-family: "Rajdhani", sans-serif !important;
   cursor: pointer;
   display: block;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 14px;
+  color: #3e3f5e;
 }
 .search-page-container .favlist-dropdown .list{
   position: absolute;
@@ -217,3 +219,59 @@
   background-color:#fd6729;
   color:#fff
 }
+
+
+.special-landing-heading{
+  margin-bottom: 30px;
+}
+.special-landing-heading span{
+  color: #8f91ac;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Rajdhani", sans-serif;
+}
+.special-landing-heading h1{
+  font-size: 30px;
+  font-weight: 700;
+}
+
+
+.marketplace-container{
+  margin: 0 auto;
+  position: relative;
+  padding: 0 15px;
+}
+
+@media (min-width:540px){
+  .marketplace-container{
+    width: 450px;
+}
+}
+@media (min-width:768px){
+.marketplace-container{
+  width: 650px;
+}
+.landing-featured .buttons{
+  gap: 20rem;
+}
+}
+@media (min-width:992px){
+.marketplace-container{
+  width: 750px;
+}
+}
+@media (min-width:1200px){
+.marketplace-container{
+  width: 1000px;
+}
+}
+
+@media (min-width:1300px){
+.marketplace-container{
+  width: 1200px;
+}
+}
+
+
+

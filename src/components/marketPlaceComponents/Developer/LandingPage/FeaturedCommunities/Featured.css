@@ -1,0 +1,13 @@
+.featured-communitities-section .card-container{
+    padding: 0 15px;
+    margin: 0 auto;
+    width: calc(100% - 130px);
+    position: relative;
+}
+@media (max-width:680px) {
+    .featured-communitities-section .card-container{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+}

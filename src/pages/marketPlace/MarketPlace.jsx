@@ -1,5 +1,6 @@
 import React from "react";
 import './MarketPlace.css'
+
 import MarketPlaceNavigation from "../../components/marketPlaceComponents/MarketPlaceNavigation";
 
 import "swiper/css/navigation";
@@ -21,7 +22,7 @@ import HeroForm from "../../components/marketPlaceComponents/MainPage/HeroForm/H
 
 const MarketPlace = () => {
 	return (
-    <div className="market-place-container !mt-[5rem]">
+    <div className="market-place-container mt-[3rem] md:!mt-[5rem]">
       {/* <Swiper
         spaceBetween={30}
         centeredSlides={true}

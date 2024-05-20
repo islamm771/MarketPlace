@@ -15,7 +15,7 @@ import MemberCard from "../../components/marketPlaceComponents/MemberClassifieds
 import MemberLandingForm from "../../components/marketPlaceComponents/MemberClassifieds/Form/MemberLandingForm";
 const MemberClassified = () => {
 	return (
-    <div className="member-classifieds-container">
+    <div className="member-classifieds-container mt-[3rem] md:!mt-[5rem]">
 
       <Hero
       title={"Classiefieds"}

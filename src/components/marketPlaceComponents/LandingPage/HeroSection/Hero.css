@@ -1,7 +1,14 @@
 .landing-hero-header{
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 80px);
 }
+
+@media (max-width:600px){
+    .landing-hero-header{
+        height: 100vh;
+    }
+}
+
 .landing-hero-header::before{
     content: "";
     position: absolute;
@@ -13,15 +20,16 @@
     z-index: -1;
     opacity: 0.3;
 }
-.landing-hero-header-container{
+.landing-hero-header .marketplace-container{
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 100%;
     margin: 0 auto;
     padding: 0 15px;
+    position: unset;
 }
-.landing-hero-header-container video{
+.landing-hero-header .marketplace-container video{
     position: absolute;
     top: 0;
     left: 0;
@@ -34,9 +42,9 @@
 .landing-hero-form .btn-tabHeroFrom{
     background-color: #fff;
     padding: 10px 25px;
-    padding-left: 10px;
     border-radius: 5px 5px 0 0 !important;
     width: fit-content;
+    font-size: 14px;
 }
 .landing-hero-form .btn-tabHeroFrom.active{
     background-color: #fd6729;
@@ -90,7 +98,7 @@
 }
 
 
-@media (min-width:540px){
+/* @media (min-width:540px){
     .landing-hero-header-container{
       width: 450px;
   }
@@ -118,7 +126,7 @@
 .landing-hero-header-container{
     width: 1200px;
 }
-}
+} */
 
 @media (max-width:1023px){
     .landing-hero-form form{
@@ -143,5 +151,12 @@
         border-radius: 5px;
         margin: 10px 15px;
         font-family: "Rajdhani", sans-serif;
+    }
+}
+
+/* Media of Form Button */
+@media (max-width:768px){
+    .landing-hero-form .btn-tabHeroFrom{
+        padding: 10px 20px;
     }
 }

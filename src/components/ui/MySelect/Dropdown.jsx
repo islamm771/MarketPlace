@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { FaChevronDown,FaCheck } from "react-icons/fa6";
+import { FaCheck } from "react-icons/fa6";
+import { BiSolidChevronDown } from "react-icons/bi";
+
+
 
 
 
@@ -35,7 +38,7 @@ const Dropdown = ({optionsArray , defaultValue , dropRef ,selectedValue , setVal
     <div className={`${activeDrop ? "open " : ""}favlist-dropdown`} onClick={() => {setActiveDrop(!activeDrop)}}>
         <span>
             { selectedValue ?  selectedValue  : defaultValue}
-            <FaChevronDown className='inline ms-2 absolute top-[12px] right-[15px] text-[#fd6729]' /> 
+            <BiSolidChevronDown className='inline ms-2 absolute top-[12px] right-[15px] text-[#fd6729]' /> 
         </span>
         <ul class={"sorts-list list"}
             style={ activeDrop ? {height:height , opacity:"1"} : {}}>

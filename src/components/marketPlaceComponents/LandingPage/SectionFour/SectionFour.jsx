@@ -11,13 +11,13 @@ import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
 
 import developer_logo from "../../../../assests/marketplace/real_estate/card/company-img-01.png"
 
-const SectionFour = ({pageTitle}) => {
+const SectionFour = ({pageTitle,title}) => {
   return (
     <div className="landing-Secondfeatured bg-white py-[4rem] lg:py-[6rem] mb-[25px]">
       <div className="landing-Secondfeatured-container">
         <div className="Secondfeatured-heading special-landing-heading">
           <span>{pageTitle}</span>
-          <h1>Featured Developers</h1>
+          <h1>{title ? title : "Featured Developers"}</h1>
         </div>
       </div>
 

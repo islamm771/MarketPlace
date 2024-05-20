@@ -2,36 +2,41 @@
     padding: 0 15px;
     margin: 0 auto;
   }
-  @media (min-width:540px){
-    .landing-category-container{
-      width: 450px;
+
+@media (min-width:540px){
+  .landing-category-container{
+    width: 450px;
+}
+}
+@media (min-width:768px){
+  .landing-category-container{
+    width: 650px;
   }
+}
+@media (min-width:992px){
+  .landing-category-container{
+    width: 750px;
   }
-  @media (min-width:768px){
-    .landing-category-container{
-      width: 650px;
-    }
+}
+@media (min-width:1200px){
+  .landing-category-container{
+    width: 1000px;
   }
-  @media (min-width:992px){
-    .landing-category-container{
-      width: 750px;
-    }
+}
+
+@media (min-width:1300px){
+  .landing-category-container{
+    width: 1200px;
   }
-  @media (min-width:1200px){
-    .landing-category-container{
-      width: 1000px;
-    }
-  }
-  
-  @media (min-width:1300px){
-    .landing-category-container{
-      width: 1200px;
-    }
-  }
+}
+
+
 .category-grid .grid > div{
     position: relative;
     height: 350px;
 }
+
+
 .category-grid .grid > div::before{
     content: "";
     position: absolute;

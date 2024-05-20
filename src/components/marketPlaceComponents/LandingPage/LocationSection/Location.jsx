@@ -19,7 +19,7 @@ const Location = ({children ,pageTitle}) => {
   ) )
   return (
     <div className='landing-location bg-white py-[4rem] lg:py-[6rem] mb-[25px]'>
-        <div className="landing-location-container">
+        <div className="marketplace-container">
             <div className="location-heading special-landing-heading flex items-end justify-between">
                 <div>
                   <span>{pageTitle}</span>

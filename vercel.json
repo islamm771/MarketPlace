@@ -35,6 +35,10 @@
         {
             "src":"/marketplace/search",
             "dest" : "/"
+        },
+        {
+            "src":"/marketplace/developer",
+            "dest" : "/"
         }
     ]
 }
