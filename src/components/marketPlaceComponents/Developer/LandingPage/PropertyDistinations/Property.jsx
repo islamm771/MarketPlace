@@ -31,7 +31,7 @@ const PropertyDistination = ({children ,pageTitle}) => {
             <div className="propertyDistination-heading special-landing-heading">
                 <div>
                   <span>{pageTitle}</span>
-                  <h1>Property Distinations</h1>
+                  <h1>Property Destinations</h1>
                 </div>
                 
                 {/* <a className='font-[500] mb-[5px]' href='/marketplace/search'>
