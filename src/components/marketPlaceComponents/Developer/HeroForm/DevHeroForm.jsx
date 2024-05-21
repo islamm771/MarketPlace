@@ -62,13 +62,13 @@ const DevHeroForm = () => {
             <label htmlFor="">Rooms</label>
             <select name="" id="property">
               <option value="" selected>
-                Property
+                Rooms
               </option>
-              <option value="">Developer 1</option>
-              <option value="">Developer 2</option>
-              <option value="">Developer 3</option>
-              <option value="">Developer 4</option>
-              <option value="">Developer 5</option>
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
             </select>
             <IoChevronDownOutline className="inline text-[#fd6729] absolute bottom-[17px] right-[15px]" />
           </div>
@@ -77,7 +77,7 @@ const DevHeroForm = () => {
             <label htmlFor="">Community</label>
             <select name="" id="property">
               <option value="" selected>
-                Property
+                Communtities
               </option>
               <option value="">Soul</option>
               <option value="">Marassi</option>
