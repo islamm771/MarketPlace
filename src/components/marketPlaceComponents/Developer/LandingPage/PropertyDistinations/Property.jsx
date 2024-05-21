@@ -17,7 +17,7 @@ import img_04 from "../../../../../assests/marketplace/developer/FeaturedCommuni
 import img_05 from "../../../../../assests/marketplace/developer/FeaturedCommunitties/img-05.jpg"
 
 
-const PropertyDistination = ({children ,pageTitle}) => {
+const PropertyDistination = ({children}) => {
 //   const renderSwiperSlides = children.map( child => (
 //     <>
 //       <SwiperSlide>
@@ -30,7 +30,7 @@ const PropertyDistination = ({children ,pageTitle}) => {
         <div className="marketplace-container">
             <div className="propertyDistination-heading special-landing-heading">
                 <div>
-                  <span>{pageTitle}</span>
+                  <span>Properties</span>
                   <h1>Property Destinations</h1>
                 </div>
                 

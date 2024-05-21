@@ -1,0 +1,40 @@
+.about-us-section .about-us-item{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 30px 15px;
+    border: 1px solid #eee;
+    transition: 0.5s;
+    position: relative;
+}
+.about-us-section .about-us-item::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 0%;
+    background-color: #fd6729;
+    transition: 0.5s;
+}
+.about-us-section .about-us-item:hover{
+    box-shadow: 0 4.4px 12px -1px #dedede5c;;
+}
+.about-us-section .about-us-item:hover::before{
+    height: 80%;
+}
+.about-us-section .about-us-item .about-us-icon svg{
+    font-size: 30px;
+    color: #fd6729;
+}
+.about-us-section .about-us-item .about-us-info{
+
+}
+.about-us-section .about-us-item .about-us-info h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.about-us-section .about-us-item .about-us-info p{
+
+}

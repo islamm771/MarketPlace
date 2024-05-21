@@ -6,13 +6,14 @@ import video from "../../assests/marketplace/landing/vid-dev.mp4"
 import LatestLunches from '../../components/marketPlaceComponents/Developer/LandingPage/LatestLunches/Latest'
 import PropertyDistination from '../../components/marketPlaceComponents/Developer/LandingPage/PropertyDistinations/Property'
 import FeaturedCommunitities from '../../components/marketPlaceComponents/Developer/LandingPage/FeaturedCommunities/Featured'
+import UpcomingProjects from '../../components/marketPlaceComponents/Developer/LandingPage/UpcomingProjects/Projects'
+import AboutUs from '../../components/marketPlaceComponents/Developer/LandingPage/AboutUs/AboutUs'
 
 import commun_img_01 from "../../assests/marketplace/developer/FeaturedCommunitties/img-01.jpg"
 import commun_img_02 from "../../assests/marketplace/developer/FeaturedCommunitties/img-02.jpg"
 import commun_img_03 from "../../assests/marketplace/developer/FeaturedCommunitties/img-03.jpg"
 import commun_img_04 from "../../assests/marketplace/developer/FeaturedCommunitties/img-04.jpg"
 import commun_img_05 from "../../assests/marketplace/developer/FeaturedCommunitties/img-05.jpg"
-
 const communitities_imgs = [commun_img_01,commun_img_02,commun_img_03,commun_img_04,commun_img_05]
 
 const MarketDeveloperPage = () => {
@@ -26,8 +27,11 @@ const MarketDeveloperPage = () => {
 
         <FeaturedCommunitities title={"Featured Communities"} subtitle={"Properties"} imgs={communitities_imgs} />
 
-        <PropertyDistination pageTitle={"Properties"} />
-            
+        <PropertyDistination />
+
+        <UpcomingProjects />
+
+        <AboutUs />
     </div>
   )
 }
