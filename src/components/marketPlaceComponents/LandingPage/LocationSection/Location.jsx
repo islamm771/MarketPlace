@@ -59,14 +59,16 @@ const Location = ({children ,pageTitle}) => {
                     },
                   }}
                 >
-                {renderSwiperSlides}
+                  {renderSwiperSlides}
+
+                  <div className="buttons">
+                    <button className='swiper-location-prev-btn'><FaChevronLeft /></button>
+                    <button className='swiper-location-next-btn'><FaChevronRight /></button>
+                  </div>
                 </Swiper>
             </div>
 
-            <div className="buttons">
-                <button className='swiper-location-prev-btn'><FaChevronLeft /></button>
-                <button className='swiper-location-next-btn'><FaChevronRight /></button>
-            </div>
+            
         </div>
     </div>
   )

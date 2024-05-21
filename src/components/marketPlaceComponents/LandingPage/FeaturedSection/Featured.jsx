@@ -71,15 +71,18 @@ const Featured = ({pageTitle,title,subTitle ,children , MemberCards , RealCards 
                       },
                     }}
                   >
-                  {renderSwiperSlides}
+
+                    {renderSwiperSlides}
+
+                    <div className="buttons">
+                      <button className='swiper-featured-prev-btn'><FaChevronLeft /></button>
+                      <button className='swiper-featured-next-btn'><FaChevronRight /></button>
+                    </div>
                   </Swiper>
                   {/* <div className='swiper-featured-pagination'></div> */}
                 </div>
 
-                <div className="buttons">
-                    <button className='swiper-featured-prev-btn'><FaChevronLeft /></button>
-                    <button className='swiper-featured-next-btn'><FaChevronRight /></button>
-                </div>
+                
               </>)}
 
             {MemberCards && <>{MemberCards}</>}

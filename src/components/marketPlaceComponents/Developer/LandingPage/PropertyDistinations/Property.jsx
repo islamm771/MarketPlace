@@ -155,13 +155,15 @@ const PropertyDistination = ({children ,pageTitle}) => {
                             </div>
                         </div>
                     </SwiperSlide>
+
+                    <div className="buttons">
+                        <button className='swiper-PropertyDistination-prev-btn'><FaChevronLeft /></button>
+                        <button className='swiper-PropertyDistination-next-btn'><FaChevronRight /></button>
+                    </div>
                 </Swiper>
             </div>
 
-            <div className="buttons">
-                <button className='swiper-PropertyDistination-prev-btn'><FaChevronLeft /></button>
-                <button className='swiper-PropertyDistination-next-btn'><FaChevronRight /></button>
-            </div>
+            
         </div>
     </div>
   )
