@@ -44,30 +44,36 @@ const Status = () => {
     "fourth":0,
   })
 
-  const Counter = (key , goal) => {
+  const Counter = (key, goal) => {
     const counter = setInterval(() => {
-      const updated = ++num[key];
-      setNum({ ...num, [key]: updated });
-      if (num[key] == goal) {
-        clearInterval(counter);
-      }
+      setNum(prevNum => {
+        const updated = prevNum[key] + 1;
+        if (updated === goal) {
+          clearInterval(counter);
+        }
+        return { ...prevNum, [key]: updated };
+      });
     }, 2000 / goal);
   };
   
-  useEffect( ()=>{
-    window.onscroll = function(){
-        if(window.scrollY >= statusRef.current.offsetTop-500){
-          if(!started){
-            SectionItems.forEach( item =>{
-              Counter(item.name, item.goal);
-            } )
-          }
+  useEffect(() => {
+    const handleScroll = () => {
+      if (statusRef.current && window.scrollY + window.innerHeight >= statusRef.current.offsetTop + 200) {
+        if (!started) {
+          SectionItems.forEach(item => {
+            Counter(item.name, item.goal);
+          });
           setStarted(true);
         }
       }
-      
-    console.log(statusRef.current.offsetTop)
-  },[window.scrollY] )
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [started, SectionItems]);
+
   return (
     <section className="status-section bg-white py-[4rem] lg:py-[6rem] mb-[25px]" ref={statusRef}>
       <div className="marketplace-container">
