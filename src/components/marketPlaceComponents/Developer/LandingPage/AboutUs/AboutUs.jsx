@@ -1,10 +1,12 @@
 import React from 'react'
 import "./AboutUs.css"
+
 import { PiHouse } from "react-icons/pi";
 import { GrMapLocation } from "react-icons/gr";
 import { RiCustomerService2Line } from "react-icons/ri";
 
-import about_us_img from "../../../../../assests/marketplace/developer/about-us-img.png"
+import about_us_img from "../../../../../assests/marketplace/developer/AboutUs/img-01.png"
+
 const AboutUs = () => {
   return (
     <div className="about-us-section bg-white py-[4rem] lg:py-[6rem] mb-[25px]">

@@ -9,8 +9,8 @@ import developer_logo from "../../../../../assests/marketplace/real_estate/card/
 
 const FeaturedCommunitities = ({ title, subtitle, imgs }) => {
 
-  const renderImgs = imgs.map((img) => (
-    <SwiperSlide>
+  const renderImgs = imgs.map((img,index) => (
+    <SwiperSlide key={index}>
       <div className="slide-item">
         <a href="#">
           <img src={img} alt="Image" />
