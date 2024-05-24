@@ -77,6 +77,10 @@ const Status = () => {
   return (
     <section className="status-section bg-white py-[4rem] lg:py-[6rem] mb-[25px]" ref={statusRef}>
       <div className="marketplace-container">
+        {/* <div className="Status-heading special-landing-heading">
+              <span>Properties</span>
+              <h1>Status</h1>
+          </div> */}
         <div className="grid md:!grid-cols-4">
           {SectionItems.map((item) => (
             <div
@@ -85,7 +89,7 @@ const Status = () => {
             >
               <span className="icon">{item.icon}</span>
               {item.img && <span><img src={item.img} alt="" className="w-[70px] mx-auto mb-[15px]"/></span> }
-              <h2 className="text-[30px] mb-[10px]">{num[item.name]}+</h2>
+              <h2 className="text-[35px] mb-[10px]">{num[item.name]}+</h2>
               <p>{item.title}</p>
             </div>
           ))}

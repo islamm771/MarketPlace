@@ -17,6 +17,7 @@ import commun_img_05 from "../../assests/marketplace/developer/FeaturedCommunitt
 import MessageFrom from '../../components/marketPlaceComponents/Developer/LandingPage/MessageFrom/MessgaeFrom'
 import Awards from '../../components/marketPlaceComponents/Developer/LandingPage/Awards/Awards'
 import Status from '../../components/marketPlaceComponents/Developer/LandingPage/Status/Status'
+import DirectorBoard from '../../components/marketPlaceComponents/Developer/LandingPage/DirectorsBoard/DirectorBoard'
 const communitities_imgs = [commun_img_01,commun_img_02,commun_img_03,commun_img_04,commun_img_05]
 
 const MarketDeveloperPage = () => {
@@ -41,6 +42,8 @@ const MarketDeveloperPage = () => {
         <Awards />
 
         <Status />
+
+        <DirectorBoard />
     </div>
   )
 }

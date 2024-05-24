@@ -110,6 +110,10 @@ const Awards = () => {
   return (
     <div className="awards-section bg-white py-[4rem] lg:py-[6rem] mb-[25px]">
       <div className="marketplace-container">
+        {/* <div className="Awards-heading special-landing-heading">
+              <span>Properties</span>
+              <h1>Awards</h1>
+          </div> */}
         <div className="buttons relative flex justify-between mb-[4rem]">
           {renderButtons}
         </div>
