@@ -42,36 +42,7 @@ const DevHeroForm = () => {
             </select>
             <IoChevronDownOutline className="inline text-[#fd6729] absolute bottom-[17px] right-[15px]" />
           </div>
-          <div className="form-item type-select">
-            <FaHouse className="inline text-[#fd6729] absolute top-[22px] left-[15px]" />
-            <label htmlFor="">Type</label>
-            <select name="" id="property">
-              <option value="" selected>
-                Property
-              </option>
-              <option value="">Property 1</option>
-              <option value="">Property 2</option>
-              <option value="">Property 3</option>
-              <option value="">Property 4</option>
-              <option value="">Property 5</option>
-            </select>
-            <IoChevronDownOutline className="inline text-[#fd6729] absolute bottom-[17px] right-[15px]" />
-          </div>
-          <div className="form-item room-select">
-            <FaHouse className="inline text-[#fd6729] absolute top-[22px] left-[15px]" />
-            <label htmlFor="">Rooms</label>
-            <select name="" id="property">
-              <option value="" selected>
-                Rooms
-              </option>
-              <option value="">1</option>
-              <option value="">2</option>
-              <option value="">3</option>
-              <option value="">4</option>
-              <option value="">5</option>
-            </select>
-            <IoChevronDownOutline className="inline text-[#fd6729] absolute bottom-[17px] right-[15px]" />
-          </div>
+
           <div className="form-item community-select">
             <FaPeopleGroup className="inline text-[#fd6729] absolute top-[22px] left-[15px]" />
             <label htmlFor="">Community</label>
@@ -88,6 +59,39 @@ const DevHeroForm = () => {
             </select>
             <IoChevronDownOutline className="inline text-[#fd6729] absolute bottom-[17px] right-[15px]" />
           </div>
+
+          <div className="form-item type-select">
+            <FaHouse className="inline text-[#fd6729] absolute top-[22px] left-[15px]" />
+            <label htmlFor="">Type</label>
+            <select name="" id="property">
+              <option value="" selected>
+                Property
+              </option>
+              <option value="">Property 1</option>
+              <option value="">Property 2</option>
+              <option value="">Property 3</option>
+              <option value="">Property 4</option>
+              <option value="">Property 5</option>
+            </select>
+            <IoChevronDownOutline className="inline text-[#fd6729] absolute bottom-[17px] right-[15px]" />
+          </div>
+          
+          <div className="form-item room-select">
+            <FaHouse className="inline text-[#fd6729] absolute top-[22px] left-[15px]" />
+            <label htmlFor="">Rooms</label>
+            <select name="" id="property">
+              <option value="" selected>
+                Rooms
+              </option>
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+            </select>
+            <IoChevronDownOutline className="inline text-[#fd6729] absolute bottom-[17px] right-[15px]" />
+          </div>
+          
 
           <div className="button-submit">
             <input type="button" value="Search" />

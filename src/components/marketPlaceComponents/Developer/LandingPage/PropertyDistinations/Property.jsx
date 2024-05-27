@@ -75,7 +75,7 @@ const PropertyDistination = ({children}) => {
                                 </a>
                             </div>
                             <div className="prop-card-info text-center pt-[15px]">
-                                    <a className="prop-card-title" href="#">Soul</a>
+                                    <a className="prop-card-title" href="/marketplace/developer/country">Egypt</a>
                                     <p class="prop-card-tagline">A PLACE UNLIKE ANY OTHER</p>
                                     <p class="prop-card-location">Egypt | North Coast</p>
                             </div>
@@ -90,7 +90,7 @@ const PropertyDistination = ({children}) => {
                                 </a>
                             </div>
                             <div className="prop-card-info text-center pt-[15px]">
-                                    <a className="prop-card-title" href="#">Bellevie</a>
+                                    <a className="prop-card-title" href="/marketplace/developer/country">UAE</a>
                                     <p class="prop-card-tagline">Life is beautiful</p>
                                     <p class="prop-card-location">Egypt | New Zayed</p>
                             </div>
@@ -105,7 +105,7 @@ const PropertyDistination = ({children}) => {
                                 </a>
                             </div>
                             <div className="prop-card-info text-center pt-[15px]">
-                                    <a className="prop-card-title" href="#">Cairo Gate</a>
+                                    <a className="prop-card-title" href="/marketplace/developer/country">Qatar</a>
                                     <p class="prop-card-tagline">Boutique Lifestyle Living</p>
                                     <p class="prop-card-location">Egypt | Sheikh Zayed City</p>
                             </div>
@@ -120,7 +120,7 @@ const PropertyDistination = ({children}) => {
                                 </a>
                             </div>
                             <div className="prop-card-info text-center pt-[15px]">
-                                    <a className="prop-card-title" href="#">Marrasi</a>
+                                    <a className="prop-card-title" href="/marketplace/developer/country">Malaysia</a>
                                     <p class="prop-card-tagline">Truly somewhere else</p>
                                     <p class="prop-card-location">Egypt | North Coast</p>
                             </div>
@@ -135,12 +135,13 @@ const PropertyDistination = ({children}) => {
                                 </a>
                             </div>
                             <div className="prop-card-info text-center pt-[15px]">
-                                    <a className="prop-card-title" href="#">Uptown Cairo</a>
+                                    <a className="prop-card-title" href="/marketplace/developer/country">Egypt</a>
                                     <p class="prop-card-tagline">A PLACE UNLIKE ANY OTHER</p>
                                     <p class="prop-card-location">Egypt | In the Center of Cairo</p>
                             </div>
                         </div>
                     </SwiperSlide>
+
                     <SwiperSlide>
                         <div className='prop-card'>
                             <div className="prop-card-img">
@@ -149,7 +150,7 @@ const PropertyDistination = ({children}) => {
                                 </a>
                             </div>
                             <div className="prop-card-info text-center pt-[15px]">
-                                    <a className="prop-card-title" href="#">Soul</a>
+                                    <a className="prop-card-title" href="/marketplace/developer/country">UAE</a>
                                     <p class="prop-card-tagline">A PLACE UNLIKE ANY OTHER</p>
                                     <p class="prop-card-location">Egypt | North Coast</p>
                             </div>

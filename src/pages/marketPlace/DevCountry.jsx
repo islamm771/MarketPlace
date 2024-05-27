@@ -1,15 +1,17 @@
 import React from 'react'
-import Hero from '../../components/marketPlaceComponents/LandingPage/HeroSection/Hero'
 import video from "../../assests/marketplace/landing/vid-dev.mp4"
+import { FaRegStar } from 'react-icons/fa'
+import Hero from '../../components/marketPlaceComponents/LandingPage/HeroSection/Hero'
 import LatestLunches from '../../components/marketPlaceComponents/Developer/LandingPage/LatestLunches/Latest'
 import FeaturedCommunitities from '../../components/marketPlaceComponents/Developer/LandingPage/FeaturedCommunities/Featured'
 import UpcomingProjects from '../../components/marketPlaceComponents/Developer/LandingPage/UpcomingProjects/Projects'
-import { FaRegStar } from 'react-icons/fa'
+import CountryHeroForm from '../../components/marketPlaceComponents/Developer/HeroForm/CountryHeroForm'
+import Latest from "../../components/marketPlaceComponents/LandingPage/LatestSection/Latest";
+import RealCard from "../../components/marketPlaceComponents/RealEstate/Items/RealCard";
 
 import img_01 from "../../assests/marketplace/developer/LatestLunches/img-03.jpg"
 import img_02 from "../../assests/marketplace/developer/LatestLunches/img-02.jpg"
 import img_03 from "../../assests/marketplace/developer/LatestLunches/img-04.jpg"
-import CountryHeroForm from '../../components/marketPlaceComponents/Developer/HeroForm/CountryHeroForm'
 
 const DevCountry = () => {
   return (
@@ -133,6 +135,45 @@ const DevCountry = () => {
           </div>
         </div>
       </div>
+
+      <Latest pageTitle={"Premium Properties"}>
+        <RealCard
+          title={"vila in coral gables with pool, garden"}
+          price={3500000}
+          owner={"Agency"}
+          isFav={false}
+        />
+        <RealCard
+          title={"vila in coral gables with pool, garden"}
+          price={3500000}
+          owner={"owner"}
+          isFav={false}
+        />
+        <RealCard
+          title={"vila in coral gables with pool, garden"}
+          price={3500000}
+          owner={"developer"}
+          isFav={false}
+        />
+        <RealCard
+          title={"vila in coral gables with pool, garden"}
+          price={3500000}
+          owner={"Agency"}
+          isFav={false}
+        />
+        <RealCard
+          title={"vila in coral gables with pool, garden"}
+          price={3500000}
+          owner={"developer"}
+          isFav={false}
+        />
+        <RealCard
+          title={"vila in coral gables with pool, garden"}
+          price={3500000}
+          owner={"owner"}
+          isFav={false}
+        />
+      </Latest>
 
       <LatestLunches />
 
