@@ -14,8 +14,11 @@ const MessageFrom = () =>{
                     <div className="message-from-content">
                         <p className="message-from-sub text-[#fd6729] text-[0.75rem] font-[700] mb-[5px]">Message From</p>
                         <h1 className="text-[30px] mb-[30px]">Founder Name</h1>
-                        <p className="message-content font-[500] text-[20px]">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem voluptas ad nostrum laborum veritatis facilis earum delectus animi molestias dicta cum, consectetur ab at dolore ducimus reprehenderit minima exercitationem.
+                        <p className="message-content font-[500]">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quo, voluptatem voluptas ad nostrum laborum veritatis facilis 
+                            earum delectus animi molestias dicta cum, consectetur ab at dolore 
+                            ducimus reprehenderit minima exercitationem.
                         </p>
                     </div>
                 </div>

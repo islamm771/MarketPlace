@@ -108,7 +108,7 @@ const AreaMarks = {
 };
 
 
-const MarketSearchPage = () => {
+const RealEstateSearch = () => {
     const [active,setActive] = useState({'list-item':false,'grid-item' : true})
 
     // Start Dropdown States
@@ -140,7 +140,7 @@ const MarketSearchPage = () => {
   
   return (
     <div className='search-page-container !my-[6rem]'>
-        <div className="dashboard-cont-swiper mb-[50px]">
+        <div className="swiper-container mb-[50px]">
           <Swiper
             spaceBetween={30}
             centeredSlides={true}
@@ -520,6 +520,7 @@ const MarketSearchPage = () => {
           </aside>
 
           <div className='lg:col-span-9'>
+
             <nav className='bg-white rounded-[12px] mb-[15px] p-[20px]'> 
                 <ul class="grid !grid-cols-6 !items-center" role="tablist">
 
@@ -553,10 +554,11 @@ const MarketSearchPage = () => {
                   <button><FaAngleDoubleRight /></button>
                 </div>
             </div>
+
           </div>
         </div>
     </div>
   );
 }
 
-export default MarketSearchPage
+export default RealEstateSearch

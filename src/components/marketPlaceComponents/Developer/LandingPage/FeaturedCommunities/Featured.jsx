@@ -1,15 +1,22 @@
 import React from "react";
+import "./Featured.css"
 import "swiper/css/navigation";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import "./Featured.css"
 import developer_logo from "../../../../../assests/marketplace/real_estate/card/company-img-01.png";
 
-const FeaturedCommunitities = ({ title, subtitle, imgs }) => {
+import commun_img_01 from "../../../../../assests/marketplace/developer/FeaturedCommunitties/img-01.jpg"
+import commun_img_02 from "../../../../../assests/marketplace/developer/FeaturedCommunitties/img-02.jpg"
+import commun_img_03 from "../../../../../assests/marketplace/developer/FeaturedCommunitties/img-03.jpg"
+import commun_img_04 from "../../../../../assests/marketplace/developer/FeaturedCommunitties/img-04.jpg"
+import commun_img_05 from "../../../../../assests/marketplace/developer/FeaturedCommunitties/img-05.jpg"
+const communitities_imgs = [commun_img_01,commun_img_02,commun_img_03,commun_img_04,commun_img_05]
 
-  const renderImgs = imgs.map((img,index) => (
+const FeaturedCommunitities = ({ title, subtitle }) => {
+
+  const renderImgs = communitities_imgs.map((img,index) => (
     <SwiperSlide key={index}>
       <div className="slide-item">
         <a href="#">

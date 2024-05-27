@@ -275,3 +275,60 @@
 
 
 
+.developer-country-card .card__image-header {
+  position: relative;
+  overflow: hidden;
+  display: block
+}
+.developer-country-card .card__image-header .ribbon {
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+  transform: translate3d(0, 0, 1px) rotate(-45deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: #ffc107;
+  color: #fff;
+  font-size: 14px;
+  font-family: Rajdhani,sans-serif;
+  padding: 6px;
+  position: absolute;
+  z-index: 3;
+  left: -30px;
+  top: 15px;
+  width: 120px;
+  text-align: center;
+  margin: auto;
+  height: 30px;
+  bottom: inherit;
+  right: inherit;
+  text-transform: capitalize;
+}
+.developer-country-card .card__image-header img {
+  max-width: 100%;
+  width: 100%;
+  height: 350px;
+  /* -o-object-fit: cover;
+  object-fit: cover; */
+  transition: all 400ms linear 0s
+}
+.developer-country-card .card__image-header:hover img {
+  transform: scale(1.05)
+}
+.developer-country-card .card__image-body {
+  padding: 20px 0;
+  position: relative;
+}
+.developer-country-card .card__image-body h6{
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.developer-country-card .card__image-body h6 a{
+  color: #1D1D1D;
+  transition: 0.3s;
+}
+.developer-country-card .card__image-body h6 a:hover{
+  color: #fd6728;
+}
+
+.developer-country-card .card__image-body p{
+  font-size: 14px;
+}

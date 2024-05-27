@@ -3,15 +3,15 @@ import { ConfigProvider } from "antd";
 import "./App.css";
 import MarketPlace from "./pages/marketPlace/MarketPlace";
 import RealEstate from "./pages/marketPlace/RealEstate";
+import RealEstateSearch from "./pages/marketPlace/RealEstateSearch";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import MainPage from "./pages/PagesOutlet/Pages";
 import MarketDashboard from "./components/marketPlaceComponents/Dashboard/MarketDashboard";
 import Automotive from "./pages/marketPlace/Automotive";
-import { useState } from "react";
 import MemberClassified from "./pages/marketPlace/MemberClassified";
-import MarketSearchPage from "./pages/marketPlace/MarketSearch";
 import MarketDeveloperPage from "./pages/marketPlace/Developer";
+import MarketDevCountry from "./pages/marketPlace/DevCountry";
 
 function App() {
   AOS.init();
@@ -45,8 +45,9 @@ function App() {
             <Route path="/marketplace/realestates" element={<RealEstate />} />
             <Route path="/marketplace/automotives" element={<Automotive />} />
             <Route path="/marketplace/dashboard" element={<MarketDashboard />} />
-            <Route path="/marketplace/search" element={<MarketSearchPage />} />
+            <Route path="/marketplace/realestate/search" element={<RealEstateSearch />} />
             <Route path="/marketplace/developer" element={<MarketDeveloperPage />} />
+            <Route path="/marketplace/developer/country" element={<MarketDevCountry />} />
           </Route>
         </Routes>
       </div>

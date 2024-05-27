@@ -5,13 +5,13 @@ const SoldPurchased = ({sold,purchased}) => {
     <>
     <div className="sold bg-[#fff] p-[20px] rounded-[12px] mb-[15px] mt-[1rem]">
         <div className="sold-container">
-            <h3 className='text-[20px] mb-[15px]'>1. Sold</h3>
+            <p className='mb-[40px] font-[700] text-[20px]'>Sold</p>
             {sold}
         </div>
     </div>
     <div className="purchased bg-[#fff] p-[20px] rounded-[12px]">
         <div className="purchased-container">
-                <h3 className='text-[20px] mb-[15px]'>2. Purchased</h3>
+                <p className='mb-[40px] font-[700] text-[20px]'>Purchased</p>
                 {purchased}
         </div>
     </div>

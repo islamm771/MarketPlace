@@ -4,7 +4,7 @@ import DeveloperSearchForm from '../../Developer/Form/DeveloperSearchForm'
 import AgencyLandingForm from '../../Agency/Form/AgencyLandingForm'
 import OwnerLandingForm from '../../Owner/Form/OwnerLandingForm'
 
-const HeroForm = () => {
+const RealHeroForm = () => {
 const [activeForm , setActiveFrom] = useState("real")
   const handleClick = (id) =>{
     setActiveFrom(id)
@@ -92,4 +92,4 @@ const [activeForm , setActiveFrom] = useState("real")
   )
 }
 
-export default HeroForm
+export default RealHeroForm

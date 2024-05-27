@@ -27,9 +27,9 @@ const LatestLunches = () => {
             </div>
           </div>
           <div className="lg:col-span-8">
-            <div className="grid md:!grid-rows-12 md:!grid-cols-12 !gap-5">
+            <div className="grid md:!grid-cols-12 !gap-5">
 
-                <div className="md:row-span-12 md:col-span-6">
+                <div className="md:col-span-6">
                     <div class="prop-block mb-[20px]">
                     <div class="prop-block-img">
                         <a href="#">
@@ -60,7 +60,7 @@ const LatestLunches = () => {
                     </div>
                 </div>
 
-                <div className="md:row-span-12 md:col-span-6">
+                <div className="md:col-span-6">
                     <div class="prop-block mb-[20px]">
                     <div class="prop-block-img">
                         <a href="#">

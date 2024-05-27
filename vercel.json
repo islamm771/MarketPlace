@@ -33,11 +33,15 @@
             "dest" : "/"
         },
         {
-            "src":"/marketplace/search",
+            "src":"/marketplace/realestate/search",
             "dest" : "/"
         },
         {
             "src":"/marketplace/developer",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/developer/country",
             "dest" : "/"
         }
     ]

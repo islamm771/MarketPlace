@@ -9,16 +9,11 @@ import FeaturedCommunitities from '../../components/marketPlaceComponents/Develo
 import UpcomingProjects from '../../components/marketPlaceComponents/Developer/LandingPage/UpcomingProjects/Projects'
 import AboutUs from '../../components/marketPlaceComponents/Developer/LandingPage/AboutUs/AboutUs'
 
-import commun_img_01 from "../../assests/marketplace/developer/FeaturedCommunitties/img-01.jpg"
-import commun_img_02 from "../../assests/marketplace/developer/FeaturedCommunitties/img-02.jpg"
-import commun_img_03 from "../../assests/marketplace/developer/FeaturedCommunitties/img-03.jpg"
-import commun_img_04 from "../../assests/marketplace/developer/FeaturedCommunitties/img-04.jpg"
-import commun_img_05 from "../../assests/marketplace/developer/FeaturedCommunitties/img-05.jpg"
+
 import MessageFrom from '../../components/marketPlaceComponents/Developer/LandingPage/MessageFrom/MessgaeFrom'
 import Awards from '../../components/marketPlaceComponents/Developer/LandingPage/Awards/Awards'
 import Status from '../../components/marketPlaceComponents/Developer/LandingPage/Status/Status'
 import DirectorBoard from '../../components/marketPlaceComponents/Developer/LandingPage/DirectorsBoard/DirectorBoard'
-const communitities_imgs = [commun_img_01,commun_img_02,commun_img_03,commun_img_04,commun_img_05]
 
 const MarketDeveloperPage = () => {
   return (
@@ -29,7 +24,7 @@ const MarketDeveloperPage = () => {
 
         <LatestLunches />
 
-        <FeaturedCommunitities title={"Featured Communities"} subtitle={"Properties"} imgs={communitities_imgs} />
+        <FeaturedCommunitities title={"Featured Communities"} subtitle={"Properties"} />
 
         <PropertyDistination />
 

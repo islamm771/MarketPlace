@@ -13,13 +13,13 @@ import SectionFour from "../../components/marketPlaceComponents/LandingPage/Sect
 import Latest from "../../components/marketPlaceComponents/LandingPage/LatestSection/Latest";
 import Location from "../../components/marketPlaceComponents/LandingPage/LocationSection/Location";
 import RealCard from "../../components/marketPlaceComponents/RealEstate/Items/RealCard";
-import HeroForm from "../../components/marketPlaceComponents/RealEstate/HeroForm/HeroForm";
+import RealHeroForm from "../../components/marketPlaceComponents/RealEstate/HeroForm/HeroForm";
 
 const RealEstate = () => {
 	return (
     <div className="real-estate-container mt-[3rem] md:!mt-[5rem]">
       <Hero>
-        <HeroForm />
+        <RealHeroForm />
       </Hero>
 
       <Featured pageTitle={"Real Estates"}>
@@ -62,6 +62,7 @@ const RealEstate = () => {
       </Featured>
 
       <Category pageTitle={"Real Estates"} />
+      
       <SectionFour pageTitle={"Real Estates"} />
 
       <Latest pageTitle={"Real Estates"}>
