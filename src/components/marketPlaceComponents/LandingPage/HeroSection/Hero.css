@@ -71,7 +71,7 @@
     position: relative;
     padding: 20px 0 15px 60px;
 }
-.landing-hero-form form .form-item:first-child{
+.landing-hero-form form .form-item.search-field{
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 45px;

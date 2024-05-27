@@ -1,6 +1,5 @@
 import React from 'react'
 import Hero from '../../components/marketPlaceComponents/LandingPage/HeroSection/Hero'
-import DevHeroForm from '../../components/marketPlaceComponents/Developer/HeroForm/DevHeroForm'
 import video from "../../assests/marketplace/landing/vid-dev.mp4"
 import LatestLunches from '../../components/marketPlaceComponents/Developer/LandingPage/LatestLunches/Latest'
 import FeaturedCommunitities from '../../components/marketPlaceComponents/Developer/LandingPage/FeaturedCommunities/Featured'
@@ -10,12 +9,13 @@ import { FaRegStar } from 'react-icons/fa'
 import img_01 from "../../assests/marketplace/developer/LatestLunches/img-03.jpg"
 import img_02 from "../../assests/marketplace/developer/LatestLunches/img-02.jpg"
 import img_03 from "../../assests/marketplace/developer/LatestLunches/img-04.jpg"
+import CountryHeroForm from '../../components/marketPlaceComponents/Developer/HeroForm/CountryHeroForm'
 
 const DevCountry = () => {
   return (
     <div className="developer-country-container mt-[3rem] md:!mt-[5rem]">
       <Hero video={video}>
-        <DevHeroForm />
+        <CountryHeroForm />
       </Hero>
 
       <div className="bg-white py-[4rem] lg:py-[6rem] mb-[25px]">
