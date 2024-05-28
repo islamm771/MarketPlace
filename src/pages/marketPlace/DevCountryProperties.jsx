@@ -242,7 +242,7 @@ const CountryProperties = () => {
           <div class="grid !grid-cols-4">
             <div class="col-md-3 col-lg-3 d-none d-md-block">
               <a
-                href="https://www.emaarmisr.com/en/our-communities/"
+                href="/marketplace/developer/country"
                 class="mb-[6px] block w-fit"
               >
                 <HiMiniArrowLongLeft className="inline" /> All

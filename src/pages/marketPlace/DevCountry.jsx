@@ -29,7 +29,7 @@ const DevCountry = () => {
 
           <div className="grid md:!grid-cols-2 lg!grid-cols-3">
             <div className="developer-country-card">
-              <div class="card__image-header">
+              <div class="card_image-header">
                 <div class="ribbon text-capitalize">
                   <span>
                     <FaRegStar className="inline me-1" />
@@ -40,7 +40,7 @@ const DevCountry = () => {
                 
               </div>
 
-              <div class="card__image-body !p-0 !py-4">
+              <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
                   <a href="/marketplace/developer/country/property" className='uppercase'>Soul</a>
                 </h6>
@@ -55,7 +55,7 @@ const DevCountry = () => {
               
             </div>
             <div className="developer-country-card">
-              <div class="card__image-header">
+              <div class="card_image-header">
                 <div class="ribbon text-capitalize">
                   <span>
                     <FaRegStar className="inline me-1" />
@@ -66,7 +66,7 @@ const DevCountry = () => {
                 
               </div>
 
-              <div class="card__image-body !p-0 !py-4">
+              <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
                   <a href="#" className='uppercase'>Bellevie</a>
                 </h6>
@@ -80,7 +80,7 @@ const DevCountry = () => {
               
             </div>
             <div className="developer-country-card">
-              <div class="card__image-header">
+              <div class="card_image-header">
                 <div class="ribbon text-capitalize">
                   <span>
                     <FaRegStar className="inline me-1" />
@@ -91,7 +91,7 @@ const DevCountry = () => {
                 
               </div>
 
-              <div class="card__image-body !p-0 !py-4">
+              <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
                   <a href="#" className='uppercase'>Cairo Uptown</a>
                 </h6>
@@ -106,7 +106,7 @@ const DevCountry = () => {
               
             </div>
             <div className="developer-country-card">
-              <div class="card__image-header">
+              <div class="card_image-header">
                 <div class="ribbon text-capitalize">
                   <span>
                     <FaRegStar className="inline me-1" />
@@ -117,7 +117,7 @@ const DevCountry = () => {
                 
               </div>
 
-              <div class="card__image-body !p-0 !py-4">
+              <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
                   <a href="#" className='uppercase'>Marassi</a>
                 </h6>
