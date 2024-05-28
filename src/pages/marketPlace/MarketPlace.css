@@ -275,12 +275,12 @@
 
 
 
-.developer-country-card .card__image-header {
+.developer-country-card .card_image-header {
   position: relative;
   overflow: hidden;
   display: block
 }
-.developer-country-card .card__image-header .ribbon {
+.developer-country-card .card_image-header .ribbon {
   box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
   transform: translate3d(0, 0, 1px) rotate(-45deg);
   -webkit-backface-visibility: hidden;
@@ -302,7 +302,7 @@
   right: inherit;
   text-transform: capitalize;
 }
-.developer-country-card .card__image-header img {
+.developer-country-card .card_image-header img {
   max-width: 100%;
   width: 100%;
   height: 350px;
@@ -310,25 +310,80 @@
   object-fit: cover; */
   transition: all 400ms linear 0s
 }
-.developer-country-card .card__image-header:hover img {
+.developer-country-card .card_image-header:hover img {
   transform: scale(1.05)
 }
-.developer-country-card .card__image-body {
+.developer-country-card .card_image-body {
   padding: 20px 0;
   position: relative;
 }
-.developer-country-card .card__image-body h6{
+.developer-country-card .card_image-body h6{
   font-size: 22px;
   margin-bottom: 15px;
 }
-.developer-country-card .card__image-body h6 a{
-  color: #1D1D1D;
+.developer-country-card .card_image-body h6 a{
+  /* color: #1D1D1D; */
   transition: 0.3s;
 }
-.developer-country-card .card__image-body h6 a:hover{
+/* .developer-country-card .card__image-body h6 a:hover{
   color: #fd6728;
-}
+} */
 
 .developer-country-card .card__image-body p{
   font-size: 14px;
+}
+
+.hero-country-property{
+  position: relative;
+  height: calc(100vh - 80px);
+}
+
+@media (max-width:600px){
+  .hero-country-property{
+      height: 100vh;
+  }
+}
+
+.hero-country-property img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  object-fit: cover;
+}
+.hero-country-property::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.90) 100%);
+  z-index: -1;
+  opacity: 0.2;
+}
+.hero-country-property .marketplace-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: unset;
+}
+
+.country-properties-sticky-bar{
+  position: fixed;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-transform: uppercase;
+  line-height: 24px;
+  z-index: 11;
+  box-shadow: 0 4px 8px 0 #ddd;
 }
