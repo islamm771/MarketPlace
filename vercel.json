@@ -43,6 +43,10 @@
         {
             "src":"/marketplace/developer/country",
             "dest" : "/"
+        },
+        {
+            "src":"/marketplace/developer/country/property",
+            "dest" : "/"
         }
     ]
 }
