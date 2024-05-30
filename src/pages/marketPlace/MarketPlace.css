@@ -188,6 +188,7 @@
   justify-content: space-between;
   align-items: center;
   font-family: "Rajdhani", sans-serif;
+  text-transform: capitalize;
 }
 .search-page-container .favlist-dropdown li:hover{
   background-color: #fd6729;

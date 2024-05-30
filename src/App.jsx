@@ -49,7 +49,7 @@ function App() {
             <Route path="/marketplace/realestate/search" element={<RealEstateSearch />} />
             <Route path="/marketplace/developer" element={<MarketDeveloperPage />} />
             <Route path="/marketplace/developer/country" element={<DevCountry />} />
-            <Route path="/marketplace/developer/country/property" element={<CountryProperties />} />
+            <Route path="/marketplace/developer/country/communitiy" element={<CountryProperties />} />
           </Route>
         </Routes>
       </div>

@@ -10,7 +10,6 @@ import { BiSolidChevronDown } from "react-icons/bi";
 const Dropdown = ({optionsArray , defaultValue , dropRef ,selectedValue , setValue }) => {
   const [activeDrop,setActiveDrop] = useState(false)
   const height = 44.8 * optionsArray.length
-  console.log(activeDrop)
   const renderDropList = optionsArray.map( li =>( 
     <li 
     class={`${selectedValue == li.value ? "active" : ""}`} 

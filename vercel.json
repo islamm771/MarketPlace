@@ -9,18 +9,6 @@
             "dest" : "/"
         },
         {
-            "src":"/marketplace/dashboard/addlisting",
-            "dest" : "/"
-        },
-        {
-            "src":"/marketplace/dashboard/addproperty",
-            "dest" : "/"
-        },
-        {
-            "src":"/marketplace/dashboard/addautomotive",
-            "dest" : "/"
-        },
-        {
             "src":"/marketplace/memberclassifieds",
             "dest" : "/"
         },
@@ -29,11 +17,11 @@
             "dest" : "/"
         },
         {
-            "src":"/marketplace/automotives",
+            "src":"/marketplace/realestate/search",
             "dest" : "/"
         },
         {
-            "src":"/marketplace/realestate/search",
+            "src":"/marketplace/automotives",
             "dest" : "/"
         },
         {
@@ -45,7 +33,7 @@
             "dest" : "/"
         },
         {
-            "src":"/marketplace/developer/country/property",
+            "src":"/marketplace/developer/country/communitiy",
             "dest" : "/"
         }
     ]

@@ -42,7 +42,7 @@ const DevCountry = () => {
 
               <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
-                  <a href="/marketplace/developer/country/property" className='uppercase'>Soul</a>
+                  <a href="/marketplace/developer/country/communitiy" className='uppercase'>Soul</a>
                 </h6>
 
                 <p className='mb-[10px]'>A PLACE UNLIKE ANY OTHER</p>
@@ -68,7 +68,7 @@ const DevCountry = () => {
 
               <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
-                  <a href="#" className='uppercase'>Bellevie</a>
+                  <a href="/marketplace/developer/country/communitiy" className='uppercase'>Bellevie</a>
                 </h6>
 
                 <p className='mb-[10px]'>A PLACE UNLIKE ANY OTHER</p>
@@ -93,7 +93,7 @@ const DevCountry = () => {
 
               <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
-                  <a href="#" className='uppercase'>Cairo Uptown</a>
+                  <a href="/marketplace/developer/country/communitiy" className='uppercase'>Cairo Uptown</a>
                 </h6>
 
                 <p className='mb-[10px]'>A PLACE UNLIKE ANY OTHER</p>
@@ -119,7 +119,7 @@ const DevCountry = () => {
 
               <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
-                  <a href="#" className='uppercase'>Marassi</a>
+                  <a href="/marketplace/developer/country/communitiy" className='uppercase'>Marassi</a>
                 </h6>
 
                 <p className='mb-[10px]'>A PLACE UNLIKE ANY OTHER</p>
