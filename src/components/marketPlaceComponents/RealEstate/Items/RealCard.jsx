@@ -180,7 +180,7 @@ const RealCard = (props) => {
                                 <div className="absolute w-[18px] h-[18px]">
                                     <img className="w-[18px] h-[18px]" src="/img/download.png" alt="Padge" />
                                 </div>
-                                <p class="badge-number absolute text-white text-[12px] top-[3px] left-[3px]">12</p>
+                                <p class="badge-number absolute text-white !text-[12px] !top-[3px] !left-[4px]">12</p>
                             </div>
                         </div>
                     </div>

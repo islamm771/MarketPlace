@@ -17,19 +17,19 @@ const CountryProperties = () => {
 
       <div className="hero-country-property">
         <img src={bg_img} alt="" />
-        {/* <div className="marketplace-container">
+        <div className="marketplace-container">
           <div className="landing-hero-header-title mb-[50px]">
-            <h1 className="text-white text-[50px] mb-[10px]">Properties</h1>
-            <p className="text-white text-[20px] font-semibold">
-              Explore Our Properties
+            <h1 className="text-white text-[60px] mb-[10px]">Soul</h1>
+            <p className="text-white text-[18px] font-semibold">
+              A PLACE UNLIKE ANY OTHER
             </p>
           </div>
-        </div> */}
+        </div>
       </div>
 
       <div className="bg-white py-[4rem] lg:py-[6rem] mb-[25px]">
         <div className="marketplace-container">
-          <div className="special-landing-heading md:w-[50%] md:mx-auto">
+          <div className="special-landing-heading text-center md:w-[50%] md:mx-auto">
             <span>A PLACE UNLIKE ANY OTHER</span>
             <h1 className="mb-[3rem] !text-[40px] md:!text-[60px] uppercase">Soul</h1>
             <p className="mb-[2rem]">
@@ -57,7 +57,7 @@ const CountryProperties = () => {
               {/* <span>A PLACE UNLIKE ANY OTHER</span> */}
               <h1 className="">Services</h1>
           </div>
-          <div className="grid !grid-cols-2 md:!grid-cols-3 lg:!grid-cols-4">
+          <div className="grid !grid-cols-2 md:!grid-cols-3 lg:!grid-cols-4 !gap-[40px]">
             <div>
               <span className="inline-block mb-[5px] text-[#3e3f5e] text-[30px]"><FaUmbrellaBeach /></span>
               <h3 className="text-[25px] mb-[5px]">4 Beaches</h3>
@@ -373,8 +373,8 @@ const CountryProperties = () => {
 
       <div class="country-properties-sticky-bar">
         <div class="marketplace-container">
-          <div class="grid !grid-cols-4">
-            <div class="col-md-3 col-lg-3 d-none d-md-block">
+          <div class="grid md:!grid-cols-4">
+            <div class="hidden md:block">
               <a
                 href="/marketplace/developer/country"
                 class="mb-[6px] block w-fit"
@@ -384,11 +384,11 @@ const CountryProperties = () => {
               </a>
               <h5>Soul</h5>
             </div>
-            <div class="col-md-3 col-lg-2 offset-lg-1 d-none d-md-block">
+            <div class="hidden md:block">
               <h4 className="mb-[6px]">Properties</h4>
               <p class="prop-dtl">Standalone Villas and beach houses</p>
             </div>
-            <div class="col-md-3 col-lg-2 d-none d-md-block">
+            <div class="hidden md:block">
               <h4 className="">Prices From </h4>
               <a
                 href="#"
@@ -400,9 +400,9 @@ const CountryProperties = () => {
                 Click for prices
               </a>
             </div>
-            <div class="col-12 col-md-3 col-lg-3 offset-lg-1 d-flex justify-content-end align-items-center">
+            <div class="">
               <a
-                className="btn-viewAll button secondary !block w-[250px] mx-auto"
+                className="btn-viewAll button secondary !block"
                 href=""
               >
                 Register Interest
