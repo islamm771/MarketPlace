@@ -3,8 +3,8 @@ import img_01 from "../../../../assests/marketplace/developer/MessageFrom/img-02
 import agent_img from "../../../../assests/marketplace/developer/DirectorBoard/4.jpg"
 import { FaFacebookF, FaLinkedin, FaStar, FaTwitter, FaYoutube } from "react-icons/fa";
 import { BsEnvelope } from "react-icons/bs";
-
 import "./Aside.css"
+
 const Aside = () => {
   return (
     <div className='property-details-aside'>

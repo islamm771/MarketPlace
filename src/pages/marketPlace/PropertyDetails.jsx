@@ -3,6 +3,7 @@ import Hero from '../../components/marketPlaceComponents/PropertyDetails/Hero/He
 import Info from '../../components/marketPlaceComponents/PropertyDetails/Info/Info'
 import Detail from '../../components/marketPlaceComponents/PropertyDetails/Detail/Detail'
 import Aside from '../../components/marketPlaceComponents/PropertyDetails/Aside/Aside'
+import FromGallery from '../../components/marketPlaceComponents/PropertyDetails/FromGallery/FromGallery'
 
 const PropertyDetails = () => {
   return (
@@ -13,6 +14,7 @@ const PropertyDetails = () => {
             <div className="col-span-9">
               <Info />
               <Detail />
+              <FromGallery />
             </div>
             <div className="col-span-3">
               <Aside />

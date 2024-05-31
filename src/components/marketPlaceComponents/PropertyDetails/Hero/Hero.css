@@ -2,7 +2,10 @@
     position: relative;
     height: 500px;
 }
-
+.property-details-hero .marketplace-container{
+    z-index: 5;
+    margin-top: -50px;
+}
 @media (max-width:600px){
     .property-details-hero{
         height: 300px;
@@ -17,4 +20,47 @@
 }
 .property-hero-swiper img:hover{
     transform: scale(1.1);
+}
+
+
+.property-details-hero .badge {
+    align-items: center;
+    background: #fff1e7;
+    border-radius: 10px;
+    color: #ff6900;
+    display: inline-flex;
+    padding: 5px 8px 5px 20px;
+    position: relative;
+    text-transform: capitalize;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 14px;
+}
+.property-details-hero .badge::before{
+    background: #ff6900;
+    border-radius: 10px;
+    content: "";
+    height: 8px;
+    left: 5px;
+    position: absolute;
+    width: 8px;
+    text-transform: capitalize;
+}
+.property-details-hero .badge-status{
+    border: 1px solid #eee;
+    background-color: #fff;
+    padding: 2px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-family: "Rajdhani", sans-serif;
+}
+.property-details-hero .badge-developer{
+    background-color: #1A4482;
+    color: white;
+    text-transform: capitalize;
+    padding: 2px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Rajdhani", sans-serif;
 }

@@ -38,6 +38,16 @@ const Hero = () => {
           <img className="w-[100%] h-[100%] object-cover" src={img_03} alt="ads banner" />
         </SwiperSlide>
       </Swiper>
+
+      <div className="marketplace-container">
+        <div className="flex gap-[10px] items-center">
+          <a href="/marketplace/search" class="badge badge-primary text-capitalize">house</a>
+          <a href="/marketplace/search" class="badge badge-primary text-capitalize">Soul</a>
+          <span className="badge-status">Resale</span>
+          <span className="badge-developer">developer</span>
+
+        </div>
+      </div>
     </div>
   );
 };
