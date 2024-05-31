@@ -1,0 +1,20 @@
+.property-details-hero{
+    position: relative;
+    height: 500px;
+}
+
+@media (max-width:600px){
+    .property-details-hero{
+        height: 300px;
+    }
+}
+
+.property-hero-swiper .swiper-slide{
+    overflow: hidden;
+}
+.property-hero-swiper img{
+    transition: 0.5s;
+}
+.property-hero-swiper img:hover{
+    transform: scale(1.1);
+}

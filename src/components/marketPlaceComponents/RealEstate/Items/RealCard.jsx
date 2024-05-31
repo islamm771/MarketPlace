@@ -98,7 +98,7 @@ const RealCard = (props) => {
             <a href="/marketplace/search" class="badge badge-primary text-capitalize mb-2 me-2">Soul</a>
             {owner.toLowerCase() !== "owner" && <span className="badge-status">Resale</span>}
             <h6 class="text-capitalize">
-                <a href="">{textFormater(title)}</a>
+                <a href="/marketplace/realestates/property">{textFormater(title)}</a>
             </h6>
 
             <p class="text-capitalize">

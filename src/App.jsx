@@ -13,6 +13,7 @@ import MemberClassified from "./pages/marketPlace/MemberClassified";
 import MarketDeveloperPage from "./pages/marketPlace/Developer";
 import DevCountry from "./pages/marketPlace/DevCountry";
 import CountryProperties from "./pages/marketPlace/DevCountryProperties";
+import PropertyDetails from "./pages/marketPlace/PropertyDetails";
 
 function App() {
   AOS.init();
@@ -46,7 +47,8 @@ function App() {
             <Route path="/marketplace/realestates" element={<RealEstate />} />
             <Route path="/marketplace/automotives" element={<Automotive />} />
             <Route path="/marketplace/dashboard" element={<MarketDashboard />} />
-            <Route path="/marketplace/realestate/search" element={<RealEstateSearch />} />
+            <Route path="/marketplace/realestates/search" element={<RealEstateSearch />} />
+            <Route path="/marketplace/realestates/property" element={<PropertyDetails />} />
             <Route path="/marketplace/developer" element={<MarketDeveloperPage />} />
             <Route path="/marketplace/developer/country" element={<DevCountry />} />
             <Route path="/marketplace/developer/country/communitiy" element={<CountryProperties />} />

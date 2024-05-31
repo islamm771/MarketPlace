@@ -3,10 +3,6 @@ import { FaCheck } from "react-icons/fa6";
 import { BiSolidChevronDown } from "react-icons/bi";
 
 
-
-
-
-
 const Dropdown = ({optionsArray , defaultValue , dropRef ,selectedValue , setValue }) => {
   const [activeDrop,setActiveDrop] = useState(false)
   const height = 44.8 * optionsArray.length

@@ -17,7 +17,11 @@
             "dest" : "/"
         },
         {
-            "src":"/marketplace/realestate/search",
+            "src":"/marketplace/realestates/search",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/realestates/property",
             "dest" : "/"
         },
         {
