@@ -8,7 +8,7 @@ const Info = () => {
   return (
     <div className="property-details-info bg-white mb-[25px]">
         <div
-          className="info-header relative"
+          className="info-header relative cursor-pointer"
           onClick={() => setIsActive(!isactive)}
         >
           <h2 className="text-[25px] capitalize mb-[15px]">

@@ -7,7 +7,7 @@ const Detail = () => {
     return (
         <div className='property-details-detail bg-white mb-[25px]'>
             <div
-                className="detail-header relative"
+                className="detail-header relative cursor-pointer"
                 onClick={() => setIsActive(!isactive)}
             >
                 <h3 className="text-[25px] capitalize">
