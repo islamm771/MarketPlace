@@ -5,7 +5,7 @@ import "./FromGallery.css"
 const FromGallery = () => {
     const [isactive, setIsActive] = useState(false);
     return (
-        <div className='property-details-gallery bg-white mb-[25px]'>
+        <div className='property-details-gallery bg-white mb-[15px]'>
             <div
                 className="gallery-header relative cursor-pointer"
                 onClick={() => setIsActive(!isactive)}

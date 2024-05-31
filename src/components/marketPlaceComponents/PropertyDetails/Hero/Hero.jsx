@@ -11,7 +11,7 @@ import img_03 from "../../../../assests/marketplace/developer/Awards/img-03.jpg"
 
 const Hero = () => {
   return (
-    <div className="property-details-hero mb-[25px]">
+    <div className="property-details-hero mb-[15px]">
       <Swiper
         slidesPerView={2}
         spaceBetween={0}

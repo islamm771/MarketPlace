@@ -5,7 +5,7 @@ import "./Detail.css"
 const Detail = () => {
     const [isactive, setIsActive] = useState(false);
     return (
-        <div className='property-details-detail bg-white mb-[25px]'>
+        <div className='property-details-detail bg-white mb-[15px]'>
             <div
                 className="detail-header relative cursor-pointer"
                 onClick={() => setIsActive(!isactive)}

@@ -10,13 +10,13 @@ const PropertyDetails = () => {
     <div className='mt-[3rem] md:!mt-[5rem]'>
         <Hero />
         <div className="marketplace-container">
-          <div className="grid !grid-cols-12 !gap-[30px]">
-            <div className="col-span-9">
+          <div className="grid lg:!grid-cols-12 !gap-[30px]">
+            <div className="lg:col-span-9">
               <Info />
               <Detail />
               <FromGallery />
             </div>
-            <div className="col-span-3">
+            <div className="lg:col-span-3">
               <Aside />
             </div>
           </div>

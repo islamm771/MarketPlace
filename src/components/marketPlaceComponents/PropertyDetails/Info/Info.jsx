@@ -6,7 +6,7 @@ import "./Info.css";
 const Info = () => {
   const [isactive, setIsActive] = useState(false);
   return (
-    <div className="property-details-info bg-white mb-[25px]">
+    <div className="property-details-info bg-white mb-[15px]">
         <div
           className="info-header relative cursor-pointer"
           onClick={() => setIsActive(!isactive)}
