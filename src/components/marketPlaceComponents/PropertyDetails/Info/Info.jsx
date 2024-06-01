@@ -11,7 +11,7 @@ const Info = () => {
           className="info-header relative cursor-pointer"
           onClick={() => setIsActive(!isactive)}
         >
-          <h2 className="text-[25px] capitalize mb-[15px]">
+          <h2 className="text-[20px] capitalize mb-[15px]">
             vila in coral gables with pool, garden apartment
           </h2>
           <p class="text-capitalize flex gap-1">

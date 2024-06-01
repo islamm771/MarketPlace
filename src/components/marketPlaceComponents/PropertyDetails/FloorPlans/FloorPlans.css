@@ -1,0 +1,49 @@
+.property-details-floor{
+    padding: 30px 15px;
+    border-radius: 12px;
+}
+.floor-header h3{
+    font-size: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #fd6729;
+    /* margin-bottom: 20px; */
+}
+
+.floor-plans-nav ul{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+.floor-plans-nav ul li{
+    color: #3e3f5e;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+    text-transform: capitalize;
+    padding-bottom: 2px;
+    line-height: 1;
+}
+.floor-plans-nav ul li.active{
+    color: #fd6729 !important;
+    border-bottom: 2px solid #fd6729;
+}
+.floor-plans-nav ul li.active::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #fd6729;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.floor-plans-content .apartments-plan-info h2{
+    font-size: 35px;
+    margin: 30px 0 15px;
+    text-transform: capitalize;
+}

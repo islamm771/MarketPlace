@@ -30,7 +30,7 @@ const FormCheckbox = ({ label, isChecked, setIsChecked, id, name }) => {
 					id={id}
 					name={name}
 					checked={isChecked}
-					onChange={handleCheckboxChange}
+					onChange={setIsChecked ? handleCheckboxChange : null }
 				/>
 				{/* <!-- CHECKBOX BOX --> */}
 				<div class="checkbox-box">

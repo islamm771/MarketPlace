@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import { BiSolidChevronDown, BiSolidChevronUp } from "react-icons/bi";
-
 import "./FromGallery.css"
+
+import img_01 from "../../../../assests/marketplace/Properties/Gallery/1.jpg"
+import img_02 from "../../../../assests/marketplace/Properties/Gallery/2.jpg"
+import img_03 from "../../../../assests/marketplace/Properties/Gallery/3.jpg"
+
+
 const FromGallery = () => {
     const [isactive, setIsActive] = useState(false);
     return (
@@ -19,7 +24,18 @@ const FromGallery = () => {
                 </span>
             </div>
 
-            {isactive && <div className='mt-[30px]'>Photos</div>}
+            {isactive && <div className='grid !grid-cols-2 !gap-[30px] mt-[30px]'>
+                
+                <div className=''>
+                    <a href="#"> <img className='h-[100%] mb-[30px]' src={img_01} alt="" /> </a>
+                    <a href="#"> <img className='h-[100%]' src={img_02} alt="" /> </a>
+                </div>
+                <div className=''>
+                    <a href="#"> <img className='h-[100%]' src={img_03} alt="" /> </a>
+                </div>
+
+            </div>
+            }
         </div>
     )
 }

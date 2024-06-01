@@ -105,3 +105,27 @@
     margin: 0 auto;
 
 }
+
+.property-details-popular{
+    background-color: #fff;
+    padding: 20px 15px;
+    border-radius: 15px;
+}
+
+.popular-header h3{
+    font-size: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #fd6729;
+    margin-bottom: 15px;
+}
+
+.property-details-popular .popular-swiper>.swiper-pagination{
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  .property-details-popular .popular-swiper>.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #ff6728ed !important;
+    transform: scale(1.2);
+  }
