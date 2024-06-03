@@ -10,6 +10,7 @@ import FloorPlans from '../../components/marketPlaceComponents/PropertyDetails/F
 import Location from '../../components/marketPlaceComponents/PropertyDetails/location/location'
 import Video from '../../components/marketPlaceComponents/PropertyDetails/Video/Video'
 import Related from '../../components/marketPlaceComponents/PropertyDetails/Related/Related'
+import Energy from '../../components/marketPlaceComponents/PropertyDetails/Energy/Energy'
 
 
 
@@ -26,6 +27,7 @@ const PropertyDetails = () => {
               <Amenities />
               <FloorPlans />
               <Video />
+              <Energy />
               <Location />
               <Related />
             </div>

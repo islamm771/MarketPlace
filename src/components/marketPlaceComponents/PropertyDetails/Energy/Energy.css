@@ -1,0 +1,26 @@
+.property-details-energy{
+    padding: 30px 15px;
+    border-radius: 12px;
+}
+.energy-header h3{
+    font-size: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #fd6729;
+    /* margin-bottom: 20px; */
+}
+
+.property-energy ul{
+    border: 1px solid #fd6729;
+}
+.property-energy ul li{
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    font-family: "Rajdhani", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+.property-energy ul li:nth-child(even){
+    background-color: #f7f7f7;
+}
