@@ -7,6 +7,9 @@ import Aside from '../../components/marketPlaceComponents/PropertyDetails/Aside/
 import FromGallery from '../../components/marketPlaceComponents/PropertyDetails/FromGallery/FromGallery'
 import Amenities from '../../components/marketPlaceComponents/PropertyDetails/Amenities/Amenities'
 import FloorPlans from '../../components/marketPlaceComponents/PropertyDetails/FloorPlans/FloorPlans'
+import Location from '../../components/marketPlaceComponents/PropertyDetails/location/location'
+import Video from '../../components/marketPlaceComponents/PropertyDetails/Video/Video'
+import Related from '../../components/marketPlaceComponents/PropertyDetails/Related/Related'
 
 
 
@@ -22,6 +25,9 @@ const PropertyDetails = () => {
               <FromGallery />
               <Amenities />
               <FloorPlans />
+              <Video />
+              <Location />
+              <Related />
             </div>
             <div className="lg:col-span-3">
               <Aside />

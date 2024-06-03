@@ -100,7 +100,7 @@ const Aside = () => {
 
       <div className="property-details-popular mb-[15px]">
         <div className="popular-header">
-            <h3 className="text-[25px] capitalize">Floor Plans</h3>
+            <h3 className="!text-[20px] capitalize">Popular Properties</h3>
         </div>
         <Swiper
           spaceBetween={30}

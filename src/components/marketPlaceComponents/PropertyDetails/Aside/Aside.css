@@ -129,3 +129,18 @@
     background-color: #ff6728ed !important;
     transform: scale(1.2);
   }
+
+.property-details-popular .state-product-card .card__image-footer{
+    flex-wrap: wrap;
+}
+
+.property-details-popular .state-product-card .card__image-footer img{
+    width: 30px;
+    height: 30px;
+}
+@media (max-width:1024px){
+    .property-details-popular .state-product-card .card__image-footer img{
+        width: 50px;
+        height: 50px;
+    }
+}
