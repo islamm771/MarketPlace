@@ -8,10 +8,10 @@ const Dropdown = ({optionsArray , defaultValue , dropRef ,selectedValue , setVal
   const height = 44.8 * optionsArray.length
   const renderDropList = optionsArray.map( li =>( 
     <li 
-    class={`${selectedValue == li.value ? "active" : ""}`} 
-    data-value={li.value} onClick={(e) => setValue(e.target.dataset.value)}
+    class={`${selectedValue.value == li.value ? "active" : ""}`} 
+    data-value={li.value} onClick={(e) => setValue(li)}
     key={li.id}>
-      {li.value} <FaCheck className='hidden' />
+      {li.text} <FaCheck className='hidden' />
     </li>
   ) )
 
@@ -32,7 +32,7 @@ const Dropdown = ({optionsArray , defaultValue , dropRef ,selectedValue , setVal
   return (
     <div className={`${activeDrop ? "open " : ""}favlist-dropdown`} onClick={() => {setActiveDrop(!activeDrop)}}>
         <span>
-            { selectedValue ?  selectedValue  : defaultValue}
+            { selectedValue ?  selectedValue.text  : defaultValue}
             <BiSolidChevronDown className='inline ms-2 absolute top-[12px] right-[15px] text-[#fd6729]' /> 
         </span>
         <ul class={"sorts-list list"}

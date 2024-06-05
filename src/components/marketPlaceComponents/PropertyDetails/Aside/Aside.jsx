@@ -17,6 +17,7 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import RealCard from "../../RealEstate/Items/RealCard";
+import Calculator from "../Calculator/Calculator";
 
 const Aside = () => {
   return (
@@ -122,6 +123,8 @@ const Aside = () => {
           </SwiperSlide>
         </Swiper>
       </div>
+
+      <Calculator />
     </div>
   );
 };
