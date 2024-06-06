@@ -20,7 +20,7 @@ const Latest = ({children,pageTitle}) => {
                     <span>{pageTitle}</span>
                     <h1>Latest Listings</h1>
                 </div>
-                <a className='latest-heading-link font-[500] mb-[5ox]' href="/marketplace/realestate/search">Browse All <HiArrowLongRight className='inline text-[14px]' /> </a>
+                <a className='latest-heading-link font-[500] mb-[5ox]' href="/marketplace/realestates/search">Browse All <HiArrowLongRight className='inline text-[14px]' /> </a>
             </div>
 
             <div className="card-container">

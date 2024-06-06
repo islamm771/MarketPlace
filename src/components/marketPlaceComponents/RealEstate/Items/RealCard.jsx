@@ -54,9 +54,7 @@ const RealCard = (props) => {
                     isSold? <span>Sold</span> :<span><FaRegStar className="inline me-1" />featured</span>
                 }
             </div>
-
             
-            {/* <img src={img_01} alt="" class="img-fluid w100 img-transition" /> */}
             <Swiper
             spaceBetween={30}
             centeredSlides={true}
@@ -83,7 +81,6 @@ const RealCard = (props) => {
             </SwiperSlide>
             
             </Swiper>
-
 
             <div class="info"><a className="text-white font-[600]" href="#">{owner}</a></div>
             <div class="fav-selection">

@@ -4,7 +4,7 @@ import { BiSolidChevronDown, BiSolidChevronUp } from "react-icons/bi";
 import { FaUmbrellaBeach } from "react-icons/fa";
 import "./Info.css";
 const Info = () => {
-  const [isactive, setIsActive] = useState(false);
+  const [isactive, setIsActive] = useState(true);
   return (
     <div className="property-details-info bg-white mb-[15px]">
         <div

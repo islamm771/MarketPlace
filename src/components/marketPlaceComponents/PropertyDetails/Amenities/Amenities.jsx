@@ -5,7 +5,7 @@ import "./Amenities.css"
 import FormCheckbox from '../../../ui/formCheckbox/FormCheckbox';
 
 const Amenities = () => {
-    const [isactive, setIsActive] = useState(false);
+    const [isactive, setIsActive] = useState(true);
     return (
         <div className='property-details-amenities bg-white mb-[15px]'>
             <div

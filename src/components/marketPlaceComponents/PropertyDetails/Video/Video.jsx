@@ -4,7 +4,7 @@ import { FaPlay } from "react-icons/fa";
 import "./Video.css";
 import img from "../../../../assests/marketplace/Properties/Video/1.jpg";
 const Video = () => {
-  const [isactive, setIsActive] = useState(false);
+  const [isactive, setIsActive] = useState(true);
   return (
     <div className="property-details-video bg-white mb-[15px]">
       <div

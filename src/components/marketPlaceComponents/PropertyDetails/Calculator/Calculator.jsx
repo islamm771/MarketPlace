@@ -3,42 +3,16 @@ import "./Calculator.css";
 import Dropdown from "../../../ui/MySelect/Dropdown";
 import { Slider } from "antd";
 
-const terms = [
-  {
-    id:1,
-    text:"30 Years Fixed",
-    value:30
-  },
-  {
-    id:2,
-    text:"20 Years Fixed",
-    value:20
-  },
-  {
-    id:3,
-    text:"15 Years Fixed",
-    value:15
-  },
-  {
-    id:4,
-    text:"10 Years Fixed",
-    value:10
-  },
-  {
-    id:5,
-    text:"5 Years Fixed",
-    value:5
-  },
-]
-
 const Calculator = () => {
-  const [term , setTerm] = useState(terms[0])
-  const termRef = useRef()
+  const [term , setTerm] = useState(24)
   const [interest,setInterest] = useState(3.5)
   const [homeprice,setHomePrice] = useState(825000)
   const [downpayment,setDownPayment] = useState(10)
   const [downPrice , setDownPrice] = useState(((downpayment/100) * homeprice))
 
+  const onChangeTerm = (value) =>{
+    setTerm(value)
+  }
   const onChangeInterestSlider = (value) =>{
     setInterest(value)
   }
@@ -85,7 +59,7 @@ const Calculator = () => {
       </div>
       <div class="mc_term_interest flex justify-center gap-2 mb-[10px]">
         <p>
-          <span class="mc_term_value font-bold">{term.value}</span> Years Fixed,
+          <span class="mc_term_value font-bold">{term}</span> Years Fixed,
           </p>
         <p>
           <span class="mc_interest_value font-bold">{interest}</span>
@@ -96,9 +70,17 @@ const Calculator = () => {
         <p>Principle and Interest <span className="font-bold">$3,334</span></p>
       </div>
 
-      <div className="terms-wrapper mb-[25px]" ref={termRef}>
+      <div className="terms-wrapper mb-[25px]">
         <label htmlFor="" className="font-[700] mb-[10px] ms-[5px]">Term</label>
-        <Dropdown optionsArray={terms} selectedValue={term} setValue={setTerm} dropRef={termRef} />
+        <p className="border border-solid border-[#ddd] p-3 font-semibold">{term} Years Fixed</p>
+        <Slider
+          step={12}
+          defaultValue={term}
+          min={12}
+          max={96}
+          tooltipVisible={false}
+          onChange={onChangeTerm}
+        />
       </div>
 
       <div className="interest-wrapper mb-[30px]">

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BiSolidChevronDown, BiSolidChevronUp } from "react-icons/bi";
 import "./FloorPlans.css";
 import img_01 from "../../../../assests/marketplace/Properties/Floor/1.png";
+import { Modal } from "antd";
 
 const floors = [
   {
@@ -35,14 +36,19 @@ const floors = [
 ];
 
 const FloorPlans = () => {
-  const [isactive, setIsActive] = useState(false);
+  const [isOpened , setIsOpened] = useState(false)
+  const [isactive, setIsActive] = useState(true);
   const [activeFloor, setActiveFloor] = useState(1);
   const [floor, setFloor] = useState(
-    floors.filter((floor) => (floor.id == 1))[0]
+    floors.filter((floor) => floor.id == 1)[0]
   );
   const handleClick = (id) => {
     setActiveFloor(id);
-    setFloor(floors.filter((floor) => (floor.id == id))[0]);
+    setFloor(floors.filter((floor) => floor.id == id)[0]);
+  };
+
+  const handleShow = () => {
+    setIsOpened(!isOpened);
   };
   const renderFloorTabs = floors.map((fl) => (
     <li
@@ -70,12 +76,25 @@ const FloorPlans = () => {
       {isactive && (
         <div className="details-floor-plans mt-[30px]">
           <nav className="floor-plans-nav">
-            <ul>{renderFloorTabs}</ul>
+            <ul className="">{renderFloorTabs}</ul>
           </nav>
           <div className="floor-plans-content">
             <div className="grid lg:!grid-cols-12">
               <div className="lg:col-span-7">
-                <img src={img_01} alt="" />
+                <img className="cursor-pointer" src={floor.img} alt="" onClick={handleShow} />
+
+                <Modal
+                  title={null}
+                  open={isOpened}
+                  onCancel={() => setIsOpened(!isOpened)}
+                  footer={null}
+                  width={800}
+                  zIndex={100000000000}
+                >
+                  <div className="">
+                      <img className="w-[500px] mx-auto" src={floor.img} alt="" />
+                  </div>
+                </Modal>
               </div>
               <div className="apartments-plan-info lg:col-span-5">
                 <h2>{floor.name}</h2>

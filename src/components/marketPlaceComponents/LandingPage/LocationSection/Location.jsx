@@ -26,7 +26,7 @@ const Location = ({children ,pageTitle}) => {
                   <h1>Location Listings</h1>
                 </div>
                 
-                <a className='font-[500] mb-[5px]' href='/marketplace/realestate/search'>
+                <a className='font-[500] mb-[5px]' href='/marketplace/realestates/search'>
                   Browse All <HiArrowLongRight className='inline text-[14px]' /> 
                 </a>
             </div>

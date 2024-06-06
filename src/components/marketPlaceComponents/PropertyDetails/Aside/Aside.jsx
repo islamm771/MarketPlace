@@ -15,7 +15,7 @@ import "swiper/css/navigation";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination,Autoplay } from "swiper/modules";
 import RealCard from "../../RealEstate/Items/RealCard";
 import Calculator from "../Calculator/Calculator";
 
@@ -109,7 +109,11 @@ const Aside = () => {
           pagination={{
             clickable: true,
           }}
-          modules={[Pagination]}
+          autoplay={{
+            delay: 7500,
+            disableOnInteraction: false,
+          }}
+          modules={[Pagination,Autoplay]}
           className="popular-swiper !pb-[3rem] md:!pb-[3rem]"
         >
           <SwiperSlide>

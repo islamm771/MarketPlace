@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { BiSolidChevronDown, BiSolidChevronUp } from "react-icons/bi";
 import "./Location.css"
 const Location = () => {
-    const [isactive, setIsActive] = useState(false);
+    const [isactive, setIsActive] = useState(true);
     return (
         <div className='property-details-location bg-white mb-[15px]'>
             <div

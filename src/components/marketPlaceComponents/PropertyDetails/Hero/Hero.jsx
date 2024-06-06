@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Hero.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
@@ -8,8 +8,11 @@ import "swiper/css/pagination";
 import img_01 from "../../../../assests/marketplace/developer/Awards/img-01.jpg";
 import img_02 from "../../../../assests/marketplace/developer/Awards/img-02.jpg";
 import img_03 from "../../../../assests/marketplace/developer/Awards/img-03.jpg";
+import { CiHeart } from "react-icons/ci";
+import { FaShareAlt } from "react-icons/fa";
 
 const Hero = () => {
+  const [isFavProduct, setisFav] = useState(false)
   return (
     <div className="property-details-hero mb-[15px]">
       <Swiper
@@ -40,12 +43,24 @@ const Hero = () => {
       </Swiper>
 
       <div className="marketplace-container">
-        <div className="flex gap-[10px] items-center">
+        <div className="flex flex-wrap gap-[10px] items-center">
           <a href="/marketplace/search" class="badge badge-primary text-capitalize">house</a>
           <a href="/marketplace/search" class="badge badge-primary text-capitalize">Soul</a>
           <span className="badge-status">Resale</span>
           <span className="badge-developer">developer</span>
 
+          <div class="share-selection ms-auto me-2">
+            {/* <input class="fav-checkbox" type="checkbox" onChange={() => {setisFav(!isFavProduct)}} checked={isFavProduct} /> */}
+            <span href="#" class="share-icon">
+              <FaShareAlt />
+            </span>
+          </div>
+          <div class="fav-selection">
+            <input class="fav-checkbox" type="checkbox" onChange={() => {setisFav(!isFavProduct)}} checked={isFavProduct} />
+            <span href="#" class="fav-icon">
+                <CiHeart />
+            </span>
+          </div>
         </div>
       </div>
     </div>

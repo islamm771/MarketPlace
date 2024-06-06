@@ -64,3 +64,38 @@
     font-weight: 600;
     font-family: "Rajdhani", sans-serif;
 }
+.property-details-hero .share-selection{
+    cursor: pointer;
+}
+
+.property-details-hero .fav-selection {
+    position: relative;
+}
+.property-details-hero .fav-selection .fav-icon,
+.property-details-hero .share-selection .share-icon{
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.property-details-hero .fav-selection .fav-checkbox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.property-details-hero .fav-selection .fav-checkbox:hover:not(:checked) ~ span svg{
+    color: rgba(255, 105, 0, 1);
+}
+.property-details-hero .fav-selection .fav-checkbox:checked ~ span{
+    background-color: rgba(255, 105, 0, 1);
+    color: #fff;
+}
+.property-details-hero .share-selection .share-icon{
+    color: #b0b0b0;
+    transform: rotate(180deg);
+}

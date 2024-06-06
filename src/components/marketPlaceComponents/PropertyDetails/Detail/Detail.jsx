@@ -3,7 +3,7 @@ import { BiSolidChevronDown, BiSolidChevronUp } from "react-icons/bi";
 import { FaUmbrellaBeach } from "react-icons/fa";
 import "./Detail.css"
 const Detail = () => {
-    const [isactive, setIsActive] = useState(false);
+    const [isactive, setIsActive] = useState(true);
     return (
         <div className='property-details-detail bg-white mb-[15px]'>
             <div
@@ -19,88 +19,88 @@ const Detail = () => {
             </div>
 
             {isactive && <div className="property-detail grid !grid-cols-2 md:!grid-cols-3 lg:!grid-cols-4 mt-[30px]">
-              <div className="provider flex gap-[20px]">
+              <div className="year-built flex gap-[20px] mb-[30px]">
                 <FaUmbrellaBeach />
                 <div>
-                  <h5>Provider:</h5>
-                  <p>Emmar Egypt</p>
+                  <h5>Year Built:</h5>
+                  <p>1997</p>
                 </div>
               </div>
-              <div className="community flex gap-[20px]">
+              <div className="delivery-type flex gap-[20px] mb-[30px]">
                 <FaUmbrellaBeach />
                 <div>
-                  <h5>Community:</h5>
+                  <h5>Delivery Type:</h5>
+                  <p>Ready</p>
+                </div>
+              </div>
+              <div className="available flex gap-[20px] mb-[30px]">
+                <FaUmbrellaBeach />
+                <div>
+                  <h5>Available:</h5>
+                  <p>Dec, 5 2027</p>
+                </div>
+              </div>
+              <div className="category flex gap-[20px] mb-[30px]">
+                <FaUmbrellaBeach />
+                <div>
+                  <h5>Category:</h5>
+                  <p>Residential</p>
+                </div>
+              </div>
+              <div className="total-year flex gap-[20px] mb-[30px]">
+                <FaUmbrellaBeach />
+                <div>
+                  <h5>Total Area:</h5>
+                  <p>Furnished</p>
+                </div>
+              </div>
+              <div className="unit-area flex gap-[20px] mb-[30px]">
+                <FaUmbrellaBeach />
+                <div>
+                  <h5>Unit Area:</h5>
                   <p>Soul</p>
                 </div>
               </div>
-              <div className="compound flex gap-[20px]">
+              <div className="garden-area flex gap-[20px] mb-[30px]">
                 <FaUmbrellaBeach />
                 <div>
-                  <h5>Compound:</h5>
-                  <p>Locanda</p>
+                  <h5>Garden Area:</h5>
+                  <p>700m<sup>2</sup></p>
                 </div>
               </div>
-              <div className="type flex gap-[20px]">
+              <div className="unit-code flex gap-[20px] mb-[30px]">
                 <FaUmbrellaBeach />
                 <div>
-                  <h5>Type:</h5>
-                  <p>Townhouse</p>
+                  <h5>Unit Code:</h5>
+                  <p>200 m<sup>2</sup></p>
                 </div>
               </div>
-              <div className="provider flex gap-[20px]">
+              <div className="bedrooms flex gap-[20px]">
                 <FaUmbrellaBeach />
                 <div>
-                  <h5>Provider:</h5>
-                  <p>Emmar Egypt</p>
+                  <h5>Bedooms:</h5>
+                  <p>6</p>
                 </div>
               </div>
-              <div className="community flex gap-[20px]">
+              <div className="bathrooms flex gap-[20px]">
                 <FaUmbrellaBeach />
                 <div>
-                  <h5>Community:</h5>
-                  <p>Soul</p>
+                  <h5>Bathrooms:</h5>
+                  <p>3</p>
                 </div>
               </div>
-              <div className="compound flex gap-[20px]">
+              <div className="floors flex gap-[20px]">
                 <FaUmbrellaBeach />
                 <div>
-                  <h5>Compound:</h5>
-                  <p>Locanda</p>
+                  <h5>Floors:</h5>
+                  <p>1</p>
                 </div>
               </div>
-              <div className="type flex gap-[20px]">
+              <div className="garages flex gap-[20px]">
                 <FaUmbrellaBeach />
                 <div>
-                  <h5>Type:</h5>
-                  <p>Townhouse</p>
-                </div>
-              </div>
-              <div className="provider flex gap-[20px]">
-                <FaUmbrellaBeach />
-                <div>
-                  <h5>Provider:</h5>
-                  <p>Emmar Egypt</p>
-                </div>
-              </div>
-              <div className="community flex gap-[20px]">
-                <FaUmbrellaBeach />
-                <div>
-                  <h5>Community:</h5>
-                  <p>Soul</p>
-                </div>
-              </div>
-              <div className="compound flex gap-[20px]">
-                <FaUmbrellaBeach />
-                <div>
-                  <h5>Compound:</h5>
-                  <p>Locanda</p>
-                </div>
-              </div>
-              <div className="type flex gap-[20px]">
-                <FaUmbrellaBeach />
-                <div>
-                  <h5>Type:</h5>
-                  <p>Townhouse</p>
+                  <h5>garages:</h5>
+                  <p>1</p>
                 </div>
               </div>
             </div>}
