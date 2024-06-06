@@ -47,8 +47,8 @@
 }
 
 .popup-image {
-  max-width: 90%;
-  max-height: 90%;
+  /* max-width: 90%;
+  max-height: 90%; */
   border-radius: 8px;
   margin: 0 auto;
 }

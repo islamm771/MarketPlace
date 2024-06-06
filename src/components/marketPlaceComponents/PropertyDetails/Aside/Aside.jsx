@@ -93,8 +93,7 @@ const Aside = () => {
           <img src={agent_img} alt="" />
         </div>
         <h3>Agent Mohamed Fahim</h3>
-        <button>
-          {" "}
+        <button class="button secondary !py-[0]">
           <BsEnvelope className="inline me-[5px]" /> Send Message
         </button>
       </div>
@@ -109,10 +108,7 @@ const Aside = () => {
           pagination={{
             clickable: true,
           }}
-          autoplay={{
-            delay: 7500,
-            disableOnInteraction: false,
-          }}
+          
           modules={[Pagination,Autoplay]}
           className="popular-swiper !pb-[3rem] md:!pb-[3rem]"
         >

@@ -65,7 +65,6 @@
 }
 .property-details-price p{
     font-weight: 700;
-    color: #000;
     font-size: 30px;
     text-align: right;
 }
@@ -134,6 +133,14 @@
     flex-wrap: wrap;
 }
 
+.property-details-popular .state-product-card .card__image-body .card__content{
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.property-details-popular .state-product-card .card__image-body .card__content li{
+    width: calc((100% / 2) - 30px);
+}
+
 .property-details-popular .state-product-card .card__image-footer img{
     width: 30px;
     height: 30px;
@@ -142,5 +149,13 @@
     .property-details-popular .state-product-card .card__image-footer img{
         width: 50px;
         height: 50px;
+    }
+
+    .property-details-popular .state-product-card .card__image-body .card__content{
+        gap: 16px;
+    }
+
+    .property-details-popular .state-product-card .card__image-body .card__content li{
+        width: auto;
     }
 }

@@ -124,7 +124,7 @@ const RealCard = (props) => {
                 </li>
                 <li class="list-inline-item">
                     <span>
-                        area <br />
+                        BUA <br />
                         <FaMap className="inline-block" /> 4300 m<sup>2</sup>
                     </span>
                 </li>

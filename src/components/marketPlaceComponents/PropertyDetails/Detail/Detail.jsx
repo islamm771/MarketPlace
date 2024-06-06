@@ -57,8 +57,8 @@ const Detail = () => {
               <div className="unit-area flex gap-[20px] mb-[30px]">
                 <FaUmbrellaBeach />
                 <div>
-                  <h5>Unit Area:</h5>
-                  <p>Soul</p>
+                  <h5>BUA:</h5>
+                  <p>Residential</p>
                 </div>
               </div>
               <div className="garden-area flex gap-[20px] mb-[30px]">
@@ -72,7 +72,7 @@ const Detail = () => {
                 <FaUmbrellaBeach />
                 <div>
                   <h5>Unit Code:</h5>
-                  <p>200 m<sup>2</sup></p>
+                  <p>EMS21</p>
                 </div>
               </div>
               <div className="bedrooms flex gap-[20px]">

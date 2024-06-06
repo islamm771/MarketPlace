@@ -160,7 +160,6 @@
     margin-bottom: 15px;
 }
 .state-product-card .card__image-body h6 a{
-    color: #1D1D1D;
     transition: 0.3s;
 }
 .state-product-card .card__image-body h6 a:hover{
@@ -207,7 +206,6 @@
 .state-product-card .card__image-footer .price h6{
     font-size: 25px;
     font-weight: 700;
-    color: #000;
 }
 .state-product-card .card__image-footer .price h6 span{
     display: block;

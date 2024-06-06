@@ -18,7 +18,7 @@ const Related = () => {
 
       {isactive && (
         <div className="property-related mt-[30px]">
-          <div className="grid !grid-cols-2">
+          <div className="grid md:!grid-cols-2">
             <RealCard
               title={"vila in coral gables with pool, garden"}
               price={3500000}
