@@ -5,6 +5,7 @@ import "./FromGallery.css";
 import img_01 from "../../../../assests/marketplace/Properties/Gallery/1.jpg";
 import img_02 from "../../../../assests/marketplace/Properties/Gallery/2.jpg";
 import img_03 from "../../../../assests/marketplace/Properties/Gallery/3.jpg";
+
 import { IoChevronBackSharp, IoChevronForwardSharp } from "react-icons/io5";
 
 const images = [
