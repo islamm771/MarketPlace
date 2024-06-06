@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { BiSolidChevronDown, BiSolidChevronUp } from "react-icons/bi";
 import "./FloorPlans.css";
 import img_01 from "../../../../assests/marketplace/Properties/Floor/1.png";
-import { Modal } from "antd";
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 const floors = [
   {
@@ -39,6 +40,8 @@ const FloorPlans = () => {
   const [isOpened , setIsOpened] = useState(false)
   const [isactive, setIsActive] = useState(true);
   const [activeFloor, setActiveFloor] = useState(1);
+  const imageUrl = img_01; // Replace with actual image URL
+  const thumbnailUrl = img_01; // Replace with actual thumbnail URL
   const [floor, setFloor] = useState(
     floors.filter((floor) => floor.id == 1)[0]
   );
@@ -81,20 +84,14 @@ const FloorPlans = () => {
           <div className="floor-plans-content">
             <div className="grid lg:!grid-cols-12">
               <div className="lg:col-span-7">
-                <img className="cursor-pointer" src={floor.img} alt="" onClick={handleShow} />
+              <Zoom>
+                <img
+                  src={thumbnailUrl}
+                  alt="Example"
+                  style={{cursor: 'pointer' }}
+                />
+              </Zoom>
 
-                <Modal
-                  title={null}
-                  open={isOpened}
-                  onCancel={() => setIsOpened(!isOpened)}
-                  footer={null}
-                  width={800}
-                  zIndex={100000000000}
-                >
-                  <div className="">
-                      <img className="w-[500px] mx-auto" src={floor.img} alt="" />
-                  </div>
-                </Modal>
               </div>
               <div className="apartments-plan-info lg:col-span-5">
                 <h2>{floor.name}</h2>
