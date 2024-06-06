@@ -5,7 +5,7 @@ import "./FromGallery.css";
 import img_01 from "../../../../assests/marketplace/Properties/Gallery/1.jpg";
 import img_02 from "../../../../assests/marketplace/Properties/Gallery/2.jpg";
 import img_03 from "../../../../assests/marketplace/Properties/Gallery/3.jpg";
-
+import Popup from "../../../ui/Popup/Popup";
 import { IoChevronBackSharp, IoChevronForwardSharp } from "react-icons/io5";
 
 const images = [
@@ -22,46 +22,22 @@ const images = [
 
 const FromGallery = () => {
   const [isactive, setIsActive] = useState(true);
-  const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const popupRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
+  
 
   const openGallery = () => {
     setIsOpen(true);
   };
-
-  const closeGallery = () => {
-    setIsOpen(false);
-  };
-
   const nextImage = () => {
     setCurrentImageIndex((currentImageIndex + 1) % images.length);
   };
-
   const prevImage = () => {
     setCurrentImageIndex(
       (currentImageIndex - 1 + images.length) % images.length
     );
   };
 
-  const handleClickOutside = (event) => {
-    if (popupRef.current && !popupRef.current.contains(event.target)) {
-      closeGallery();
-    }
-  };
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add("no-scroll");
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.body.classList.remove("no-scroll");
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isOpen]);
 
   return (
     <div className="property-details-gallery bg-white mb-[15px]">
@@ -118,35 +94,26 @@ const FromGallery = () => {
         </div>
       )}
 
-      <div
-        className="popup-gallery"
-        style={
-          isOpen
-            ? { opacity: 1, visibility: "visible" }
-            : { opacity: 0, visibility: "hidden" }
-        }
-      >
-        <div ref={popupRef} className="popup-content">
-          <span className="close hover:text-red-700" onClick={closeGallery}>
-            &times;
-          </span>
-          <img
-            src={images[currentImageIndex]}
-            alt={`Popup ${currentImageIndex}`}
-            className="popup-image"
-          />
-          <div className="pop-navigation">
-            <button onClick={prevImage} className="prev">
-                <IoChevronBackSharp />
 
-            </button>
-            <button onClick={nextImage} className="next">
-                <IoChevronForwardSharp />
+      <Popup isOpen={isOpen} setIsOpen={setIsOpen}>
+        <img
+          src={images[currentImageIndex]}
+          alt={`Popup ${currentImageIndex}`}
+          className="popup-image"
+        />
+        <div className="pop-navigation">
+          <button onClick={prevImage} className="prev">
+              <IoChevronBackSharp />
 
-            </button>
-          </div>
+          </button>
+          <button onClick={nextImage} className="next">
+              <IoChevronForwardSharp />
+
+          </button>
         </div>
-      </div>
+      </Popup>
+
+      
     </div>
   );
 };
