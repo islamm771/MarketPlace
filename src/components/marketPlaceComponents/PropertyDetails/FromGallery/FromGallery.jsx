@@ -95,7 +95,7 @@ const FromGallery = () => {
       )}
 
 
-      <Popup isOpen={isOpen} setIsOpen={setIsOpen}>
+      <Popup isOpen={isOpen} images={images} currentImgIndex={currentImageIndex} setCurrentImgIndex={setCurrentImageIndex} setIsOpen={setIsOpen}>
         <img
           src={images[currentImageIndex]}
           alt={`Popup ${currentImageIndex}`}

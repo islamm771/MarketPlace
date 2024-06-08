@@ -59,7 +59,7 @@ const Calculator = () => {
       </div>
       <div class="mc_term_interest flex justify-center gap-2 mb-[10px]">
         <p>
-          <span class="mc_term_value font-bold">{term}</span> Years Fixed,
+          <span class="mc_term_value font-bold">{term}</span> Months Fixed,
           </p>
         <p>
           <span class="mc_interest_value font-bold">{interest}</span>

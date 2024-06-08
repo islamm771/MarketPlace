@@ -86,6 +86,8 @@ const ClassifiedCard = (props) => {
                         <CiHeart />
                     </a>
                 </div>
+
+                
                 <div class="user-thumb">
 
                     <div className="profile-image bg-white rounded-[50%]">
@@ -102,8 +104,8 @@ const ClassifiedCard = (props) => {
                             size={16}
                         />
                         <div className="badge-container-nav">
-                                <img src="/img/download.png" alt="Padge" />
-                                <p className="badge-number-nav">12</p>
+                            <img src="/img/download.png" alt="Padge" />
+                            <p className="badge-number-nav">12</p>
                         </div>
                     </div>
                 </div>
@@ -119,7 +121,7 @@ const ClassifiedCard = (props) => {
                 </div>
                 <div class="gigs-title">
                     <h3>
-                        <a href="#">
+                        <a href="/marketplace/memberclassifieds/details">
                             {title ? textFormater(title) : "Product Title"}
                         </a>
                     </h3>
@@ -139,7 +141,7 @@ const ClassifiedCard = (props) => {
                             
                             <svg stroke="currentColor" 
                                 fill="currentColor" stroke-width="0" viewBox="0 0 24 24" 
-                                class="owner-profile-verify absolute bottom-[-6px] right-0" color="#36e9f7" height="16" width="16" 
+                                class="owner-profile-verify absolute bottom-[-4px] right-0" color="#36e9f7" height="16" width="16" 
                                 xmlns="http://www.w3.org/2000/svg" style={{color:'rgb(54, 233, 247)'}}>
                                 <path d="M10.007 2.10377C8.60544 1.65006 7.08181 2.28116 6.41156 
                                     3.59306L5.60578 5.17023C5.51004 5.35763 5.35763 5.51004 5.17023 
@@ -175,9 +177,9 @@ const ClassifiedCard = (props) => {
                             <div class="badge-container absolute bottom-[-6px] left-0 w-[18px] h-[18px]">
                                 <div className="relative">
                                     <div className="absolute w-[18px] h-[18px]">
-                                        <img className="w-[18px] h-[18px]" src="/img/download.png" alt="Padge" />
+                                        <img className="w-[16px] h-[16px]" src="/img/download.png" alt="Padge" />
                                     </div>
-                                    <p class="badge-number absolute text-white text-[12px] top-[3px] left-[3px]">12</p>
+                                    <p class="badge-number absolute text-white !text-[10px] top-[3px] left-[3px] font-[700]">12</p>
                                 </div>
                             </div>
                         </div>
@@ -196,14 +198,17 @@ const ClassifiedCard = (props) => {
                 </div>
 
                 <div class="gigs-card-footer">
+                    
                     <div class="gigs-share">
                         <a href="">
                             <FaShareAlt />
                         </a>
                     </div>
+
                     <div class="star-rate">
                         <span><FaStar />5.0</span>
                     </div>
+
                     <p><img src={img_map} alt="Icon" />Cairo</p>
                     <h5>{price ? pricFormater(price) : "7800000"} EGP</h5>
                 </div>

@@ -23,7 +23,7 @@ const Category = ({pageTitle}) => {
                         <a href="#"> Apartments </a>
                       </h3>
                       <p> Great Deals Available</p>
-                      <a href="/marketplace/realestate/search"><mark> 13 Listings</mark></a>
+                      <a href="/marketplace/realestates/search"><mark> 13 Listings</mark></a>
                     </div>
                   </div>
                 </div>
@@ -35,7 +35,7 @@ const Category = ({pageTitle}) => {
                         <a href="#"> Apartments </a>
                       </h3>
                       <p> Great Deals Available</p>
-                      <a href="/marketplace/realestate/search"><mark> 13 Listings</mark></a>
+                      <a href="/marketplace/realestates/search"><mark> 13 Listings</mark></a>
                     </div>
                   </div>
                   </div>
@@ -47,7 +47,7 @@ const Category = ({pageTitle}) => {
                         <a href="3"> Apartments </a>
                       </h3>
                       <p> Great Deals Available</p>
-                      <a href="/marketplace/realestate/search"><mark> 13 Listings</mark></a>
+                      <a href="/marketplace/realestates/search"><mark> 13 Listings</mark></a>
                     </div>
                   </div>
                   </div>
@@ -59,7 +59,7 @@ const Category = ({pageTitle}) => {
                         <a href="#"> Apartments </a>
                       </h3>
                       <p> Great Deals Available</p>
-                      <a href="/marketplace/realestate/search"><mark> 13 Listings</mark></a>
+                      <a href="/marketplace/realestates/search"><mark> 13 Listings</mark></a>
                     </div>
                   </div>
                   </div>
@@ -71,7 +71,7 @@ const Category = ({pageTitle}) => {
                         <a href="#"> Apartments </a>
                       </h3>
                       <p> Great Deals Available</p>
-                      <a href="/marketplace/realestate/search"><mark> 13 Listings</mark></a>
+                      <a href="/marketplace/realestates/search"><mark> 13 Listings</mark></a>
                     </div>
                   </div>
                   </div>

@@ -51,14 +51,14 @@ const Detail = () => {
                 <FaUmbrellaBeach />
                 <div>
                   <h5>Total Area:</h5>
-                  <p>Furnished</p>
+                  <p>14300 M <sup>2</sup></p>
                 </div>
               </div>
               <div className="unit-area flex gap-[20px] mb-[30px]">
                 <FaUmbrellaBeach />
                 <div>
                   <h5>BUA:</h5>
-                  <p>Residential</p>
+                  <p>4300 M <sup>2</sup></p>
                 </div>
               </div>
               <div className="garden-area flex gap-[20px] mb-[30px]">

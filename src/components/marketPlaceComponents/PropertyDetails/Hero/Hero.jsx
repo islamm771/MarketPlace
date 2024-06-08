@@ -10,7 +10,6 @@ import img_02 from "../../../../assests/marketplace/developer/Awards/img-02.jpg"
 import img_03 from "../../../../assests/marketplace/developer/Awards/img-03.jpg";
 import { CiHeart } from "react-icons/ci";
 import { FaFacebook, FaInstagram, FaShareAlt, FaShareSquare, FaTwitter, FaWhatsapp } from "react-icons/fa";
-import { IoLogoWhatsapp } from "react-icons/io5";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Hero = () => {
@@ -56,8 +55,8 @@ const Hero = () => {
 
       <div className="marketplace-container">
         <div className="flex flex-wrap gap-[10px] items-center">
-          <a href="/marketplace/search" className="badge badge-primary text-capitalize">house</a>
-          <a href="/marketplace/search" className="badge badge-primary text-capitalize">Soul</a>
+          <a href="/marketplace/realestates/search" className="badge badge-primary text-capitalize">house</a>
+          <a href="/marketplace/realestates/search" className="badge badge-primary text-capitalize">Soul</a>
           <span className="badge-status">Resale</span>
           <span className="badge-developer">developer</span>
 

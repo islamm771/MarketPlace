@@ -1,0 +1,22 @@
+.classified-details-related{
+    padding: 30px 15px;
+    border-radius: 12px;
+}
+.related-header h3{
+    font-size: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #fd6729;
+    /* margin-bottom: 20px; */
+}
+
+
+.classified-related-swiper>.swiper-pagination{
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.classified-related-swiper>.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #ff6728ed !important;
+    transform: scale(1.2);
+}

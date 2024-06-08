@@ -13,6 +13,10 @@
             "dest" : "/"
         },
         {
+            "src":"/marketplace/memberclassifieds/details",
+            "dest" : "/"
+        },
+        {
             "src":"/marketplace/realestates",
             "dest" : "/"
         },

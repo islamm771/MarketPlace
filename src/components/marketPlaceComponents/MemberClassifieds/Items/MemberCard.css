@@ -69,7 +69,7 @@ display: -ms-inline-flexbox;
 align-items: center;
 color: #1D1D1D;
 margin-bottom: 0;
-margin-right: 20px;
+/* margin-right: 20px; */
 }
 .member-product-card .gigs-card-footer p img {
 width: 18px;
@@ -155,7 +155,7 @@ color: #4F4F4F;
 display: inline-flex;
 align-items: center;
 font-weight: 600;
-margin-top: 5px;
+/* margin-top: 5px; */
 }
 .member-product-card .star-rate span svg {
 color: #9B9B9B;
@@ -314,7 +314,7 @@ z-index: 1;
 }
 .member-product-card .user-thumb .badge-container-nav p{
   position: absolute;
-  top: 6px;
+  top: 5px;
   left: 5px;
 }
 

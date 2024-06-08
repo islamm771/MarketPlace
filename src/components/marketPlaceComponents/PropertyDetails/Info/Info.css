@@ -16,10 +16,12 @@
 .property-info-categories > div h5{
     font-size: 20px;
     text-transform: capitalize;
+    font-size: 14px;
 }
 .property-info-categories > div p{
     font-weight: 500;
     text-transform: capitalize;
+    font-size: 18px;
 }
 
 .property-info-describtion h3{
