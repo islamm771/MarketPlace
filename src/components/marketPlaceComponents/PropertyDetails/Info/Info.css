@@ -24,14 +24,14 @@
     font-size: 18px;
 }
 
-.property-info-describtion h3{
+.property-info-description h3{
     font-size: 20px;
     padding-left: 15px;
     border-left: 2px solid #fd6729;
     margin-bottom: 20px;
 }
 
-.property-info-describtion p{
+.property-info-description p{
     font-weight: 500;
     color: #7D9098;
     line-height: 1.2;

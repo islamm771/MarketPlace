@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
 import { HiArrowLongRight } from 'react-icons/hi2';
-const Featured = ({pageTitle,title,subTitle ,children , MemberCards , RealCards , AutoCards}) => {
+const Featured = ({pageTitle,title,subTitle ,children , MemberCards , RealCards , AutoCards , link}) => {
   let renderSwiperSlides;
   console.log(children)
   if(children){
@@ -29,7 +29,7 @@ const Featured = ({pageTitle,title,subTitle ,children , MemberCards , RealCards 
                   <h1>{title ? title : "Featured Listings"}</h1>
                   {subTitle && <span>{subTitle}</span>}
                 </div>
-                {!title && <a className='font-[500] mb-[5px]' href='/marketplace/realestates/search'>
+                {!title && <a className='font-[500] mb-[5px]' href={link}>
                   Browse All <HiArrowLongRight className='inline text-[14px]' /> 
                   </a>}
             </div>

@@ -4,7 +4,7 @@ import img_01 from "../../../../assests/marketplace/landing/Category/2.jpg"
 import img_02 from "../../../../assests/marketplace/landing/Category/3.jpg"
 import img_03 from "../../../../assests/marketplace/landing/Category/4.jpg"
 import img_04 from "../../../../assests/marketplace/landing/Category/5.jpg"
-const Category = ({pageTitle}) => {
+const Category = ({pageTitle , link}) => {
   return (
     <div className='landing-category bg-white py-[4rem] lg:py-[6rem] mb-[25px]'>
         <div className="marketplace-container">
@@ -23,7 +23,7 @@ const Category = ({pageTitle}) => {
                         <a href="#"> Apartments </a>
                       </h3>
                       <p> Great Deals Available</p>
-                      <a href="/marketplace/realestates/search"><mark> 13 Listings</mark></a>
+                      <a href={link}><mark> 13 Listings</mark></a>
                     </div>
                   </div>
                 </div>
@@ -35,7 +35,7 @@ const Category = ({pageTitle}) => {
                         <a href="#"> Apartments </a>
                       </h3>
                       <p> Great Deals Available</p>
-                      <a href="/marketplace/realestates/search"><mark> 13 Listings</mark></a>
+                      <a href={link}><mark> 13 Listings</mark></a>
                     </div>
                   </div>
                   </div>
@@ -47,7 +47,7 @@ const Category = ({pageTitle}) => {
                         <a href="3"> Apartments </a>
                       </h3>
                       <p> Great Deals Available</p>
-                      <a href="/marketplace/realestates/search"><mark> 13 Listings</mark></a>
+                      <a href={link}><mark> 13 Listings</mark></a>
                     </div>
                   </div>
                   </div>
@@ -59,7 +59,7 @@ const Category = ({pageTitle}) => {
                         <a href="#"> Apartments </a>
                       </h3>
                       <p> Great Deals Available</p>
-                      <a href="/marketplace/realestates/search"><mark> 13 Listings</mark></a>
+                      <a href={link}><mark> 13 Listings</mark></a>
                     </div>
                   </div>
                   </div>
@@ -71,7 +71,7 @@ const Category = ({pageTitle}) => {
                         <a href="#"> Apartments </a>
                       </h3>
                       <p> Great Deals Available</p>
-                      <a href="/marketplace/realestates/search"><mark> 13 Listings</mark></a>
+                      <a href={link}><mark> 13 Listings</mark></a>
                     </div>
                   </div>
                   </div>

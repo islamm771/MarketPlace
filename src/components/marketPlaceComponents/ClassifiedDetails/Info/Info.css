@@ -10,14 +10,14 @@
 }
 
 
-.classified-info-describtion h3{
+.classified-info-description h3{
     font-size: 20px;
     padding-left: 15px;
     border-left: 2px solid #fd6729;
     margin-bottom: 20px;
 }
 
-.classified-info-describtion p{
+.classified-info-description p{
     font-weight: 500;
     color: #7D9098;
     line-height: 1.2;

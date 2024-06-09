@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
 import { HiArrowLongRight } from 'react-icons/hi2';
 
-const Location = ({children ,pageTitle}) => {
+const Location = ({children ,pageTitle,link}) => {
   const renderSwiperSlides = children.map( child => (
     <>
       <SwiperSlide>
@@ -26,7 +26,7 @@ const Location = ({children ,pageTitle}) => {
                   <h1>Location Listings</h1>
                 </div>
                 
-                <a className='font-[500] mb-[5px]' href='/marketplace/realestates/search'>
+                <a className='font-[500] mb-[5px]' href={link}>
                   Browse All <HiArrowLongRight className='inline text-[14px]' /> 
                 </a>
             </div>

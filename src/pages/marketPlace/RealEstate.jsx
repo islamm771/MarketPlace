@@ -22,7 +22,7 @@ const RealEstate = () => {
         <RealHeroForm />
       </Hero>
 
-      <Featured pageTitle={"Real Estates"}>
+      <Featured pageTitle={"Real Estates"} link={"/marketplace/realestates/search"}>
         <RealCard
           title={"vila in coral gables with pool, garden"}
           price={3500000}
@@ -61,11 +61,11 @@ const RealEstate = () => {
         />
       </Featured>
 
-      <Category pageTitle={"Real Estates"} />
+      <Category pageTitle={"Real Estates"} link={"/marketplace/realestates/search"} />
       
       <SectionFour pageTitle={"Real Estates"} />
 
-      <Latest pageTitle={"Real Estates"}>
+      <Latest pageTitle={"Real Estates"} link={"/marketplace/realestates/search"}>
         <RealCard
           title={"vila in coral gables with pool, garden"}
           price={3500000}
@@ -104,7 +104,7 @@ const RealEstate = () => {
         />
       </Latest>
 
-      <Location pageTitle={"Real Estates"}>
+      <Location pageTitle={"Real Estates"} link={"/marketplace/realestates/search"}>
         <RealCard
             title={"vila in coral gables with pool, garden"}
             price={3500000}

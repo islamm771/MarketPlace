@@ -36,6 +36,7 @@ const Countries = [
   { id: 3, value: "Germany" },
   { id: 5, value: "Spain" },
 ];
+
 const Cities = {
   Egypt: [
     { id: 1, value: "Cairo", count: 3447 },

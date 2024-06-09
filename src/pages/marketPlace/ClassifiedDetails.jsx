@@ -53,8 +53,6 @@ const ClassifiedDetails = () => {
         <div className="grid lg:!grid-cols-12 !gap-[30px]">
           <div className="lg:col-span-9">
             <Info />
-            {/* <Detail /> */}
-            <FromGallery />
             <Related />
           </div>
           <div className="lg:col-span-3">

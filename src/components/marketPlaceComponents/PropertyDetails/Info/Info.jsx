@@ -57,8 +57,8 @@ const Info = () => {
               </div>
             </div>
             <hr />
-            <div className="property-info-describtion">
-              <h3>Describtion</h3>
+            <div className="property-info-description">
+              <h3>description</h3>
               <p className="mb-[20px]">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut,
                 rerum! Magnam eius, quia et voluptatum at ullam porro ex itaque

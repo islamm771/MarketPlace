@@ -4,7 +4,7 @@ import "./Latest.css"
 import { FaArrowRightLong } from "react-icons/fa6";
 import { HiArrowLongRight } from "react-icons/hi2";
 
-const Latest = ({children,pageTitle}) => {
+const Latest = ({children,pageTitle,link}) => {
     const renderMarketCards = children.map( child =>(
         <>
             <div className="grid-item">
@@ -20,7 +20,7 @@ const Latest = ({children,pageTitle}) => {
                     <span>{pageTitle}</span>
                     <h1>Latest Listings</h1>
                 </div>
-                <a className='latest-heading-link font-[500] mb-[5px]' href="/marketplace/realestates/search">Browse All <HiArrowLongRight className='inline text-[14px]' /> </a>
+                <a className='latest-heading-link font-[500] mb-[5px]' href={link}>Browse All <HiArrowLongRight className='inline text-[14px]' /> </a>
             </div>
 
             <div className="card-container">

@@ -15,6 +15,7 @@ import DevCountry from "./pages/marketPlace/DevCountry";
 import CountryProperties from "./pages/marketPlace/DevCountryProperties";
 import PropertyDetails from "./pages/marketPlace/PropertyDetails";
 import ClassifiedDetails from "./pages/marketPlace/ClassifiedDetails";
+import ClassifiedSearch from "./pages/marketPlace/ClassifiedSearch";
 
 function App() {
   AOS.init();
@@ -44,16 +45,21 @@ function App() {
             element={<MainPage />}
           >
             <Route path="/" element={<MarketPlace />} />
+            <Route path="/marketplace/dashboard" element={<MarketDashboard />} />
+
             <Route path="/marketplace/memberclassifieds" element={<MemberClassified />} />
             <Route path="/marketplace/memberclassifieds/details" element={<ClassifiedDetails />} />
+            <Route path="/marketplace/memberclassifieds/search" element={<ClassifiedSearch />} />
+
             <Route path="/marketplace/realestates" element={<RealEstate />} />
-            <Route path="/marketplace/automotives" element={<Automotive />} />
-            <Route path="/marketplace/dashboard" element={<MarketDashboard />} />
             <Route path="/marketplace/realestates/search" element={<RealEstateSearch />} />
             <Route path="/marketplace/realestates/property" element={<PropertyDetails />} />
+            
             <Route path="/marketplace/developer" element={<MarketDeveloperPage />} />
             <Route path="/marketplace/developer/country" element={<DevCountry />} />
             <Route path="/marketplace/developer/country/communitiy" element={<CountryProperties />} />
+
+            <Route path="/marketplace/automotives" element={<Automotive />} />
           </Route>
         </Routes>
       </div>

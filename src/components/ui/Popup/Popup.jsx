@@ -41,7 +41,7 @@ const Popup = ({isOpen,setIsOpen,images,currentImgIndex,setCurrentImgIndex,child
         {children}
 
         <div className="img-thumbnails flex gap-4 justify-center p-4">
-          {images.map((img, index) => (
+          {images?.map((img, index) => (
             <img src={img} alt=""
             className={`${index == currentImgIndex ? "active " : ""}thumbnail`}
             onClick={() => setCurrentImgIndex(index)}

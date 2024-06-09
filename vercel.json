@@ -17,6 +17,10 @@
             "dest" : "/"
         },
         {
+            "src":"/marketplace/memberclassifieds/search",
+            "dest" : "/"
+        },
+        {
             "src":"/marketplace/realestates",
             "dest" : "/"
         },

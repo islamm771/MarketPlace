@@ -115,8 +115,8 @@ const Info = () => {
           </div>
 
           <hr />
-          <div className="classified-info-describtion">
-            <h3>Describtion</h3>
+          <div className="classified-info-description">
+            <h3>Description</h3>
             <p className="mb-[20px]">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut,
               rerum! Magnam eius, quia et voluptatum at ullam porro ex itaque
