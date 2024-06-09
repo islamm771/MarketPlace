@@ -65,20 +65,6 @@ const Cities = {
   ],
 };
 
-const Providers = [
-  { id: 1, value: "All" },
-  { id: 2, value: "Agency" },
-  { id: 3, value: "Developer" },
-  { id: 4, value: "Owner" },
-];
-
-const Developers = [
-  { id: 1, value: "Dev 1" },
-  { id: 2, value: "Dev 2" },
-  { id: 3, value: "Dev 3" },
-  { id: 4, value: "Dev 4" },
-  { id: 5, value: "Dev 5" },
-];
 
 const Sorts = [
   { id: 1, value: "Featured" },
@@ -99,105 +85,6 @@ const marks = {
   },
 };
 
-const AreaMarks = {
-  10: {
-    label: <>10</>,
-  },
-  1000000: {
-    label: <>1,000,000</>,
-  },
-};
-
-const Communities = [
-  {
-    id: 1,
-    value: "Soul",
-    compounds: [
-      {
-        id: 1,
-        value: "Locanda",
-      },
-      {
-        id: 2,
-        value: "Sea view",
-      },
-      {
-        id: 3,
-        value: "Heights",
-      },
-      {
-        id: 4,
-        value: "Lagoons",
-      },
-    ],
-  },
-  {
-    id: 2,
-    value: "Bellevie",
-    compounds: [
-      {
-        id: 1,
-        value: "Plaza residence",
-      },
-      {
-        id: 2,
-        value: "Fields Villas",
-      },
-      {
-        id: 3,
-        value: "Lake Villas",
-      },
-      {
-        id: 4,
-        value: "The town center",
-      },
-    ],
-  },
-  {
-    id: 3,
-    value: "Marassi",
-    compounds: [
-      {
-        id: 1,
-        value: "Locanda",
-      },
-      {
-        id: 1,
-        value: "Sea view",
-      },
-      {
-        id: 1,
-        value: "Heights",
-      },
-      {
-        id: 1,
-        value: "Lagoons",
-      },
-    ],
-  },
-  {
-    id: 4,
-    value: "Cairo uptown",
-    compounds: [
-      {
-        id: 1,
-        value: "Locanda",
-      },
-      {
-        id: 1,
-        value: "Sea view",
-      },
-      {
-        id: 1,
-        value: "Heights",
-      },
-      {
-        id: 1,
-        value: "Lagoons",
-      },
-    ],
-  },
-];
 
 const ClassifiedSearch = () => {
   const [active, setActive] = useState({
@@ -210,19 +97,11 @@ const ClassifiedSearch = () => {
   const [country, setCountry] = useState(null);
   const [category, setCategory] = useState(null);
   const [subcategory, setSubCategory] = useState(null);
-  const [provider, setProvider] = useState(null);
-  const [developer, setDeveloper] = useState(null);
-  const [community, setCommunity] = useState(null);
-  const [compound , setCompound] = useState(null)
   // Start Reference
   const dropSortRef = useRef(null);
   const dropCountryRef = useRef(null);
   const dropCategoryRef = useRef(null);
   const dropSubCategoryRef = useRef(null);
-  const dropProviderRef = useRef(null);
-  const dropDeveloperRef = useRef(null);
-  const dropCommunityRef = useRef(null);
-  const dropCompoundRef = useRef(null);
 
   // Start Handelers
   const handleClick = (id) => {
@@ -234,10 +113,6 @@ const ClassifiedSearch = () => {
   function onAfterChange(value) {
     console.log("onAfterChange: ", value);
   }
-
-  useEffect( ()=>{
-    setCompound(null)
-  }, [community] )
 
 
   return (

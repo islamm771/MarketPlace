@@ -36,6 +36,16 @@ const Related = () => {
                 clickable: true,
               }}
               modules={[Pagination]}
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                769: {
+                  slidesPerView: 2,
+                  spaceBetween: 30,
+                },
+              }}
               className="classified-related-swiper !pb-[3rem] md:!pb-[3rem]"
             >
               <SwiperSlide>
