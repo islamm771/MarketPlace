@@ -50,12 +50,12 @@ const ClassifiedDetails = () => {
           </Swiper>
         </div>
 
-        <div className="grid lg:!grid-cols-12 !gap-[30px]">
-          <div className="lg:col-span-9">
+        <div className="grid xl:!grid-cols-12 !gap-[30px]">
+          <div className="xl:col-span-9">
             <Info />
             <Related />
           </div>
-          <div className="lg:col-span-3">
+          <div className="xl:col-span-3">
             <Aside />
           </div>
         </div>

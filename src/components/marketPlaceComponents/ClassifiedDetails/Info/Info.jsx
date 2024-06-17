@@ -8,30 +8,32 @@ import { FaFacebook, FaInstagram, FaShareAlt, FaShareSquare, FaWhatsapp } from "
 import { CiHeart } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 
+import img_01 from "../../../../assests/marketplace/member_classifieds/card/gigs-01.jpg"
+
 const images = [
     {
-      original: "https://picsum.photos/id/1018/1000/600/",
-      thumbnail: "https://picsum.photos/id/1018/250/150/",
+      original: img_01,
+      thumbnail: img_01,
     },
     {
-      original: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/250/150/",
+      original: img_01,
+      thumbnail: img_01,
     },
     {
-      original: "https://picsum.photos/id/1019/1000/600/",
-      thumbnail: "https://picsum.photos/id/1019/250/150/",
+      original: img_01,
+      thumbnail: img_01,
     },
     {
-      original: "https://picsum.photos/id/1018/1000/600/",
-      thumbnail: "https://picsum.photos/id/1018/250/150/",
+      original: img_01,
+      thumbnail: img_01,
     },
     {
-      original: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/250/150/",
+      original: img_01,
+      thumbnail: img_01,
     },
     {
-      original: "https://picsum.photos/id/1019/1000/600/",
-      thumbnail: "https://picsum.photos/id/1019/250/150/",
+      original: img_01,
+      thumbnail: img_01,
     },
   ];
 
@@ -68,7 +70,7 @@ const Info = () => {
           <div className="classified-gallery relative">
             <ImageGallery
               items={images}
-              autoPlay={true}
+              // autoPlay={true}
               showPlayButton={false}
             />
 

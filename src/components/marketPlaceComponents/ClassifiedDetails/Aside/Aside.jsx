@@ -112,13 +112,12 @@ const Aside = () => {
         </div>
       </div>
 
-      <div className="classified-details-popular mb-[15px]">
-        <div className="popular-header">
+      <div className="classified-details-similar mb-[15px]">
+        <div className="similar-header">
           <h3 className="!text-[20px] capitalize">Similar Products</h3>
         </div>
         <Swiper
           spaceBetween={30}
-          centeredSlides={true}
           pagination={{
             clickable: true,
           }}
@@ -127,6 +126,20 @@ const Aside = () => {
           //   disableOnInteraction: false,
           // }}
           modules={[Pagination, Autoplay]}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            769: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1280: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+          }}
           className="popular-swiper !pb-[3rem] md:!pb-[3rem]"
         >
           <SwiperSlide>
