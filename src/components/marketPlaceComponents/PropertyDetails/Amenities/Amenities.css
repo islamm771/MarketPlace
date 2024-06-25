@@ -1,0 +1,15 @@
+.property-details-amenities{
+    padding: 30px 15px;
+    border-radius: 12px;
+}
+.amenities-header h3{
+    font-size: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #fd6729;
+    /* margin-bottom: 20px; */
+}
+
+.details-amenities ul li{
+    margin-bottom: 15px;
+    font-size: 20px;
+}

@@ -1,0 +1,81 @@
+.property-details-floor{
+    padding: 30px 15px;
+    border-radius: 12px;
+}
+.floor-header h3{
+    font-size: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #fd6729;
+    /* margin-bottom: 20px; */
+}
+
+.floor-plans-nav ul{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+.floor-plans-nav ul li{
+    color: #3e3f5e;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+    text-transform: capitalize;
+    padding-bottom: 2px;
+    line-height: 1;
+}
+.floor-plans-nav ul li.active{
+    color: #fd6729 !important;
+    /* border-bottom: 2px solid #fd6729; */
+}
+/* .floor-plans-nav ul li.active::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #fd6729;
+    border-radius: 50%;
+    border: 3px solid #fff;
+} */
+
+.floor-plans-content .apartments-plan-info h2{
+    font-size: 35px;
+    margin: 30px 0 15px;
+    text-transform: capitalize;
+}
+.floor-plans-content .apartments-plan-info p{
+    line-height: 1.2;
+}
+/* 
+.floor-plans-content .float-div{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0000004f;
+    z-index: 4;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.floor-plans-content .float-div.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.floor-plans-content .float-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0) translate(-50%, -50%);
+    width: 500px;
+    transition: 0.5s;
+    transform-origin: left;
+    z-index: 5;
+    transform: scale(1) translate(-50%, -50%); 
+} */

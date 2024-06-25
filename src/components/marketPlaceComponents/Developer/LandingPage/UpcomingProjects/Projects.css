@@ -1,0 +1,31 @@
+.upcomimg-projects-section .prop-block .prop-block-img{
+    overflow: hidden;
+}
+
+.upcomimg-projects-section .prop-block .prop-block-img img{
+    transition: all 400ms linear 0s;
+}
+
+.upcomimg-projects-section .prop-block .prop-block-img img:hover{
+    transform: scale(1.1);
+}
+.upcomimg-projects-section .prop-block .prop-title{
+    padding: 10px 0;
+}
+.upcomimg-projects-section .prop-block .prop-title .prop-name{
+    font-weight: 600;
+    padding-right: 10px;
+    border-right: 1px solid #7f81ba ;
+}
+
+.upcomimg-projects-section .prop-block .prop-title span{
+    color: #3e3f5e;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    padding: 0 10px;
+    border-right: 1px solid #7f81ba ;
+}
+
+.upcomimg-projects-section .prop-block .prop-title span:last-child{
+    border: none;
+}

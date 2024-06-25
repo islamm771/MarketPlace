@@ -1,0 +1,63 @@
+.dashboard-container{
+    padding: 0 15px;
+    margin: 0 auto;
+}
+@media (min-width:540px){
+.dashboard-container{
+    width: 450px;
+}
+}
+@media (min-width:768px){
+.dashboard-container{
+    width: 700px;
+}
+}
+@media (min-width:992px){
+.dashboard-container{
+    width: 820px;
+}
+}
+@media (min-width:1200px){
+.dashboard-container{
+    width: 1000px;
+}
+}
+
+@media (min-width:1300px){
+.dashboard-container{
+    width: 1200px;
+}
+}
+
+.dashboard-container .sidebar-menu-header {
+    display: flex;
+    padding: 20px;
+}
+
+.dashboard-container .sidebar-menu-cont{
+    overflow:hidden;
+    height: 0px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.dashboard-container .sidebar-menu-cont.active{
+    height: 218px;
+}
+
+.dashboard-container .sidebar-menu-cont button{
+    display: block;
+    background-color: transparent;
+    color: #3e3f5e;
+    border-radius: 10px;
+    padding: 5px 12px;
+    margin: 0;
+    text-align: start;
+    font-size: 14px;
+}
+
+.dashboard-container .sidebar-menu-cont button.active{
+    color: #ff6728;
+}
+
+.dashboard-container .account-hub-sidebar .sidebar-menu-header.active h4{
+    color: #ff6728;
+}

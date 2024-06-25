@@ -1,0 +1,59 @@
+.property-distination-section .prop-card .prop-card-img{
+    overflow: hidden;
+}
+.property-distination-section .prop-card .prop-card-img img{
+    transition: all 400ms linear 0s;
+}
+
+.property-distination-section .prop-card .prop-card-img img:hover{
+    transform: scale(1.1);
+}
+
+.property-distination-section .prop-card .prop-card-info a{
+    font-size: 30px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.property-distination-section .prop-card .prop-card-tagline{
+    margin-bottom: 8px;
+}
+.property-distination-section .prop-card .prop-card-location{
+    font-size: 14px;
+}
+
+
+
+.property-distination-section .buttons{
+    display: flex;
+    justify-content: center;
+    gap: 12rem;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.property-distination-section .buttons button {
+font-size: 18px;
+color: #b7b7b7;
+width: fit-content;
+padding: 10px;
+border-radius: 50%;
+}
+
+.property-distination-section .buttons .swiper-button-disabled, 
+.property-distination-section .buttons .swiper-button-disabled {
+    opacity: 0.5;
+}
+.property-distination-section .PropertyDistination-swiper>.swiper-pagination {
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.property-distination-section .PropertyDistination-swiper>.swiper-pagination .swiper-pagination-bullet-active {
+background-color: #ff6728ed !important;
+transform: scale(1.2);
+}

@@ -1,0 +1,50 @@
+.property-details-energy{
+    padding: 30px 15px;
+    border-radius: 12px;
+}
+.energy-header h3{
+    font-size: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #fd6729;
+    /* margin-bottom: 20px; */
+}
+
+.property-energy .property-energy-info{
+    border: 1px solid #8dc643;
+}
+.property-energy .property-energy-info li{
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    font-family: "Rajdhani", sans-serif;
+    color: #3e3f5e;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+.property-energy .property-energy-info li:nth-child(even){
+    background-color: #f7f7f7;
+}
+
+.energy-class{
+    display: flex;
+    margin: 13px 0 0;
+}
+.energy-class li{
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    padding: 8px 10px;
+    position: relative;
+}
+.energy-class li span{
+    position: absolute;
+    bottom: 29px;
+    height: 0;
+    width: 0;
+    left: calc(50% - 12px);
+    border: 12px solid rgba(0, 0, 0, 0);
+    content: "";
+    border-top-color: #00845a;
+}
+

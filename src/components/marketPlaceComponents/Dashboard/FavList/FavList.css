@@ -1,0 +1,141 @@
+.market-dashboard-favList > *{
+    font-family: "Rajdhani", sans-serif;
+}
+.market-dashboard-favList .favlist-dropdown{
+    position: relative;
+    width: 100%;
+    border: 1px solid #11d8dc !important;
+    padding: 7px 15px;
+    border-radius: 12px;
+}
+.market-dashboard-favList .favlist-dropdown:focus{
+    border: 1px solid #fd6729 !important;
+}
+.market-dashboard-favList .favlist-dropdown.open{
+    border: 1px solid #fd6729 !important;
+}
+.market-dashboard-favList .favlist-dropdown span{
+    cursor: pointer;
+    display: block;
+    font-weight: 500;
+}
+.market-dashboard-favList .favlist-dropdown .list{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #ffff;
+    width: 100%;
+    box-shadow: 0 1px 5px rgba(70, 70, 70, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 8;
+    opacity: 0;
+    transition: 0.5s;
+    height: 0;
+}
+.market-dashboard-favList .favlist-dropdown .sorts-list.show{
+    opacity: 1;
+    height: 268px;
+}
+.market-dashboard-favList .favlist-dropdown .perPages-list.show{
+    opacity: 1;
+    height: 222px;
+}
+.market-dashboard-favList .favlist-dropdown .list li{
+    padding: 10px 10px;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Rajdhani", sans-serif;
+}
+.market-dashboard-favList .favlist-dropdown li:hover{
+    background-color: #fd6729;
+    color: #fff;
+}
+.market-dashboard-favList .favlist-dropdown li.active svg{
+    display: block;
+    color: #fd6729;
+}
+.market-dashboard-favList .view-item svg{
+    /* display: block;
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid #eee;
+    color:#fd6729;
+    background-color: #fff;
+    border-radius: 0; */
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid #eee;
+    color: #fd6729;
+    background-color: #fff;
+    border-radius: 0;
+    font-size: 40px;
+}
+.market-dashboard-favList .view-item svg.active{
+    background-color:#fd6729;
+    color:#fff
+}
+
+.list-items > .grid{
+    grid-template-columns: 100% !important;
+}
+
+.list-items > .grid .state-product-card{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: repeat(12, minmax(0, 1fr));
+    height: 290px;
+}
+.list-items > .grid .state-product-card .card__image-header{
+    grid-row: span 12 / span 12;
+    grid-column: span 7 / span 7;
+}
+.list-items > .grid .state-product-card .card__image-body,
+.list-items > .grid .state-product-card .card__image-footer{
+    grid-column: span 5 / span 5;
+}
+.list-items > .grid .state-product-card .card__image-body{
+    grid-row: span 9 / span 9;
+}
+.list-items > .grid .state-product-card .card__image-footer{
+    grid-row: span 3 / span 3;
+}
+.list-items > .grid .state-product-card .card__image-body .badge{
+    margin-bottom: 20px;
+}
+.list-items > .grid .state-product-card .card__image-body ul{
+    gap: 30px;
+}
+.list-items > .grid .state-product-card .card__image-body ul li span{
+    font-size: 16px;
+}
+
+.list-items .member-product-card .gigs-grid{
+    display: flex !important;
+    height: 330px;
+}
+.list-items .member-product-card .gigs-grid .gigs-img{
+    width: 55%;
+    height: 100%;
+}
+.list-items .member-product-card .gigs-grid .gigs-img .user-thumb{
+    display: none;
+}
+.list-items .member-product-card .gigs-grid .gigs-content{
+    width: 45%;
+    height: 100%;
+    padding: 22px 24px 0;
+}
+.list-items .member-product-card .gigs-grid .gigs-describtion{
+    display: block;
+}
+
+.list-items .member-product-card .gigs-grid .owner-profile-wrapper{
+    display: flex;
+}

@@ -1,0 +1,109 @@
+.login-nav-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 7px 40px;
+	max-width: 1500px;
+	margin: 0 auto;
+	z-index: 9999999;
+	position: relative;
+}
+.login-nav-container .nav-left-side {
+	display: flex;
+}
+
+.login-nav-container .nav-img-logo {
+	margin-right: 13px;
+	margin-left: -52px;
+}
+
+.login-nav-container .nav-img-logo img {
+	width: 167px;
+	height: 44px;
+}
+
+.login-nav-container .nav-text-logo h3 {
+	margin: 0;
+	font-size: 30px;
+	color: #1bd8dc;
+	font-family: "Roboto", sans-serif;
+	font-weight: normal;
+}
+.login-nav-container .nav-text-logo h3 span {
+	color: #fd6728;
+}
+
+.login-nav-container .nav-text-logo p {
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+	margin-top: -5px;
+	color: #042c5c;
+}
+.login-nav-container .lang-container {
+	position: relative;
+}
+.login-nav-container .lang-container .lang-text {
+	font-size: 16px;
+	color: #3e3f5e;
+	cursor: pointer;
+}
+
+.login-nav-container .lang-container .lang-text img {
+	width: 13px;
+	height: 13px;
+}
+
+.login-nav-container .lang-container .flags-menu-container {
+	position: absolute;
+	background-color: #fff;
+	box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
+	width: 130px;
+	top: 30px;
+	right: 8px;
+	overflow: hidden;
+	padding: 0px 15px;
+	transition: 0.3s ease-in-out all;
+}
+
+.login-nav-container .lang-container .flags-menu-container .flag-box {
+	margin: 5px 0;
+}
+
+.login-nav-container .lang-container .flags-menu-container .flag-box a span {
+	margin-right: 7px;
+}
+
+.login-nav-container .lang-container .flags-menu-container .flag-box a {
+	text-decoration: none;
+	font-size: 13px;
+	color: #73778c;
+}
+.login-nav-container .lang-container .flags-menu-container .flag-box img {
+	width: 20px;
+	height: 20px;
+}
+@media (max-width: 600px) {
+	.login-nav-container {
+		padding: 7px 10px;
+	}
+}
+@media (max-width: 768px) {
+	.login-nav-container {
+		justify-content: space-between;
+	}
+	/* .login-nav-container .nav-left-side {
+    display: none;
+  } */
+	.login-nav-container .lang-container p span:last-child {
+		display: none;
+	}
+	.login-nav-container .nav-img-logo img {
+		width: 140px;
+		height: 30px;
+	}
+}
+
+.flokky-logo {
+	margin-left: -60px;
+}

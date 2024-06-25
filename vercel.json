@@ -1,0 +1,52 @@
+{
+    "routes":[
+        {
+            "src":"/",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/dashboard",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/memberclassifieds",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/memberclassifieds/details",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/memberclassifieds/search",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/realestates",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/realestates/search",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/realestates/property",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/automotives",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/developer",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/developer/country",
+            "dest" : "/"
+        },
+        {
+            "src":"/marketplace/developer/country/communitiy",
+            "dest" : "/"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+.property-details-info{
+    padding: 30px 15px;
+    border-radius: 12px;
+}
+
+.property-details-info hr{
+    height: 1px;
+    margin: 30px 0;
+    background-color: #ddd;
+}
+
+.property-info-categories > div svg{
+    font-size: 25px;
+    color: #3e3f5e;
+}
+.property-info-categories > div h5{
+    font-size: 20px;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+.property-info-categories > div p{
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.property-info-description h3{
+    font-size: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #fd6729;
+    margin-bottom: 20px;
+}
+
+.property-info-description p{
+    font-weight: 500;
+    color: #7D9098;
+    line-height: 1.2;
+}

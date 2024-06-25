@@ -1,0 +1,195 @@
+.classified-details-info{
+    padding: 30px 15px;
+    border-radius: 12px;
+}
+
+.classified-details-info hr{
+    height: 1px;
+    margin: 30px 0;
+    background-color: #ddd;
+}
+
+
+.classified-info-description h3{
+    font-size: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #fd6729;
+    margin-bottom: 20px;
+}
+
+.classified-info-description p{
+    font-weight: 500;
+    color: #7D9098;
+    line-height: 1.2;
+}
+
+.classified-gallery .image-gallery-icon{
+    width: fit-content !important;
+}
+
+.classified-gallery .image-gallery-thumbnail .image-gallery-thumbnail-image{
+    border-radius: 8px;
+}
+
+
+.classified-details-info .classified-social {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 15px;
+}
+
+.classified-details-info .share-selection,
+.classified-details-info .fav-selection{
+    width: fit-content;
+}
+
+.classified-details-info .fav-selection {
+    position: relative;
+}
+.classified-details-info .fav-selection .fav-icon,
+.classified-details-info .share-selection .share-icon{
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.classified-details-info .fav-selection .fav-checkbox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.classified-details-info .share-options{
+    position: absolute;
+    top: 55px;
+    right: 50px;
+    width: 280px;
+    padding: 15px;
+    background-color: #fff;
+    color: #3e3f5e;
+    border-radius: 12px;
+}
+.classified-social .share-options .title{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    width: fit-content;
+    padding: 0;
+    margin-bottom: 10px;
+
+}
+.classified-social .share-options .social-media{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.classified-social .share-options .social-media-btn{
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    line-height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 5px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.classified-social .share-options .social-media-btn:nth-child(1){
+    background: #25D366;
+}
+
+.classified-social .share-options .social-media-btn:nth-child(2){
+    background: #E4405F;
+}
+
+.classified-social .share-options .social-media-btn:nth-child(3){
+    background: #000;
+}
+
+.classified-social .share-options .social-media-btn:nth-child(4){
+    background: #1877F2;
+}
+
+.classified-details-info .fav-selection .fav-checkbox:hover:not(:checked) ~ span svg{
+    color: rgba(255, 105, 0, 1);
+}
+.classified-details-info .fav-selection .fav-checkbox:checked ~ span{
+    background-color: rgba(255, 105, 0, 1);
+    color: #fff;
+}
+.classified-details-info .share-selection .share-icon{
+    color: #b0b0b0;
+    transform: rotate(180deg);
+}
+
+
+.classified-details-info .classified-badges{
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-end; */
+    gap: 15px;
+    padding: 15px;
+}
+
+.classified-details-info .badge {
+    align-items: center;
+    background: #fff1e7;
+    border-radius: 10px;
+    color: #ff6900;
+    display: inline-flex;
+    padding: 5px 8px 5px 20px;
+    position: relative;
+    text-transform: capitalize;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 14px;
+}
+.classified-details-info .badge::before{
+    background: #ff6900;
+    border-radius: 10px;
+    content: "";
+    height: 8px;
+    left: 5px;
+    position: absolute;
+    width: 8px;
+    text-transform: capitalize;
+}
+.classified-details-info .badge-status{
+    border: 1px solid #eee;
+    background-color: #fff;
+    padding: 2px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-family: "Rajdhani", sans-serif;
+}
+.classified-details-info .badge-developer{
+    background-color: #1A4482;
+    color: white;
+    text-transform: capitalize;
+    padding: 2px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Rajdhani", sans-serif;
+}

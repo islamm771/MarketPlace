@@ -1,0 +1,24 @@
+.property-details-detail{
+    padding: 30px 15px;
+    border-radius: 12px;
+}
+.detail-header h3{
+    font-size: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #fd6729;
+    /* margin-bottom: 20px; */
+}
+
+.property-detail > div svg{
+    font-size: 25px;
+    color: #3e3f5e;
+}
+.property-detail > div h5{
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.property-detail > div p{
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 18px;
+}

@@ -1,0 +1,32 @@
+.no-scroll {
+    overflow: hidden;
+}
+
+.property-details-gallery {
+  padding: 30px 15px;
+  border-radius: 12px;
+}
+.gallery-header h3 {
+  font-size: 20px;
+  padding-left: 15px;
+  border-left: 2px solid #fd6729;
+  /* margin-bottom: 20px; */
+}
+
+.prop-gallery-imgs .additional-imgs::before {
+  content: "+6";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000007c;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
