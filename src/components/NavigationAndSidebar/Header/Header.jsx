@@ -522,10 +522,10 @@ const Header = () => {
 								dispatch(setIsCartVisible({ value: !isCartVisible }));
 							}}
 						>
-							{/* <svg className="action-list-item-icon icon-shopping-bag">
+							<svg className="action-list-item-icon icon-shopping-bag">
 								<use xlinkHref="#svg-shopping-bag"></use>
-							</svg> */}
-							<IoBag className="action-list-item-icon icon-shopping-bag" />
+							</svg>
+							{/* <IoBag className="action-list-item-icon icon-shopping-bag" /> */}
 						</div>
 
 						<div

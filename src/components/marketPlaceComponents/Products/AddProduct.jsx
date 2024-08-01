@@ -33,7 +33,7 @@ const AddProduct = () => {
             "transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s",
         }}
       >
-        <Link className="dropdown-navigation-link" to="/marketplace/dashboard" onClick={() => handleClick(1)}>
+        <Link className="dropdown-navigation-link" to="/dashboard" onClick={() => handleClick(1)}>
           <svg
             className="me-[5px] inline"
             xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ const AddProduct = () => {
           </svg>
           Classifieds
         </Link>
-        <Link className="dropdown-navigation-link" to="/marketplace/dashboard" onClick={() => handleClick(2)}>
+        <Link className="dropdown-navigation-link" to="/dashboard" onClick={() => handleClick(2)}>
           <svg
             className="me-[5px] inline"
             xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ const AddProduct = () => {
           </svg>
           Real Estate
         </Link>
-        <Link className="dropdown-navigation-link" to="/marketplace/dashboard" onClick={() => handleClick(3)}>
+        <Link className="dropdown-navigation-link" to="/dashboard" onClick={() => handleClick(3)}>
           <svg
             className="me-[5px] inline"
             xmlns="http://www.w3.org/2000/svg"

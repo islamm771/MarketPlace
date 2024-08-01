@@ -39,27 +39,27 @@ function App() {
       }}
     >
       <div className="App">
-        <Routes>
+      <Routes>
           <Route
             path="/"
             element={<MainPage />}
           >
             <Route path="/" element={<MarketPlace />} />
-            <Route path="/marketplace/dashboard" element={<MarketDashboard />} />
+            <Route path="/dashboard" element={<MarketDashboard />} />
 
-            <Route path="/marketplace/memberclassifieds" element={<MemberClassified />} />
-            <Route path="/marketplace/memberclassifieds/details" element={<ClassifiedDetails />} />
-            <Route path="/marketplace/memberclassifieds/search" element={<ClassifiedSearch />} />
+            <Route path="/memberclassifieds" element={<MemberClassified />} />
+            <Route path="/memberclassifieds/details" element={<ClassifiedDetails />} />
+            <Route path="/memberclassifieds/search" element={<ClassifiedSearch />} />
 
-            <Route path="/marketplace/realestates" element={<RealEstate />} />
-            <Route path="/marketplace/realestates/search" element={<RealEstateSearch />} />
-            <Route path="/marketplace/realestates/property" element={<PropertyDetails />} />
+            <Route path="/realestates" element={<RealEstate />} />
+            <Route path="/realestates/search" element={<RealEstateSearch />} />
+            <Route path="/realestates/property" element={<PropertyDetails />} />
             
-            <Route path="/marketplace/developer" element={<MarketDeveloperPage />} />
-            <Route path="/marketplace/developer/country" element={<DevCountry />} />
-            <Route path="/marketplace/developer/country/communitiy" element={<CountryProperties />} />
+            <Route path="/developer" element={<MarketDeveloperPage />} />
+            <Route path="/developer/country" element={<DevCountry />} />
+            <Route path="/developer/country/communitiy" element={<CountryProperties />} />
 
-            <Route path="/marketplace/automotives" element={<Automotive />} />
+            <Route path="/automotives" element={<Automotive />} />
           </Route>
         </Routes>
       </div>

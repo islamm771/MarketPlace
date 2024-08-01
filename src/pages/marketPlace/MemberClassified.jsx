@@ -41,7 +41,7 @@ const MemberClassified = () => {
 
       <Featured
         pageTitle={"Member Classifieds"}
-        link={"/marketplace/memberclassifieds/search"}
+        link={"/memberclassifieds/search"}
       >
         <MemberCard
           title={"Ladies Gap Jeans (Bought one month ago)"}
@@ -72,14 +72,14 @@ const MemberClassified = () => {
 
       <Category
         pageTitle={"Member Classifieds"}
-        link={"/marketplace/memberclassifieds/search"}
+        link={"/memberclassifieds/search"}
       />
 
       <SectionFour pageTitle={"Member Classifieds"} />
 
       <Latest
         pageTitle={"Member Classifieds"}
-        link={"/marketplace/memberclassifieds/search"}
+        link={"/memberclassifieds/search"}
       >
         <MemberCard
           title={"Ladies Gap Jeans (Bought one month ago)"}
@@ -110,7 +110,7 @@ const MemberClassified = () => {
 
       <Location
         pageTitle={"Member Classifieds"}
-        link="/marketplace/memberclassifieds/search"
+        link="/memberclassifieds/search"
       >
         <MemberCard
           title={"Ladies Gap Jeans (Bought one month ago)"}

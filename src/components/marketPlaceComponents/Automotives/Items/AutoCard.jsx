@@ -250,7 +250,7 @@ const AutoCard = (props) => {
                         </div>
                     </div>
                     <div className="owner-details pt-[2.5px]">
-                        <h6 className="owner-details-title">
+                        <h6 className="owner-details-title mb-[2px]">
                             Marina Valentine
                             {/* <MdAdminPanelSettings size={20} color={"#d7006a"} /> */}
                         </h6>

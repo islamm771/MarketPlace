@@ -53,33 +53,34 @@ const SectionFour = ({pageTitle,title}) => {
           <SwiperSlide>
             {/* <img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" /> */}
             <div className="slide-item">
-              <a href="#">
+              <a href="/developer">
                 <img src={img_01} alt="Image" />
-              </a>
-              <div class="slide-item-info">
-                <div className='slide-item-info-logo w-[100%] mb-[15px]'> <img src={developer_logo} alt="" /> </div>
-                <div class="slide-item-info-breif">
-                  <h6 className="mb-[10px]">The luxury crib</h6>
-                  <h1>
-                    <a href="#" className="text-[20px]">
-                      Upper East Side
+                <div class="slide-item-info">
+                  <div className='slide-item-info-logo w-[100%] mb-[15px]'>
+                      <img src={developer_logo} alt="" /> 
+                    </div>
+                  <div class="slide-item-info-breif">
+                    <h6 className="mb-[10px]">The luxury crib</h6>
+                    <h1>
+                      <a href="#" className="text-[20px]">
+                        Upper East Side
+                      </a>
+                    </h1>
+                  </div>
+                  <div class="btn-wrapper go-top">
+                    <a class="" href="#">
+                      Details
                     </a>
-                  </h1>
+                  </div>
                 </div>
-                <div class="btn-wrapper go-top">
-                  <a class="" href="#">
-                    Details
-                  </a>
-                </div>
-              </div>
+              </a>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             {/* <img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" /> */}
             <div className="slide-item">
-              <a href="#">
+              <a href="/developer">
                 <img src={img_02} alt="Image" />
-              </a>
               <div class="slide-item-info">
                 <div className='slide-item-info-logo w-[100%] mb-[15px]'> <img src={developer_logo} alt="" /> </div>
                 <div class="slide-item-info-breif">
@@ -96,14 +97,14 @@ const SectionFour = ({pageTitle,title}) => {
                   </a>
                 </div>
               </div>
+              </a>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             {/* <img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" /> */}
             <div className="slide-item">
-              <a href="#">
+              <a href="/developer">
                 <img src={img_03} alt="Image" />
-              </a>
               <div class="slide-item-info">
                 <div className='slide-item-info-logo w-[100%] mb-[15px]'> <img src={developer_logo} alt="" /> </div>
                 <div class="slide-item-info-breif">
@@ -120,14 +121,14 @@ const SectionFour = ({pageTitle,title}) => {
                   </a>
                 </div>
               </div>
+              </a>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             {/* <img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" /> */}
             <div className="slide-item">
-              <a href="#">
+              <a href="/developer">
                 <img src={img_01} alt="Image" />
-              </a>
               <div class="slide-item-info">
                 <div className='slide-item-info-logo w-[100%] mb-[15px]'> <img src={developer_logo} alt="" /> </div>
                 <div class="slide-item-info-breif">
@@ -144,14 +145,14 @@ const SectionFour = ({pageTitle,title}) => {
                   </a>
                 </div>
               </div>
+              </a>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             {/* <img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" /> */}
             <div className="slide-item">
-              <a href="#">
+              <a href="/developer">
                 <img src={img_02} alt="Image" />
-              </a>
               <div class="slide-item-info">
                 <div className='slide-item-info-logo w-[100%] mb-[15px]'> <img src={developer_logo} alt="" /> </div>
                 <div class="slide-item-info-breif">
@@ -168,14 +169,14 @@ const SectionFour = ({pageTitle,title}) => {
                   </a>
                 </div>
               </div>
+              </a>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             {/* <img src={img_01} className='w-[100%] h-[100%] object-cover' alt="" /> */}
             <div className="slide-item">
-              <a href="#">
+              <a href="/developer">
                 <img src={img_03} alt="Image" />
-              </a>
               <div class="slide-item-info">
                 <div className='slide-item-info-logo w-[100%] mb-[15px]'> <img src={developer_logo} alt="" /> </div>
                 <div class="slide-item-info-breif">
@@ -192,6 +193,7 @@ const SectionFour = ({pageTitle,title}) => {
                   </a>
                 </div>
               </div>
+              </a>
             </div>
           </SwiperSlide>
         </Swiper>

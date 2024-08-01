@@ -24,8 +24,13 @@ import AutoPurchased from "../Automotives/Sold-Purchased/AutoPurchased";
 import MemberListings from "../MemberClassifieds/Listings/MemberListings";
 import MemberSold from "../MemberClassifieds/Sold-Purchased/MemberSold";
 import MemberPurchased from "../MemberClassifieds/Sold-Purchased/AutoPurchased";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setActiveTabSlice } from "../../../app/feature/MarketplaceDashSlice";
+
+
+
 const MarketDashboard = () => {
+  const dispatch = useDispatch()
   const [activeButton , setActiveButton] = useState({
     title:"Marketplace",
     parent:"Main Dashboard"
@@ -38,54 +43,38 @@ const MarketDashboard = () => {
   });
   const dashboradContent = useRef(null)
   
-
   const activemarketplacetab = useSelector( state => state.marketplacetabs.activeTabSlice )
 
+
+  function getStateFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const state = params.get('state');
+    if (state) {
+      return JSON.parse(decodeURIComponent(state));
+    }
+    return null;
+  }
+
   useEffect( ()=>{
-    
-    // RealForm
-    if(activemarketplacetab == 2){
-      setActiveButton({title:"Add Property" , parent:"Real Estate"})
+    const state = getStateFromUrl();
+    dispatch(setActiveTabSlice(state?.data))
+  } ,[])
 
-      const copyState = {...buttonStates}
+  useEffect( ()=>{
 
-      Object.keys(copyState).forEach( key =>{
-          copyState[key] = false
-      } )
+  // MemberForm
+  if(activemarketplacetab == 1){
+    setActiveButton({title:"Add Listing" , parent:"Member Classified"})
 
-      copyState['real'] = !buttonStates['real']
-      setButtonStates(copyState)
-    }
+    const copyState = {...buttonStates}
 
-    // MemberForm
-    if(activemarketplacetab == 1){
-      setActiveButton({title:"Add Listing" , parent:"Member Classified"})
+    Object.keys(copyState).forEach( key =>{
+        copyState[key] = false
+    } )
 
-      const copyState = {...buttonStates}
-
-      Object.keys(copyState).forEach( key =>{
-          copyState[key] = false
-      } )
-
-      copyState['member'] = !buttonStates['member']
-      setButtonStates(copyState)
-    }
-
-    // AutomotiveForm
-    if(activemarketplacetab == 3){
-      setActiveButton({title:"Add Automotive" , parent:"Automotive"})
-
-      const copyState = {...buttonStates}
-
-      Object.keys(copyState).forEach( key =>{
-          copyState[key] = false
-      } )
-
-      copyState['auto'] = !buttonStates['auto']
-      setButtonStates(copyState)
-    }
-
-
+    copyState['member'] = !buttonStates['member']
+    setButtonStates(copyState)
+  }
     // RealForm
   if(activemarketplacetab == 2){
     setActiveButton({title:"Add Property" , parent:"Real Estate"})
@@ -100,9 +89,9 @@ const MarketDashboard = () => {
     setButtonStates(copyState)
   }
 
-  // MemberForm
-  if(activemarketplacetab == 1){
-    setActiveButton({title:"Add Listing" , parent:"Member Classified"})
+   // AutomotiveForm
+   if(activemarketplacetab == 3){
+    setActiveButton({title:"Add Automotive" , parent:"Automotive"})
 
     const copyState = {...buttonStates}
 
@@ -110,7 +99,7 @@ const MarketDashboard = () => {
         copyState[key] = false
     } )
 
-    copyState['member'] = !buttonStates['member']
+    copyState['auto'] = !buttonStates['auto']
     setButtonStates(copyState)
   }
 

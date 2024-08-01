@@ -5,47 +5,47 @@
             "dest" : "/"
         },
         {
-            "src":"/marketplace/dashboard",
+            "src":"/dashboard",
             "dest" : "/"
         },
         {
-            "src":"/marketplace/memberclassifieds",
+            "src":"/memberclassifieds",
             "dest" : "/"
         },
         {
-            "src":"/marketplace/memberclassifieds/details",
+            "src":"/memberclassifieds/details",
             "dest" : "/"
         },
         {
-            "src":"/marketplace/memberclassifieds/search",
+            "src":"/memberclassifieds/search",
             "dest" : "/"
         },
         {
-            "src":"/marketplace/realestates",
+            "src":"/realestates",
             "dest" : "/"
         },
         {
-            "src":"/marketplace/realestates/search",
+            "src":"/realestates/search",
             "dest" : "/"
         },
         {
-            "src":"/marketplace/realestates/property",
+            "src":"/realestates/property",
             "dest" : "/"
         },
         {
-            "src":"/marketplace/automotives",
+            "src":"/automotives",
             "dest" : "/"
         },
         {
-            "src":"/marketplace/developer",
+            "src":"/developer",
             "dest" : "/"
         },
         {
-            "src":"/marketplace/developer/country",
+            "src":"/developer/country",
             "dest" : "/"
         },
         {
-            "src":"/marketplace/developer/country/communitiy",
+            "src":"/developer/country/communitiy",
             "dest" : "/"
         }
     ]

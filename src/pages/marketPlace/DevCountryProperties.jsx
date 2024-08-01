@@ -248,7 +248,7 @@ const CountryProperties = () => {
               <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
                   <a
-                    href="/marketplace/realestate/search"
+                    href="/realestate/search"
                     className="uppercase"
                   >
                     LOCANDA SERVICED RESIDENCE
@@ -276,7 +276,7 @@ const CountryProperties = () => {
               <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
                   <a
-                    href="/marketplace/realestate/search"
+                    href="/realestate/search"
                     className="uppercase"
                   >
                     Seaview
@@ -302,7 +302,7 @@ const CountryProperties = () => {
               <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
                   <a
-                    href="/marketplace/realestate/search"
+                    href="/realestate/search"
                     className="uppercase"
                   >
                     HEIGHTS
@@ -328,7 +328,7 @@ const CountryProperties = () => {
               <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
                   <a
-                    href="/marketplace/realestate/search"
+                    href="/realestate/search"
                     className="uppercase"
                   >
                     LAGOONS
@@ -376,7 +376,7 @@ const CountryProperties = () => {
           <div class="grid md:!grid-cols-4">
             <div class="hidden md:block">
               <a
-                href="/marketplace/developer/country"
+                href="/developer/country"
                 class="mb-[6px] block w-fit"
               >
                 <HiMiniArrowLongLeft className="inline" /> All
