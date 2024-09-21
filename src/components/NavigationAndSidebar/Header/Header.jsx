@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { IoArrowBackCircle, IoArrowForwardCircle,IoBag, IoSettingsOutline } from "react-icons/io5";
+import React, { useEffect, useRef, useState } from "react";
+import { IoArrowBackCircle, IoArrowForwardCircle, IoBag, IoSettingsOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -50,6 +50,24 @@ const Header = () => {
 	const [isHidden, setIsHidden] = useState(false);
 	const [delayedIcon, setDelayedIcon] = useState(null);
 
+	const cartDropRef = useRef(null)
+	const notificationsDropRef = useRef(null)
+	const messagesDropRef = useRef(null)
+	const settingsDropRef = useRef(null)
+
+
+	const handleNavigate = (data) => {
+		const state = { data: data };
+		const encodedState = encodeURIComponent(JSON.stringify(state));
+		// const url = `http://localhost:3000/user-dashboard?state=${encodedState}`;
+		const url = `https://main.flokky.app/user-dashboard?state=${encodedState}`;
+		;
+
+		// Open the URL in a new tab
+		window.open(url, '_blank');
+	};
+
+
 	const toggleSidebar = () => {
 		dispatch(setIsMiniMenuHidden({ value: !isMiniMenuHidden }));
 	};
@@ -99,6 +117,25 @@ const Header = () => {
 			window.addEventListener("load", onPageLoad, false);
 			return () => window.removeEventListener("load", onPageLoad);
 		}
+	}, []);
+
+	const handleClickOutside = (event) => {
+		if (cartDropRef.current && !cartDropRef.current.contains(event.target)) {
+			dispatch(setIsCartVisible({ value: false }));
+		}
+		if (notificationsDropRef.current && !notificationsDropRef.current.contains(event.target)) {
+			dispatch(setIsNotificationsVisible({ value: false }));
+		}
+		if (messagesDropRef.current && !messagesDropRef.current.contains(event.target)) {
+			dispatch(setIsMessagesVisible({ value: false }));
+		}
+		if (settingsDropRef.current && !settingsDropRef.current.contains(event.target)) {
+			dispatch(setIsSettingsVisible({ value: false }));
+		}
+	};
+
+	useEffect(() => {
+		document.addEventListener('mousedown', handleClickOutside);
 	}, []);
 
 	return (
@@ -189,7 +226,7 @@ const Header = () => {
 							</a>
 						</li>
 
-						<li className="menu-main-item">
+						<li className="menu-main-item flex items-center">
 							<p className="menu-main-item-link">
 								<svg className="icon-dots">
 									<use xlinkHref="#svg-dots"></use>
@@ -230,9 +267,8 @@ const Header = () => {
 				style={{ position: "relative" }}
 			>
 				<div
-					className={`interactive-input dark ${
-						searchInput !== "" ? "active" : ""
-					}`}
+					className={`interactive-input dark ${searchInput !== "" ? "active" : ""
+						}`}
 				>
 					<input
 						type="text"
@@ -275,9 +311,8 @@ const Header = () => {
 						maxWidth: "100%",
 						opacity: `${searchInput === "" ? "0" : "1"}`,
 						visibility: `${searchInput === "" ? "hidden" : "visible"}`,
-						transform: `translate(0px, ${
-							searchInput !== "" ? "0px" : "-40px"
-						})`,
+						transform: `translate(0px, ${searchInput !== "" ? "0px" : "-40px"
+							})`,
 						transition:
 							"transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s",
 					}}
@@ -448,7 +483,7 @@ const Header = () => {
 				</div>
 			</div>
 
-			<div className="header-actions">
+			<div className="!hidden md:!flex header-actions">
 				<AddProduct />
 			</div>
 
@@ -511,9 +546,8 @@ const Header = () => {
 				<div className="action-list dark">
 					<div className="action-list-item-wrap">
 						<div
-							className={`action-list-item header-dropdown-trigger ${
-								isCartVisible ? "active" : ""
-							}`}
+							className={`action-list-item header-dropdown-trigger ${isCartVisible ? "active" : ""
+								}`}
 							onClick={() => {
 								dispatch(setIsFriendsVisible({ value: false }));
 								dispatch(setIsMessagesVisible({ value: false }));
@@ -706,9 +740,8 @@ const Header = () => {
 
 					<div className="action-list-item-wrap">
 						<div
-							className={`action-list-item header-dropdown-trigger ${
-								isFriendsVisible ? "active" : ""
-							}`}
+							className={`action-list-item header-dropdown-trigger ${isFriendsVisible ? "active" : ""
+								}`}
 							onClick={() => {
 								dispatch(setIsFriendsVisible({ value: !isFriendsVisible }));
 								dispatch(setIsMessagesVisible({ value: false }));
@@ -731,9 +764,8 @@ const Header = () => {
 								right: "6px",
 								opacity: `${isFriendsVisible ? "1" : "0"}`,
 								visibility: `${isFriendsVisible ? "visible" : "hidden"}`,
-								transform: `translate(0px, ${
-									isFriendsVisible ? "0px" : "-40px"
-								})`,
+								transform: `translate(0px, ${isFriendsVisible ? "0px" : "-40px"
+									})`,
 								transition:
 									"transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s",
 							}}
@@ -931,8 +963,12 @@ const Header = () => {
 							</div>
 
 							<a
-								className="dropdown-box-button secondary"
-								href="hub-profile-requests.html"
+								className="dropdown-box-button primary"
+								href="#"
+								onClick={() => {
+									handleNavigate("Connection Requests")
+								}}
+
 							>
 								View all Requests
 							</a>
@@ -941,9 +977,8 @@ const Header = () => {
 
 					<div className="action-list-item-wrap">
 						<div
-							className={`action-list-item header-dropdown-trigger ${
-								isMessagesVisible ? "active" : ""
-							}`}
+							className={`action-list-item header-dropdown-trigger ${isMessagesVisible ? "active" : ""
+								}`}
 							onClick={() => {
 								dispatch(setIsFriendsVisible({ value: false }));
 								dispatch(setIsMessagesVisible({ value: !isMessagesVisible }));
@@ -968,9 +1003,8 @@ const Header = () => {
 								right: "6px",
 								opacity: `${isMessagesVisible ? "1" : "0"}`,
 								visibility: `${isMessagesVisible ? "visible" : "hidden"}`,
-								transform: `translate(0px, ${
-									isMessagesVisible ? "0px" : "-40px"
-								})`,
+								transform: `translate(0px, ${isMessagesVisible ? "0px" : "-40px"
+									})`,
 								transition:
 									"transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s",
 							}}
@@ -1275,7 +1309,7 @@ const Header = () => {
 								</a>
 							</div>
 
-							<Link className="dropdown-box-button primary" to={"/chat"}>
+							<Link className="dropdown-box-button primary" to={"https://chat.flokky.app/"}>
 								View all Messages
 							</Link>
 						</div>
@@ -1283,9 +1317,8 @@ const Header = () => {
 
 					<div className="action-list-item-wrap">
 						<div
-							className={`action-list-item header-dropdown-trigger ${
-								isNotificationsVisible ? "active" : ""
-							}`}
+							className={`action-list-item header-dropdown-trigger ${isNotificationsVisible ? "active" : ""
+								}`}
 							onClick={() => {
 								dispatch(setIsFriendsVisible({ value: false }));
 								dispatch(setIsMessagesVisible({ value: false }));
@@ -1310,9 +1343,8 @@ const Header = () => {
 								right: "6px",
 								opacity: `${isNotificationsVisible ? "1" : "0"}`,
 								visibility: `${isNotificationsVisible ? "visible" : "hidden"}`,
-								transform: `translate(0px, ${
-									isNotificationsVisible ? "0px" : "-40px"
-								})`,
+								transform: `translate(0px, ${isNotificationsVisible ? "0px" : "-40px"
+									})`,
 								transition:
 									"transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s",
 							}}
@@ -1622,8 +1654,12 @@ const Header = () => {
 							</div>
 
 							<a
-								className="dropdown-box-button secondary"
-								href="hub-profile-notifications.html"
+								className="dropdown-box-button primary"
+								href="#"
+								onClick={() => {
+									// dispatch(setSelectedForm({ value: "Profile Info" }));
+									handleNavigate("Notifications")
+								}}
 							>
 								View all Notifications
 							</a>
@@ -1631,11 +1667,10 @@ const Header = () => {
 					</div>
 				</div>
 
-				<div className="action-item-wrap">
+				<div className="action-item-wrap" ref={settingsDropRef}>
 					<div
-						className={`action-item dark header-settings-dropdown-trigger ${
-							isSettingsVisible ? "active" : ""
-						}`}
+						className={`action-item dark header-settings-dropdown-trigger ${isSettingsVisible ? "active" : ""
+							}`}
 						onClick={() => {
 							dispatch(setIsFriendsVisible({ value: false }));
 							dispatch(setIsMessagesVisible({ value: false }));
@@ -1644,11 +1679,10 @@ const Header = () => {
 							dispatch(setIsCartVisible({ value: false }));
 						}}
 					>
-						{/* <svg className="action-item-icon icon-settings">
+						<svg className="action-item-icon icon-settings">
 							<use xlinkHref="#svg-settings"></use>
-						</svg> */}
+						</svg>
 
-						<IoSettingsOutline style={{color:"#fff"}} className="action-item-icon icon-settings" />
 					</div>
 
 					<div
@@ -1660,9 +1694,8 @@ const Header = () => {
 							right: "22px",
 							opacity: `${isSettingsVisible ? "1" : "0"}`,
 							visibility: `${isSettingsVisible ? "visible" : "hidden"}`,
-							transform: `translate(0px, ${
-								isSettingsVisible ? "0px" : "-40px"
-							})`,
+							transform: `translate(0px, ${isSettingsVisible ? "0px" : "-40px"
+								})`,
 							transition:
 								"transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s",
 						}}
@@ -1687,37 +1720,17 @@ const Header = () => {
 
 						<a
 							className="dropdown-navigation-link"
-							href="hub-profile-info.html"
+							href="#"
+							onClick={() => {
+								// dispatch(setSelectedForm({ value: "Profile Info" }));
+								handleNavigate("Profile Info")
+							}}
 						>
 							Profile Info
 						</a>
 
-						<a
-							className="dropdown-navigation-link"
-							href="hub-profile-social.html"
-						>
-							Social &amp; Stream
-						</a>
-
-						<a
-							className="dropdown-navigation-link"
-							href="hub-profile-notifications.html"
-						>
-							Notifications
-						</a>
-
-						<a
-							className="dropdown-navigation-link"
-							href="hub-profile-messages.html"
-						>
-							Messages
-						</a>
-
-						<a
-							className="dropdown-navigation-link"
-							href="hub-profile-requests.html"
-						>
-							Friend Requests
+						<a className="dropdown-navigation-link" href="/affiliations">
+							Affiliations
 						</a>
 
 						<p className="dropdown-navigation-category">Account</p>
@@ -1726,66 +1739,56 @@ const Header = () => {
 							className="dropdown-navigation-link"
 							href="hub-account-info.html"
 						>
-							Account Info
+							Advertising
 						</a>
 
 						<a
 							className="dropdown-navigation-link"
-							href="hub-account-password.html"
+							href="#"
+							onClick={() => {
+								// dispatch(setSelectedForm({ value: "Wallet & Credit" }));
+								handleNavigate("Wallet & Credit")
+							}}
 						>
-							Change Password
+							Wallet
 						</a>
 
 						<a
 							className="dropdown-navigation-link"
-							href="hub-account-settings.html"
+							href="#"
+							onClick={() => {
+								// dispatch(setSelectedForm({ value: "Privacy" }));
+								handleNavigate("Privacy")
+							}}
 						>
-							General Settings
+							Privacy
 						</a>
 
 						<p className="dropdown-navigation-category">Groups</p>
 
 						<a
 							className="dropdown-navigation-link"
-							href="hub-group-management.html"
+							href="#"
+							onClick={() => {
+								// dispatch(setSelectedForm({ value: "" }));
+								handleNavigate("Manage Communtities")
+							}}
 						>
-							Manage Groups
+							Manage Communtities
 						</a>
+
+						<p className="dropdown-navigation-category">Businesses</p>
 
 						<a
 							className="dropdown-navigation-link"
-							href="hub-group-invitations.html"
+							href="/businesses"
 						>
-							Invitations
+							Manage Businesses
 						</a>
 
-						<p className="dropdown-navigation-category">My Store</p>
-
-						<a
-							className="dropdown-navigation-link"
-							href="hub-store-account.html"
-						>
-							My Account <span className="highlighted">$250,32</span>
-						</a>
-
-						<a
-							className="dropdown-navigation-link"
-							href="hub-store-statement.html"
-						>
-							Sales Statement
-						</a>
-
-						<a className="dropdown-navigation-link" href="hub-store-items.html">
-							Manage Items
-						</a>
-
-						<a
-							className="dropdown-navigation-link"
-							href="hub-store-downloads.html"
-						>
-							Downloads
-						</a>
-
+						<p className="dropdown-navigation-button button small secondary">
+							Dark mood
+						</p>
 						<p className="dropdown-navigation-button button small secondary">
 							Logout
 						</p>

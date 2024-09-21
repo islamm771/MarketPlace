@@ -28,7 +28,7 @@ const Aside = () => {
           <img src={img_01} alt="" />
         </div>
         <div className="property-profile-body-info">
-          <h3>Emmar Misr</h3>
+          <h3> <a href="/developer"> Emmar Misr </a> </h3>
           <div className="flex items-center justify-center gap-[20px] py-[20px]">
             <div className="rate text-center">
               <p className="text-[20px] font-[700] mb-[5px]">4.5</p>

@@ -1,15 +1,15 @@
-.landing-hero-header{
+.landing-hero-header {
     position: relative;
     height: calc(100vh - 80px);
 }
 
-@media (max-width:600px){
-    .landing-hero-header{
+@media (max-width:600px) {
+    .landing-hero-header {
         height: 100vh;
     }
 }
 
-.landing-hero-header::before{
+.landing-hero-header::before {
     content: "";
     position: absolute;
     top: 0;
@@ -20,7 +20,8 @@
     z-index: -1;
     opacity: 0.3;
 }
-.landing-hero-header .marketplace-container{
+
+.landing-hero-header .marketplace-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -29,7 +30,8 @@
     padding: 0 15px;
     position: unset;
 }
-.landing-hero-header .marketplace-container video{
+
+.landing-hero-header .marketplace-container video {
     position: absolute;
     top: 0;
     left: 0;
@@ -39,61 +41,69 @@
     object-fit: cover;
 }
 
-.landing-hero-form .btn-tabHeroFrom{
+.landing-hero-form .btn-tabHeroFrom {
     background-color: #fff;
     padding: 10px 25px;
     border-radius: 5px 5px 0 0 !important;
     width: fit-content;
     font-size: 14px;
 }
-.landing-hero-form .btn-tabHeroFrom.active{
+
+.landing-hero-form .btn-tabHeroFrom.active {
     background-color: #fd6729;
     color: #fff;
 }
-.landing-hero-form .btn-tabHeroFrom.active svg{
+
+.landing-hero-form .btn-tabHeroFrom.active svg {
     fill: white;
 }
-.landing-hero-form .all-hero-forms form{
+
+.landing-hero-form .all-hero-forms form {
     border-radius: 0 5px 5px 5px !important;
 }
 
-.landing-hero-form form{
+.landing-hero-form form {
     display: flex;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 0 5px 5px 5px !important;
+    border-radius: 5px !important;
 }
 
-.landing-hero-form form .form-item{
+.landing-hero-form form .form-item {
     background-color: #fff;
-    border-right:1px solid #ddd;
+    border-right: 1px solid #ddd;
     position: relative;
     padding: 20px 0 15px 60px;
 }
-.landing-hero-form form .form-item.search-field{
+
+.landing-hero-form form .form-item.search-field {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 45px;
 }
-.landing-hero-form form input[type="text"]{
-    border:none;
+
+.landing-hero-form form input[type="text"] {
+    border: none;
     border-radius: 0;
     height: 100%;
 }
-.landing-hero-form form select{
-    border: none;
-    border-radius: 0;
+
+.landing-hero-form form select {
+    border: none !important;
+    border-radius: 0 !important;
     cursor: pointer;
 }
-.landing-hero-form form input[type="button"]{
+
+.landing-hero-form form input[type="button"] {
     background-color: #fd6729;
     color: white;
     padding: 15px;
     cursor: pointer;
     height: 100%;
 }
-.landing-hero-form form .form-item svg:first-child{
+
+.landing-hero-form form .form-item svg:first-child {
     font-size: 30px;
 }
 
@@ -128,25 +138,29 @@
 }
 } */
 
-@media (max-width:1023px){
-    .landing-hero-form form{
+@media (max-width:1023px) {
+    .landing-hero-form form {
         flex-direction: column;
     }
-    .landing-hero-form form .form-item{
+
+    .landing-hero-form form .form-item {
         border-radius: 0;
         border-bottom: 1px solid #ddd;
         padding-right: 10px;
     }
-    .landing-hero-form form .form-item:first-child{
+
+    .landing-hero-form form .form-item:first-child {
         padding-top: 20px;
         padding-bottom: 20px;
         padding-left: 45px;
     }
-    .landing-hero-form form .button-submit{
+
+    .landing-hero-form form .button-submit {
         background-color: #fff;
         text-align: end;
     }
-    .landing-hero-form form input[type="button"]{
+
+    .landing-hero-form form input[type="button"] {
         padding: 6px 20px;
         border-radius: 5px;
         margin: 10px 15px;
@@ -155,8 +169,8 @@
 }
 
 /* Media of Form Button */
-@media (max-width:768px){
-    .landing-hero-form .btn-tabHeroFrom{
+@media (max-width:768px) {
+    .landing-hero-form .btn-tabHeroFrom {
         padding: 10px 20px;
     }
 }

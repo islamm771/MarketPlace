@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import FormCheckbox from "../../components/ui/formCheckbox/FormCheckbox";
-import EstateProducts from "../../components/marketPlaceComponents/Products/EstateProducts/Products";
 import "./MarketPlace.css";
 import { IoGridSharp } from "react-icons/io5";
 import { FaThList } from "react-icons/fa";
@@ -97,6 +96,8 @@ const ClassifiedSearch = () => {
   const [country, setCountry] = useState(null);
   const [category, setCategory] = useState(null);
   const [subcategory, setSubCategory] = useState(null);
+
+
   // Start Reference
   const dropSortRef = useRef(null);
   const dropCountryRef = useRef(null);
@@ -267,7 +268,7 @@ const ClassifiedSearch = () => {
                 </a>
               </li>
             </ul>
-            
+
           </div>
         </aside>
 

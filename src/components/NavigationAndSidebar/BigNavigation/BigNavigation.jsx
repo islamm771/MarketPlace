@@ -60,15 +60,14 @@ const BigNavigation = () => {
 	return (
 		<nav
 			id="navigation-widget"
-			className={`navigation-widget navigation-widget-desktop sidebar menu-big left ${
-				isLargeHidden ? "hidden" : "active delayed"
-			}`}
+			className={`navigation-widget navigation-widget-desktop sidebar menu-big left ${isLargeHidden ? "hidden" : "active delayed"
+				}`}
 			data-simplebar
 		>
 			{location.pathname.includes("/marketplace") ||
-			location.pathname.includes("/chat") ||
-			location.pathname.includes("/careers") ||
-			location.pathname.includes("/crea8") ? (
+				location.pathname.includes("/chat") ||
+				location.pathname.includes("/careers") ||
+				location.pathname.includes("/crea8") ? (
 				<>
 					<div className="navigation-widget-info-wrap">
 						<div className="navigation-widget-info">
@@ -105,7 +104,7 @@ const BigNavigation = () => {
 			) : (
 				<>
 					<figure className="navigation-widget-cover liquid">
-						<img src="img/cover/01.jpg" alt="cover-01" />
+						<img src="/img/cover/01.jpg" alt="cover-01" />
 					</figure>
 
 					<div className="user-short-description">
@@ -137,26 +136,26 @@ const BigNavigation = () => {
 
 					<div className="badge-list small">
 						<div className="badge-item">
-							<img src="img/badge/gold-s.png" alt="badge-gold-s" />
+							<img src="/img/badge/gold-s.png" alt="badge-gold-s" />
 						</div>
 
 						<div className="badge-item">
-							<img src="img/badge/age-s.png" alt="badge-age-s" />
+							<img src="/img/badge/age-s.png" alt="badge-age-s" />
 						</div>
 
 						<div className="badge-item">
 							<img
-								src="img/badge/caffeinated-s.png"
+								src="/img/badge/caffeinated-s.png"
 								alt="badge-caffeinated-s"
 							/>
 						</div>
 
 						<div className="badge-item">
-							<img src="img/badge/warrior-s.png" alt="badge-warrior-s" />
+							<img src="/img/badge/warrior-s.png" alt="badge-warrior-s" />
 						</div>
 
 						<a className="badge-item" href="profile-badges.html">
-							<img src="img/badge/blank-s.png" alt="badge-blank-s" />
+							<img src="/img/badge/blank-s.png" alt="badge-blank-s" />
 							<p className="badge-item-text">+9</p>
 						</a>
 					</div>
@@ -207,14 +206,14 @@ const BigNavigation = () => {
 					location.pathname.includes("/chat") ||
 					location.pathname.includes("/careers") ||
 					location.pathname.includes("/crea8")) && (
-					<div className="big-nav-secondary-pages"></div>
-				)}
+						<div className="big-nav-secondary-pages"></div>
+					)}
 				<li
-					className={`menu-item ${location.pathname === "/" ? "active" : ""}`}
+					className={`menu-item`}
 				>
 					<Link
 						className="menu-item-link"
-						to="/"
+						to="https://main.flokky.app/"
 						onClick={() => {
 							dispatch(setIsLargeHidden({ value: !isLargeHidden }));
 						}}
@@ -227,12 +226,11 @@ const BigNavigation = () => {
 				</li>
 
 				<li
-					className={`menu-item ${
-						location.pathname.includes("/directory") ? "active" : ""
-					}`}
+					className={`menu-item ${location.pathname.includes("/directory") ? "active" : ""
+						}`}
 				>
 					<Link
-						to={"/directory"}
+						to={"https://main.flokky.app/directory"}
 						className="menu-item-link"
 						onClick={() => {
 							dispatch(setIsLargeHidden({ value: !isLargeHidden }));
@@ -336,9 +334,8 @@ const BigNavigation = () => {
 							<svg
 								className="slider-control-icon icon-small-arrow"
 								style={{
-									transform: `rotate(${
-										isMarketplaceMenuOpen ? "270" : "90"
-									}deg)`,
+									transform: `rotate(${isMarketplaceMenuOpen ? "270" : "90"
+										}deg)`,
 									cursor: "pointer",
 								}}
 							>
@@ -354,13 +351,12 @@ const BigNavigation = () => {
 					)}
 
 				<li
-					className={`menu-item ${
-						location.pathname.includes("/reviews") ? "active" : ""
-					}`}
+					className={`menu-item ${location.pathname.includes("/reviews") ? "active" : ""
+						}`}
 				>
 					<Link
 						className="menu-item-link"
-						to="/reviews"
+						to="rhttps://main.flokky.app/eviews"
 						onClick={() => {
 							dispatch(setIsLargeHidden({ value: !isLargeHidden }));
 						}}
@@ -502,12 +498,11 @@ const BigNavigation = () => {
 				)} */}
 
 				<li
-					className={`menu-item ${
-						location.pathname.includes("/offers") ? "active" : ""
-					}`}
+					className={`menu-item ${location.pathname.includes("/offers") ? "active" : ""
+						}`}
 				>
 					<Link
-						to={"/offers"}
+						to={"https://main.flokky.app/offers"}
 						className="menu-item-link market-icon"
 						onClick={() => {
 							dispatch(setIsLargeHidden({ value: !isLargeHidden }));
@@ -527,12 +522,11 @@ const BigNavigation = () => {
 				</li>
 
 				<li
-					className={`menu-item ${
-						location.pathname.includes("/events") ? "active" : ""
-					}`}
+					className={`menu-item ${location.pathname.includes("/events") ? "active" : ""
+						}`}
 				>
 					<Link
-						to={"/events"}
+						to={"https://main.flokky.app/events"}
 						className="menu-item-link market-icon"
 						onClick={() => {
 							dispatch(setIsLargeHidden({ value: !isLargeHidden }));
@@ -552,13 +546,12 @@ const BigNavigation = () => {
 				</li>
 
 				<li
-					className={`menu-item ${
-						location.pathname.includes("/forum") ? "active" : ""
-					}`}
+					className={`menu-item ${location.pathname.includes("/forum") ? "active" : ""
+						}`}
 				>
 					<Link
 						className="menu-item-link"
-						to="/forum"
+						to="https://main.flokky.app/forum"
 						onClick={() => {
 							dispatch(setIsLargeHidden({ value: !isLargeHidden }));
 						}}
