@@ -262,14 +262,14 @@
 	fill: #fd6729;
 }
 
-.header-actions .add-listing-product{
+.header-actions .add-listing-product {
 	cursor: pointer;
 	background-color: transparent;
 	border: 1px solid #fff;
 	color: white;
 	width: 120px;
 	margin: 0 5px;
-    /* padding: 8px 12px; */
+	/* padding: 8px 12px; */
 }
 
 .header-mobile {
@@ -466,7 +466,7 @@
 
 .mini-menu-border {
 	margin-bottom: 10px;
-	margin-top: -10px;
+	/* margin-top: -10px; */
 }
 
 .mobile-nav-secondary {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setActiveTabSlice } from "../../../app/feature/MarketplaceDashSlice";
 import { Link } from "react-router-dom";
@@ -7,11 +7,30 @@ const AddProduct = () => {
   const [isAddFromVisible, setIsAddFromVisible] = useState(false);
   const dispatch = useDispatch()
 
-  const handleClick = (number) =>{
+  const handleClick = (number) => {
     dispatch(setActiveTabSlice(number))
   }
+  const addRef = useRef(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (addRef.current && !addRef.current.contains(event.target)) {
+        setIsAddFromVisible(false)
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // Cleanup function
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isAddFromVisible]);
+
+
+
   return (
-    <div className="relative">
+    <div className="relative" ref={addRef}>
       <button
         className="text-white block p-2 mx-[8px] text-[14px] w-[100px] border border-white border-solid"
         onClick={() => setIsAddFromVisible(!isAddFromVisible)}
@@ -24,7 +43,7 @@ const AddProduct = () => {
         style={{
           position: "absolute",
           zIndex: "9999",
-          top: "64px",
+          top: "44px",
           right: "0",
           opacity: `${isAddFromVisible ? "1" : "0"}`,
           visibility: `${isAddFromVisible ? "visible" : "hidden"}`,
@@ -33,7 +52,7 @@ const AddProduct = () => {
             "transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s",
         }}
       >
-        <Link className="dropdown-navigation-link" to="/marketplace/dashboard" onClick={() => handleClick(1)}>
+        <Link className="dropdown-navigation-link" to="/dashboard" onClick={() => handleClick(1)}>
           <svg
             className="me-[5px] inline"
             xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +70,7 @@ const AddProduct = () => {
           </svg>
           Classifieds
         </Link>
-        <Link className="dropdown-navigation-link" to="/marketplace/dashboard" onClick={() => handleClick(2)}>
+        <Link className="dropdown-navigation-link" to="/dashboard" onClick={() => handleClick(2)}>
           <svg
             className="me-[5px] inline"
             xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +82,7 @@ const AddProduct = () => {
           </svg>
           Real Estate
         </Link>
-        <Link className="dropdown-navigation-link" to="/marketplace/dashboard" onClick={() => handleClick(3)}>
+        <Link className="dropdown-navigation-link" to="/dashboard" onClick={() => handleClick(3)}>
           <svg
             className="me-[5px] inline"
             xmlns="http://www.w3.org/2000/svg"

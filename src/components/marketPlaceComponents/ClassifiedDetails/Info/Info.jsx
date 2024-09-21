@@ -109,8 +109,8 @@ const Info = () => {
             </div>
 
             <div className="classified-badges">
-              <a href="/marketplace/search" className="badge badge-primary text-capitalize">Category</a>
-              <a href="/marketplace/search" className="badge badge-primary text-capitalize">Sub-Category</a>
+              <a href="/memberclassifieds/search" className="badge badge-primary text-capitalize">Category</a>
+              <a href="/memberclassifieds/search" className="badge badge-primary text-capitalize">Sub-Category</a>
               <span className="badge-status">Used</span>
               {/* <span className="badge-developer">New</span> */}
             </div>

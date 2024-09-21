@@ -91,11 +91,11 @@ const RealCard = (props) => {
             </div>
         </div>
         <div class="card__image-body">
-            <a href="/marketplace/search" class="badge badge-primary text-capitalize mb-2 me-2">house</a>
-            <a href="/marketplace/search" class="badge badge-primary text-capitalize mb-2 me-2">Soul</a>
+            <a href="/realestates/search" class="badge badge-primary text-capitalize mb-2 me-2">house</a>
+            <a href="/realestates/search" class="badge badge-primary text-capitalize mb-2 me-2">Soul</a>
             {owner.toLowerCase() !== "owner" && <span className="badge-status">Resale</span>}
             <h6 class="text-capitalize">
-                <a href="/marketplace/realestates/property">{textFormater(title)}</a>
+                <a href="/realestates/property">{textFormater(title)}</a>
             </h6>
 
             <p class="text-capitalize">
@@ -183,7 +183,7 @@ const RealCard = (props) => {
                     </div>
                 </div>
                 <div className="owner-details pt-[2.5px]">
-                    <h6 className="owner-details-title">
+                    <h6 className="owner-details-title mb-[2px]">
                         Marina Valentine
                         {/* <MdAdminPanelSettings size={20} color={"#d7006a"} /> */}
                     </h6>

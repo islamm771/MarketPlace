@@ -55,8 +55,8 @@ const Hero = () => {
 
       <div className="marketplace-container">
         <div className="flex flex-wrap gap-[10px] items-center">
-          <a href="/marketplace/realestates/search" className="badge badge-primary text-capitalize">house</a>
-          <a href="/marketplace/realestates/search" className="badge badge-primary text-capitalize">Soul</a>
+          <a href="/realestates/search" className="badge badge-primary text-capitalize">house</a>
+          <a href="/realestates/search" className="badge badge-primary text-capitalize">Soul</a>
           <span className="badge-status">Resale</span>
           <span className="badge-developer">developer</span>
 

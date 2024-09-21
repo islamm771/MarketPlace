@@ -70,12 +70,12 @@ const PropertyDistination = ({children}) => {
                     <SwiperSlide>
                         <div className='prop-card'>
                             <div className="prop-card-img">
-                                <a href="">
+                                <a href="/developer/country">
                                     <img className='w-[100%]' src={img_01} alt="" />
                                 </a>
                             </div>
                             <div className="prop-card-info text-center pt-[15px]">
-                                    <a className="prop-card-title" href="/marketplace/developer/country">Egypt</a>
+                                    <a className="prop-card-title" href="/developer/country">Egypt</a>
                                     <p class="prop-card-tagline">A PLACE UNLIKE ANY OTHER</p>
                                     <p class="prop-card-location">Egypt | North Coast</p>
                             </div>
@@ -85,12 +85,12 @@ const PropertyDistination = ({children}) => {
                     <SwiperSlide>
                         <div className='prop-card'>
                             <div className="prop-card-img">
-                                <a href="">
+                                <a href="/developer/country">
                                     <img className='w-[100%]' src={img_02} alt="" />
                                 </a>
                             </div>
                             <div className="prop-card-info text-center pt-[15px]">
-                                    <a className="prop-card-title" href="/marketplace/developer/country">UAE</a>
+                                    <a className="prop-card-title" href="/developer/country">UAE</a>
                                     <p class="prop-card-tagline">Life is beautiful</p>
                                     <p class="prop-card-location">Egypt | New Zayed</p>
                             </div>
@@ -100,12 +100,12 @@ const PropertyDistination = ({children}) => {
                     <SwiperSlide>
                         <div className='prop-card'>
                             <div className="prop-card-img">
-                                <a href="">
+                                <a href="/developer/country">
                                     <img className='w-[100%]' src={img_03} alt="" />
                                 </a>
                             </div>
                             <div className="prop-card-info text-center pt-[15px]">
-                                    <a className="prop-card-title" href="/marketplace/developer/country">Qatar</a>
+                                    <a className="prop-card-title" href="/developer/country">Qatar</a>
                                     <p class="prop-card-tagline">Boutique Lifestyle Living</p>
                                     <p class="prop-card-location">Egypt | Sheikh Zayed City</p>
                             </div>
@@ -115,12 +115,12 @@ const PropertyDistination = ({children}) => {
                     <SwiperSlide>
                         <div className='prop-card'>
                             <div className="prop-card-img">
-                                <a href="">
+                                <a href="/developer/country">
                                     <img className='w-[100%]' src={img_05} alt="" />
                                 </a>
                             </div>
                             <div className="prop-card-info text-center pt-[15px]">
-                                    <a className="prop-card-title" href="/marketplace/developer/country">Malaysia</a>
+                                    <a className="prop-card-title" href="/developer/country">Malaysia</a>
                                     <p class="prop-card-tagline">Truly somewhere else</p>
                                     <p class="prop-card-location">Egypt | North Coast</p>
                             </div>
@@ -130,12 +130,12 @@ const PropertyDistination = ({children}) => {
                     <SwiperSlide>
                         <div className='prop-card'>
                             <div className="prop-card-img">
-                                <a href="">
+                                <a href="/developer/country">
                                     <img className='w-[100%]' src={img_04} alt="" />
                                 </a>
                             </div>
                             <div className="prop-card-info text-center pt-[15px]">
-                                    <a className="prop-card-title" href="/marketplace/developer/country">Egypt</a>
+                                    <a className="prop-card-title" href="/developer/country">Egypt</a>
                                     <p class="prop-card-tagline">A PLACE UNLIKE ANY OTHER</p>
                                     <p class="prop-card-location">Egypt | In the Center of Cairo</p>
                             </div>
@@ -145,12 +145,12 @@ const PropertyDistination = ({children}) => {
                     <SwiperSlide>
                         <div className='prop-card'>
                             <div className="prop-card-img">
-                                <a href="">
+                                <a href="/developer/country">
                                     <img className='w-[100%]' src={img_03} alt="" />
                                 </a>
                             </div>
                             <div className="prop-card-info text-center pt-[15px]">
-                                    <a className="prop-card-title" href="/marketplace/developer/country">UAE</a>
+                                    <a className="prop-card-title" href="/developer/country">UAE</a>
                                     <p class="prop-card-tagline">A PLACE UNLIKE ANY OTHER</p>
                                     <p class="prop-card-location">Egypt | North Coast</p>
                             </div>

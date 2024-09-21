@@ -10,7 +10,7 @@ const RealSuggested = () => {
     <>
       <div className="suggested-heading mt-[50px] mb-[35px] flex items-center justify-between">
         <h3 className='text-[22px]'>Real Estates</h3>
-        <a className='latest-heading-link font-[500]' href="/marketplace/realestates">
+        <a className='latest-heading-link font-[500]' href="/realestates">
           View All <HiArrowLongRight className='inline text-[14px]' /> 
         </a>
       </div>

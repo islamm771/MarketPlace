@@ -13,7 +13,7 @@ import AsideChats from "./AsideChats/AsideChats";
 import MobileNavigation from "./MobileNavigation/MobileNavigation";
 import BigNavigation from "./BigNavigation/BigNavigation";
 import MiniNavigation from "./Mini-Navigation/MiniNavidation";
-import MobileQuickPost from "../tech-business-profile/quick-post/MobileQuickPost";
+// import MobileQuickPost from "../tech-business-profile/quick-post/MobileQuickPost";
 const NavigationAndSidebar = () => {
 	const [isLoad, setIsLoad] = useState(true);
 	const breakPoint = 680;
@@ -121,7 +121,7 @@ const NavigationAndSidebar = () => {
 
 			<MobileNavigation />
 
-			<MobileQuickPost />
+			{/* <MobileQuickPost /> */}
 
 			<AsideChats />
 

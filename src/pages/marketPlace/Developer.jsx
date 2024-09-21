@@ -25,7 +25,7 @@ const MarketDeveloperPage = () => {
 
       <LatestLunches />
 
-      <Latest pageTitle={"Premium Properties"}>
+      <Latest pageTitle={"Premium Properties"} link={"/realestates/search"}>
         <RealCard
           title={"vila in coral gables with pool, garden"}
           price={3500000}

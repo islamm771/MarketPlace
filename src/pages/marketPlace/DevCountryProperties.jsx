@@ -182,7 +182,7 @@ const CountryProperties = () => {
         </div>
       </div>
 
-      <Latest pageTitle={"Premium Properties"}>
+      <Latest pageTitle={"Premium Properties"} link={"/realestates/search"}>
         <RealCard
           title={"vila in coral gables with pool, garden"}
           price={3500000}
@@ -248,7 +248,7 @@ const CountryProperties = () => {
               <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
                   <a
-                    href="/marketplace/realestate/search"
+                    href="/realestates/search"
                     className="uppercase"
                   >
                     LOCANDA SERVICED RESIDENCE
@@ -276,7 +276,7 @@ const CountryProperties = () => {
               <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
                   <a
-                    href="/marketplace/realestate/search"
+                    href="/realestates/search"
                     className="uppercase"
                   >
                     Seaview
@@ -302,7 +302,7 @@ const CountryProperties = () => {
               <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
                   <a
-                    href="/marketplace/realestate/search"
+                    href="/realestates/search"
                     className="uppercase"
                   >
                     HEIGHTS
@@ -328,7 +328,7 @@ const CountryProperties = () => {
               <div class="card_image-body !p-0 !py-4">
                 <h6 class="text-capitalize">
                   <a
-                    href="/marketplace/realestate/search"
+                    href="/realestates/search"
                     className="uppercase"
                   >
                     LAGOONS
@@ -375,9 +375,8 @@ const CountryProperties = () => {
         <div class="marketplace-container">
           <div class="grid md:!grid-cols-4">
             <div class="hidden md:block">
-              <a
-                href="/marketplace/developer/country"
-                class="mb-[6px] block w-fit"
+              <a class="mb-[6px] block w-fit"
+                href="/developer/country"
               >
                 <HiMiniArrowLongLeft className="inline" /> All
                 Communities{" "}

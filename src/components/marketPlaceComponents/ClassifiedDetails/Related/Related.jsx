@@ -91,7 +91,7 @@ const Related = () => {
 
             <a
               className="seller-viewAll font-[500] block w-fit ms-auto me-[5px]"
-              href="/marketplace/realestates/search"
+              href="/memberclassifieds/search"
             >
               View All <HiArrowLongRight className="inline text-[14px]" />{" "}
             </a>

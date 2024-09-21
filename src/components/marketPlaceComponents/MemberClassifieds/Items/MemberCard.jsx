@@ -114,14 +114,14 @@ const ClassifiedCard = (props) => {
             </div>
             <div class="gigs-content">
                 <div class="gigs-info">
-                    <a href="#" class="badge bg-primary-light">
+                    <a href="/memberclassifieds/search" class="badge bg-primary-light">
                         Fashion
                     </a>
                     <span>Used</span>
                 </div>
                 <div class="gigs-title">
                     <h3>
-                        <a href="/marketplace/memberclassifieds/details">
+                        <a href="/memberclassifieds/details">
                             {title ? textFormater(title) : "Product Title"}
                         </a>
                     </h3>

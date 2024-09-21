@@ -43,8 +43,8 @@
     transition: all 0.3s ease 0s;
 }
 .slide-item-info-logo img{
-    width: 50px;
-    height: 50px;
+    width: 50px !important;
+    height: 50px !important;
     border-radius: 50%;
 }
 .slide-item-info .slide-item-info-breif h1 a,

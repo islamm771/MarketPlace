@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Outlet } from "react-router-dom";
 import NavigationAndSidebar from "../../components/NavigationAndSidebar/NavigationAndSidebar";
 import "../marketPlace/MarketPlace.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsLargeHidden } from "../../app/feature/outletSlice";
 const MainPage = () => {
+	const dispatch = useDispatch()
 	const isLargeHidden = useSelector((state) => state.outlet.isLargeHidden);
 	const isChatsOpen = useSelector((state) => state.outlet.isChatsOpen);
 	const isChatOpen = useSelector((state) => state.outlet.isChatOpen);
@@ -35,12 +37,31 @@ const MainPage = () => {
 		};
 	}, []);
 
+	const mainBodyRef = useRef(null)
+
+	useEffect(() => {
+		if (!isLargeHidden) {
+			const handleClickOutside = (event) => {
+				if (mainBodyRef.current && mainBodyRef.current.contains(event.target)) {
+					dispatch(setIsLargeHidden({ value: true }));
+				}
+			};
+
+			document.addEventListener('mousedown', handleClickOutside);
+
+			// Cleanup function
+			return () => {
+				document.removeEventListener('mousedown', handleClickOutside);
+			};
+		}
+	}, [isLargeHidden, dispatch]);
+
 	return (
 		<>
 			<NavigationAndSidebar />
-			<>
+			<div ref={mainBodyRef}>
 				<Outlet />
-			</>
+			</div>
 		</>
 	);
 };
